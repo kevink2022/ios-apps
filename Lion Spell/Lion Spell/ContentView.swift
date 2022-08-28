@@ -10,19 +10,19 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            // title
-            
+            TitleView()
+                        
             FoundWordsView(words: ["Lorem","ipsum","dolor","sit","amet","consectetur","adipiscing","elit","sed","do","eiusmod","tempor","incididunt","ut","labore","et","dolore","magna","aliqua"])
             
             CurrentWordView(letters: ["a", "b", "c", "d", "e"])
             
             LetterButtonRowView(letters: ["a", "b", "c", "d", "e"])
             
-            // backspace / submit buttons
+            GameButtonView()
             
-            // score display
+            ScoreView(score: 15)
             
-            // new game / hint / prefrences buttons
+            MenuButtonView()
         }
     }
 }
