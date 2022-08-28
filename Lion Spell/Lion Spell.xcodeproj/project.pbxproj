@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F16A1E128BC195E00158C26 /* Chalkduster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F16A1E028BC191600158C26 /* Chalkduster.ttf */; };
 		4F693B3828B9615900352C0C /* Lion_SpellApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F693B3728B9615900352C0C /* Lion_SpellApp.swift */; };
 		4F693B3A28B9615900352C0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F693B3928B9615900352C0C /* ContentView.swift */; };
 		4F693B3C28B9615A00352C0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F693B3B28B9615A00352C0C /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F16A1E028BC191600158C26 /* Chalkduster.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chalkduster.ttf; sourceTree = "<group>"; };
 		4F693B3428B9615900352C0C /* Lion Spell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lion Spell.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F693B3728B9615900352C0C /* Lion_SpellApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lion_SpellApp.swift; sourceTree = "<group>"; };
 		4F693B3928B9615900352C0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F16A1DF28BC190100158C26 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4F16A1E028BC191600158C26 /* Chalkduster.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		4F693B2B28B9615900352C0C = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +125,7 @@
 				4F693B3928B9615900352C0C /* ContentView.swift */,
 				4F693B6628B9682200352C0C /* LetterButton.swift */,
 				4F693B6828B9693800352C0C /* LetterButtonRowView.swift */,
+				4F16A1DF28BC190100158C26 /* fonts */,
 				4F693B6428B9665800352C0C /* CurrentWordView.swift */,
 				4F6E822B28BBEF9C00F4A2F1 /* MenuButtonView.swift */,
 				4F6E822928BBEE7400F4A2F1 /* ScoreView.swift */,
@@ -257,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F16A1E128BC195E00158C26 /* Chalkduster.ttf in Resources */,
 				4F693B3F28B9615A00352C0C /* Preview Assets.xcassets in Resources */,
 				4F693B3C28B9615A00352C0C /* Assets.xcassets in Resources */,
 			);

@@ -9,21 +9,36 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            TitleView()
-                        
-            FoundWordsView(words: ["Lorem","ipsum","dolor","sit","amet","consectetur","adipiscing","elit","sed","do","eiusmod","tempor","incididunt","ut","labore","et","dolore","magna","aliqua"])
+        
+        ZStack
+        {
+            Color("psuBlue")
+                .ignoresSafeArea()
             
-            CurrentWordView(letters: ["a", "b", "c", "d", "e"])
-            
-            LetterButtonRowView(letters: ["a", "b", "c", "d", "e"])
-            
-            GameButtonView()
-            
-            ScoreView(score: 15)
-            
-            MenuButtonView()
+            VStack {
+                TitleView()
+                
+                Spacer()
+                            
+                FoundWordsView(words: ["Lorem","ipsum","dolor","sit","amet","consectetur","adipiscing","elit","sed","do","eiusmod","tempor","incididunt","ut","labore","et","dolore","magna","aliqua"])
+                
+                CurrentWordView(letters: ["a", "b", "c", "d", "e"])
+                
+                LetterButtonRowView(letters: ["a", "b", "c", "d", "e"])
+                
+                GameButtonView()
+                
+                ScoreView(score: 15)
+                
+                Spacer()
+                
+                MenuButtonView()
+            }
         }
+        
+        
+        
+        
     }
 }
 
