@@ -9,8 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            // title
+            
+            FoundWordsView(words: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ")
+            
+            CurrentWordView(word: "lorem")
+            
+            // letter buttons
+            
+            // backspace / submit buttons
+            
+            // score display
+            
+            // new game / hint / prefrences buttons
+        }
     }
 }
 

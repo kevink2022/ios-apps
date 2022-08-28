@@ -13,6 +13,10 @@
 		4F693B3F28B9615A00352C0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F693B3E28B9615A00352C0C /* Preview Assets.xcassets */; };
 		4F693B4A28B9615A00352C0C /* Lion_SpellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F693B4928B9615A00352C0C /* Lion_SpellTests.swift */; };
 		4F693B5528B9615A00352C0C /* Lion_SpellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F693B5428B9615A00352C0C /* Lion_SpellUITests.swift */; };
+		4F693B6328B962C800352C0C /* FoundWordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F693B6228B962C800352C0C /* FoundWordsView.swift */; };
+		4F693B6528B9665800352C0C /* CurrentWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F693B6428B9665800352C0C /* CurrentWordView.swift */; };
+		4F693B6728B9682200352C0C /* LetterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F693B6628B9682200352C0C /* LetterButton.swift */; };
+		4F693B6928B9693800352C0C /* LetterButtonRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F693B6828B9693800352C0C /* LetterButtonRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		4F693B5028B9615A00352C0C /* Lion SpellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lion SpellUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F693B5428B9615A00352C0C /* Lion_SpellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lion_SpellUITests.swift; sourceTree = "<group>"; };
 		4F693B5628B9615A00352C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F693B6228B962C800352C0C /* FoundWordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundWordsView.swift; sourceTree = "<group>"; };
+		4F693B6428B9665800352C0C /* CurrentWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWordView.swift; sourceTree = "<group>"; };
+		4F693B6628B9682200352C0C /* LetterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButton.swift; sourceTree = "<group>"; };
+		4F693B6828B9693800352C0C /* LetterButtonRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,10 @@
 			children = (
 				4F693B3728B9615900352C0C /* Lion_SpellApp.swift */,
 				4F693B3928B9615900352C0C /* ContentView.swift */,
+				4F693B6628B9682200352C0C /* LetterButton.swift */,
+				4F693B6828B9693800352C0C /* LetterButtonRowView.swift */,
+				4F693B6428B9665800352C0C /* CurrentWordView.swift */,
+				4F693B6228B962C800352C0C /* FoundWordsView.swift */,
 				4F693B3B28B9615A00352C0C /* Assets.xcassets */,
 				4F693B4028B9615A00352C0C /* Info.plist */,
 				4F693B3D28B9615A00352C0C /* Preview Content */,
@@ -259,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F693B6328B962C800352C0C /* FoundWordsView.swift in Sources */,
 				4F693B3A28B9615900352C0C /* ContentView.swift in Sources */,
+				4F693B6728B9682200352C0C /* LetterButton.swift in Sources */,
+				4F693B6528B9665800352C0C /* CurrentWordView.swift in Sources */,
 				4F693B3828B9615900352C0C /* Lion_SpellApp.swift in Sources */,
+				4F693B6928B9693800352C0C /* LetterButtonRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
