@@ -8,16 +8,23 @@
 import SwiftUI
 
 struct CurrentWordView: View {
-    let word: String
+    let letters: Array<Character>
     
-    var body: some View {
-        Text(word)
-            .font(.largeTitle)
-    }
-}
+    var body: some View
+    {
+        HStack
+        {
+            ForEach(letters.indices)
+            {
+                index in Text("\(String(letters[index]))")
+                            .font(.largeTitle)
+            }
+            
+        }
+    }}
 
 struct CurrentWordView_Previews: PreviewProvider {
     static var previews: some View {
-        CurrentWordView(word: "lorem")
+        CurrentWordView(letters: ["a", "b", "c", "d", "e"])
     }
 }

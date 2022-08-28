@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct FoundWordsView: View {
-    let words: String
+    let words: Array<String>
     
-    var body: some View {
-        ScrollView(.horizontal)
-        {
+    var body: some View
+    {
+        ScrollView(.horizontal) {
             HStack
             {
-                Text(words)
+                ForEach(words.indices)
+                {
+                    index in Text("\(words[index])")
+                }
             }
             .padding()
         }
@@ -24,6 +27,6 @@ struct FoundWordsView: View {
 
 struct FoundWordsView_Previews: PreviewProvider {
     static var previews: some View {
-        FoundWordsView(words: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ")
+        FoundWordsView(words: ["Lorem","ipsum","dolor","sit","amet","consectetur","adipiscing","elit","sed","do","eiusmod","tempor","incididunt","ut","labore","et","dolore","magna","aliqua"])
     }
 }

@@ -14,7 +14,11 @@ struct LetterButtonRowView: View {
     {
         HStack
         {
-            Text("Hello World!")
+            ForEach(letters.indices)
+            {
+                index in LetterButton(letter: letters[index])
+            }
+            
         }
     }
 }

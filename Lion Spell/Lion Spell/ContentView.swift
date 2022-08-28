@@ -12,11 +12,11 @@ struct ContentView: View {
         VStack {
             // title
             
-            FoundWordsView(words: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ")
+            FoundWordsView(words: ["Lorem","ipsum","dolor","sit","amet","consectetur","adipiscing","elit","sed","do","eiusmod","tempor","incididunt","ut","labore","et","dolore","magna","aliqua"])
             
-            CurrentWordView(word: "lorem")
+            CurrentWordView(letters: ["a", "b", "c", "d", "e"])
             
-            // letter buttons
+            LetterButtonRowView(letters: ["a", "b", "c", "d", "e"])
             
             // backspace / submit buttons
             
