@@ -11,15 +11,33 @@ struct LetterButton: View {
     let letter: Character
     
     var body: some View {
-        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/)
+        
+        ZStack
         {
-            Text(String(letter))
+            Rectangle()
+                .foregroundColor(.white)
+                .cornerRadius(10)
+                .aspectRatio(1, contentMode: .fit)
+            
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/)
+            {
+                Text(String(letter))
+                    .font(.custom("American Typewriter Semibold", size: 42))
+                    .foregroundColor(Color("psuBlue"))
+            }
         }
+        
+        
     }
 }
 
 struct LetterButton_Previews: PreviewProvider {
     static var previews: some View {
-        LetterButton(letter: "a")
+        ZStack{
+            Color("psuBlue")
+                .ignoresSafeArea()
+            
+            LetterButton(letter: "a")
+        }
     }
 }

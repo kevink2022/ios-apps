@@ -12,19 +12,26 @@ struct LetterButtonRowView: View {
     
     var body: some View
     {
-        HStack
+        HStack(spacing:20)
         {
             ForEach(letters.indices)
             {
-                index in LetterButton(letter: letters[index])
+                index in
+                    LetterButton(letter: letters[index])
             }
             
         }
+        .padding(.horizontal)
     }
 }
 
 struct LetterButtonRowView_Previews: PreviewProvider {
     static var previews: some View {
-        LetterButtonRowView(letters: ["a", "b", "c", "d", "e"])
+        ZStack{
+            Color("psuBlue")
+                .ignoresSafeArea()
+            
+            LetterButtonRowView(letters: ["a", "b", "c", "d", "e"])
+        }
     }
 }

@@ -40,11 +40,17 @@ struct MenuButtonView: View {
         }
         .padding()
         .font(.title)
+        .foregroundColor(.white)
     }
 }
 
 struct MenuButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuButtonView()
+        ZStack{
+            Color("psuBlue")
+                .ignoresSafeArea()
+            
+            MenuButtonView()
+        }
     }
 }

@@ -27,6 +27,8 @@ struct ContentView: View {
                 LetterButtonRowView(letters: ["a", "b", "c", "d", "e"])
                 
                 GameButtonView()
+
+                Spacer()
                 
                 ScoreView(score: 15)
                 
@@ -35,10 +37,6 @@ struct ContentView: View {
                 MenuButtonView()
             }
         }
-        
-        
-        
-        
     }
 }
 

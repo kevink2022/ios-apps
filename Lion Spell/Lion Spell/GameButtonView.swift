@@ -14,7 +14,7 @@ struct GameButtonView: View {
             // Backspace button
             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/)
             {
-                Image(systemName: "delete.left")
+                Image(systemName: "delete.left.fill")
             }
             
             Spacer()
@@ -22,7 +22,7 @@ struct GameButtonView: View {
             // Submit Button
             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/)
             {
-                Image(systemName: "paperplane")
+                Image(systemName: "paperplane.fill")
             }
             
             // Note: These button views will likely be split into
@@ -30,12 +30,18 @@ struct GameButtonView: View {
             //       moment I feel it is not necessary.
         }
         .padding()
-        .font(.title)
+        .font(.largeTitle)
+        .foregroundColor(.white)
     }
 }
 
 struct GameButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        GameButtonView()
+        ZStack{
+            Color("psuBlue")
+                .ignoresSafeArea()
+            
+            GameButtonView()
+        }
     }
 }

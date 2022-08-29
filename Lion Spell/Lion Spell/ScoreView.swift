@@ -12,12 +12,18 @@ struct ScoreView: View {
     var body: some View
     {
         Text("\(score)")
-            .font(.largeTitle)
+            .font(.custom("Chalkduster", size: 96))
+            .foregroundColor(.white)
     }
 }
 
 struct ScoreView_Previews: PreviewProvider {
     static var previews: some View {
-        ScoreView(score: 15)
+        ZStack{
+            Color("psuBlue")
+                .ignoresSafeArea()
+            
+            ScoreView(score: 15)
+        }
     }
 }

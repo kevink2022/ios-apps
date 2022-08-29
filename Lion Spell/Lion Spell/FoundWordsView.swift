@@ -12,21 +12,33 @@ struct FoundWordsView: View {
     
     var body: some View
     {
-        ScrollView(.horizontal) {
-            HStack
+            ScrollView(.horizontal)
             {
-                ForEach(words.indices)
+                HStack
                 {
-                    index in Text("\(words[index])")
+                    ForEach(words.indices)
+                    {
+                        index in Text("\(words[index])")
+                    }
                 }
+                .font(.custom("American Typewriter Semibold", size: 24))
+                .padding()
+                .foregroundColor(Color("psuBlue"))
             }
-            .padding()
-        }
+            .background(Color(.white))
+
+        
     }
 }
 
 struct FoundWordsView_Previews: PreviewProvider {
     static var previews: some View {
-        FoundWordsView(words: ["Lorem","ipsum","dolor","sit","amet","consectetur","adipiscing","elit","sed","do","eiusmod","tempor","incididunt","ut","labore","et","dolore","magna","aliqua"])
+        ZStack{
+            Color("psuBlue")
+                .ignoresSafeArea()
+            
+            FoundWordsView(words: ["Lorem","ipsum","dolor","sit","amet","consectetur","adipiscing","elit","sed","do","eiusmod","tempor","incididunt","ut","labore","et","dolore","magna","aliqua"])
+        }
+        
     }
 }
