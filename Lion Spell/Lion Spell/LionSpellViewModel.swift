@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+class ScrambleGameManager : ObservableObject
+{
+    let game = LionSpellGame(choices: 5)
+    
+    
+    
+    // Getters
+    
+    // Setters
+    
+    
+}

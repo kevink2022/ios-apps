@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F16A1E128BC195E00158C26 /* Chalkduster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F16A1E028BC191600158C26 /* Chalkduster.ttf */; };
+		4F68723E28BFFC670077D4C3 /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F68723D28BFFC670077D4C3 /* Words.swift */; };
 		4F693B3828B9615900352C0C /* Lion_SpellApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F693B3728B9615900352C0C /* Lion_SpellApp.swift */; };
 		4F693B3A28B9615900352C0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F693B3928B9615900352C0C /* ContentView.swift */; };
 		4F693B3C28B9615A00352C0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F693B3B28B9615A00352C0C /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		4F16A1E028BC191600158C26 /* Chalkduster.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chalkduster.ttf; sourceTree = "<group>"; };
+		4F68723D28BFFC670077D4C3 /* Words.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
 		4F693B3428B9615900352C0C /* Lion Spell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lion Spell.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F693B3728B9615900352C0C /* Lion_SpellApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lion_SpellApp.swift; sourceTree = "<group>"; };
 		4F693B3928B9615900352C0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				4F693B4028B9615A00352C0C /* Info.plist */,
 				4FF2DF5A28BEB4750069DB95 /* SubViews */,
 				4FF2DF5628BEB44F0069DB95 /* LionSpellModel.swift */,
+				4F68723D28BFFC670077D4C3 /* Words.swift */,
 				4FF2DF5828BEB46B0069DB95 /* LionSpellViewModel.swift */,
 				4F693B3D28B9615A00352C0C /* Preview Content */,
 			);
@@ -319,6 +322,7 @@
 				4F693B6728B9682200352C0C /* LetterButton.swift in Sources */,
 				4F693B6528B9665800352C0C /* CurrentWordView.swift in Sources */,
 				4F693B3828B9615900352C0C /* Lion_SpellApp.swift in Sources */,
+				4F68723E28BFFC670077D4C3 /* Words.swift in Sources */,
 				4F693B6928B9693800352C0C /* LetterButtonRowView.swift in Sources */,
 				4F6E822E28BBF11200F4A2F1 /* TitleView.swift in Sources */,
 			);
