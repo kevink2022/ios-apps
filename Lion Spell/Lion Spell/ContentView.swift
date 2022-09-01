@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var game = ScrambleGameManager()
     
-    
     var body: some View {
         
         ZStack
@@ -28,7 +27,7 @@ struct ContentView: View {
                 
                 CurrentWordView(letters: game.currentWord)
                 
-                LetterButtonRowView(letters: ["a", "b", "c", "d", "e"])
+                LetterButtonRowView(letters: game.letterSet)
                 
                 GameButtonView()
 

@@ -10,7 +10,7 @@ import Foundation
 
 struct LionSpellGame
 {
-    let letterSet   : Set<Character>
+    let letterSet   : Array<Character>
     let letterCount : Int
         
     init(choices letters: Int)
@@ -18,7 +18,7 @@ struct LionSpellGame
         letterCount = letters
         
         var random          : String
-        var potentialSet    : Set<Character>
+        var potentialSet    : Array<Character>
         
         repeat
         {
@@ -40,7 +40,7 @@ struct LionSpellGame
                     }
                     else
                     {
-                        potentialSet.insert(letter)
+                        potentialSet.append(letter)
                     }
                     
                     if potentialSet.count == letterCount
@@ -53,7 +53,7 @@ struct LionSpellGame
             
         } while potentialSet.count < letterCount
         
-        letterSet = potentialSet
+        letterSet = potentialSet.shuffled()
     }
     
     func checkWord(_ word: String) -> Bool

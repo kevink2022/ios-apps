@@ -15,6 +15,9 @@ class ScrambleGameManager : ObservableObject
     var foundWords : Array<String> = []
     var score : Int = 0
     
+    // Would like this to be a let
+    var letterSet : Array<Character> {game.letterSet}
+    
     var submitButtonEnabled : Bool
     {
         // This feels like too much processing for a computed value
