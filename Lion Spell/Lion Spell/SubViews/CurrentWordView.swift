@@ -14,13 +14,23 @@ struct CurrentWordView: View {
     {
         HStack
         {
-            ForEach(letters.indices)
+            if letters.count == 0
             {
-                index in
-                    Text("\(String(letters[index]))")
-                        .font(.custom("Chalkduster", size: 48))
-                        .foregroundColor(.white)
+                Text(" ")
+                    .font(.custom("Chalkduster", size: 48))
+                    .foregroundColor(.white)
             }
+            else
+            {
+                ForEach(letters.indices)
+                {
+                    index in
+                        Text("\(String(letters[index]))")
+                            .font(.custom("Chalkduster", size: 48))
+                            .foregroundColor(.white)
+                }
+            }
+            
             
         }
     }}

@@ -19,7 +19,7 @@ struct LetterButton: View {
                 .cornerRadius(10)
                 .aspectRatio(1, contentMode: .fit)
             
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/)
+            Button(action: {})
             {
                 Text(String(letter))
                     .font(.custom("American Typewriter Semibold", size: 42))

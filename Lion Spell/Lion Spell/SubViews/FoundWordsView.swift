@@ -16,9 +16,16 @@ struct FoundWordsView: View {
             {
                 HStack
                 {
-                    ForEach(words.indices)
+                    if words.count == 0
                     {
-                        index in Text("\(words[index])")
+                        Text(" ")
+                    }
+                    else
+                    {
+                        ForEach(words.indices)
+                        {
+                            index in Text("\(words[index])")
+                        }
                     }
                 }
                 .font(.custom("American Typewriter Semibold", size: 24))

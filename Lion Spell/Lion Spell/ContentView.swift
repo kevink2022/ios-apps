@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var game = ScrambleGameManager()
+    
+    
     var body: some View {
         
         ZStack
@@ -16,13 +19,14 @@ struct ContentView: View {
                 .ignoresSafeArea()
             
             VStack {
+
                 TitleView()
                 
                 Spacer()
                             
-                FoundWordsView(words: ["Lorem","ipsum","dolor","sit","amet","consectetur","adipiscing","elit","sed","do","eiusmod","tempor","incididunt","ut","labore","et","dolore","magna","aliqua"])
+                FoundWordsView(words: game.foundWords)
                 
-                CurrentWordView(letters: ["a", "b", "c", "d", "e"])
+                CurrentWordView(letters: game.currentWord)
                 
                 LetterButtonRowView(letters: ["a", "b", "c", "d", "e"])
                 
@@ -30,7 +34,7 @@ struct ContentView: View {
 
                 Spacer()
                 
-                ScoreView(score: 15)
+                ScoreView(score: game.score)
                 
                 Spacer()
                 

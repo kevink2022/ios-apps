@@ -9,13 +9,62 @@ import Foundation
 
 class ScrambleGameManager : ObservableObject
 {
-    let game = LionSpellGame(choices: 5)
+    var game = LionSpellGame(choices: 5)
     
+    @Published var currentWord : Array<Character> = []
+    var foundWords : Array<String> = []
+    var score : Int = 0
+    
+    var submitButtonEnabled : Bool
+    {
+        // This feels like too much processing for a computed value
+        game.checkWord(String(currentWord))
+    }
+    
+    var deleteButtonEnabled : Bool
+    {
+        if currentWord.count == 0
+        {
+            return false
+        }
+        else
+        {
+            return true
+        }
+    }
+    
+    /* --- BUTTONS --- */
+    
+    func submit()
+    {
+        score += game.wordScore(String(currentWord))
+        foundWords.append(String(currentWord))
+        currentWord = []
+    }
+    
+    func addLetter(_ letter: String)
+    {
+        currentWord += letter
+    }
+    
+    func delete()
+    {
+        currentWord.remove(at: currentWord.endIndex)
+    }
+    
+    func newGame()
+    {
+        game = LionSpellGame(choices: 5)
+        foundWords = []
+        currentWord = []
+        score = 0
+    }
     
     
     // Getters
     
     // Setters
     
-    
 }
+
+
