@@ -11,17 +11,16 @@ class ScrambleGameManager : ObservableObject
 {
     var game = LionSpellGame(choices: 5)
     
-    @Published var currentWord : Array<Character> = []
-    var foundWords : Array<String> = []
+    @Published var currentWord = Word()
+    var foundWords : Array<Word> = []
     var score : Int = 0
     
-    // Would like this to be a let
-    var letterSet : Array<Character> {game.letterSet}
+    var letterSet : Array<Letter> {game.letterSet}
     
     var submitButtonEnabled : Bool
     {
         // This feels like too much processing for a computed value
-        game.checkWord(String(currentWord))
+        game.checkWord(currentWord.string)
     }
     
     var deleteButtonEnabled : Bool
@@ -35,39 +34,33 @@ class ScrambleGameManager : ObservableObject
             return true
         }
     }
-    
-    /* --- BUTTONS --- */
-    
+}
+
+
+// MARK: Intents
+extension ScrambleGameManager {
     func submit()
     {
-        score += game.wordScore(String(currentWord))
-        foundWords.append(String(currentWord))
-        currentWord = []
+        score += game.wordScore(currentWord.string)
+        foundWords.append(currentWord)
+        currentWord = Word()
     }
     
-    func addLetter(_ letter: String)
+    func addLetter(_ letter: Character)
     {
-        currentWord += letter
+        currentWord.append(Letter(letter: letter))
     }
     
-    func delete()
+    func backspace()
     {
-        currentWord.remove(at: currentWord.endIndex)
+        currentWord.backspace()
     }
     
     func newGame()
     {
         game = LionSpellGame(choices: 5)
         foundWords = []
-        currentWord = []
+        currentWord = Word()
         score = 0
     }
-    
-    
-    // Getters
-    
-    // Setters
-    
 }
-
-

@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var game = ScrambleGameManager()
+    @EnvironmentObject var game : ScrambleGameManager
+    //@ObservedObject var game = ScrambleGameManager()
     
     var body: some View {
         
@@ -25,7 +26,7 @@ struct ContentView: View {
                             
                 FoundWordsView(words: game.foundWords)
                 
-                CurrentWordView(letters: game.currentWord)
+                CurrentWordView(word: game.currentWord)
                 
                 LetterButtonRowView(letters: game.letterSet)
                 

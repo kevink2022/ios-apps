@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FoundWordsView: View {
-    let words: Array<String>
+    let words: Array<Word>
     
     var body: some View
     {
@@ -22,9 +22,9 @@ struct FoundWordsView: View {
                     }
                     else
                     {
-                        ForEach(words.indices)
+                        ForEach(words)
                         {
-                            index in Text("\(words[index])")
+                            word in Text("\(word.string)")
                         }
                     }
                 }
@@ -44,7 +44,7 @@ struct FoundWordsView_Previews: PreviewProvider {
             Color("psuBlue")
                 .ignoresSafeArea()
             
-            FoundWordsView(words: ["Lorem","ipsum","dolor","sit","amet","consectetur","adipiscing","elit","sed","do","eiusmod","tempor","incididunt","ut","labore","et","dolore","magna","aliqua"])
+            //FoundWordsView(words: ["Lorem","ipsum","dolor","sit","amet","consectetur","adipiscing","elit","sed","do","eiusmod","tempor","incididunt","ut","labore","et","dolore","magna","aliqua"])
         }
         
     }

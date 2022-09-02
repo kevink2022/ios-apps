@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct LetterButtonRowView: View {
-    let letters: Array<Character>
+    let letters: Array<Letter>
     
     var body: some View
     {
         HStack(spacing:20)
         {
-            ForEach(letters.indices)
+            ForEach(letters)
             {
-                index in
-                    LetterButton(letter: letters[index])
+                letter in
+                    LetterButton(letter: letter)
             }
             
         }
@@ -31,7 +31,7 @@ struct LetterButtonRowView_Previews: PreviewProvider {
             Color("psuBlue")
                 .ignoresSafeArea()
             
-            LetterButtonRowView(letters: ["a", "b", "c", "d", "e"])
+            //LetterButtonRowView(letters: ["a", "b", "c", "d", "e"])
         }
     }
 }

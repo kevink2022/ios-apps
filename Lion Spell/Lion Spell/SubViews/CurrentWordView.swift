@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct CurrentWordView: View {
-    let letters: Array<Character>
+    let word : Word
     
     var body: some View
     {
         HStack
         {
-            if letters.count == 0
+            // Prevents view from taking less space when no word is present
+            if word.count == 0
             {
                 Text(" ")
                     .font(.custom("Chalkduster", size: 48))
@@ -22,10 +23,10 @@ struct CurrentWordView: View {
             }
             else
             {
-                ForEach(letters.indices)
+                ForEach(word.letters)
                 {
-                    index in
-                        Text("\(String(letters[index]))")
+                    letter in
+                        Text("\(String(letter.letter))")
                             .font(.custom("Chalkduster", size: 48))
                             .foregroundColor(.white)
                 }
@@ -41,7 +42,7 @@ struct CurrentWordView_Previews: PreviewProvider {
             Color("psuBlue")
                 .ignoresSafeArea()
             
-            CurrentWordView(letters: ["a", "b", "c", "d", "e"])
+            //CurrentWordView(letters: ["a", "b", "c", "d", "e"])
         }
         
     }
