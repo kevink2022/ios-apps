@@ -17,22 +17,17 @@ class ScrambleGameManager : ObservableObject
     
     var letterSet : Array<Letter> {game.letterSet}
     
-    var submitButtonEnabled : Bool
+    var submitButtonDisabled : Bool
     {
         // This feels like too much processing for a computed value
-        game.checkWord(currentWord.string)
+        if game.checkWord(currentWord.string) { return false }
+        else { return true }
     }
     
-    var deleteButtonEnabled : Bool
+    var backspaceButtonDisabled : Bool
     {
-        if currentWord.count == 0
-        {
-            return false
-        }
-        else
-        {
-            return true
-        }
+        if currentWord.count == 0 { return true }
+        else { return false }
     }
 }
 

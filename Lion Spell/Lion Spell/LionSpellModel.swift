@@ -10,9 +10,10 @@ import Foundation
 
 struct LionSpellGame
 {
-    let letterSet   : Array<Letter>
-    let letterCount : Int
-    let bonus       : Int = 5
+    let letterSet           : Array<Letter>
+    let letterCount         : Int
+    let bonus               : Int = 5
+    let minimumWordLength   : Int = 4
     
     init(choices letters: Int)
     {
@@ -35,7 +36,7 @@ extension LionSpellGame {
     
     func checkWord(_ word: String) -> Bool
     {
-        if word.count > letterCount && Words.words.contains(word)
+        if word.count >= minimumWordLength && Words.words.contains(word)
         {
             return true
         }
@@ -48,7 +49,7 @@ extension LionSpellGame {
     func wordScore(_ word: String) -> Int
     {
 
-        // Check for 5 point bonus
+        // Check for point bonus
         var score = bonus
         for letter in letterSet
         {

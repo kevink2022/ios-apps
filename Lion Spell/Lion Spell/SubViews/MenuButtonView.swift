@@ -12,11 +12,7 @@ struct MenuButtonView: View {
     {
         HStack
         {
-            // New Game button
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/)
-            {
-                Image(systemName: "plus.circle")
-            }
+            NewGameButton()
             
             Spacer()
             

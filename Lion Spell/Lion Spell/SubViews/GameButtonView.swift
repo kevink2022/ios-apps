@@ -11,27 +11,13 @@ struct GameButtonView: View {
     var body: some View {
         HStack
         {
-            // Backspace button
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/)
-            {
-                Image(systemName: "delete.left.fill")
-            }
+            BackspaceButton()
             
             Spacer()
             
-            // Submit Button
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/)
-            {
-                Image(systemName: "paperplane.fill")
-            }
-            
-            // Note: These button views will likely be split into
-            //       their own files into the future, but at the
-            //       moment I feel it is not necessary.
+            SubmitButton()
         }
         .padding()
-        .font(.largeTitle)
-        .foregroundColor(.white)
     }
 }
 
