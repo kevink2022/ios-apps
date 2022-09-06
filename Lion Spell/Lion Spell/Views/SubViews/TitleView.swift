@@ -10,13 +10,12 @@ import SwiftUI
 struct TitleView: View {
     var body: some View
     {
-
         HStack
         {
             Image("lionsticker")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(height: 175)
+                .frame(height: ViewConstants.lionStickerHeight)
             
 
             VStack(alignment: .trailing)
@@ -24,15 +23,18 @@ struct TitleView: View {
                 Text("LION")
                 Text("SPELL")
             }
-            .padding(.leading, -30)
-            .padding(.top, 50)
-            .font(.custom("Chalkduster", size: 48))
+            .padding(.leading, ViewConstants.titleLeadingPadding)
+            .padding(.top, ViewConstants.titleTopPadding)
+            .font(.custom("Chalkduster", size: ViewConstants.largeChalkFontSize))
             .foregroundColor(.white)
-
-            
         }
-        
     }
+}
+
+extension ViewConstants {
+    static let lionStickerHeight : CGFloat = 175
+    static let titleLeadingPadding : CGFloat = -30
+    static let titleTopPadding : CGFloat = 50
 }
 
 struct TitleView_Previews: PreviewProvider {

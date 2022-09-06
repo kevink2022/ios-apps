@@ -12,12 +12,14 @@ struct LionSpellGame
 {
     let letterSet           : Array<Letter>
     let letterCount         : Int
-    let bonus               : Int = 5
-    let minimumWordLength   : Int = 4
+    let bonus               : Int
+    let minimumWordLength   : Int
     
-    init(choices letters: Int)
+    init(letterCount letters: Int, bonus bonusPoints: Int, minimumWordLength min: Int)
     {
-        letterCount = letters
+        letterCount         = letters
+        bonus               = bonusPoints
+        minimumWordLength   = min
         
         let legalCharSet = LionSpellGame.getLegalLetterSet(letterCount: letters)
         var legalLetterSet : Array<Letter> = []
@@ -49,6 +51,11 @@ extension LionSpellGame {
     func wordScore(_ word: String) -> Int
     {
 
+        if word.count == 4
+        {
+            return 1
+        }
+        
         // Check for point bonus
         var score = bonus
         for letter in letterSet
@@ -154,5 +161,18 @@ extension Word //Functions
     mutating func backspace ()
     {
         self.letters.removeLast()
+    }
+    
+    func isContainedIn (_ wordList: Array<Word>) -> Bool
+    {
+        for word in wordList
+        {
+            if word.string == self.string
+            {
+                return true
+            }
+        }
+        
+        return false
     }
 }

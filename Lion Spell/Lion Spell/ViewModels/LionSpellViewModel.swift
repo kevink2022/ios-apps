@@ -7,9 +7,20 @@
 
 import Foundation
 
-class ScrambleGameManager : ObservableObject
+struct InitConstants
 {
-    var game = LionSpellGame(choices: 5)
+    static let letterCount = 5
+    static let bonus       = 5
+    static let minWordLen  = 4
+}
+
+class ScrambleGameManager: ObservableObject
+{
+    var game = LionSpellGame(
+        letterCount: InitConstants.letterCount,
+        bonus: InitConstants.bonus,
+        minimumWordLength: InitConstants.minWordLen
+    )
     
     @Published var currentWord = Word()
     var foundWords : Array<Word> = []
@@ -20,15 +31,11 @@ class ScrambleGameManager : ObservableObject
     var submitButtonDisabled : Bool
     {
         // This feels like too much processing for a computed value
-        if game.checkWord(currentWord.string) { return false }
+        if !currentWord.isContainedIn(foundWords) && game.checkWord(currentWord.string) { return false }
         else { return true }
     }
     
-    var backspaceButtonDisabled : Bool
-    {
-        if currentWord.count == 0 { return true }
-        else { return false }
-    }
+    var backspaceButtonDisabled : Bool { currentWord.count == 0 ? true : false }
 }
 
 
@@ -53,9 +60,16 @@ extension ScrambleGameManager {
     
     func newGame()
     {
-        game = LionSpellGame(choices: 5)
+        game = LionSpellGame(
+            letterCount: InitConstants.letterCount,
+            bonus: InitConstants.bonus,
+            minimumWordLength: InitConstants.minWordLen
+        )
+        
         foundWords = []
         currentWord = Word()
         score = 0
     }
 }
+
+

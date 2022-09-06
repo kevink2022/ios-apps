@@ -17,19 +17,22 @@ struct LetterButton: View {
         {
             Rectangle()
                 .foregroundColor(.white)
-                .cornerRadius(10)
+                .cornerRadius(ViewConstants.letterButtonCornerRadius)
                 .aspectRatio(1, contentMode: .fit)
             
             Button(action: {game.addLetter(letter.letter)})
             {
                 Text(String(letter.letter))
-                    .font(.custom("American Typewriter Semibold", size: 42))
+                    .font(.custom("American Typewriter Semibold", size: ViewConstants.largeTypewriterFontSize))
                     .foregroundColor(Color("psuBlue"))
             }
         }
-        
-        
     }
+}
+
+extension ViewConstants
+{
+    static let letterButtonCornerRadius : CGFloat = 10
 }
 
 struct LetterButton_Previews: PreviewProvider {

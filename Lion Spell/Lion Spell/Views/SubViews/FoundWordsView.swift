@@ -28,13 +28,11 @@ struct FoundWordsView: View {
                         }
                     }
                 }
-                .font(.custom("American Typewriter Semibold", size: 24))
+                .font(.custom("American Typewriter Semibold", size: ViewConstants.smallTypewriterFontSize))
                 .padding()
                 .foregroundColor(Color("psuBlue"))
             }
             .background(Color(.white))
-
-        
     }
 }
 

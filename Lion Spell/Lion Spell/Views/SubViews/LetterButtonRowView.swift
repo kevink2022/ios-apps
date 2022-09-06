@@ -12,7 +12,7 @@ struct LetterButtonRowView: View {
     
     var body: some View
     {
-        HStack(spacing:20)
+        HStack(spacing: ViewConstants.letterButtonRowSpacing)
         {
             ForEach(letters)
             {
@@ -23,6 +23,11 @@ struct LetterButtonRowView: View {
         }
         .padding(.horizontal)
     }
+}
+
+extension ViewConstants
+{
+    static let letterButtonRowSpacing : CGFloat = 20
 }
 
 struct LetterButtonRowView_Previews: PreviewProvider {

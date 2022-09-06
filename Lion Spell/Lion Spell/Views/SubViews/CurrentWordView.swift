@@ -18,7 +18,7 @@ struct CurrentWordView: View {
             if word.count == 0
             {
                 Text(" ")
-                    .font(.custom("Chalkduster", size: 48))
+                    .font(.custom("Chalkduster", size: ViewConstants.largeChalkFontSize))
                     .foregroundColor(.white)
             }
             else
@@ -27,7 +27,7 @@ struct CurrentWordView: View {
                 {
                     letter in
                         Text("\(String(letter.letter))")
-                            .font(.custom("Chalkduster", size: 48))
+                            .font(.custom("Chalkduster", size: ViewConstants.largeChalkFontSize))
                             .foregroundColor(.white)
                 }
             }
