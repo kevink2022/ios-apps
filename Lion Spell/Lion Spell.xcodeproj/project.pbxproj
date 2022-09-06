@@ -27,6 +27,7 @@
 		4F6E822C28BBEF9C00F4A2F1 /* MenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E822B28BBEF9C00F4A2F1 /* MenuButtonView.swift */; };
 		4F6E822E28BBF11200F4A2F1 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E822D28BBF11200F4A2F1 /* TitleView.swift */; };
 		4FD2426528C6FD200090CFD4 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD2426428C6FD200090CFD4 /* ViewConstants.swift */; };
+		4FD2426728C6FFE10090CFD4 /* ScrambleTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD2426628C6FFE10090CFD4 /* ScrambleTypes.swift */; };
 		4FF2DF5728BEB44F0069DB95 /* LionSpellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2DF5628BEB44F0069DB95 /* LionSpellModel.swift */; };
 		4FF2DF5928BEB46B0069DB95 /* LionSpellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2DF5828BEB46B0069DB95 /* LionSpellViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -75,6 +76,7 @@
 		4F6E822B28BBEF9C00F4A2F1 /* MenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonView.swift; sourceTree = "<group>"; };
 		4F6E822D28BBF11200F4A2F1 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		4FD2426428C6FD200090CFD4 /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
+		4FD2426628C6FFE10090CFD4 /* ScrambleTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrambleTypes.swift; sourceTree = "<group>"; };
 		4FF2DF5628BEB44F0069DB95 /* LionSpellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionSpellModel.swift; sourceTree = "<group>"; };
 		4FF2DF5828BEB46B0069DB95 /* LionSpellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionSpellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				4FF2DF5628BEB44F0069DB95 /* LionSpellModel.swift */,
+				4FD2426628C6FFE10090CFD4 /* ScrambleTypes.swift */,
 				4F68723D28BFFC670077D4C3 /* Words.swift */,
 			);
 			path = Models;
@@ -364,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FD2426728C6FFE10090CFD4 /* ScrambleTypes.swift in Sources */,
 				4F6E822C28BBEF9C00F4A2F1 /* MenuButtonView.swift in Sources */,
 				4FF2DF5928BEB46B0069DB95 /* LionSpellViewModel.swift in Sources */,
 				4F693B6328B962C800352C0C /* FoundWordsView.swift in Sources */,
