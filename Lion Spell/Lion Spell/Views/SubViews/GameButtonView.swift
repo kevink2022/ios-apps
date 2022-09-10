@@ -17,7 +17,6 @@ struct GameButtonView: View {
             
             SubmitButton()
         }
-        .padding()
     }
 }
 

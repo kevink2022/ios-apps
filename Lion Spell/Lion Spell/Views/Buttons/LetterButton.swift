@@ -18,12 +18,15 @@ struct LetterButton: View
         {
             ZStack
             {
-                Rectangle()
-                //Pentagon()
-                    //.fill(.white)
-                    .foregroundColor(.white)
-                    .cornerRadius(ViewConstants.letterButtonCornerRadius)
+                
+                //Rectangle()
+                RegularPolygon(sides: 5)
+                    .fill(.white)
+                    //.foregroundColor(.white)
+                    //.cornerRadius(ViewConstants.letterButtonCornerRadius)
                     .aspectRatio(1, contentMode: .fit)
+                
+                
                 
                 Text(String(letter.letter))
                     .font(.custom("American Typewriter Semibold", size: ViewConstants.largeTypewriterFontSize))

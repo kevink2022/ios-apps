@@ -20,24 +20,22 @@ struct ContentView: View {
             
             VStack {
 
-                TitleView()
-                
-                Spacer()
-                            
+                SimpleTitleView()
+                                            
                 FoundWordsView(words: game.foundWords)
                 
                 CurrentWordView(word: game.currentWord)
                 
+                Spacer()
+                
                 LetterButtonRowView(letters: game.letterSet)
                 
-                GameButtonView()
-
                 Spacer()
+                
+                GameButtonView()
                 
                 ScoreView(score: game.score)
-                
-                Spacer()
-                
+                                
                 MenuButtonView()
             }
         }

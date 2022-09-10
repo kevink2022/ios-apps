@@ -34,7 +34,6 @@ struct MenuButtonView: View {
             //       their own files into the future, but at the
             //       moment I feel it is not necessary.
         }
-        .padding()
         .font(.title)
         .foregroundColor(.white)
     }
