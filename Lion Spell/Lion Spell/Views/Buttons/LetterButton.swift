@@ -7,21 +7,24 @@
 
 import SwiftUI
 
-struct LetterButton: View {
+struct LetterButton: View
+{
     @EnvironmentObject var game : ScrambleGameManager
     let letter: Letter
     
-    var body: some View {
-
-        ZStack
+    var body: some View
+    {
+        Button(action: {game.addLetter(letter.letter)})
         {
-            Rectangle()
-                .foregroundColor(.white)
-                .cornerRadius(ViewConstants.letterButtonCornerRadius)
-                .aspectRatio(1, contentMode: .fit)
-            
-            Button(action: {game.addLetter(letter.letter)})
+            ZStack
             {
+                Rectangle()
+                //Pentagon()
+                    //.fill(.white)
+                    .foregroundColor(.white)
+                    .cornerRadius(ViewConstants.letterButtonCornerRadius)
+                    .aspectRatio(1, contentMode: .fit)
+                
                 Text(String(letter.letter))
                     .font(.custom("American Typewriter Semibold", size: ViewConstants.largeTypewriterFontSize))
                     .foregroundColor(Color("psuBlue"))
