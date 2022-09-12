@@ -14,7 +14,6 @@ struct LionSpellGame
     let bonus               : Int
     let minimumWordLength   : Int
     let language            : LionSpellLanguage
-    let legalWords          : Array<String>
     let stats               : LionSpellStatistics
     
     init(letterCount letters: Int, bonus bonusPoints: Int, minimumWordLength min: Int, language lang: LionSpellLanguage)
@@ -34,7 +33,7 @@ struct LionSpellGame
         
         letterSet = legalLetterSet
         
-        (legalWords, stats) = LionSpellGame.initStatistics(letterSet: legalCharSet)
+        stats = LionSpellGame.initStatistics(letterSet: legalLetterSet, bonusPoints: bonus)
     }
 }
 
@@ -82,7 +81,7 @@ extension LionSpellGame
         LionSpellGame.staticWordScore(word, bonusPoints: bonus, charSet: letterSet)
     }
     
-    static func staticWordScore(_ word: String, bonusPoints: Int, charSet: Array<Letter>) -> Int
+    private static func staticWordScore(_ word: String, bonusPoints: Int, charSet: Array<Letter>) -> Int
     {
 
         if word.count == 4
@@ -108,34 +107,28 @@ extension LionSpellGame
     
     // Initializes statics and returns the set of legal words so none of
     // information needs to be recalculated
-    private static func initStatistics (letterSet: Array<Letter>, bonusPoints: Int) -> (Array<String>, LionSpellStatistics)
+    private static func initStatistics (letterSet: Array<Letter>, bonusPoints: Int) -> LionSpellStatistics
     {
-        var legalWords : Array<String> = []
         var stats : LionSpellStatistics = LionSpellStatistics()
-        var hint : LionSpellHint
         
         for word in Words.words
         {
             if word.filter({!letterSet.asCharacters.contains($0)}).isEmpty
             {
-                legalWords.append(word)
                 
-                stats.possibleWords.append(word)
-                stats.possibleScore += LionSpellGame.staticWordScore(word, bonusPoints: bonusPoints, charSet: letterSet)
+                stats.words.append(word)
+                stats.hints.appendHint(word)
+                stats.maxScore += LionSpellGame.staticWordScore(word, bonusPoints: bonusPoints, charSet: letterSet)
                 
                 // Check for Panagram
                 if letterSet.asCharacters.filter({!word.contains($0)}).isEmpty
                 {
-                    stats.possiblePanagrams.append(word)
+                    stats.panagrams.append(word)
                 }
-                
-                if stats.hints.contains(<#T##Self.Element#>)
-                
-                
             }
         }
         
-        return (legalWords, stats)
+        return stats
     }
     
     private static func getLegalLetterSet (letterCount: Int) -> Array<Character>
@@ -159,36 +152,35 @@ enum LionSpellLanguage
 
 struct LionSpellStatistics
 {
-    var possibleWords : Array<String> = []
-    var possibleScore : Int = 0
-    var possiblePanagrams : Array<String> = []
-    var wordLengthPossibilities : Array<LionSpellHint> = []
+    var words       : Array<String> = []
+    var panagrams   : Array<String> = []
+    var hints       : Array<LionSpellHint> = []
+    var maxScore    : Int = 0
 }
 
 extension Array where Element == LionSpellHint
 {
-    func exists(_ hint: LionSpellHint) -> Bool
+    mutating func appendHint(_ newWord: String)
     {
-        for hint in self
+        for index in self.indices
         {
-
+            if self[index].firstLetter == newWord.first && self[index].length == newWord.count
+            {
+                // Found a hint of the same structure
+                self[index].instances.append(newWord)
+                return
+            }
         }
+        
+        // Didn't find a hint, adding new one
+        self.append(LionSpellHint(length: newWord.count, firstLetter: newWord.first!, instances: [newWord]))
     }
 }
 
 struct LionSpellHint : Equatable, Identifiable
 {
-    let id : UUID()
+    let id = UUID()
     let length : Int
     let firstLetter : Character
-    var instances : Int
-}
-
-extension LionSpellHint
-{
-    static func == (lhs: LionSpellHint, rhs: LionSpellHint) -> Bool
-    {
-        lhs.length == rhs.length &&
-        lhs.firstLetter == rhs.firstLetter
-    }
+    var instances : Array<String>
 }
