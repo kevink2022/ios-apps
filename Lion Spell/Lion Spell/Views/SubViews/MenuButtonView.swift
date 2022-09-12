@@ -7,7 +7,10 @@
 
 import SwiftUI
 
-struct MenuButtonView: View {
+struct MenuButtonView: View
+{
+    @Binding var sheet : ShowingSheet?
+    
     var body: some View
     {
         HStack
@@ -17,7 +20,7 @@ struct MenuButtonView: View {
             Spacer()
             
             // Hints button
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/)
+            Button(action: {sheet = .hints})
             {
                 Image(systemName: "info.circle")
             }
@@ -25,7 +28,7 @@ struct MenuButtonView: View {
             Spacer()
             
             // Prefrences Button
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/)
+            Button(action: {sheet = .preferences})
             {
                 Image(systemName: "gearshape")
             }
@@ -45,7 +48,7 @@ struct MenuButtonView_Previews: PreviewProvider {
             Color("psuBlue")
                 .ignoresSafeArea()
             
-            MenuButtonView()
+            //MenuButtonView()
         }
     }
 }

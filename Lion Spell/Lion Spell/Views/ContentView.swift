@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Showing: String, Identifiable, CaseIterable
+enum ShowingSheet: String, Identifiable, CaseIterable
 {
     case hints, preferences
     var id: RawValue { rawValue }
@@ -17,6 +17,7 @@ enum Showing: String, Identifiable, CaseIterable
 struct ContentView: View {
     @EnvironmentObject var game : ScrambleGameManager
     //@ObservedObject var game = ScrambleGameManager()
+    @State var sheet : ShowingSheet?
     
     var body: some View {
         
@@ -35,7 +36,7 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                LetterButtonRowView(letters: game.letterSet)
+                LetterButtonRowView(letters: game.model.letterSet)
                 
                 Spacer()
                 
@@ -43,7 +44,22 @@ struct ContentView: View {
                 
                 ScoreView(score: game.score)
                                 
-                MenuButtonView()
+                MenuButtonView(sheet: $sheet)
+            }
+            .padding()
+            .sheet(item: $sheet)
+            {
+                item in
+                
+                switch item
+                {
+                case .hints         : HintsSheet()
+                case .preferences   : PreferencesSheet()
+                }
+            }
+            .onDisappear
+            {
+                sheet = nil
             }
         }
     }

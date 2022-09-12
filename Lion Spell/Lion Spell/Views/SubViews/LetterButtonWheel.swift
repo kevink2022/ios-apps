@@ -14,12 +14,14 @@ struct LetterButtonWheel: View {
     
     var body: some View {
         
-        let angle = (2.0*Double.pi/Double(game.model.letterCount-1))
-
-        ZStack
-        {
-            LetterButton(letter: game.letterSet[0])
-                .rotationEffect(Angle(degrees: ViewConstants.baseRotationAngle))
+        Text("hello")
+        
+//        let angle = (2.0*Double.pi/Double(game.model.letterCount-1))
+//
+//        ZStack
+//        {
+//            LetterButton(letter: game.letterSet[0])
+//                .rotationEffect(Angle(degrees: ViewConstants.baseRotationAngle))
             
 //            ForEach(game.letterSet.indices)
 //            { index in
@@ -34,7 +36,7 @@ struct LetterButtonWheel: View {
 //                        y: CGFloat( * ViewConstants.baseOffset)
 //                    )
 //            }
-        }
+        //}
     }
 }
 

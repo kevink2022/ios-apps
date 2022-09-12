@@ -32,6 +32,10 @@
 		4F908AD128CD47C200E5D10D /* RegularPolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908AD028CD47C200E5D10D /* RegularPolygon.swift */; };
 		4F908AD328CD5AFF00E5D10D /* LetterButtonWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908AD228CD5AFF00E5D10D /* LetterButtonWheel.swift */; };
 		4F908AD528CE604D00E5D10D /* HintsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908AD428CE604D00E5D10D /* HintsView.swift */; };
+		4F908AD828CFC82F00E5D10D /* PreferencesSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908AD728CFC82F00E5D10D /* PreferencesSheet.swift */; };
+		4F908ADA28CFC83B00E5D10D /* HintsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908AD928CFC83B00E5D10D /* HintsSheet.swift */; };
+		4F908ADC28CFCC8800E5D10D /* FrenchWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908ADB28CFCC8800E5D10D /* FrenchWords.swift */; };
+		4F908ADE28CFCEED00E5D10D /* LionSpellPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908ADD28CFCEED00E5D10D /* LionSpellPreferences.swift */; };
 		4FD2426528C6FD200090CFD4 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD2426428C6FD200090CFD4 /* ViewConstants.swift */; };
 		4FD2426728C6FFE10090CFD4 /* ScrambleTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD2426628C6FFE10090CFD4 /* ScrambleTypes.swift */; };
 		4FF2DF5728BEB44F0069DB95 /* LionSpellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2DF5628BEB44F0069DB95 /* LionSpellModel.swift */; };
@@ -87,6 +91,10 @@
 		4F908AD028CD47C200E5D10D /* RegularPolygon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularPolygon.swift; sourceTree = "<group>"; };
 		4F908AD228CD5AFF00E5D10D /* LetterButtonWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonWheel.swift; sourceTree = "<group>"; };
 		4F908AD428CE604D00E5D10D /* HintsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintsView.swift; sourceTree = "<group>"; };
+		4F908AD728CFC82F00E5D10D /* PreferencesSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSheet.swift; sourceTree = "<group>"; };
+		4F908AD928CFC83B00E5D10D /* HintsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintsSheet.swift; sourceTree = "<group>"; };
+		4F908ADB28CFCC8800E5D10D /* FrenchWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrenchWords.swift; path = ../../../../../Downloads/FrenchWords.swift; sourceTree = "<group>"; };
+		4F908ADD28CFCEED00E5D10D /* LionSpellPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionSpellPreferences.swift; sourceTree = "<group>"; };
 		4FD2426428C6FD200090CFD4 /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
 		4FD2426628C6FFE10090CFD4 /* ScrambleTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrambleTypes.swift; sourceTree = "<group>"; };
 		4FF2DF5628BEB44F0069DB95 /* LionSpellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionSpellModel.swift; sourceTree = "<group>"; };
@@ -121,6 +129,7 @@
 		4F16A1DF28BC190100158C26 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				4F908ADB28CFCC8800E5D10D /* FrenchWords.swift */,
 				4F68723D28BFFC670077D4C3 /* Words.swift */,
 				4F16A1E028BC191600158C26 /* Chalkduster.ttf */,
 			);
@@ -153,10 +162,10 @@
 				4F693B3728B9615900352C0C /* Lion_SpellApp.swift */,
 				4F16A1DF28BC190100158C26 /* fonts */,
 				4F693B3B28B9615A00352C0C /* Assets.xcassets */,
-				4FD2425F28C6FC370090CFD4 /* Models */,
 				4F693B4028B9615A00352C0C /* Info.plist */,
-				4FD2426128C6FC8D0090CFD4 /* Views */,
+				4FD2425F28C6FC370090CFD4 /* Models */,
 				4FD2426028C6FC530090CFD4 /* ViewModels */,
+				4FD2426128C6FC8D0090CFD4 /* Views */,
 				4F693B3D28B9615A00352C0C /* Preview Content */,
 			);
 			path = "Lion Spell";
@@ -204,11 +213,21 @@
 			path = Shapes;
 			sourceTree = "<group>";
 		};
+		4F908AD628CFC81800E5D10D /* Sheets */ = {
+			isa = PBXGroup;
+			children = (
+				4F908AD728CFC82F00E5D10D /* PreferencesSheet.swift */,
+				4F908AD928CFC83B00E5D10D /* HintsSheet.swift */,
+			);
+			path = Sheets;
+			sourceTree = "<group>";
+		};
 		4FD2425F28C6FC370090CFD4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				4FF2DF5628BEB44F0069DB95 /* LionSpellModel.swift */,
 				4FD2426628C6FFE10090CFD4 /* ScrambleTypes.swift */,
+				4F908ADD28CFCEED00E5D10D /* LionSpellPreferences.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				4F693B3928B9615900352C0C /* ContentView.swift */,
+				4F908AD628CFC81800E5D10D /* Sheets */,
 				4F908AC928CC0BC800E5D10D /* Shapes */,
 				4F908AC628CC07E700E5D10D /* Previews */,
 				4FD2426328C6FD080090CFD4 /* Resources */,
@@ -402,20 +422,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FD2426728C6FFE10090CFD4 /* ScrambleTypes.swift in Sources */,
+				4F908ADE28CFCEED00E5D10D /* LionSpellPreferences.swift in Sources */,
 				4F908AC528CC07AB00E5D10D /* SimpleTitleView.swift in Sources */,
 				4F6E822C28BBEF9C00F4A2F1 /* MenuButtonView.swift in Sources */,
 				4FF2DF5928BEB46B0069DB95 /* LionSpellViewModel.swift in Sources */,
 				4F693B6328B962C800352C0C /* FoundWordsView.swift in Sources */,
 				4F6E822A28BBEE7400F4A2F1 /* ScoreView.swift in Sources */,
 				4F908AD328CD5AFF00E5D10D /* LetterButtonWheel.swift in Sources */,
+				4F908ADC28CFCC8800E5D10D /* FrenchWords.swift in Sources */,
 				4F618DA228C26C8600CD503F /* SubmitButton.swift in Sources */,
 				4FF2DF5728BEB44F0069DB95 /* LionSpellModel.swift in Sources */,
 				4F618DA028C26BF200CD503F /* BackspaceButton.swift in Sources */,
 				4F6E822828BBED3F00F4A2F1 /* GameButtonView.swift in Sources */,
 				4F693B3A28B9615900352C0C /* ContentView.swift in Sources */,
 				4F693B6728B9682200352C0C /* LetterButton.swift in Sources */,
+				4F908AD828CFC82F00E5D10D /* PreferencesSheet.swift in Sources */,
 				4F908AC828CC080300E5D10D /* BackgroundColorPreview.swift in Sources */,
 				4F693B6528B9665800352C0C /* CurrentWordView.swift in Sources */,
+				4F908ADA28CFC83B00E5D10D /* HintsSheet.swift in Sources */,
 				4F908ACF28CC10C200E5D10D /* ViewExtensions.swift in Sources */,
 				4F908AD128CD47C200E5D10D /* RegularPolygon.swift in Sources */,
 				4FD2426528C6FD200090CFD4 /* ViewConstants.swift in Sources */,

@@ -123,7 +123,7 @@ extension LionSpellGame
                 // Check for Panagram
                 if letterSet.asCharacters.filter({!word.contains($0)}).isEmpty
                 {
-                    stats.panagrams.append(word)
+                    stats.pangrams.append(word)
                 }
             }
         }
@@ -134,10 +134,14 @@ extension LionSpellGame
     private static func getLegalLetterSet (letterCount: Int) -> Array<Character>
     {
         var potentialSet : Array<Character>
-
+        var string : String
+        
         repeat
         {
-            potentialSet = Array(Set(Words.words.randomElement()!))
+            string = Words.words.randomElement()!
+            potentialSet = Array(Set(string))
+            print(string)
+            print(potentialSet)
         }
         while potentialSet.count < 5
         
@@ -145,15 +149,10 @@ extension LionSpellGame
     }
 }
 
-enum LionSpellLanguage
-{
-    case english, french
-}
-
 struct LionSpellStatistics
 {
     var words       : Array<String> = []
-    var panagrams   : Array<String> = []
+    var pangrams    : Array<String> = []
     var hints       : Array<LionSpellHint> = []
     var maxScore    : Int = 0
 }
@@ -175,6 +174,23 @@ extension Array where Element == LionSpellHint
         // Didn't find a hint, adding new one
         self.append(LionSpellHint(length: newWord.count, firstLetter: newWord.first!, instances: [newWord]))
     }
+    
+    //mutating func
+
+    func lengths () -> Array<Int>
+    {
+        var len: Array<Int> = []
+        
+        for hint in self
+        {
+            if !len.contains(hint.length)
+            {
+                len.append(hint.length)
+            }
+        }
+    
+        return len
+    }
 }
 
 struct LionSpellHint : Equatable, Identifiable
@@ -184,3 +200,5 @@ struct LionSpellHint : Equatable, Identifiable
     let firstLetter : Character
     var instances : Array<String>
 }
+
+

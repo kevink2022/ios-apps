@@ -12,21 +12,26 @@ struct InitConstants
     static let letterCount = 5
     static let bonus       = 5
     static let minWordLen  = 4
+    static let lang : LionSpellLanguage = .english
 }
 
 class ScrambleGameManager: ObservableObject
 {
     var model = LionSpellGame(
-        letterCount: InitConstants.letterCount,
-        bonus: InitConstants.bonus,
-        minimumWordLength: InitConstants.minWordLen
+        letterCount:        InitConstants.letterCount,
+        bonus:              InitConstants.bonus,
+        minimumWordLength:  InitConstants.minWordLen,
+        language:           InitConstants.lang
     )
     
     @Published var currentWord = Word()
     var foundWords : Array<Word> = []
     var score : Int = 0
     
-    var letterSet : Array<Letter> {model.letterSet}
+    @Published var preferences = LionSpellPreferences() { didSet {newGame()} }
+    
+    
+    //var letterSet : Array<Letter> {model.letterSet}
     
     var submitButtonDisabled : Bool
     {
@@ -61,9 +66,10 @@ extension ScrambleGameManager {
     func newGame()
     {
         model = LionSpellGame(
-            letterCount: InitConstants.letterCount,
-            bonus: InitConstants.bonus,
-            minimumWordLength: InitConstants.minWordLen
+            letterCount:        preferences.difficulty.literal,
+            bonus:              InitConstants.bonus,
+            minimumWordLength:  InitConstants.minWordLen,
+            language:           preferences.language
         )
         
         foundWords = []
@@ -72,4 +78,10 @@ extension ScrambleGameManager {
     }
 }
 
+struct ScramblePreferences
+{
+    
+    
+    
+}
 
