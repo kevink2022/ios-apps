@@ -20,7 +20,7 @@ struct LetterButton: View
             {
                 
                 //Rectangle()
-                RegularPolygon(sides: 5)
+                RegularPolygon(sides: game.model.letterCount - 1)
                     .fill(.white)
                     //.foregroundColor(.white)
                     //.cornerRadius(ViewConstants.letterButtonCornerRadius)

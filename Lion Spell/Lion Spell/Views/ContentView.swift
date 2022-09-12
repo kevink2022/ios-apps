@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+enum Showing: String, Identifiable, CaseIterable
+{
+    case hints, preferences
+    var id: RawValue { rawValue }
+}
+
+
 struct ContentView: View {
     @EnvironmentObject var game : ScrambleGameManager
     //@ObservedObject var game = ScrambleGameManager()

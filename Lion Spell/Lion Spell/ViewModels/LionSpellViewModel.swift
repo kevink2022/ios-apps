@@ -16,7 +16,7 @@ struct InitConstants
 
 class ScrambleGameManager: ObservableObject
 {
-    var game = LionSpellGame(
+    var model = LionSpellGame(
         letterCount: InitConstants.letterCount,
         bonus: InitConstants.bonus,
         minimumWordLength: InitConstants.minWordLen
@@ -26,12 +26,12 @@ class ScrambleGameManager: ObservableObject
     var foundWords : Array<Word> = []
     var score : Int = 0
     
-    var letterSet : Array<Letter> {game.letterSet}
+    var letterSet : Array<Letter> {model.letterSet}
     
     var submitButtonDisabled : Bool
     {
         // This feels like too much processing for a computed value
-        if !currentWord.isContainedIn(foundWords) && game.checkWord(currentWord.string) { return false }
+        if !currentWord.isContainedIn(foundWords) && model.checkWord(currentWord.string) { return false }
         else { return true }
     }
     
@@ -43,7 +43,7 @@ class ScrambleGameManager: ObservableObject
 extension ScrambleGameManager {
     func submit()
     {
-        score += game.wordScore(currentWord.string)
+        score += model.wordScore(currentWord.string)
         foundWords.append(currentWord)
         currentWord = Word()
     }
@@ -60,7 +60,7 @@ extension ScrambleGameManager {
     
     func newGame()
     {
-        game = LionSpellGame(
+        model = LionSpellGame(
             letterCount: InitConstants.letterCount,
             bonus: InitConstants.bonus,
             minimumWordLength: InitConstants.minWordLen

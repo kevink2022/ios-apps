@@ -30,6 +30,8 @@
 		4F908AC828CC080300E5D10D /* BackgroundColorPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908AC728CC080300E5D10D /* BackgroundColorPreview.swift */; };
 		4F908ACF28CC10C200E5D10D /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908ACE28CC10C200E5D10D /* ViewExtensions.swift */; };
 		4F908AD128CD47C200E5D10D /* RegularPolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908AD028CD47C200E5D10D /* RegularPolygon.swift */; };
+		4F908AD328CD5AFF00E5D10D /* LetterButtonWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908AD228CD5AFF00E5D10D /* LetterButtonWheel.swift */; };
+		4F908AD528CE604D00E5D10D /* HintsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908AD428CE604D00E5D10D /* HintsView.swift */; };
 		4FD2426528C6FD200090CFD4 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD2426428C6FD200090CFD4 /* ViewConstants.swift */; };
 		4FD2426728C6FFE10090CFD4 /* ScrambleTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD2426628C6FFE10090CFD4 /* ScrambleTypes.swift */; };
 		4FF2DF5728BEB44F0069DB95 /* LionSpellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2DF5628BEB44F0069DB95 /* LionSpellModel.swift */; };
@@ -83,6 +85,8 @@
 		4F908AC728CC080300E5D10D /* BackgroundColorPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorPreview.swift; sourceTree = "<group>"; };
 		4F908ACE28CC10C200E5D10D /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		4F908AD028CD47C200E5D10D /* RegularPolygon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularPolygon.swift; sourceTree = "<group>"; };
+		4F908AD228CD5AFF00E5D10D /* LetterButtonWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonWheel.swift; sourceTree = "<group>"; };
+		4F908AD428CE604D00E5D10D /* HintsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintsView.swift; sourceTree = "<group>"; };
 		4FD2426428C6FD200090CFD4 /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
 		4FD2426628C6FFE10090CFD4 /* ScrambleTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrambleTypes.swift; sourceTree = "<group>"; };
 		4FF2DF5628BEB44F0069DB95 /* LionSpellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionSpellModel.swift; sourceTree = "<group>"; };
@@ -261,6 +265,8 @@
 				4F6E822D28BBF11200F4A2F1 /* TitleView.swift */,
 				4F6E822728BBED3F00F4A2F1 /* GameButtonView.swift */,
 				4F908AC428CC07AB00E5D10D /* SimpleTitleView.swift */,
+				4F908AD228CD5AFF00E5D10D /* LetterButtonWheel.swift */,
+				4F908AD428CE604D00E5D10D /* HintsView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -401,6 +407,7 @@
 				4FF2DF5928BEB46B0069DB95 /* LionSpellViewModel.swift in Sources */,
 				4F693B6328B962C800352C0C /* FoundWordsView.swift in Sources */,
 				4F6E822A28BBEE7400F4A2F1 /* ScoreView.swift in Sources */,
+				4F908AD328CD5AFF00E5D10D /* LetterButtonWheel.swift in Sources */,
 				4F618DA228C26C8600CD503F /* SubmitButton.swift in Sources */,
 				4FF2DF5728BEB44F0069DB95 /* LionSpellModel.swift in Sources */,
 				4F618DA028C26BF200CD503F /* BackspaceButton.swift in Sources */,
@@ -413,6 +420,7 @@
 				4F908AD128CD47C200E5D10D /* RegularPolygon.swift in Sources */,
 				4FD2426528C6FD200090CFD4 /* ViewConstants.swift in Sources */,
 				4F693B3828B9615900352C0C /* Lion_SpellApp.swift in Sources */,
+				4F908AD528CE604D00E5D10D /* HintsView.swift in Sources */,
 				4F68723E28BFFC670077D4C3 /* Words.swift in Sources */,
 				4F693B6928B9693800352C0C /* LetterButtonRowView.swift in Sources */,
 				4F618DA428C277DA00CD503F /* NewGameButton.swift in Sources */,

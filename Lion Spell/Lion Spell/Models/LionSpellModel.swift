@@ -7,19 +7,22 @@
 
 import Foundation
 
-
 struct LionSpellGame
 {
     let letterSet           : Array<Letter>
     let letterCount         : Int
     let bonus               : Int
     let minimumWordLength   : Int
+    let language            : LionSpellLanguage
+    let legalWords          : Array<String>
+    let stats               : LionSpellStatistics
     
-    init(letterCount letters: Int, bonus bonusPoints: Int, minimumWordLength min: Int)
+    init(letterCount letters: Int, bonus bonusPoints: Int, minimumWordLength min: Int, language lang: LionSpellLanguage)
     {
         letterCount         = letters
         bonus               = bonusPoints
         minimumWordLength   = min
+        language            = lang
         
         let legalCharSet = LionSpellGame.getLegalLetterSet(letterCount: letters)
         var legalLetterSet : Array<Letter> = []
@@ -30,11 +33,37 @@ struct LionSpellGame
         }
         
         letterSet = legalLetterSet
+        
+        (legalWords, stats) = LionSpellGame.initStatistics(letterSet: legalCharSet)
+    }
+}
+
+// MARK: Computed Vars
+extension LionSpellGame
+{
+    var possibleWords : Int
+    {
+        12
+    }
+    
+    var possiblePoints : Int
+    {
+        12
+    }
+    
+    var possiblePanagrams : Int
+    {
+        12
     }
 }
 
 // MARK: Functions
-extension LionSpellGame {
+extension LionSpellGame
+{
+    func possibleWords(startingLetter: Character, wordLength: Int) -> Int
+    {
+        12
+    }
     
     func checkWord(_ word: String) -> Bool
     {
@@ -50,6 +79,11 @@ extension LionSpellGame {
     
     func wordScore(_ word: String) -> Int
     {
+        LionSpellGame.staticWordScore(word, bonusPoints: bonus, charSet: letterSet)
+    }
+    
+    static func staticWordScore(_ word: String, bonusPoints: Int, charSet: Array<Letter>) -> Int
+    {
 
         if word.count == 4
         {
@@ -57,8 +91,8 @@ extension LionSpellGame {
         }
         
         // Check for point bonus
-        var score = bonus
-        for letter in letterSet
+        var score = bonusPoints
+        for letter in charSet
         {
             if word.contains(letter.letter) == false
             {
@@ -72,49 +106,89 @@ extension LionSpellGame {
         return score
     }
     
-    private static func getLegalLetterSet (letterCount: Int) -> Array<Character>
+    // Initializes statics and returns the set of legal words so none of
+    // information needs to be recalculated
+    private static func initStatistics (letterSet: Array<Letter>, bonusPoints: Int) -> (Array<String>, LionSpellStatistics)
     {
-        var random          : String
-        var potentialSet    : Array<Character>
+        var legalWords : Array<String> = []
+        var stats : LionSpellStatistics = LionSpellStatistics()
+        var hint : LionSpellHint
         
-        repeat
+        for word in Words.words
         {
-            // I understand force unwrapping is dangerous,
-            // but I know Words.words will never be empty
-            // so it is safe here.
-            random = Words.words.randomElement()!
-            potentialSet = []
-            
-            // Check a random word from the list, if it has 5
-            // unique characters, make them the character set
-            if random.count >= letterCount
+            if word.filter({!letterSet.asCharacters.contains($0)}).isEmpty
             {
-                for letter in random
+                legalWords.append(word)
+                
+                stats.possibleWords.append(word)
+                stats.possibleScore += LionSpellGame.staticWordScore(word, bonusPoints: bonusPoints, charSet: letterSet)
+                
+                // Check for Panagram
+                if letterSet.asCharacters.filter({!word.contains($0)}).isEmpty
                 {
-                    // If character is not unique, break
-                    if potentialSet.contains(letter)
-                    {
-                        break
-                    }
-                    // Else, add the unique character to the potential set
-                    else
-                    {
-                        potentialSet.append(letter)
-                    }
-                    
-                    // If the desired number of unique letters has been
-                    // found, break
-                    if potentialSet.count == letterCount
-                    {
-                        break
-                    }
+                    stats.possiblePanagrams.append(word)
                 }
                 
+                if stats.hints.contains(<#T##Self.Element#>)
+                
+                
             }
-            
-        // Loop until a valid set has been found
-        } while potentialSet.count < letterCount
+        }
+        
+        return (legalWords, stats)
+    }
+    
+    private static func getLegalLetterSet (letterCount: Int) -> Array<Character>
+    {
+        var potentialSet : Array<Character>
+
+        repeat
+        {
+            potentialSet = Array(Set(Words.words.randomElement()!))
+        }
+        while potentialSet.count < 5
         
         return potentialSet.shuffled()
+    }
+}
+
+enum LionSpellLanguage
+{
+    case english, french
+}
+
+struct LionSpellStatistics
+{
+    var possibleWords : Array<String> = []
+    var possibleScore : Int = 0
+    var possiblePanagrams : Array<String> = []
+    var wordLengthPossibilities : Array<LionSpellHint> = []
+}
+
+extension Array where Element == LionSpellHint
+{
+    func exists(_ hint: LionSpellHint) -> Bool
+    {
+        for hint in self
+        {
+
+        }
+    }
+}
+
+struct LionSpellHint : Equatable, Identifiable
+{
+    let id : UUID()
+    let length : Int
+    let firstLetter : Character
+    var instances : Int
+}
+
+extension LionSpellHint
+{
+    static func == (lhs: LionSpellHint, rhs: LionSpellHint) -> Bool
+    {
+        lhs.length == rhs.length &&
+        lhs.firstLetter == rhs.firstLetter
     }
 }

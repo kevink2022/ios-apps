@@ -14,6 +14,21 @@ struct Letter : Identifiable
     let id : UUID = UUID()
 }
 
+extension Array where Element == Letter
+{
+    var asCharacters : Array<Character>
+    {
+        var characters : Array<Character> = []
+        
+        for letter in self
+        {
+            characters.append(letter.letter)
+        }
+        
+        return characters
+    }
+}
+
 // MARK: Word Struct
 struct Word : Identifiable
 {
@@ -63,3 +78,19 @@ extension Word //Functions
         return false
     }
 }
+
+extension Array where Element == Word
+{
+    var asCharacters : Array<String>
+    {
+        var strings : Array<String> = []
+        
+        for word in self
+        {
+            strings.append(word.string)
+        }
+        
+        return strings
+    }
+}
+
