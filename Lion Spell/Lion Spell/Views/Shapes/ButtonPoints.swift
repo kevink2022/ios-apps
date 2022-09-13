@@ -39,27 +39,5 @@ extension ButtonPoint
         
         return points
     }
-    
-//    static func getPoints(buttons: Int, width: Double, height: Double) -> Array<ButtonPoint>
-//    {
-//        let radius = min(width, height)/3
-//        let angle = (2.0*Double.pi/Double(buttons-1))
-//        let centerX = width/2
-//        let centerY = height/2
-//
-//        var points : Array<ButtonPoint> = []
-//
-//        points.append(ButtonPoint(point: CGPoint(x: centerX, y: centerX), index: 0))
-//
-//        for side in 1..<buttons
-//        {
-//            let x = centerX + CGFloat(cos( Double(side) * angle) * radius)
-//            let y = centerY + CGFloat(sin( Double(side) * angle) * radius)
-//
-//            points.append(ButtonPoint(point: CGPoint(x: x, y: y), index: side))
-//        }
-//
-//        return points
-//    }
 }
 

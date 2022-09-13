@@ -39,33 +39,9 @@ struct LionSpellGame
     }
 }
 
-// MARK: Computed Vars
-extension LionSpellGame
-{
-    var possibleWords : Int
-    {
-        12
-    }
-    
-    var possiblePoints : Int
-    {
-        12
-    }
-    
-    var possiblePanagrams : Int
-    {
-        12
-    }
-}
-
 // MARK: Functions
 extension LionSpellGame
 {
-    func possibleWords(startingLetter: Character, wordLength: Int) -> Int
-    {
-        12
-    }
-    
     func checkWord(_ word: String) -> Bool
     {
         if word.count >= minimumWordLength && wordSet.contains(word)
@@ -136,14 +112,10 @@ extension LionSpellGame
     private static func getLegalLetterSet (letterCount: Int, wordSet: Array<String>) -> Array<Character>
     {
         var potentialSet : Array<Character>
-        var string : String
         
         repeat
         {
-            string = wordSet.randomElement()!
-            potentialSet = Array(Set(string))
-            print(string)
-            print(potentialSet)
+            potentialSet = Array(Set(wordSet.randomElement()!))
         }
         while potentialSet.count != letterCount
         

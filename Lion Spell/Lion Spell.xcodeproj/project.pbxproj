@@ -31,7 +31,6 @@
 		4F908ACF28CC10C200E5D10D /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908ACE28CC10C200E5D10D /* ViewExtensions.swift */; };
 		4F908AD128CD47C200E5D10D /* RegularPolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908AD028CD47C200E5D10D /* RegularPolygon.swift */; };
 		4F908AD328CD5AFF00E5D10D /* LetterButtonWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908AD228CD5AFF00E5D10D /* LetterButtonWheel.swift */; };
-		4F908AD528CE604D00E5D10D /* HintsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908AD428CE604D00E5D10D /* HintsView.swift */; };
 		4F908AD828CFC82F00E5D10D /* PreferencesSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908AD728CFC82F00E5D10D /* PreferencesSheet.swift */; };
 		4F908ADA28CFC83B00E5D10D /* HintsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908AD928CFC83B00E5D10D /* HintsSheet.swift */; };
 		4F908ADC28CFCC8800E5D10D /* FrenchWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908ADB28CFCC8800E5D10D /* FrenchWords.swift */; };
@@ -92,7 +91,6 @@
 		4F908ACE28CC10C200E5D10D /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		4F908AD028CD47C200E5D10D /* RegularPolygon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularPolygon.swift; sourceTree = "<group>"; };
 		4F908AD228CD5AFF00E5D10D /* LetterButtonWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonWheel.swift; sourceTree = "<group>"; };
-		4F908AD428CE604D00E5D10D /* HintsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintsView.swift; sourceTree = "<group>"; };
 		4F908AD728CFC82F00E5D10D /* PreferencesSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSheet.swift; sourceTree = "<group>"; };
 		4F908AD928CFC83B00E5D10D /* HintsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintsSheet.swift; sourceTree = "<group>"; };
 		4F908ADB28CFCC8800E5D10D /* FrenchWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrenchWords.swift; path = ../../../../../Downloads/FrenchWords.swift; sourceTree = "<group>"; };
@@ -292,7 +290,6 @@
 				4F6E822728BBED3F00F4A2F1 /* GameButtonView.swift */,
 				4F908AC428CC07AB00E5D10D /* SimpleTitleView.swift */,
 				4F908AD228CD5AFF00E5D10D /* LetterButtonWheel.swift */,
-				4F908AD428CE604D00E5D10D /* HintsView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -452,7 +449,6 @@
 				4F908AD128CD47C200E5D10D /* RegularPolygon.swift in Sources */,
 				4FD2426528C6FD200090CFD4 /* ViewConstants.swift in Sources */,
 				4F693B3828B9615900352C0C /* Lion_SpellApp.swift in Sources */,
-				4F908AD528CE604D00E5D10D /* HintsView.swift in Sources */,
 				4F68723E28BFFC670077D4C3 /* Words.swift in Sources */,
 				4F693B6928B9693800352C0C /* LetterButtonRowView.swift in Sources */,
 				4F618DA428C277DA00CD503F /* NewGameButton.swift in Sources */,

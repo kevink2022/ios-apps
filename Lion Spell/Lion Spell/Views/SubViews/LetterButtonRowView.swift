@@ -19,7 +19,6 @@ struct LetterButtonRowView: View {
                 letter in
                 LetterButton(letter: letter, index: 0)
             }
-            
         }
         .padding(.horizontal)
     }

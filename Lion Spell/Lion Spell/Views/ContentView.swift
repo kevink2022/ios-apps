@@ -36,7 +36,6 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                //LetterButtonRowView(letters: game.model.letterSet)
                 ZStack
                 {
                     GeometryReader
@@ -46,7 +45,7 @@ struct ContentView: View {
                         LetterButtonWheel(buttonCount: game.model.letterCount, points: ButtonPoint.getPoints(buttons: game.model.letterCount, frame: geo.frame(in: .local)))
                     }
                     
-                }//.padding()
+                }
                 
                 Spacer()
                 

@@ -33,9 +33,6 @@ struct MenuButtonView: View
                 Image(systemName: "gearshape")
             }
             
-            // Note: These button views will likely be split into
-            //       their own files into the future, but at the
-            //       moment I feel it is not necessary.
         }
         .font(.title)
         .foregroundColor(.white)

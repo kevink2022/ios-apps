@@ -19,15 +19,9 @@ struct LetterButton: View
         {
             ZStack
             {
-                
-                //Rectangle()
                 RegularPolygon(sides: game.model.letterCount - 1)
                     .fill(index == 0 ? .yellow : .white)
-                    //.foregroundColor(.white)
-                    //.cornerRadius(ViewConstants.letterButtonCornerRadius)
                     .aspectRatio(1, contentMode: .fit)
-                
-                
                 
                 Text(String(letter.letter))
                     .font(.custom("American Typewriter Semibold", size: ViewConstants.largeTypewriterFontSize*3))
