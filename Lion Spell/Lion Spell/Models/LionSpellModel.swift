@@ -23,7 +23,7 @@ struct LionSpellGame
         bonus               = bonusPoints
         minimumWordLength   = min
         language            = lang
-        wordSet             = (lang == .english) ? Words.words : frenchWords
+        wordSet             = (lang == .english) ? Words.words : Words.frenchWords
         
         let legalCharSet = LionSpellGame.getLegalLetterSet(letterCount: letters, wordSet: wordSet)
         var legalLetterSet : Array<Letter> = []

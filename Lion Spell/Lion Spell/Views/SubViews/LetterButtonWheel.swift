@@ -41,6 +41,9 @@ struct LetterButtonWheel: View {
     }
 }
 
+// These view constants are optimized for the iPhone 13 and 13 pro.
+// For whatever reason, the center point is different depending on the device.
+// For the 5 button shift, that is just bad code
 extension ViewConstants
 {
     static let fiveButtonOffset : Double = 90

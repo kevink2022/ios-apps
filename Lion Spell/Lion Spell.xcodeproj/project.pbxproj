@@ -33,7 +33,6 @@
 		4F908AD328CD5AFF00E5D10D /* LetterButtonWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908AD228CD5AFF00E5D10D /* LetterButtonWheel.swift */; };
 		4F908AD828CFC82F00E5D10D /* PreferencesSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908AD728CFC82F00E5D10D /* PreferencesSheet.swift */; };
 		4F908ADA28CFC83B00E5D10D /* HintsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908AD928CFC83B00E5D10D /* HintsSheet.swift */; };
-		4F908ADC28CFCC8800E5D10D /* FrenchWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908ADB28CFCC8800E5D10D /* FrenchWords.swift */; };
 		4F908ADE28CFCEED00E5D10D /* LionSpellPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908ADD28CFCEED00E5D10D /* LionSpellPreferences.swift */; };
 		4F908AE028D0015900E5D10D /* LionSpellStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908ADF28D0015900E5D10D /* LionSpellStatistics.swift */; };
 		4F908AE228D01C0500E5D10D /* ButtonPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908AE128D01C0500E5D10D /* ButtonPoints.swift */; };
@@ -93,7 +92,6 @@
 		4F908AD228CD5AFF00E5D10D /* LetterButtonWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonWheel.swift; sourceTree = "<group>"; };
 		4F908AD728CFC82F00E5D10D /* PreferencesSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSheet.swift; sourceTree = "<group>"; };
 		4F908AD928CFC83B00E5D10D /* HintsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintsSheet.swift; sourceTree = "<group>"; };
-		4F908ADB28CFCC8800E5D10D /* FrenchWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrenchWords.swift; path = ../../../../../Downloads/FrenchWords.swift; sourceTree = "<group>"; };
 		4F908ADD28CFCEED00E5D10D /* LionSpellPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionSpellPreferences.swift; sourceTree = "<group>"; };
 		4F908ADF28D0015900E5D10D /* LionSpellStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionSpellStatistics.swift; sourceTree = "<group>"; };
 		4F908AE128D01C0500E5D10D /* ButtonPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPoints.swift; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 		4F16A1DF28BC190100158C26 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				4F908ADB28CFCC8800E5D10D /* FrenchWords.swift */,
 				4F68723D28BFFC670077D4C3 /* Words.swift */,
 				4F16A1E028BC191600158C26 /* Chalkduster.ttf */,
 			);
@@ -433,7 +430,6 @@
 				4F693B6328B962C800352C0C /* FoundWordsView.swift in Sources */,
 				4F6E822A28BBEE7400F4A2F1 /* ScoreView.swift in Sources */,
 				4F908AD328CD5AFF00E5D10D /* LetterButtonWheel.swift in Sources */,
-				4F908ADC28CFCC8800E5D10D /* FrenchWords.swift in Sources */,
 				4F618DA228C26C8600CD503F /* SubmitButton.swift in Sources */,
 				4FF2DF5728BEB44F0069DB95 /* LionSpellModel.swift in Sources */,
 				4F618DA028C26BF200CD503F /* BackspaceButton.swift in Sources */,
