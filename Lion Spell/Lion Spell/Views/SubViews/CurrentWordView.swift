@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CurrentWordView: View {
+    @EnvironmentObject var game : ScrambleGameManager
     let word : Word
     
     var body: some View
@@ -28,7 +29,7 @@ struct CurrentWordView: View {
                     letter in
                         Text("\(String(letter.letter))")
                             .font(.custom("Chalkduster", size: ViewConstants.largeChalkFontSize))
-                            .foregroundColor(.white)
+                            .foregroundColor(letter.letter == game.model.letterSet[0].letter ? .yellow : .white)
                 }
             }
             

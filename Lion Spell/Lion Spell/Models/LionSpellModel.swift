@@ -91,7 +91,7 @@ extension LionSpellGame
         
         for word in wordSet
         {
-            if word.filter({!letterSet.asCharacters.contains($0)}).isEmpty
+            if word.contains(letterSet[0].letter) &&  word.filter({!letterSet.asCharacters.contains($0)}).isEmpty
             {
                 
                 stats.words.append(word)
