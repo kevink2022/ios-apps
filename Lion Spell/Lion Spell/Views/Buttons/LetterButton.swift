@@ -11,6 +11,7 @@ struct LetterButton: View
 {
     @EnvironmentObject var game : ScrambleGameManager
     let letter: Letter
+    let index: Int
     
     var body: some View
     {
@@ -21,7 +22,7 @@ struct LetterButton: View
                 
                 //Rectangle()
                 RegularPolygon(sides: game.model.letterCount - 1)
-                    .fill(.white)
+                    .fill(index == 0 ? .yellow : .white)
                     //.foregroundColor(.white)
                     //.cornerRadius(ViewConstants.letterButtonCornerRadius)
                     .aspectRatio(1, contentMode: .fit)
@@ -29,7 +30,9 @@ struct LetterButton: View
                 
                 
                 Text(String(letter.letter))
-                    .font(.custom("American Typewriter Semibold", size: ViewConstants.largeTypewriterFontSize))
+                    .font(.custom("American Typewriter Semibold", size: ViewConstants.largeTypewriterFontSize*3))
+                    // This is real creative
+                    .rotationEffect(Angle(degrees: -90 - (index == 0 ? 180 : 0) - (game.model.letterCount == 7 ? 90 : 0)))
                     .foregroundColor(Color("psuBlue"))
             }
         }

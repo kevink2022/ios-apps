@@ -17,7 +17,7 @@ struct LetterButtonRowView: View {
             ForEach(letters)
             {
                 letter in
-                    LetterButton(letter: letter)
+                LetterButton(letter: letter, index: 0)
             }
             
         }

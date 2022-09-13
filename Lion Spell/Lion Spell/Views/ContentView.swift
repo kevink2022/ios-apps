@@ -36,17 +36,28 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                LetterButtonRowView(letters: game.model.letterSet)
+                //LetterButtonRowView(letters: game.model.letterSet)
+                ZStack
+                {
+                    GeometryReader
+                    {
+                        geo in
+                        
+                        LetterButtonWheel(buttonCount: game.model.letterCount, points: ButtonPoint.getPoints(buttons: game.model.letterCount, frame: geo.frame(in: .local)))
+                    }
+                    
+                }//.padding()
                 
                 Spacer()
                 
                 GameButtonView()
+                    .padding(.horizontal)
                 
                 ScoreView(score: game.score)
                                 
                 MenuButtonView(sheet: $sheet)
+                    .padding(.horizontal)
             }
-            .padding()
             .sheet(item: $sheet)
             {
                 item in

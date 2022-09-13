@@ -36,7 +36,7 @@ class ScrambleGameManager: ObservableObject
     var submitButtonDisabled : Bool
     {
         // This feels like too much processing for a computed value
-        if !currentWord.isContainedIn(foundWords) && model.checkWord(currentWord.string) { return false }
+        if !currentWord.isContainedIn(foundWords) && model.stats.words.contains(currentWord.string) { return false }
         else { return true }
     }
     

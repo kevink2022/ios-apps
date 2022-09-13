@@ -13,6 +13,7 @@ struct LionSpellGame
     let letterCount         : Int
     let bonus               : Int
     let minimumWordLength   : Int
+    let wordSet             : Array<String>
     let language            : LionSpellLanguage
     let stats               : LionSpellStatistics
     
@@ -22,8 +23,9 @@ struct LionSpellGame
         bonus               = bonusPoints
         minimumWordLength   = min
         language            = lang
+        wordSet             = (lang == .english) ? Words.words : frenchWords
         
-        let legalCharSet = LionSpellGame.getLegalLetterSet(letterCount: letters)
+        let legalCharSet = LionSpellGame.getLegalLetterSet(letterCount: letters, wordSet: wordSet)
         var legalLetterSet : Array<Letter> = []
         
         for index in 0..<letters
@@ -33,7 +35,7 @@ struct LionSpellGame
         
         letterSet = legalLetterSet
         
-        stats = LionSpellGame.initStatistics(letterSet: legalLetterSet, bonusPoints: bonus)
+        stats = LionSpellGame.initStatistics(letterSet: legalLetterSet, bonusPoints: bonus, wordSet: wordSet)
     }
 }
 
@@ -66,7 +68,7 @@ extension LionSpellGame
     
     func checkWord(_ word: String) -> Bool
     {
-        if word.count >= minimumWordLength && Words.words.contains(word)
+        if word.count >= minimumWordLength && wordSet.contains(word)
         {
             return true
         }
@@ -107,11 +109,11 @@ extension LionSpellGame
     
     // Initializes statics and returns the set of legal words so none of
     // information needs to be recalculated
-    private static func initStatistics (letterSet: Array<Letter>, bonusPoints: Int) -> LionSpellStatistics
+    private static func initStatistics (letterSet: Array<Letter>, bonusPoints: Int, wordSet: Array<String>) -> LionSpellStatistics
     {
         var stats : LionSpellStatistics = LionSpellStatistics()
         
-        for word in Words.words
+        for word in wordSet
         {
             if word.filter({!letterSet.asCharacters.contains($0)}).isEmpty
             {
@@ -131,74 +133,23 @@ extension LionSpellGame
         return stats
     }
     
-    private static func getLegalLetterSet (letterCount: Int) -> Array<Character>
+    private static func getLegalLetterSet (letterCount: Int, wordSet: Array<String>) -> Array<Character>
     {
         var potentialSet : Array<Character>
         var string : String
         
         repeat
         {
-            string = Words.words.randomElement()!
+            string = wordSet.randomElement()!
             potentialSet = Array(Set(string))
             print(string)
             print(potentialSet)
         }
-        while potentialSet.count < 5
+        while potentialSet.count != letterCount
         
         return potentialSet.shuffled()
     }
 }
 
-struct LionSpellStatistics
-{
-    var words       : Array<String> = []
-    var pangrams    : Array<String> = []
-    var hints       : Array<LionSpellHint> = []
-    var maxScore    : Int = 0
-}
-
-extension Array where Element == LionSpellHint
-{
-    mutating func appendHint(_ newWord: String)
-    {
-        for index in self.indices
-        {
-            if self[index].firstLetter == newWord.first && self[index].length == newWord.count
-            {
-                // Found a hint of the same structure
-                self[index].instances.append(newWord)
-                return
-            }
-        }
-        
-        // Didn't find a hint, adding new one
-        self.append(LionSpellHint(length: newWord.count, firstLetter: newWord.first!, instances: [newWord]))
-    }
-    
-    //mutating func
-
-    func lengths () -> Array<Int>
-    {
-        var len: Array<Int> = []
-        
-        for hint in self
-        {
-            if !len.contains(hint.length)
-            {
-                len.append(hint.length)
-            }
-        }
-    
-        return len
-    }
-}
-
-struct LionSpellHint : Equatable, Identifiable
-{
-    let id = UUID()
-    let length : Int
-    let firstLetter : Character
-    var instances : Array<String>
-}
 
 
