@@ -8,10 +8,16 @@
 import SwiftUI
 
 @main
-struct PentominoesApp: App {
-    var body: some Scene {
-        WindowGroup {
+struct PentominoesApp: App
+{
+    @StateObject var game = PentominoManager()
+    
+    var body: some Scene
+    {
+        WindowGroup
+        {
             ContentView()
+                .environmentObject(game)
         }
     }
 }
