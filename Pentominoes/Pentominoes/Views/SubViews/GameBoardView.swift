@@ -7,11 +7,26 @@
 
 import SwiftUI
 
-struct GameBoardView: View {
-    var body: some View {
-        ZStack
+struct GameBoardView: View
+{
+    @EnvironmentObject var game : PentominoManager
+    
+    var body: some View
+    {
+        ZStack(alignment: .topLeading)
         {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Image(game.currentBoard)
+            
+            ForEach(game.pieces, id: \.self.tile.name)
+            {
+                piece in
+                
+                Image(piece.tile.name)
+                    .position(
+                        x: CGFloat(piece.position.x),
+                        y: CGFloat(piece.position.y)
+                    )
+            }
         }
     }
 }

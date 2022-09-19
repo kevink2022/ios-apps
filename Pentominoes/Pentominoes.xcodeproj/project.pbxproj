@@ -20,6 +20,10 @@
 		4F6E6E5E28D9081F00CE6FA6 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E5D28D9081F00CE6FA6 /* StorageManager.swift */; };
 		4F6E6E6228D90DAA00CE6FA6 /* GameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E6128D90DAA00CE6FA6 /* GameBoardView.swift */; };
 		4F6E6E6528D91B0300CE6FA6 /* FileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E6428D91B0300CE6FA6 /* FileInfo.swift */; };
+		4F6E6E6728D91EC100CE6FA6 /* ButtonColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E6628D91EC100CE6FA6 /* ButtonColumn.swift */; };
+		4F6E6E6928D91EEA00CE6FA6 /* BoardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E6828D91EEA00CE6FA6 /* BoardButton.swift */; };
+		4F6E6E6B28D925CE00CE6FA6 /* ResetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E6A28D925CE00CE6FA6 /* ResetButton.swift */; };
+		4F6E6E6D28D925E000CE6FA6 /* SolveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E6C28D925DF00CE6FA6 /* SolveButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,10 @@
 		4F6E6E5D28D9081F00CE6FA6 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		4F6E6E6128D90DAA00CE6FA6 /* GameBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardView.swift; sourceTree = "<group>"; };
 		4F6E6E6428D91B0300CE6FA6 /* FileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileInfo.swift; sourceTree = "<group>"; };
+		4F6E6E6628D91EC100CE6FA6 /* ButtonColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonColumn.swift; sourceTree = "<group>"; };
+		4F6E6E6828D91EEA00CE6FA6 /* BoardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardButton.swift; sourceTree = "<group>"; };
+		4F6E6E6A28D925CE00CE6FA6 /* ResetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetButton.swift; sourceTree = "<group>"; };
+		4F6E6E6C28D925DF00CE6FA6 /* SolveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolveButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,9 +156,9 @@
 		4F6E6E4D28D8FDCF00CE6FA6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4F6E6E2328D8FD3400CE6FA6 /* ContentView.swift */,
 				4F6E6E6028D9089200CE6FA6 /* Buttons */,
 				4F6E6E5F28D9088500CE6FA6 /* SubViews */,
-				4F6E6E2328D8FD3400CE6FA6 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,8 +175,8 @@
 		4F6E6E5528D9037000CE6FA6 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				4F6E6E5628D9037000CE6FA6 /* Solutions.json */,
 				4F6E6E5728D9037000CE6FA6 /* Tiles.json */,
+				4F6E6E5628D9037000CE6FA6 /* Solutions.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -185,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				4F6E6E6128D90DAA00CE6FA6 /* GameBoardView.swift */,
+				4F6E6E6628D91EC100CE6FA6 /* ButtonColumn.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -192,6 +201,9 @@
 		4F6E6E6028D9089200CE6FA6 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				4F6E6E6828D91EEA00CE6FA6 /* BoardButton.swift */,
+				4F6E6E6A28D925CE00CE6FA6 /* ResetButton.swift */,
+				4F6E6E6C28D925DF00CE6FA6 /* SolveButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -335,12 +347,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F6E6E6728D91EC100CE6FA6 /* ButtonColumn.swift in Sources */,
 				4F6E6E5228D8FF3B00CE6FA6 /* Model.swift in Sources */,
 				4F6E6E5C28D9081600CE6FA6 /* PentominoManager.swift in Sources */,
 				4F6E6E5928D9073100CE6FA6 /* PentominoGame.swift in Sources */,
+				4F6E6E6B28D925CE00CE6FA6 /* ResetButton.swift in Sources */,
 				4F6E6E5E28D9081F00CE6FA6 /* StorageManager.swift in Sources */,
 				4F6E6E2428D8FD3400CE6FA6 /* ContentView.swift in Sources */,
+				4F6E6E6928D91EEA00CE6FA6 /* BoardButton.swift in Sources */,
 				4F6E6E6528D91B0300CE6FA6 /* FileInfo.swift in Sources */,
+				4F6E6E6D28D925E000CE6FA6 /* SolveButton.swift in Sources */,
 				4F6E6E6228D90DAA00CE6FA6 /* GameBoardView.swift in Sources */,
 				4F6E6E2228D8FD3400CE6FA6 /* PentominoesApp.swift in Sources */,
 			);

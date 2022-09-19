@@ -10,12 +10,14 @@ import Foundation
 /// Convenient struct for generating URL and exists property
 /// for a file in the documents directory
 /// All this is unneeded in iOS16!
-struct FileInfo {
+struct FileInfo
+{
     let name : String
     let url : URL
     let exists : Bool
     
-    init(for filename:String) {
+    init(for filename:String)
+    {
         name = filename
         let fileManager = FileManager.default
         let documentURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
@@ -23,7 +25,8 @@ struct FileInfo {
         exists = fileManager.fileExists(atPath: url.path)
     }
     
-    private init(name:String, url:URL, exists:Bool) {
+    private init(name:String, url:URL, exists:Bool)
+    {
         self.init(for:"")
     }
 }

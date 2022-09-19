@@ -9,19 +9,28 @@ import SwiftUI
 
 struct ContentView: View
 {
+    @EnvironmentObject var game : PentominoManager
+    
     var body: some View
     {
         HStack
         {
-            // Left column of buttons
+            VStack
+            {
+                ButtonColumn(boardButtons: game.model.boardNames.dropLast(3))
+                
+                ResetButton()
+            }
             
-            // Center Column
+            GameBoardView()
             
-            // Right Column
+            VStack
+            {
+                ButtonColumn(boardButtons: Array(game.model.boardNames.dropFirst(3)))
+                
+                SolveButton()
+            }
         }
-        
-        Text("Hello, world!")
-            .padding()
     }
 }
 
@@ -29,6 +38,11 @@ struct ContentView_Previews: PreviewProvider
 {
     static var previews: some View
     {
-        ContentView()
+        Group {
+            ContentView()
+                .environmentObject(PentominoManager())
+            ContentView()
+                .environmentObject(PentominoManager())
+        }
     }
 }
