@@ -13,22 +13,40 @@ struct ContentView: View
     
     var body: some View
     {
-        HStack
+        ZStack
         {
-            VStack
-            {
-                ButtonColumn(boardButtons: game.model.boardNames.dropLast(3))
-                
-                ResetButton()
-            }
+            Color(.orange)
+                .ignoresSafeArea()
             
-            GameBoardView()
-            
-            VStack
+            HStack
             {
-                ButtonColumn(boardButtons: Array(game.model.boardNames.dropFirst(3)))
+                Spacer()
                 
-                SolveButton()
+                VStack
+                {
+                    ButtonColumn(boardButtons: game.model.boardNames.dropLast(3))
+                    
+                    ResetButton()
+                    
+                    Spacer()
+                }
+                .padding(.top, 40)
+                
+                GameBoardView()
+                    .frame(width: 560)
+                    .padding()
+                
+                VStack
+                {
+                    ButtonColumn(boardButtons: Array(game.model.boardNames.dropFirst(3)))
+                    
+                    SolveButton()
+                    
+                    Spacer()
+                }
+                .padding(.top, 40)
+                
+                Spacer()
             }
         }
     }

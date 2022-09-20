@@ -22,6 +22,7 @@ struct BoardButton: View
         {
             Image(boardTitle + "button")
         }
+        .padding()
     }
 }
 

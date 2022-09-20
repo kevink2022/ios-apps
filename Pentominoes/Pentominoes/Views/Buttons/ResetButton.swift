@@ -9,7 +9,16 @@ import SwiftUI
 
 struct ResetButton: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button
+        {
+            
+        }
+        label:
+        {
+            Text("Reset")
+                .font(.largeTitle)
+                .foregroundColor(.red)
+        }
     }
 }
 

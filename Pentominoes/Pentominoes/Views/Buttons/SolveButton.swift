@@ -7,9 +7,20 @@
 
 import SwiftUI
 
-struct SolveButton: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct SolveButton: View
+{
+    var body: some View
+    {
+        Button
+        {
+            
+        }
+        label:
+        {
+            Text("Solve")
+                .font(.largeTitle)
+                .foregroundColor(.red)
+        }
     }
 }
 
