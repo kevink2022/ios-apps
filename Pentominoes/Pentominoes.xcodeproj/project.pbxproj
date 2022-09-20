@@ -14,7 +14,6 @@
 		4F6E6E3328D8FD3500CE6FA6 /* PentominoesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E3228D8FD3500CE6FA6 /* PentominoesTests.swift */; };
 		4F6E6E3D28D8FD3500CE6FA6 /* PentominoesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E3C28D8FD3500CE6FA6 /* PentominoesUITests.swift */; };
 		4F6E6E3F28D8FD3500CE6FA6 /* PentominoesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E3E28D8FD3500CE6FA6 /* PentominoesUITestsLaunchTests.swift */; };
-		4F6E6E5228D8FF3B00CE6FA6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E5128D8FF3B00CE6FA6 /* Model.swift */; };
 		4F6E6E5928D9073100CE6FA6 /* PentominoGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E5828D9073100CE6FA6 /* PentominoGame.swift */; };
 		4F6E6E5C28D9081600CE6FA6 /* PentominoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E5B28D9081600CE6FA6 /* PentominoManager.swift */; };
 		4F6E6E5E28D9081F00CE6FA6 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E5D28D9081F00CE6FA6 /* StorageManager.swift */; };
@@ -26,6 +25,8 @@
 		4F6E6E6D28D925E000CE6FA6 /* SolveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E6C28D925DF00CE6FA6 /* SolveButton.swift */; };
 		4F6E6E6E28D933DD00CE6FA6 /* Tiles.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F6E6E5728D9037000CE6FA6 /* Tiles.json */; };
 		4F6E6E6F28D933DD00CE6FA6 /* Solutions.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F6E6E5628D9037000CE6FA6 /* Solutions.json */; };
+		4F6E6E7228D96E3300CE6FA6 /* PieceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E7128D96E3300CE6FA6 /* PieceView.swift */; };
+		4F6E6E7428D96F9400CE6FA6 /* PentominosTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E7328D96F9400CE6FA6 /* PentominosTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +57,6 @@
 		4F6E6E3828D8FD3500CE6FA6 /* PentominoesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PentominoesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F6E6E3C28D8FD3500CE6FA6 /* PentominoesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PentominoesUITests.swift; sourceTree = "<group>"; };
 		4F6E6E3E28D8FD3500CE6FA6 /* PentominoesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PentominoesUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		4F6E6E5128D8FF3B00CE6FA6 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = "../../../../../Downloads/Pentomino Assets 2/Model.swift"; sourceTree = "<group>"; };
 		4F6E6E5628D9037000CE6FA6 /* Solutions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Solutions.json; sourceTree = "<group>"; };
 		4F6E6E5728D9037000CE6FA6 /* Tiles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Tiles.json; sourceTree = "<group>"; };
 		4F6E6E5828D9073100CE6FA6 /* PentominoGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PentominoGame.swift; sourceTree = "<group>"; };
@@ -68,6 +68,8 @@
 		4F6E6E6828D91EEA00CE6FA6 /* BoardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardButton.swift; sourceTree = "<group>"; };
 		4F6E6E6A28D925CE00CE6FA6 /* ResetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetButton.swift; sourceTree = "<group>"; };
 		4F6E6E6C28D925DF00CE6FA6 /* SolveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolveButton.swift; sourceTree = "<group>"; };
+		4F6E6E7128D96E3300CE6FA6 /* PieceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceView.swift; sourceTree = "<group>"; };
+		4F6E6E7328D96F9400CE6FA6 /* PentominosTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PentominosTypes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,8 +170,8 @@
 		4F6E6E4E28D8FF1B00CE6FA6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4F6E6E5128D8FF3B00CE6FA6 /* Model.swift */,
 				4F6E6E5828D9073100CE6FA6 /* PentominoGame.swift */,
+				4F6E6E7328D96F9400CE6FA6 /* PentominosTypes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,6 +198,7 @@
 			children = (
 				4F6E6E6128D90DAA00CE6FA6 /* GameBoardView.swift */,
 				4F6E6E6628D91EC100CE6FA6 /* ButtonColumn.swift */,
+				4F6E6E7128D96E3300CE6FA6 /* PieceView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -352,16 +355,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F6E6E6728D91EC100CE6FA6 /* ButtonColumn.swift in Sources */,
-				4F6E6E5228D8FF3B00CE6FA6 /* Model.swift in Sources */,
 				4F6E6E5C28D9081600CE6FA6 /* PentominoManager.swift in Sources */,
 				4F6E6E5928D9073100CE6FA6 /* PentominoGame.swift in Sources */,
 				4F6E6E6B28D925CE00CE6FA6 /* ResetButton.swift in Sources */,
+				4F6E6E7428D96F9400CE6FA6 /* PentominosTypes.swift in Sources */,
 				4F6E6E5E28D9081F00CE6FA6 /* StorageManager.swift in Sources */,
 				4F6E6E2428D8FD3400CE6FA6 /* ContentView.swift in Sources */,
 				4F6E6E6928D91EEA00CE6FA6 /* BoardButton.swift in Sources */,
 				4F6E6E6528D91B0300CE6FA6 /* FileInfo.swift in Sources */,
 				4F6E6E6D28D925E000CE6FA6 /* SolveButton.swift in Sources */,
 				4F6E6E6228D90DAA00CE6FA6 /* GameBoardView.swift in Sources */,
+				4F6E6E7228D96E3300CE6FA6 /* PieceView.swift in Sources */,
 				4F6E6E2228D8FD3400CE6FA6 /* PentominoesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

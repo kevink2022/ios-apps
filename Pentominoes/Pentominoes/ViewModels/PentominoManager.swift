@@ -9,12 +9,12 @@ import Foundation
 
 class PentominoManager : ObservableObject
 {
-    let model : PentominoGame
-    var pieces : Array<Piece>
+    var model : PentominoGame
     
     @Published var currentBoard : String
     
     private let tileManager : StorageManager<[Tile]>
+    private let solutionManager : StorageManager<[Solution]>
     
     init()
     {
@@ -22,11 +22,17 @@ class PentominoManager : ObservableObject
         
         let tiles = tileManager.modelData ?? []
         
-        model = PentominoGame(tiles: tiles)
+        solutionManager = StorageManager(fileName: "Solutions")
         
-        pieces = PentominoManager.initPositions(tiles: tiles)
+        let solutions = solutionManager.modelData ?? []
+        
+        model = PentominoGame(tiles: tiles, solutions: solutions)
+        
+        model.setPieces(pieces: PentominoManager.initPositions(pieces: model.pieces))
                 
-        currentBoard = "Board1"
+        currentBoard = PentominoConstants.DefaultBoard
+        
+        print(model.pieces)
     }
  
     func chooseBoard(title board: String)
@@ -34,21 +40,16 @@ class PentominoManager : ObservableObject
         currentBoard = board
     }
     
-    static private func initPositions(tiles t: Array<Tile>) -> Array<Piece>
+    static private func initPositions(pieces: [Piece]) -> Array<Piece>
     {
-        var pieces : Array<Piece> = []
+        var _pieces : Array<Piece> = pieces
         var x = LayoutConstants.x_inital
         var y = LayoutConstants.y_inital
         
-        for tile in t
+        for index in _pieces.indices
         {
-            pieces.append(Piece(tile: tile, position: Position()))
-        }
-        
-        for index in pieces.indices
-        {
-            pieces[index].position.x = x
-            pieces[index].position.y = y
+            _pieces[index].position.x = x
+            _pieces[index].position.y = y
             
             x += LayoutConstants.x_step
             
@@ -59,7 +60,7 @@ class PentominoManager : ObservableObject
             }
         }
         
-        return pieces
+        return _pieces
     }
 }
 

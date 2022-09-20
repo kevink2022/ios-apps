@@ -9,17 +9,28 @@ import Foundation
 
 struct PentominoGame
 {
-    let boardNames : Array<String> = ["Board0", "Board1", "Board2", "Board3", "Board4", "Board5"]
-    let solutions : Int = 0 // Not needed for assign 1
+    let boardNames : Array<String> = PentominoConstants.Boards
+    let solutions : Array<Solution>
+    var pieces : Array<Piece>
     
-    // Not piece as pieces need to be mutable
-    // This is subject to change however
-    let tiles : Array<Tile>
-    
-    init(tiles t: [Tile])
+    init(tiles t: [Tile], solutions s: [Solution])
     {
-        tiles = t
+        solutions = s
+        
+        var _pieces : Array<Piece> = []
+        
+        for tile in t
+        {
+            _pieces.append(Piece(tile: tile, position: Position()))
+        }
+        
+        pieces = _pieces
     }
     
-    
+    mutating func setPieces(pieces p: Array<Piece>)
+    {
+        self.pieces = p
+    }
 }
+
+

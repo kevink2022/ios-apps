@@ -17,15 +17,9 @@ struct GameBoardView: View
         {
             Image(game.currentBoard)
             
-            ForEach(game.pieces, id: \.self.tile.name)
+            ForEach(game.model.pieces, id: \.self.tile.name)
             {
-                piece in
-                
-                Image(piece.tile.name)
-                    .position(
-                        x: CGFloat(piece.position.x),
-                        y: CGFloat(piece.position.y)
-                    )
+                piece in PieceView(piece: piece)
             }
         }
     }
