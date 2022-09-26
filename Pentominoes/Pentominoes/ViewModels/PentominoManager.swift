@@ -31,9 +31,6 @@ class PentominoManager : ObservableObject
         currentBoard = PentominoConstants.DefaultBoard
         
         model.setPieces(pieces: PentominoManager.initPositions(pieces: model.pieces))
-
-        
-        print(model.pieces)
     }
  
     func chooseBoard(title board: String)

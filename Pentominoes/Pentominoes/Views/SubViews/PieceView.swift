@@ -36,9 +36,15 @@ struct PieceView: View
         ZStack
         {
             Image(piece.tile.name)
+            
+            VStack
+            {
+                Text("(\(piece.position.x), \(piece.position.y))")
                 
-            Text("(\(piece.position.x), \(piece.position.y))")
-                .font(.title)
+                Text("(\(piece.x_literal), \(piece.y_literal))")
+
+            }
+            .font(.title)
         
         }
         .position(

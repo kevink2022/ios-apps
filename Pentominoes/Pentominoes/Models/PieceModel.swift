@@ -22,14 +22,14 @@ extension Piece
     {
         let block = LayoutConstants.block_size
         
-        return (self.position.x * block) + (self.tile.width * block) + (self.tile.width%2 * block/2)
+        return (self.position.x * block) + (self.tile.width/2 * block) + (self.tile.width%2 * block/2)
     }
     
     var y_literal : Int
     {
         let block = LayoutConstants.block_size
         
-        return (self.position.y * block) + (self.tile.height * block) + (self.tile.height%2 * block/2)
+        return (self.position.y * block) + (self.tile.height/2 * block) + (self.tile.height%2 * block/2)
     }
     
 }
