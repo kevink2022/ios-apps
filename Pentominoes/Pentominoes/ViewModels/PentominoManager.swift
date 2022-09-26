@@ -71,4 +71,5 @@ struct LayoutConstants
     static let x_step   = 160
     static let y_step   = 200
     static let x_row_count = 4
+    static let block_size  = 40
 }
