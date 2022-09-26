@@ -17,9 +17,9 @@ struct GameBoardView: View
         {
             Image(game.currentBoard)
             
-            ForEach(game.model.pieces, id: \.self.tile.name)
+            ForEach($game.model.pieces, id: \.self.tile.name)
             {
-                piece in PieceView(piece: piece)
+                $piece in PieceView(piece: $piece)
             }
         }
     }

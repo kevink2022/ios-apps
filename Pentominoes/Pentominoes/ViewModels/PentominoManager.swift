@@ -66,10 +66,10 @@ class PentominoManager : ObservableObject
 
 struct LayoutConstants
 {
-    static let y_inital = 700
-    static let x_inital = 40
-    static let x_step   = 160
-    static let y_step   = 200
+    static let y_inital = 17
+    static let x_inital = 1
+    static let x_step   = 4
+    static let y_step   = 5
     static let x_row_count = 4
     static let block_size  = 40
 }
