@@ -9,7 +9,7 @@ import Foundation
 
 class PentominoManager : ObservableObject
 {
-    var model : PentominoGame
+    @Published var model : PentominoGame
     
     @Published var currentBoard : String
     
@@ -27,10 +27,11 @@ class PentominoManager : ObservableObject
         let solutions = solutionManager.modelData ?? []
         
         model = PentominoGame(tiles: tiles, solutions: solutions)
+                        
+        currentBoard = PentominoConstants.DefaultBoard
         
         model.setPieces(pieces: PentominoManager.initPositions(pieces: model.pieces))
-                
-        currentBoard = PentominoConstants.DefaultBoard
+
         
         print(model.pieces)
     }
@@ -66,7 +67,7 @@ class PentominoManager : ObservableObject
 
 struct LayoutConstants
 {
-    static let y_inital = 17
+    static let y_inital = 13
     static let x_inital = 1
     static let x_step   = 4
     static let y_step   = 5

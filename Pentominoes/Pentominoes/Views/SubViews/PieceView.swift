@@ -33,14 +33,30 @@ struct PieceView: View
                 offset = CGSize.zero
             }
         
-        Image(piece.tile.name)
-            .position(
-                x: CGFloat(piece.x_literal),
-                y: CGFloat(piece.y_literal)
-            )
-            .scaleEffect(scale)
-            .offset(offset)
-            .gesture(move)
+        ZStack
+        {
+            Image(piece.tile.name)
+                
+            Text("(\(piece.position.x), \(piece.position.y))")
+                .font(.title)
+        
+        }
+        .position(
+            x: CGFloat(piece.x_literal),
+            y: CGFloat(piece.y_literal)
+        )
+        .scaleEffect(scale)
+        .offset(offset)
+        .gesture(move)
+        
+//        Image(piece.tile.name)
+//            .position(
+//                x: CGFloat(piece.x_literal),
+//                y: CGFloat(piece.y_literal)
+//            )
+//            .scaleEffect(scale)
+//            .offset(offset)
+//            .gesture(move)
     }
 }
 
