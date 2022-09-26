@@ -61,6 +61,18 @@ extension Piece
     
     mutating func moveByLiteral(x_literal : Int, y_literal : Int)
     {
+        let block = LayoutConstants.block_size
         
+        let x_threshold = (x_literal % block) / (block/2)
+        let y_threshold = (y_literal % block) / (block/2)
+
+        let x_translation = (x_literal / block) + x_threshold
+        let y_translation = (y_literal / block) + y_threshold
+        
+        self.moveTo(
+            x: self.position.x + x_translation,
+            y: self.position.y + y_translation
+        )
+
     }
 }
