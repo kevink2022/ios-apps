@@ -10,8 +10,13 @@ import SwiftUI
 struct PieceView: View
 {
     @Binding var piece : Piece
-    @State   var scale = 1.0
-    @State   var offset = CGSize.zero
+    
+    // Animatable values
+    @State   var scale   = 1.0
+    @State   var offset  = CGSize.zero
+    @State   var angle   = Angle.zero   // Violate SSOT??
+    
+    
     
     var body: some View
     {
@@ -20,6 +25,7 @@ struct PieceView: View
             {
                 value in
                 offset = value.translation
+                scale = 1.2
             }
             .onEnded
             {
@@ -31,38 +37,39 @@ struct PieceView: View
                 )
                 
                 offset = CGSize.zero
+                scale = 1.0
             }
         
-        ZStack
-        {
-            Image(piece.tile.name)
-            
-            VStack
+        let rotate = TapGesture(count: 1)
+            .onEnded
             {
-                Text("(\(piece.position.x), \(piece.position.y))")
-                
-                Text("(\(piece.x_literal), \(piece.y_literal))")
-
+                piece.rotate()
+                angle = Angle(degrees: Double(piece.position.rotations * 90))
             }
-            .font(.title)
         
-        }
-        .position(
-            x: CGFloat(piece.x_literal),
-            y: CGFloat(piece.y_literal)
-        )
-        .scaleEffect(scale)
-        .offset(offset)
-        .gesture(move)
+        let flip = LongPressGesture(minimumDuration: 0.05, maximumDistance: 50)
+            .onEnded
+            {
+                _ in
+                piece.flip()
+            }
+
+        Image(piece.tile.name)
+            .rotationEffect(angle)
+            .rotation3DEffect(Angle(degrees: (piece.position.isFlipped ? 180 : 0)), axis: (x:0, y:1, z:0))
+            .scaleEffect(scale)
+            .position(
+                x: CGFloat(piece.x_literal),
+                y: CGFloat(piece.y_literal)
+            )
+            .offset(offset)
+            .animation(.linear(duration: 0.05), value: scale)
+            .animation(.easeInOut, value: angle)
+            .animation(.easeInOut, value: piece.position.isFlipped)
+            .gesture(move)
+            .gesture(rotate)
+            .gesture(flip)
         
-//        Image(piece.tile.name)
-//            .position(
-//                x: CGFloat(piece.x_literal),
-//                y: CGFloat(piece.y_literal)
-//            )
-//            .scaleEffect(scale)
-//            .offset(offset)
-//            .gesture(move)
     }
 }
 
@@ -71,3 +78,34 @@ struct PieceView_Previews: PreviewProvider {
         PieceView(piece: .constant(Piece.standard))
     }
 }
+
+
+//ZStack
+//{
+//    Image(piece.tile.name)
+//
+//    VStack
+//    {
+//        Text("(\(piece.position.x), \(piece.position.y))")
+//
+//        Text("(\(piece.x_literal), \(piece.y_literal))")
+//
+//    }
+//    .font(.title)
+//
+//}
+//
+//.rotationEffect(angle)
+//.rotation3DEffect(Angle(degrees: (flipped ? 180 : 0)), axis: (x:0, y:1, z:0))
+//.scaleEffect(scale)
+//.position(
+//    x: CGFloat(piece.x_literal),
+//    y: CGFloat(piece.y_literal)
+//)
+//.offset(offset)
+//.animation(.linear(duration: 0.05), value: scale)
+//.animation(.easeInOut, value: angle)
+//.animation(.easeInOut, value: flipped)
+//.gesture(move)
+//.gesture(rotate)
+//.gesture(flip)
