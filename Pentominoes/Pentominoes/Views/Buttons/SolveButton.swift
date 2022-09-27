@@ -21,7 +21,7 @@ struct SolveButton: View
         {
             Text("Solve")
                 .font(.largeTitle)
-                .foregroundColor(.red)
+                .foregroundColor(manager.boardNumber == 0 ? .gray : .red)
         }
         .disabled(manager.boardNumber == 0)
     }
