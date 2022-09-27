@@ -35,6 +35,10 @@ extension Piece
         return (self.position.y * block) + (height/2 * block) + (height%2 * block/2)
     }
     
+    var angle : Double
+    {
+        Double(self.position.rotations * 90)
+    }
 }
 
 extension Piece

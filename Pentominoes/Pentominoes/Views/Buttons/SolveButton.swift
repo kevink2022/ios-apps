@@ -9,11 +9,13 @@ import SwiftUI
 
 struct SolveButton: View
 {
+    @EnvironmentObject var manager : PentominoManager
+    
     var body: some View
     {
         Button
         {
-            
+            manager.solve()
         }
         label:
         {
@@ -21,11 +23,13 @@ struct SolveButton: View
                 .font(.largeTitle)
                 .foregroundColor(.red)
         }
+        .disabled(manager.boardNumber == 0)
     }
 }
 
 struct SolveButton_Previews: PreviewProvider {
     static var previews: some View {
-        SolveButton()
+        Text("")
+        //SolveButton()
     }
 }

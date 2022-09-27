@@ -19,7 +19,7 @@ struct Tile : Codable
 }
 
 // specifies the complete orientation of a piece using unit coordinates
-struct Position : Codable
+struct Position : Codable, Equatable
 {
     var x : Int
     var y : Int
@@ -34,10 +34,6 @@ struct Position : Codable
         rotations = 0
     }
 }
-
-
-
-
 
 typealias Solution = [String : Position]
 

@@ -14,7 +14,6 @@ struct PieceView: View
     // Animatable values
     @State   var scale   = 1.0
     @State   var offset  = CGSize.zero
-    @State   var angle   = Angle.zero   // Violate SSOT??
     
     
     
@@ -44,7 +43,6 @@ struct PieceView: View
             .onEnded
             {
                 piece.rotate()
-                angle = Angle(degrees: Double(piece.position.rotations * 90))
             }
         
         let flip = LongPressGesture(minimumDuration: 0.05, maximumDistance: 50)
@@ -55,8 +53,8 @@ struct PieceView: View
             }
 
         Image(piece.tile.name)
-            .rotationEffect(angle)
             .rotation3DEffect(Angle(degrees: (piece.position.isFlipped ? 180 : 0)), axis: (x:0, y:1, z:0))
+            .rotationEffect(Angle(degrees: piece.angle))
             .scaleEffect(scale)
             .position(
                 x: CGFloat(piece.x_literal),
@@ -64,8 +62,7 @@ struct PieceView: View
             )
             .offset(offset)
             .animation(.linear(duration: 0.05), value: scale)
-            .animation(.easeInOut, value: angle)
-            .animation(.easeInOut, value: piece.position.isFlipped)
+            .animation(.easeInOut, value: piece.position)
             .gesture(move)
             .gesture(rotate)
             .gesture(flip)
