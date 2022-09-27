@@ -7,11 +7,15 @@
 
 import SwiftUI
 
-struct ResetButton: View {
-    var body: some View {
+struct ResetButton: View
+{
+    @EnvironmentObject var manager : PentominoManager
+    
+    var body: some View
+    {
         Button
         {
-            
+            manager.reset()
         }
         label:
         {
@@ -24,6 +28,7 @@ struct ResetButton: View {
 
 struct ResetButton_Previews: PreviewProvider {
     static var previews: some View {
-        ResetButton()
+        Text("")
+        //ResetButton()
     }
 }

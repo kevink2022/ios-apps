@@ -9,12 +9,17 @@ import Foundation
 
 class PentominoManager : ObservableObject
 {
-    var model : PentominoGame
+    @Published var model : PentominoGame
     
     @Published var currentBoard : String
     
     private let tileManager : StorageManager<[Tile]>
     private let solutionManager : StorageManager<[Solution]>
+    
+    var boardNumber : Int
+    {
+        currentBoard.last?.wholeNumberValue ?? 0
+    }
     
     init()
     {
@@ -27,20 +32,13 @@ class PentominoManager : ObservableObject
         let solutions = solutionManager.modelData ?? []
         
         model = PentominoGame(tiles: tiles, solutions: solutions)
-        
-        model.setPieces(pieces: PentominoManager.initPositions(pieces: model.pieces))
-                
+                        
         currentBoard = PentominoConstants.DefaultBoard
         
-        print(model.pieces)
+        model.setPieces(pieces: PentominoManager.initPositions(pieces: model.pieces))
     }
  
-    func chooseBoard(title board: String)
-    {
-        currentBoard = board
-    }
-    
-    static private func initPositions(pieces: [Piece]) -> Array<Piece>
+    static private func initPositions(pieces: [Piece]) -> [Piece]
     {
         var _pieces : Array<Piece> = pieces
         var x = LayoutConstants.x_inital
@@ -48,8 +46,9 @@ class PentominoManager : ObservableObject
         
         for index in _pieces.indices
         {
-            _pieces[index].position.x = x
-            _pieces[index].position.y = y
+            _pieces[index].moveTo(x: x, y: y)
+            _pieces[index].position.isFlipped = false
+            _pieces[index].position.rotations = 0
             
             x += LayoutConstants.x_step
             
@@ -66,9 +65,30 @@ class PentominoManager : ObservableObject
 
 struct LayoutConstants
 {
-    static let y_inital = 700
-    static let x_inital = 40
-    static let x_step   = 160
-    static let y_step   = 200
+    static let y_inital = 15
+    static let x_inital = 0
+    static let x_step   = 4
+    static let y_step   = 5
     static let x_row_count = 4
+    static let block_size  = 40
+}
+
+
+// MARK: Intents
+extension PentominoManager
+{
+    func chooseBoard(title board: String)
+    {
+        currentBoard = board
+    }
+    
+    func reset()
+    {
+        model.setPieces(pieces: PentominoManager.initPositions(pieces: model.pieces))
+    }
+    
+    func solve()
+    {
+        model.solve(boardNum: boardNumber)
+    }
 }

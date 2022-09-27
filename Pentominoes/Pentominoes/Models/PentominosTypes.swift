@@ -19,7 +19,7 @@ struct Tile : Codable
 }
 
 // specifies the complete orientation of a piece using unit coordinates
-struct Position : Codable
+struct Position : Codable, Equatable
 {
     var x : Int
     var y : Int
@@ -32,41 +32,6 @@ struct Position : Codable
         y = 0
         isFlipped = false
         rotations = 0
-    }
-}
-
-// a Piece is the model data that the view uses to display a pentomino
-struct Piece
-{
-    let tile : Tile
-    var position : Position
-    
-    static let standard = Piece(tile: Tile.standard, position: Position())
-}
-
-extension Piece
-{
-    mutating func moveTo(x: Int, y: Int)
-    {
-        self.position.x = x
-        self.position.y = y
-    }
-    
-    mutating func rotate()
-    {
-        if self.position.rotations == 3
-        {
-            self.position.rotations = 0
-        }
-        else
-        {
-            self.position.rotations += 1
-        }
-    }
-    
-    mutating func flip()
-    {
-        self.position.isFlipped.toggle()
     }
 }
 

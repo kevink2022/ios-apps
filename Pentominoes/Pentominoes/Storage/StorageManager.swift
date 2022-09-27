@@ -29,7 +29,6 @@ class StorageManager<SomeData:Codable>
             }
             catch
             {
-                print(error)
                 modelData = nil
             }
             return
@@ -54,9 +53,7 @@ class StorageManager<SomeData:Codable>
         }
         catch
         {
-            print(error)
             modelData = nil
-            
         }
     }
     
@@ -71,7 +68,7 @@ class StorageManager<SomeData:Codable>
         }
         catch
         {
-            print(error)
+                
         }
     }
 }
