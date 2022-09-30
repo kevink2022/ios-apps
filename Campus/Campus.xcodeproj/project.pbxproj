@@ -14,8 +14,13 @@
 		4F139E0828E5FECA0027EB3A /* CampusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139E0728E5FECA0027EB3A /* CampusTests.swift */; };
 		4F139E1228E5FECA0027EB3A /* CampusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139E1128E5FECA0027EB3A /* CampusUITests.swift */; };
 		4F139E1428E5FECA0027EB3A /* CampusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139E1328E5FECA0027EB3A /* CampusUITestsLaunchTests.swift */; };
-		4F139E2528E5FF630027EB3A /* buildings in Resources */ = {isa = PBXBuildFile; fileRef = 4F139E2328E5FF630027EB3A /* buildings */; };
-		4F139E2628E5FF630027EB3A /* buildings.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F139E2428E5FF630027EB3A /* buildings.json */; };
+		4F139E5E28E639760027EB3A /* CampusMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139E5D28E639760027EB3A /* CampusMap.swift */; };
+		4F139E6028E63A300027EB3A /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139E5F28E63A300027EB3A /* MapManager.swift */; };
+		4F139E6428E63A900027EB3A /* CampusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139E6328E63A900027EB3A /* CampusModel.swift */; };
+		4F139E6628E63B640027EB3A /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139E6528E63B640027EB3A /* Building.swift */; };
+		4F139E6F28E640010027EB3A /* buildings.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F139E6E28E640010027EB3A /* buildings.json */; };
+		4F139E9228E645260027EB3A /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139E9128E645260027EB3A /* StorageManager.swift */; };
+		4F139E9328E645260027EB3A /* FileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139E9028E645260027EB3A /* FileInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +51,13 @@
 		4F139E0D28E5FECA0027EB3A /* CampusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F139E1128E5FECA0027EB3A /* CampusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusUITests.swift; sourceTree = "<group>"; };
 		4F139E1328E5FECA0027EB3A /* CampusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		4F139E2328E5FF630027EB3A /* buildings */ = {isa = PBXFileReference; lastKnownFileType = folder; name = buildings; path = "../../../../Downloads/Assignment 6/buildings"; sourceTree = "<group>"; };
-		4F139E2428E5FF630027EB3A /* buildings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = buildings.json; path = "../../../../Downloads/Assignment 6/buildings.json"; sourceTree = "<group>"; };
+		4F139E5D28E639760027EB3A /* CampusMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusMap.swift; sourceTree = "<group>"; };
+		4F139E5F28E63A300027EB3A /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
+		4F139E6328E63A900027EB3A /* CampusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusModel.swift; sourceTree = "<group>"; };
+		4F139E6528E63B640027EB3A /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
+		4F139E6E28E640010027EB3A /* buildings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = buildings.json; sourceTree = "<group>"; };
+		4F139E9028E645260027EB3A /* FileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileInfo.swift; sourceTree = "<group>"; };
+		4F139E9128E645260027EB3A /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +112,7 @@
 				4F139E2128E5FF080027EB3A /* ViewModels */,
 				4F139E2028E5FEFB0027EB3A /* Models */,
 				4F139DF628E5FEC90027EB3A /* CampusApp.swift */,
-				4F139DF828E5FEC90027EB3A /* ContentView.swift */,
-				4F139E2328E5FF630027EB3A /* buildings */,
-				4F139E2428E5FF630027EB3A /* buildings.json */,
+				4F139E8F28E645260027EB3A /* Storage */,
 				4F139DFA28E5FECA0027EB3A /* Assets.xcassets */,
 				4F139DFC28E5FECA0027EB3A /* Preview Content */,
 			);
@@ -139,6 +147,9 @@
 		4F139E2028E5FEFB0027EB3A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4F139E6E28E640010027EB3A /* buildings.json */,
+				4F139E6328E63A900027EB3A /* CampusModel.swift */,
+				4F139E6528E63B640027EB3A /* Building.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -146,6 +157,7 @@
 		4F139E2128E5FF080027EB3A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				4F139E5F28E63A300027EB3A /* MapManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -153,8 +165,19 @@
 		4F139E2228E5FF0E0027EB3A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4F139DF828E5FEC90027EB3A /* ContentView.swift */,
+				4F139E5D28E639760027EB3A /* CampusMap.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4F139E8F28E645260027EB3A /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				4F139E9128E645260027EB3A /* StorageManager.swift */,
+				4F139E9028E645260027EB3A /* FileInfo.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +285,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F139DFE28E5FECA0027EB3A /* Preview Assets.xcassets in Resources */,
+				4F139E6F28E640010027EB3A /* buildings.json in Resources */,
 				4F139DFB28E5FECA0027EB3A /* Assets.xcassets in Resources */,
-				4F139E2528E5FF630027EB3A /* buildings in Resources */,
-				4F139E2628E5FF630027EB3A /* buildings.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +311,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F139E6028E63A300027EB3A /* MapManager.swift in Sources */,
+				4F139E6628E63B640027EB3A /* Building.swift in Sources */,
+				4F139E9228E645260027EB3A /* StorageManager.swift in Sources */,
+				4F139E5E28E639760027EB3A /* CampusMap.swift in Sources */,
 				4F139DF928E5FEC90027EB3A /* ContentView.swift in Sources */,
+				4F139E6428E63A900027EB3A /* CampusModel.swift in Sources */,
+				4F139E9328E645260027EB3A /* FileInfo.swift in Sources */,
 				4F139DF728E5FEC90027EB3A /* CampusApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

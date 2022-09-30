@@ -10,11 +10,14 @@ import SwiftUI
 @main
 struct CampusApp: App
 {
+    @State var manager = MapManager()
+    
     var body: some Scene
     {
         WindowGroup
         {
             ContentView()
+                .environmentObject(manager)
         }
     }
 }
