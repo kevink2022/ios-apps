@@ -13,7 +13,7 @@ extension Building
     var cLLocCoord2D : CLLocationCoordinate2D
     {
         return CLLocationCoordinate2D(
-            latitude: CLLocationDegrees(self.latitude),
+            latitude:  CLLocationDegrees(self.latitude),
             longitude: CLLocationDegrees(self.longitude)
         )
     }

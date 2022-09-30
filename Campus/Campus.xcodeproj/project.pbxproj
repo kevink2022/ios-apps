@@ -23,6 +23,7 @@
 		4F139E9328E645260027EB3A /* FileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139E9028E645260027EB3A /* FileInfo.swift */; };
 		4F139E9528E764590027EB3A /* BuildingAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139E9428E764590027EB3A /* BuildingAnnotation.swift */; };
 		4F139E9728E764CC0027EB3A /* Building+MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139E9628E764CC0027EB3A /* Building+MapKit.swift */; };
+		4F139E9928E7811E0027EB3A /* FavoritedBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139E9828E7811E0027EB3A /* FavoritedBuilding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		4F139E9128E645260027EB3A /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		4F139E9428E764590027EB3A /* BuildingAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingAnnotation.swift; sourceTree = "<group>"; };
 		4F139E9628E764CC0027EB3A /* Building+MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Building+MapKit.swift"; sourceTree = "<group>"; };
+		4F139E9828E7811E0027EB3A /* FavoritedBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedBuilding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				4F139E6328E63A900027EB3A /* CampusModel.swift */,
 				4F139E6528E63B640027EB3A /* Building.swift */,
 				4F139E9628E764CC0027EB3A /* Building+MapKit.swift */,
+				4F139E9828E7811E0027EB3A /* FavoritedBuilding.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				4F139E9528E764590027EB3A /* BuildingAnnotation.swift in Sources */,
 				4F139E6028E63A300027EB3A /* MapManager.swift in Sources */,
 				4F139E6628E63B640027EB3A /* Building.swift in Sources */,
+				4F139E9928E7811E0027EB3A /* FavoritedBuilding.swift in Sources */,
 				4F139E9728E764CC0027EB3A /* Building+MapKit.swift in Sources */,
 				4F139E9228E645260027EB3A /* StorageManager.swift in Sources */,
 				4F139E5E28E639760027EB3A /* CampusMap.swift in Sources */,

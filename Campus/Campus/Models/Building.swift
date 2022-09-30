@@ -15,7 +15,6 @@ struct Building : Codable, Identifiable
     let opp_bldg_code       : Int
     let photo               : String?
     let year_constructed    : Int?
-    //var isFavorited         : Bool
     var id                  : Int { opp_bldg_code }
 }
 

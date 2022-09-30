@@ -12,17 +12,18 @@ struct CampusMap: View
 {
     @EnvironmentObject var manager : MapManager
     
-    private func annotationFor(building: Building) -> some MapAnnotationProtocol
+    private func annotationFor(building: FavoritedBuilding) -> some MapAnnotationProtocol
     {
-        MapAnnotation(coordinate: building.cLLocCoord2D)
+        MapAnnotation(coordinate: building.building.cLLocCoord2D)
         {
             Button
             {
-                
+                manager.toggleFavorite(building: building)
             }
             label:
             {
                 Image(systemName: "pin.fill")
+                    .foregroundColor(building.isFavorited ? .yellow : .blue)
             }
         }
     }

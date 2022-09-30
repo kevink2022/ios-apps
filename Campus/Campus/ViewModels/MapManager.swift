@@ -10,7 +10,8 @@ import MapKit
 
 class MapManager : ObservableObject
 {
-    private let storageManager : StorageManager<[Building]>
+    private let storageManager : StorageManager<[FavoritedBuilding]>
+    
     private let span = MapConstants.span
     
     @Published var model : CampusModel
@@ -18,10 +19,28 @@ class MapManager : ObservableObject
     
     init()
     {
-        storageManager = StorageManager(fileName: "buildings")
+        storageManager = StorageManager(fileName: "favoritedBuildings")
         
-        let buildings = storageManager.modelData ?? []
-                        
+        var buildings : Array<FavoritedBuilding> = []
+                
+        // If saved user data
+        if let favoritedBuildings = storageManager.modelData
+        {
+            buildings = favoritedBuildings
+        }
+        // else, need to initialize new fav's with regular buildings
+        else
+        {
+            let buildingManager : StorageManager<[Building]> = StorageManager(fileName: "buildings")
+            
+            let normalBuildings = buildingManager.modelData ?? []
+            
+            for normalBuilding in normalBuildings
+            {
+                buildings.append(FavoritedBuilding(building: normalBuilding, isFavorited: false))
+            }
+        }
+
         let _model = CampusModel(buildings: buildings)
         
         region = MKCoordinateRegion(
@@ -30,6 +49,16 @@ class MapManager : ObservableObject
         )
         
         model = _model
+    }
+    
+    
+    // MARK: Intents
+    func toggleFavorite(building: FavoritedBuilding)
+    {
+        if let index = model.buildings.firstIndex(where: {$0.id == building.id} )
+        {
+            model.buildings[index].isFavorited.toggle()
+        }
     }
 }
 

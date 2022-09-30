@@ -18,6 +18,6 @@ struct Coordinates : Codable
 struct CampusModel
 {
     let centerCoord = Coordinates.psuCampus
-    var buildings   : [Building]
+    var buildings   : [FavoritedBuilding]
 }
 
