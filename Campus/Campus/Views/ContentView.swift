@@ -14,6 +14,14 @@ struct ContentView: View
         NavigationStack
         {
             CampusMap()
+                .ignoresSafeArea(edges: .bottom)
+                .toolbar
+                {
+                    Image(systemName: "star")
+                    Image(systemName: "building.2")
+                    Image(systemName: "gearshape")
+                    
+                }
         }
     }
 }

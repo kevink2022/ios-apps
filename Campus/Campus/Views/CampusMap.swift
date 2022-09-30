@@ -12,9 +12,27 @@ struct CampusMap: View
 {
     @EnvironmentObject var manager : MapManager
     
+    private func annotationFor(building: Building) -> some MapAnnotationProtocol
+    {
+        MapAnnotation(coordinate: building.cLLocCoord2D)
+        {
+            Button
+            {
+                
+            }
+            label:
+            {
+                Image(systemName: "pin.fill")
+            }
+        }
+    }
+    
     var body: some View
     {
-        Map(coordinateRegion: $manager.region)
+        Map(coordinateRegion: $manager.region,
+            annotationItems: manager.model.buildings,
+            annotationContent: annotationFor(building: )
+        )
     }
 }
 

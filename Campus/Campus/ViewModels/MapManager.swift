@@ -21,7 +21,7 @@ class MapManager : ObservableObject
         storageManager = StorageManager(fileName: "buildings")
         
         let buildings = storageManager.modelData ?? []
-        
+                        
         let _model = CampusModel(buildings: buildings)
         
         region = MKCoordinateRegion(
