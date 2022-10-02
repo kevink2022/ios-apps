@@ -17,12 +17,20 @@ class MapManager : ObservableObject
     @Published var model : CampusModel
     var region : MKCoordinateRegion
     
+    @Published var selectedBuilding : FavoritedBuilding? = nil
+    @Published var showDetailSheet  : Bool = false
+    
+    
+    
+    
+    
+    
     init()
     {
         storageManager = StorageManager(fileName: "favoritedBuildings")
         
         var buildings : Array<FavoritedBuilding> = []
-                
+        
         // If saved user data
         if let favoritedBuildings = storageManager.modelData
         {
@@ -40,7 +48,7 @@ class MapManager : ObservableObject
                 buildings.append(FavoritedBuilding(building: normalBuilding, isFavorited: false))
             }
         }
-
+        
         let _model = CampusModel(buildings: buildings)
         
         region = MKCoordinateRegion(
@@ -50,8 +58,10 @@ class MapManager : ObservableObject
         
         model = _model
     }
-    
-    
+ }
+
+extension MapManager
+{
     // MARK: Intents
     func toggleFavorite(building: FavoritedBuilding)
     {

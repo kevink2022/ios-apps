@@ -18,7 +18,8 @@ struct CampusMap: View
         {
             Button
             {
-                manager.toggleFavorite(building: building)
+                manager.selectedBuilding = building
+                manager.showDetailSheet  = true
             }
             label:
             {
