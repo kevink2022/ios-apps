@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailView: View
 {
-    let building : FavoritedBuilding
+    @EnvironmentObject var manager : MapManager
     
     var body: some View
     {
@@ -17,19 +17,22 @@ struct DetailView: View
         {
             HStack
             {
-                Text(building.building.name)
+                Text(manager.selectedBuilding.building.name)
                     .font(.largeTitle)
                 
-                FavoriteButton(building: building)
+                Spacer()
+                
+                FavoriteButton()
             }
             
-            if let photo = building.building.photo
+            if let photo = manager.selectedBuilding.building.photo
             {
                 Image(photo)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
             }
         }
+        .padding()
     }
 }
 
@@ -37,6 +40,6 @@ struct DetailView_Previews: PreviewProvider
 {
     static var previews: some View
     {
-        DetailView(building: FavoritedBuilding.standard)
+        DetailView()
     }
 }

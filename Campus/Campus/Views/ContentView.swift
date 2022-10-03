@@ -18,20 +18,25 @@ struct ContentView: View
             CampusMap()
                 .ignoresSafeArea(edges: .horizontal)
                 .ignoresSafeArea(edges: .bottom)
-                .toolbar
+                
+                .toolbar { ToolbarButtons() }
+                
+                .sheet(isPresented: $manager.showSheet)
                 {
-                    Image(systemName: "star")
-                    Image(systemName: "building.2")
-                    Image(systemName: "gearshape")
-                    
-                }
-                .sheet(isPresented: $manager.showDetailSheet)
-                {
-                    manager.selectedBuilding = nil
+                    // On cancel
+                    // To solve issue of building menu not reappearing
+                    manager.sheet      = .none
+                    manager.presenting = .presented
+                    manager.showSheet  = false
                 }
                 content:
                 {
-                    DetailView(building: manager.selectedBuilding!)
+                    switch manager.sheet
+                    {
+                    case .detailView:   DetailView()
+                    case .buildingMenu: BuildingMenu()
+                    default:            BuildingMenu()
+                    }
                 }
         }
     }
@@ -50,8 +55,16 @@ struct ContentView_Previews: PreviewProvider
 struct ViewConstants
 {
     // SF Images
-    static let pinned       = "pin.fill"
-    static let not_pinned   = "pin.slash"
-    static let favorite     = "star.fill"
-    static let not_favorite = "star"
+    static let presented        = "building.2.fill"
+    static let not_presented    = "building.2"
+    static let favorite         = "star.fill"
+    static let not_favorite     = "star"
+    static let settings         = "gearshape"
+    static let pinned           = "pin.fill"
+    static let not_pinned       = "pin.slash"
+    
+    // Colors
+    static let favorite_color   = Color.orange
+    static let presented_color  = Color.blue
+    static let not_color        = Color.black
 }

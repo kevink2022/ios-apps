@@ -11,6 +11,8 @@ import SwiftUI
 struct CampusApp: App
 {
     @State var manager = MapManager()
+    @Environment(\.scenePhase) var scenePhase
+
     
     var body: some Scene
     {
@@ -18,6 +20,18 @@ struct CampusApp: App
         {
             ContentView()
                 .environmentObject(manager)
+        }
+        .onChange(of: scenePhase) { phase in
+            switch phase {
+            case .background:
+                manager.save()
+            case .active:
+                break
+            case .inactive:
+                break
+            @unknown default:
+                assert(false, "Unknown scene Phase")
+            }
         }
     }
 }

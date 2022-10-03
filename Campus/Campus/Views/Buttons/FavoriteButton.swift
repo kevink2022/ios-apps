@@ -10,26 +10,25 @@ import SwiftUI
 struct FavoriteButton: View
 {
     @EnvironmentObject var manager : MapManager
-    
-    let building : FavoritedBuilding
-    
+        
     var body: some View
     {
         Button
         {
-            manager.toggleFavorite(building: building)
+            manager.toggleFavorite(building: manager.selectedBuilding)
         }
         label:
         {
-            Image(systemName: building.isFavorited ? "star.fill" : "star")
-                .foregroundColor(building.isFavorited ? .yellow : .black)
+            Image(systemName: manager.selectedBuilding.isFavorited ? ViewConstants.favorite : ViewConstants.not_favorite)
+                .foregroundColor(manager.selectedBuilding.isFavorited ? ViewConstants.favorite_color : ViewConstants.not_color)
+                .font(.title)
         }
     }
 }
 
 struct FavoriteButton_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteButton(building: FavoritedBuilding.standard)
+        FavoriteButton()
             .environmentObject(MapManager())
     }
 }

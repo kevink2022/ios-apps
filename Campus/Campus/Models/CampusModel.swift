@@ -15,9 +15,18 @@ struct Coordinates : Codable
     static let psuCampus = Coordinates(latitude: 40.798214, longitude: -77.859909)
 }
 
-struct CampusModel
+struct CampusModel : Codable
 {
-    let centerCoord = Coordinates.psuCampus
+    static let centerCoord = Coordinates.psuCampus
     var buildings   : [FavoritedBuilding]
 }
 
+enum CampusSheets
+{
+    case none, detailView, buildingMenu
+}
+
+enum PresentedPins
+{
+    case none, presented, favorited
+}
