@@ -26,6 +26,7 @@
 		4F139E9928E7811E0027EB3A /* FavoritedBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139E9828E7811E0027EB3A /* FavoritedBuilding.swift */; };
 		4F139E9B28E78EB00027EB3A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139E9A28E78EB00027EB3A /* DetailView.swift */; };
 		4F139E9E28E78FFC0027EB3A /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139E9D28E78FFC0027EB3A /* FavoriteButton.swift */; };
+		4F139EA028EA71F70027EB3A /* BuildingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139E9F28EA71F70027EB3A /* BuildingMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		4F139E9828E7811E0027EB3A /* FavoritedBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedBuilding.swift; sourceTree = "<group>"; };
 		4F139E9A28E78EB00027EB3A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		4F139E9D28E78FFC0027EB3A /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		4F139E9F28EA71F70027EB3A /* BuildingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 				4F139DF828E5FEC90027EB3A /* ContentView.swift */,
 				4F139E5D28E639760027EB3A /* CampusMap.swift */,
 				4F139E9A28E78EB00027EB3A /* DetailView.swift */,
+				4F139E9F28EA71F70027EB3A /* BuildingMenu.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				4F139E5E28E639760027EB3A /* CampusMap.swift in Sources */,
 				4F139DF928E5FEC90027EB3A /* ContentView.swift in Sources */,
 				4F139E6428E63A900027EB3A /* CampusModel.swift in Sources */,
+				4F139EA028EA71F70027EB3A /* BuildingMenu.swift in Sources */,
 				4F139E9328E645260027EB3A /* FileInfo.swift in Sources */,
 				4F139DF728E5FEC90027EB3A /* CampusApp.swift in Sources */,
 				4F139E9E28E78FFC0027EB3A /* FavoriteButton.swift in Sources */,

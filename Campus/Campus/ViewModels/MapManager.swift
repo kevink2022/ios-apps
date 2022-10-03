@@ -45,7 +45,13 @@ class MapManager : ObservableObject
             
             for normalBuilding in normalBuildings
             {
-                buildings.append(FavoritedBuilding(building: normalBuilding, isFavorited: false))
+                buildings.append(
+                    FavoritedBuilding(
+                        building: normalBuilding,
+                        isFavorited: false,
+                        isPresented: false
+                    )
+                )
             }
         }
         
@@ -62,12 +68,33 @@ class MapManager : ObservableObject
 
 extension MapManager
 {
+    var presentedBuildings : [FavoritedBuilding]
+    {
+        self.model.buildings.filter { $0.isPresented == true }
+    }
+    
+    var favoritedBuildings : [FavoritedBuilding]
+    {
+        self.model.buildings.filter { $0.isFavorited == true }
+    }
+    
+    var buildings : [FavoritedBuilding] { self.model.buildings }
+    
+    
     // MARK: Intents
     func toggleFavorite(building: FavoritedBuilding)
     {
         if let index = model.buildings.firstIndex(where: {$0.id == building.id} )
         {
             model.buildings[index].isFavorited.toggle()
+        }
+    }
+    
+    func togglePresented(building: FavoritedBuilding)
+    {
+        if let index = model.buildings.firstIndex(where: {$0.id == building.id} )
+        {
+            model.buildings[index].isPresented.toggle()
         }
     }
 }

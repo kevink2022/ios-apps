@@ -45,3 +45,13 @@ struct ContentView_Previews: PreviewProvider
             .environmentObject(MapManager())
     }
 }
+
+
+struct ViewConstants
+{
+    // SF Images
+    static let pinned       = "pin.fill"
+    static let not_pinned   = "pin.slash"
+    static let favorite     = "star.fill"
+    static let not_favorite = "star"
+}

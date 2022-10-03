@@ -11,6 +11,7 @@ struct FavoritedBuilding : Codable, Identifiable
 {
     let building    : Building
     var isFavorited : Bool
+    var isPresented : Bool
     var id          : Int { self.building.id }
     
     static let standard = FavoritedBuilding(
@@ -22,5 +23,7 @@ struct FavoritedBuilding : Codable, Identifiable
             photo: "beaver",
             year_constructed: nil
         ),
-        isFavorited: false)
+        isFavorited: false,
+        isPresented: false
+    )
 }

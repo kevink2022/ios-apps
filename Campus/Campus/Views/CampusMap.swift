@@ -32,7 +32,7 @@ struct CampusMap: View
     var body: some View
     {
         Map(coordinateRegion: $manager.region,
-            annotationItems: manager.model.buildings,
+            annotationItems: manager.favoritedBuildings,
             annotationContent: annotationFor(building: )
         )
     }
