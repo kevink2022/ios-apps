@@ -20,12 +20,12 @@ struct CampusMap: View
             {
                 manager.selectedBuilding = building
                 manager.showSheet  = true
-                manager.sheet = .detailView
+                manager.sheet      = .detailView
             }
             label:
             {
-                Image(systemName: building.isFavorited ? ViewConstants.favorite : ViewConstants.presented)
-                    .foregroundColor(building.isFavorited ? ViewConstants.favorite_color : ViewConstants.presented_color)
+                Image(systemName: building.isFavorited ? ViewConstants.favorite : ViewConstants.building)
+                    .foregroundColor(building.isFavorited ? ViewConstants.favorite_color : ViewConstants.pinned_color)
             }
         }
     }
@@ -33,7 +33,7 @@ struct CampusMap: View
     var body: some View
     {
         Map(coordinateRegion: $manager.region,
-            annotationItems: manager.pinnedBuildings,
+            annotationItems: manager.presentedBuildings,
             annotationContent: annotationFor(building: )
         )
     }

@@ -26,7 +26,7 @@ struct ContentView: View
                     // On cancel
                     // To solve issue of building menu not reappearing
                     manager.sheet      = .none
-                    manager.presenting = .presented
+                    manager.presenting = .pinned
                     manager.showSheet  = false
                 }
                 content:
@@ -55,8 +55,8 @@ struct ContentView_Previews: PreviewProvider
 struct ViewConstants
 {
     // SF Images
-    static let presented        = "building.2.fill"
-    static let not_presented    = "building.2"
+    static let building         = "building.2.fill"
+    static let not_building     = "building.2"
     static let favorite         = "star.fill"
     static let not_favorite     = "star"
     static let settings         = "gearshape"
@@ -65,6 +65,6 @@ struct ViewConstants
     
     // Colors
     static let favorite_color   = Color.orange
-    static let presented_color  = Color.blue
+    static let pinned_color     = Color.blue
     static let not_color        = Color.black
 }

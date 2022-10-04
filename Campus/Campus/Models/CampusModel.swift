@@ -7,18 +7,9 @@
 
 import Foundation
 
-struct Coordinates : Codable
-{
-    var latitude  : Double
-    var longitude : Double
-    
-    static let psuCampus = Coordinates(latitude: 40.798214, longitude: -77.859909)
-}
-
 struct CampusModel : Codable
 {
-    static let centerCoord = Coordinates.psuCampus
-    var buildings   : [FavoritedBuilding]
+    var buildings : [FavoritedBuilding]
 }
 
 enum CampusSheets
@@ -28,5 +19,5 @@ enum CampusSheets
 
 enum PresentedPins
 {
-    case none, presented, favorited
+    case none, pinned, favorited
 }

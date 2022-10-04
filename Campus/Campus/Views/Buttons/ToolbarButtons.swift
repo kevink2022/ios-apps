@@ -35,31 +35,31 @@ struct ToolbarButtons: View
         // Presented
         Button
         {
-            if manager.presenting == .presented
+            if manager.presenting == .pinned
             {
                 manager.presenting = .none
             }
             else
             {
-                manager.presenting = .presented
+                manager.presenting = .pinned
             }
         }
         label:
         {
-            Image(systemName: manager.presenting == .presented ? ViewConstants.presented : ViewConstants.not_presented)
-                .foregroundColor(manager.presenting == .presented ? ViewConstants.presented_color : ViewConstants.not_color)
+            Image(systemName: manager.presenting == .pinned ? ViewConstants.building : ViewConstants.not_building)
+                .foregroundColor(manager.presenting == .pinned ? ViewConstants.pinned_color : ViewConstants.not_color)
         }
         
         // Settings
         Button
         {
             manager.sheet       = .buildingMenu
-            manager.presenting  = .presented
+            manager.presenting  = .pinned
             manager.showSheet   = true
         }
         label:
         {
-            Image(systemName: "gearshape")
+            Image(systemName: ViewConstants.settings)
         }
     }
 }

@@ -14,11 +14,12 @@ class MapManager : ObservableObject
     private let span = MapConstants.span
     var region : MKCoordinateRegion
 
-    @Published var model : CampusModel
+    @Published var model        : CampusModel
+    @Published var showSheet    : Bool = false
+    @Published var sheet        : CampusSheets  = .none
+    @Published var presenting   : PresentedPins = .pinned
     @Published var selectedBuilding : FavoritedBuilding
-    @Published var showSheet : Bool = false
-    @Published var sheet : CampusSheets = .none
-    @Published var presenting : PresentedPins = .none
+    
     
     init()
     {
@@ -46,7 +47,7 @@ class MapManager : ObservableObject
                     FavoritedBuilding(
                         building: normalBuilding,
                         isFavorited: false,
-                        isPresented: false
+                        isPinned: false
                     )
                 )
             }
@@ -55,10 +56,11 @@ class MapManager : ObservableObject
         }
         
         region = MKCoordinateRegion(
-            center: CLLocationCoordinate2D(CampusModel.centerCoord),
+            center: MapConstants.psuCampus,
             span: MKCoordinateSpan(latitudeDelta: span, longitudeDelta: span)
         )
         
+        // This feels ugly, but is a lot cleaner then using an optional
         selectedBuilding = _model.buildings.first!
         
         // Sort alphabetically (numbers 1st)
@@ -73,9 +75,9 @@ class MapManager : ObservableObject
 
 extension MapManager
 {
-    var presentedBuildings : [FavoritedBuilding]
+    var pinnedBuildings : [FavoritedBuilding]
     {
-        self.model.buildings.filter { $0.isPresented == true }
+        self.model.buildings.filter { $0.isPinned == true }
     }
     
     var favoritedBuildings : [FavoritedBuilding]
@@ -85,12 +87,12 @@ extension MapManager
     
     var buildings : [FavoritedBuilding] { self.model.buildings }
     
-    var pinnedBuildings : [FavoritedBuilding]
+    var presentedBuildings : [FavoritedBuilding]
     {
         switch self.presenting
         {
         case .none:      return []
-        case .presented: return self.presentedBuildings
+        case .pinned: return self.pinnedBuildings
         case .favorited: return self.favoritedBuildings
         }
     }
@@ -112,11 +114,11 @@ extension MapManager
         }
     }
     
-    func togglePresented(building: FavoritedBuilding)
+    func togglePinned(building: FavoritedBuilding)
     {
         if let index = model.buildings.firstIndex(where: {$0.id == building.id} )
         {
-            model.buildings[index].isPresented.toggle()
+            model.buildings[index].isPinned.toggle()
         }
     }
 }
@@ -124,12 +126,5 @@ extension MapManager
 struct MapConstants
 {
     static let span = 0.03
-}
-
-extension CLLocationCoordinate2D
-{
-    init(_ coord: Coordinates)
-    {
-        self = CLLocationCoordinate2D(latitude: coord.latitude, longitude: coord.longitude)
-    }
+    static let psuCampus = CLLocationCoordinate2D(latitude: 40.798214, longitude: -77.859909)
 }

@@ -15,31 +15,47 @@ struct BuildingMenu: View
     {
         List
         {
-            ForEach(manager.buildings)
+            Section
             {
-                building in
-                
                 Button
                 {
-                    manager.togglePresented(building: building)
+                    manager.showSheet = false
+                    manager.sheet = .none
                 }
                 label:
                 {
-                    HStack
+                    Text("Save Changes")
+                }
+            }
+            
+            Section
+            {
+                ForEach(manager.buildings)
+                {
+                    building in
+                    
+                    Button
                     {
-                        Text(building.building.name)
-                        
-                        Spacer()
-                        
-                        Image(systemName: building.isPresented ? ViewConstants.pinned : ViewConstants.not_pinned)
+                        manager.togglePinned(building: building)
+                    }
+                    label:
+                    {
+                        HStack
+                        {
+                            Text(building.building.name)
+                            
+                            Spacer()
+                            
+                            Image(systemName: building.isPinned ? ViewConstants.pinned : ViewConstants.not_pinned)
+                        }
                     }
                 }
             }
+            header:
+            {
+                Text("Please select the buildings to display.")
+            }
         }
-//        label:
-//        {
-//            Text("Presented Buildings")
-//        }
     }
 }
 
