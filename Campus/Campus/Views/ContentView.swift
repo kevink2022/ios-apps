@@ -24,6 +24,11 @@ struct ContentView: View
                 .sheet(isPresented: $manager.showSheet)
                 {
                     // On cancel
+                    if manager.sheet == .buildingMenu
+                    {
+                        manager.centerRegion()
+                    }
+                    
                     // To solve issue of building menu not reappearing
                     manager.sheet      = .none
                     manager.presenting = .pinned

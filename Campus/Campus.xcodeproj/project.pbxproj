@@ -28,6 +28,13 @@
 		4F139E9E28E78FFC0027EB3A /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139E9D28E78FFC0027EB3A /* FavoriteButton.swift */; };
 		4F139EA028EA71F70027EB3A /* BuildingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139E9F28EA71F70027EB3A /* BuildingMenu.swift */; };
 		4F139EA228EB67970027EB3A /* ToolbarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139EA128EB67970027EB3A /* ToolbarButtons.swift */; };
+		4F139EA428EBB2420027EB3A /* ExitSheetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139EA328EBB2420027EB3A /* ExitSheetButton.swift */; };
+		4FBA4F8628F4A48C00E4863C /* QuickSelectButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8528F4A48C00E4863C /* QuickSelectButtons.swift */; };
+		4FBA4F8828F4A7EB00E4863C /* ManagerIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8728F4A7EB00E4863C /* ManagerIntents.swift */; };
+		4FBA4F8A28F4BF5900E4863C /* ManagerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8928F4BF5900E4863C /* ManagerFunctions.swift */; };
+		4FBA4F8C28F4C35100E4863C /* ManagerVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8B28F4C35100E4863C /* ManagerVariables.swift */; };
+		4FBA4F8F28F4CBB700E4863C /* SCWalk.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8D28F4CBB700E4863C /* SCWalk.gpx */; };
+		4FBA4F9028F4CBB700E4863C /* W209Westgate.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8E28F4CBB700E4863C /* W209Westgate.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +79,13 @@
 		4F139E9D28E78FFC0027EB3A /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		4F139E9F28EA71F70027EB3A /* BuildingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingMenu.swift; sourceTree = "<group>"; };
 		4F139EA128EB67970027EB3A /* ToolbarButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarButtons.swift; sourceTree = "<group>"; };
+		4F139EA328EBB2420027EB3A /* ExitSheetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitSheetButton.swift; sourceTree = "<group>"; };
+		4FBA4F8528F4A48C00E4863C /* QuickSelectButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSelectButtons.swift; sourceTree = "<group>"; };
+		4FBA4F8728F4A7EB00E4863C /* ManagerIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerIntents.swift; sourceTree = "<group>"; };
+		4FBA4F8928F4BF5900E4863C /* ManagerFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerFunctions.swift; sourceTree = "<group>"; };
+		4FBA4F8B28F4C35100E4863C /* ManagerVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerVariables.swift; sourceTree = "<group>"; };
+		4FBA4F8D28F4CBB700E4863C /* SCWalk.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = SCWalk.gpx; path = "../../../../../Downloads/SampleCode2022-main/Around Town/Around Town/Models/SCWalk.gpx"; sourceTree = "<group>"; };
+		4FBA4F8E28F4CBB700E4863C /* W209Westgate.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = W209Westgate.gpx; path = "../../../../../Downloads/SampleCode2022-main/Around Town/Around Town/Models/W209Westgate.gpx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,10 +136,10 @@
 		4F139DF528E5FEC90027EB3A /* Campus */ = {
 			isa = PBXGroup;
 			children = (
+				4F139DF628E5FEC90027EB3A /* CampusApp.swift */,
 				4F139E2228E5FF0E0027EB3A /* Views */,
 				4F139E2128E5FF080027EB3A /* ViewModels */,
 				4F139E2028E5FEFB0027EB3A /* Models */,
-				4F139DF628E5FEC90027EB3A /* CampusApp.swift */,
 				4F139E8F28E645260027EB3A /* Storage */,
 				4F139DFA28E5FECA0027EB3A /* Assets.xcassets */,
 				4F139DFC28E5FECA0027EB3A /* Preview Content */,
@@ -166,6 +180,8 @@
 				4F139E6528E63B640027EB3A /* Building.swift */,
 				4F139E9628E764CC0027EB3A /* Building+MapKit.swift */,
 				4F139E9828E7811E0027EB3A /* FavoritedBuilding.swift */,
+				4FBA4F8D28F4CBB700E4863C /* SCWalk.gpx */,
+				4FBA4F8E28F4CBB700E4863C /* W209Westgate.gpx */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,7 +190,10 @@
 			isa = PBXGroup;
 			children = (
 				4F139E5F28E63A300027EB3A /* MapManager.swift */,
+				4FBA4F8928F4BF5900E4863C /* ManagerFunctions.swift */,
+				4FBA4F8728F4A7EB00E4863C /* ManagerIntents.swift */,
 				4F139E9428E764590027EB3A /* BuildingAnnotation.swift */,
+				4FBA4F8B28F4C35100E4863C /* ManagerVariables.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -205,6 +224,8 @@
 			children = (
 				4F139E9D28E78FFC0027EB3A /* FavoriteButton.swift */,
 				4F139EA128EB67970027EB3A /* ToolbarButtons.swift */,
+				4F139EA328EBB2420027EB3A /* ExitSheetButton.swift */,
+				4FBA4F8528F4A48C00E4863C /* QuickSelectButtons.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -313,8 +334,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FBA4F8F28F4CBB700E4863C /* SCWalk.gpx in Resources */,
 				4F139DFE28E5FECA0027EB3A /* Preview Assets.xcassets in Resources */,
 				4F139E6F28E640010027EB3A /* buildings.json in Resources */,
+				4FBA4F9028F4CBB700E4863C /* W209Westgate.gpx in Resources */,
 				4F139DFB28E5FECA0027EB3A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,11 +373,16 @@
 				4F139E5E28E639760027EB3A /* CampusMap.swift in Sources */,
 				4F139EA228EB67970027EB3A /* ToolbarButtons.swift in Sources */,
 				4F139DF928E5FEC90027EB3A /* ContentView.swift in Sources */,
+				4FBA4F8628F4A48C00E4863C /* QuickSelectButtons.swift in Sources */,
 				4F139E6428E63A900027EB3A /* CampusModel.swift in Sources */,
 				4F139EA028EA71F70027EB3A /* BuildingMenu.swift in Sources */,
+				4FBA4F8C28F4C35100E4863C /* ManagerVariables.swift in Sources */,
 				4F139E9328E645260027EB3A /* FileInfo.swift in Sources */,
 				4F139DF728E5FEC90027EB3A /* CampusApp.swift in Sources */,
+				4FBA4F8828F4A7EB00E4863C /* ManagerIntents.swift in Sources */,
 				4F139E9E28E78FFC0027EB3A /* FavoriteButton.swift in Sources */,
+				4FBA4F8A28F4BF5900E4863C /* ManagerFunctions.swift in Sources */,
+				4F139EA428EBB2420027EB3A /* ExitSheetButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

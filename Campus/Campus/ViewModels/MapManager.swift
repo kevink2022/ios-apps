@@ -92,7 +92,7 @@ extension MapManager
         switch self.presenting
         {
         case .none:      return []
-        case .pinned: return self.pinnedBuildings
+        case .pinned:    return self.pinnedBuildings
         case .favorited: return self.favoritedBuildings
         }
     }
@@ -101,30 +101,11 @@ extension MapManager
     {
         storageManager.save(modelData: model)
     }
-    
-    
-    // MARK: Intents
-    func toggleFavorite(building: FavoritedBuilding)
-    {
-        if let index = model.buildings.firstIndex(where: {$0.id == building.id} )
-        {
-            model.buildings[index].isFavorited.toggle()
-            // To get changes to propagate to sheet
-            self.selectedBuilding = model.buildings[index]
-        }
-    }
-    
-    func togglePinned(building: FavoritedBuilding)
-    {
-        if let index = model.buildings.firstIndex(where: {$0.id == building.id} )
-        {
-            model.buildings[index].isPinned.toggle()
-        }
-    }
 }
 
 struct MapConstants
 {
     static let span = 0.03
+    static let spanBuffer = 0.005
     static let psuCampus = CLLocationCoordinate2D(latitude: 40.798214, longitude: -77.859909)
 }

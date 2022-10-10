@@ -18,11 +18,12 @@ struct ToolbarButtons: View
         {
             if manager.presenting == .favorited
             {
-                manager.presenting = .none
+                
+                manager.present(.none)
             }
             else
             {
-                manager.presenting = .favorited
+                manager.present(.favorited)
             }
             
         }
@@ -37,11 +38,11 @@ struct ToolbarButtons: View
         {
             if manager.presenting == .pinned
             {
-                manager.presenting = .none
+                manager.present(.none)
             }
             else
             {
-                manager.presenting = .pinned
+                manager.present(.pinned)
             }
         }
         label:
@@ -54,8 +55,8 @@ struct ToolbarButtons: View
         Button
         {
             manager.sheet       = .buildingMenu
-            manager.presenting  = .pinned
             manager.showSheet   = true
+            manager.present(.pinned)
         }
         label:
         {

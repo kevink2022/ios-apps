@@ -21,3 +21,8 @@ enum PresentedPins
 {
     case none, pinned, favorited
 }
+
+extension CampusModel
+{
+
+}

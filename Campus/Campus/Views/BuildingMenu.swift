@@ -15,19 +15,23 @@ struct BuildingMenu: View
     {
         List
         {
+            // Save Changes Button
             Section
             {
-                Button
-                {
-                    manager.showSheet = false
-                    manager.sheet = .none
-                }
-                label:
-                {
-                    Text("Save Changes")
-                }
+                ExitSheetButton(text: "Save Changes")
             }
             
+            // Quick Action buttons
+            Section
+            {
+                QuickSelectButtons()
+            }
+            header:
+            {
+                Text("Quick Select")
+            }
+            
+            // Individual Building Buttons
             Section
             {
                 ForEach(manager.buildings)
