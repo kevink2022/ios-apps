@@ -70,7 +70,7 @@ extension MapManager
         model.buildings = model.buildings.map
         {
             var new = $0
-            new.isPinned = true
+            new.isPinned = self.buidlingNearby(building: new) ? true : false
             return new
         }
         

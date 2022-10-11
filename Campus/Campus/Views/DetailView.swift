@@ -25,7 +25,7 @@ struct DetailView: View
                 
                 Button
                 {
-                    manager.directions(to: manager.selectedBuilding)
+                    manager.getExpectedTime(to: manager.selectedBuilding)
                     withAnimation
                     {
                         showingDirections.toggle()
@@ -46,13 +46,25 @@ struct DetailView: View
                 HStack
                 {
                     Spacer()
-                    VStack(alignment: .trailing)
+                    
+ 
+                    Text(manager.expectedTime)
+                        .font(.title3)
+                    
+                    if manager.headingAngleToSelectedBuilding == -1
                     {
-                        Text("Time: \(manager.expectedTime) ")
-                        Text("Direction: \(manager.headingAngle)˚")
+                        Image(systemName: "exclamationmark.triangle")
                     }
-                    .font(.title3)
+                    else
+                    {
+                        Image(systemName: "arrow.up")
+                            .rotationEffect(Angle(degrees: manager.headingAngleToSelectedBuilding))
+                    }
+                    
+                    Text(String(format: "%.2f˚", manager.headingAngleToSelectedBuilding < 0 ? manager.headingAngleToSelectedBuilding + 360 : manager.headingAngleToSelectedBuilding ))
+                        .font(.title3)
                 }
+                .offset(x: -6)
             }
             
             if let photo = manager.selectedBuilding.building.photo

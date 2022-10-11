@@ -26,6 +26,7 @@ extension MapManager : CLLocationManagerDelegate
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
+        currentLocation = locations[0]
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)

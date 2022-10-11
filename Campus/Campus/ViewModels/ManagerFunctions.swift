@@ -50,4 +50,22 @@ extension MapManager
             )
         )
     }
+    
+    func buidlingNearby(building: FavoritedBuilding) -> Bool
+    {
+        if let loc = currentLocation?.coordinate
+        {
+            let build = building.building
+
+            
+            let lat_delta  = abs(build.latitude  - loc.latitude)
+            let long_delta = abs(build.longitude - loc.longitude)
+            
+            if sqrt(abs(lat_delta + long_delta)) < MapConstants.nearby
+            {
+                return true
+            }
+        }
+        return false
+    }
 }

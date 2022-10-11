@@ -24,7 +24,8 @@ class MapManager : NSObject, ObservableObject
     var selectedDirections : CampusDirection
     // It won't let me assign a local var in the directions completion handler
     @Published var expectedTime = "Loading..."
-    @Published var headingAngle = "Loading..."
+    @Published var headingAngle : Double = 0
+    var currentLocation : CLLocation?
     
     
     override init()
@@ -112,6 +113,32 @@ extension MapManager
         }
     }
     
+    var headingAngleToSelectedBuilding : Double
+    {
+        if let from = currentLocation?.coordinate
+        {
+            let to = self.selectedBuilding.building
+
+            let lat1 = from.latitude.radians
+            let lon1 = from.longitude.radians
+
+            let lat2 = to.latitude.radians
+            let lon2 = to.longitude.radians
+
+            let dLon = lon2 - lon1
+
+            let y = sin(dLon) * cos(lat2)
+            let x = cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(dLon)
+            let radiansBearing = atan2(y, x)
+
+            return radiansBearing.degrees
+        }
+        else
+        {
+            return -1
+        }
+    }
+    
     func save()
     {
         storageManager.save(modelData: model)
@@ -123,4 +150,5 @@ struct MapConstants
     static let span = 0.03
     static let spanBuffer = 0.005
     static let psuCampus = CLLocationCoordinate2D(latitude: 40.798214, longitude: -77.859909)
+    static let nearby = 0.075
 }

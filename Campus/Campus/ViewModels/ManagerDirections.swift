@@ -11,15 +11,6 @@ import SwiftUI
 
 extension MapManager
 {
-    func directions(to building: FavoritedBuilding)
-    {
-        getExpectedTime(to: building)
-        self.headingAngle = String(format: "%.2f", Double(Angle(radians: headingAngle(to: building)).degrees))
-    }
-    
-    
-    
-    
     func getExpectedTime(to building: FavoritedBuilding)
     {
         self.expectedTime = "Loading..."
@@ -48,18 +39,17 @@ extension MapManager
             }
         }
     }
-    
-    func headingAngle(to: FavoritedBuilding) -> Double
+}
+
+extension Double
+{
+    var degrees: Double
     {
-        let from = MKMapItem.forCurrentLocation().placemark.coordinate
-        
-        let delta_longitude = abs(to.building.longitude - from.longitude)
-        
-        let x = cos(to.building.latitude) * sin(delta_longitude)
-        let y = (cos(from.latitude) * sin(to.building.latitude)) - (sin(from.latitude) * cos(to.building.latitude) * cos(delta_longitude))
-        
-        let angle = atan2(x, y)
-        
-        return angle
+        Angle(radians: self).degrees
+    }
+    
+    var radians: Double
+    {
+        Angle(degrees: self).radians
     }
 }
