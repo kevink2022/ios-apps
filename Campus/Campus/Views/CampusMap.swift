@@ -32,10 +32,17 @@ struct CampusMap: View
     
     var body: some View
     {
+        let drag = DragGesture()
+            .onChanged{ value in manager.trackingLocation = false }
+            .onEnded{ value in manager.trackingLocation = false }
+        
         Map(coordinateRegion: $manager.region,
+            showsUserLocation: true,
+            userTrackingMode: manager.trackingLocation ? .constant(.follow) : .constant(.none),
             annotationItems: manager.presentedBuildings,
             annotationContent: annotationFor(building: )
         )
+        .gesture(drag)
     }
 }
 

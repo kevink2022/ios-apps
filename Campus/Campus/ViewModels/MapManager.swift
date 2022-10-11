@@ -8,20 +8,26 @@
 import Foundation
 import MapKit
 
-class MapManager : ObservableObject
+class MapManager : NSObject, ObservableObject
 {
     private let storageManager : StorageManager<CampusModel>
     private let span = MapConstants.span
+    let locationManager : CLLocationManager
     var region : MKCoordinateRegion
 
     @Published var model        : CampusModel
-    @Published var showSheet    : Bool = false
+    @Published var showSheet    : Bool          = false
     @Published var sheet        : CampusSheets  = .none
     @Published var presenting   : PresentedPins = .pinned
+    @Published var trackingLocation : Bool      = false
     @Published var selectedBuilding : FavoritedBuilding
+    var selectedDirections : CampusDirection
+    // It won't let me assign a local var in the directions completion handler
+    @Published var expectedTime = "Loading..."
+    @Published var headingAngle = "Loading..."
     
     
-    init()
+    override init()
     {
         storageManager = StorageManager(fileName: "savedModel")
         
@@ -70,6 +76,15 @@ class MapManager : ObservableObject
         }
         
         model = _model
+        
+        locationManager = CLLocationManager()
+        
+        selectedDirections = CampusDirection(travelTime: "", heading: "")
+        
+        super.init()
+        
+        locationManager.desiredAccuracy = .leastNonzeroMagnitude
+        locationManager.delegate = self
     }
  }
 

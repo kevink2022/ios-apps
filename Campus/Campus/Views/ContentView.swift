@@ -23,19 +23,6 @@ struct ContentView: View
                 
                 .sheet(isPresented: $manager.showSheet)
                 {
-                    // On cancel
-                    if manager.sheet == .buildingMenu
-                    {
-                        manager.centerRegion()
-                    }
-                    
-                    // To solve issue of building menu not reappearing
-                    manager.sheet      = .none
-                    manager.presenting = .pinned
-                    manager.showSheet  = false
-                }
-                content:
-                {
                     switch manager.sheet
                     {
                     case .detailView:   DetailView()
@@ -67,9 +54,15 @@ struct ViewConstants
     static let settings         = "gearshape"
     static let pinned           = "pin.fill"
     static let not_pinned       = "pin.slash"
+    static let location         = "location.fill"
+    static let not_location     = "location"
+    static let directions       = "map.fill"
+    static let not_directions   = "map"
     
     // Colors
     static let favorite_color   = Color.orange
     static let pinned_color     = Color.blue
     static let not_color        = Color.black
+    static let location_color   = Color.green
+    static let directions_color = Color.blue
 }

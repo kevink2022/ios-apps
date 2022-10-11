@@ -13,19 +13,33 @@ struct ToolbarButtons: View
     
     var body: some View
     {
+        // Center Map
+        Button
+        {
+            withAnimation
+            {
+                manager.trackingLocation.toggle()
+            }
+        }
+        label:
+        {
+            Image(systemName: manager.trackingLocation ? ViewConstants.location : ViewConstants.not_location)
+                .foregroundColor( manager.trackingLocation ? ViewConstants.location_color : ViewConstants.not_color)
+        }
+        .disabled(manager.trackingLocation)
+        
         // Favorites
         Button
         {
             if manager.presenting == .favorited
             {
-                
                 manager.present(.none)
             }
             else
             {
                 manager.present(.favorited)
             }
-            
+            manager.trackingLocation = false
         }
         label:
         {

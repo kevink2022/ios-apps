@@ -17,6 +17,8 @@ extension MapManager
             // To get changes to propagate to sheet
             self.selectedBuilding = model.buildings[index]
         }
+        
+        self.centerRegion()
     }
     
     func togglePinned(building: FavoritedBuilding)
@@ -25,6 +27,8 @@ extension MapManager
         {
             model.buildings[index].isPinned.toggle()
         }
+        
+        self.centerRegion()
     }
     
     func present(_ buildings: PresentedPins)
@@ -45,6 +49,8 @@ extension MapManager
             new.isPinned = true
             return new
         }
+        
+        self.centerRegion()
     }
     
     func showFavorites()
@@ -55,6 +61,8 @@ extension MapManager
             new.isPinned = new.isFavorited ? true : false
             return new
         }
+        
+        self.centerRegion()
     }
     
     func showNearby()
@@ -65,6 +73,8 @@ extension MapManager
             new.isPinned = true
             return new
         }
+        
+        self.centerRegion()
     }
     
     func showNone()

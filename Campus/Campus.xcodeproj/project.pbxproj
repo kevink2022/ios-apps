@@ -35,6 +35,8 @@
 		4FBA4F8C28F4C35100E4863C /* ManagerVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8B28F4C35100E4863C /* ManagerVariables.swift */; };
 		4FBA4F8F28F4CBB700E4863C /* SCWalk.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8D28F4CBB700E4863C /* SCWalk.gpx */; };
 		4FBA4F9028F4CBB700E4863C /* W209Westgate.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8E28F4CBB700E4863C /* W209Westgate.gpx */; };
+		4FBA4F9228F4CEA600E4863C /* Manager+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F9128F4CEA600E4863C /* Manager+Location.swift */; };
+		4FBA4F9828F4F86200E4863C /* ManagerDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F9728F4F86200E4863C /* ManagerDirections.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		4FBA4F8B28F4C35100E4863C /* ManagerVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerVariables.swift; sourceTree = "<group>"; };
 		4FBA4F8D28F4CBB700E4863C /* SCWalk.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = SCWalk.gpx; path = "../../../../../Downloads/SampleCode2022-main/Around Town/Around Town/Models/SCWalk.gpx"; sourceTree = "<group>"; };
 		4FBA4F8E28F4CBB700E4863C /* W209Westgate.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = W209Westgate.gpx; path = "../../../../../Downloads/SampleCode2022-main/Around Town/Around Town/Models/W209Westgate.gpx"; sourceTree = "<group>"; };
+		4FBA4F9128F4CEA600E4863C /* Manager+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Location.swift"; sourceTree = "<group>"; };
+		4FBA4F9728F4F86200E4863C /* ManagerDirections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerDirections.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +198,8 @@
 				4FBA4F8728F4A7EB00E4863C /* ManagerIntents.swift */,
 				4F139E9428E764590027EB3A /* BuildingAnnotation.swift */,
 				4FBA4F8B28F4C35100E4863C /* ManagerVariables.swift */,
+				4FBA4F9128F4CEA600E4863C /* Manager+Location.swift */,
+				4FBA4F9728F4F86200E4863C /* ManagerDirections.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -365,6 +371,7 @@
 			files = (
 				4F139E9528E764590027EB3A /* BuildingAnnotation.swift in Sources */,
 				4F139E9B28E78EB00027EB3A /* DetailView.swift in Sources */,
+				4FBA4F9828F4F86200E4863C /* ManagerDirections.swift in Sources */,
 				4F139E6028E63A300027EB3A /* MapManager.swift in Sources */,
 				4F139E6628E63B640027EB3A /* Building.swift in Sources */,
 				4F139E9928E7811E0027EB3A /* FavoritedBuilding.swift in Sources */,
@@ -377,6 +384,7 @@
 				4F139E6428E63A900027EB3A /* CampusModel.swift in Sources */,
 				4F139EA028EA71F70027EB3A /* BuildingMenu.swift in Sources */,
 				4FBA4F8C28F4C35100E4863C /* ManagerVariables.swift in Sources */,
+				4FBA4F9228F4CEA600E4863C /* Manager+Location.swift in Sources */,
 				4F139E9328E645260027EB3A /* FileInfo.swift in Sources */,
 				4F139DF728E5FEC90027EB3A /* CampusApp.swift in Sources */,
 				4FBA4F8828F4A7EB00E4863C /* ManagerIntents.swift in Sources */,
@@ -544,6 +552,7 @@
 				DEVELOPMENT_TEAM = Q9B7SPU3TM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Campus uses your location to help you find your way around your campus.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -573,6 +582,7 @@
 				DEVELOPMENT_TEAM = Q9B7SPU3TM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Campus uses your location to help you find your way around your campus.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
