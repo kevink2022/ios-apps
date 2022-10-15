@@ -13,11 +13,17 @@ struct ContentView: View
     
     var body: some View
     {
+        let drag = DragGesture()
+            .onChanged{ value in manager.trackingLocation = false }
+            .onEnded{ value in manager.trackingLocation = false }
+        
         NavigationStack
         {
-            CampusMap()
+            UICampusMap()
+            //CampusMap()
                 .ignoresSafeArea(edges: .horizontal)
                 .ignoresSafeArea(edges: .bottom)
+                .gesture(drag)
                 
                 .toolbar { ToolbarButtons() }
                 

@@ -13,6 +13,20 @@ struct ToolbarButtons: View
     
     var body: some View
     {
+        Button
+        {
+            switch manager.mapConfig
+            {
+            case .standard: manager.mapConfig = .hybrid
+            case .hybrid:   manager.mapConfig = .imagery
+            case .imagery:  manager.mapConfig = .standard
+            }
+        }
+        label:
+        {
+            Image(systemName: "globe.americas")
+        }
+        
         // Center Map
         Button
         {

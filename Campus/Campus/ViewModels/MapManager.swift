@@ -25,6 +25,7 @@ class MapManager : NSObject, ObservableObject
     // It won't let me assign a local var in the directions completion handler
     @Published var expectedTime = "Loading..."
     @Published var headingAngle : Double = 0
+    @Published var mapConfig : MapConfigurations = .standard
     var currentLocation : CLLocation?
     
     
@@ -139,6 +140,14 @@ extension MapManager
         }
     }
     
+    var annotations : [FavoritedAnnotation]
+    {
+        self.presentedBuildings.map
+        {
+            FavoritedAnnotation(building: $0)
+        }
+    }
+    
     func save()
     {
         storageManager.save(modelData: model)
@@ -151,4 +160,9 @@ struct MapConstants
     static let spanBuffer = 0.005
     static let psuCampus = CLLocationCoordinate2D(latitude: 40.798214, longitude: -77.859909)
     static let nearby = 0.075
+}
+
+enum MapConfigurations
+{
+    case standard, hybrid, imagery
 }

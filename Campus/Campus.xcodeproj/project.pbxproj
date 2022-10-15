@@ -29,6 +29,9 @@
 		4F139EA028EA71F70027EB3A /* BuildingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139E9F28EA71F70027EB3A /* BuildingMenu.swift */; };
 		4F139EA228EB67970027EB3A /* ToolbarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139EA128EB67970027EB3A /* ToolbarButtons.swift */; };
 		4F139EA428EBB2420027EB3A /* ExitSheetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F139EA328EBB2420027EB3A /* ExitSheetButton.swift */; };
+		4FA553D428FA19BC001AA5BB /* UICampusMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA553D328FA19BC001AA5BB /* UICampusMap.swift */; };
+		4FA553D628FA1B12001AA5BB /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA553D528FA1B12001AA5BB /* MapCoordinator.swift */; };
+		4FA553D828FA1E1A001AA5BB /* FavoritedAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA553D728FA1E1A001AA5BB /* FavoritedAnnotation.swift */; };
 		4FBA4F8628F4A48C00E4863C /* QuickSelectButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8528F4A48C00E4863C /* QuickSelectButtons.swift */; };
 		4FBA4F8828F4A7EB00E4863C /* ManagerIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8728F4A7EB00E4863C /* ManagerIntents.swift */; };
 		4FBA4F8A28F4BF5900E4863C /* ManagerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8928F4BF5900E4863C /* ManagerFunctions.swift */; };
@@ -82,6 +85,9 @@
 		4F139E9F28EA71F70027EB3A /* BuildingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingMenu.swift; sourceTree = "<group>"; };
 		4F139EA128EB67970027EB3A /* ToolbarButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarButtons.swift; sourceTree = "<group>"; };
 		4F139EA328EBB2420027EB3A /* ExitSheetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitSheetButton.swift; sourceTree = "<group>"; };
+		4FA553D328FA19BC001AA5BB /* UICampusMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICampusMap.swift; sourceTree = "<group>"; };
+		4FA553D528FA1B12001AA5BB /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
+		4FA553D728FA1E1A001AA5BB /* FavoritedAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedAnnotation.swift; sourceTree = "<group>"; };
 		4FBA4F8528F4A48C00E4863C /* QuickSelectButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSelectButtons.swift; sourceTree = "<group>"; };
 		4FBA4F8728F4A7EB00E4863C /* ManagerIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerIntents.swift; sourceTree = "<group>"; };
 		4FBA4F8928F4BF5900E4863C /* ManagerFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerFunctions.swift; sourceTree = "<group>"; };
@@ -200,6 +206,7 @@
 				4FBA4F8B28F4C35100E4863C /* ManagerVariables.swift */,
 				4FBA4F9128F4CEA600E4863C /* Manager+Location.swift */,
 				4FBA4F9728F4F86200E4863C /* ManagerDirections.swift */,
+				4FA553D728FA1E1A001AA5BB /* FavoritedAnnotation.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -207,6 +214,7 @@
 		4F139E2228E5FF0E0027EB3A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4FA553D228FA194D001AA5BB /* UIMap */,
 				4F139E9C28E78FEB0027EB3A /* Buttons */,
 				4F139DF828E5FEC90027EB3A /* ContentView.swift */,
 				4F139E5D28E639760027EB3A /* CampusMap.swift */,
@@ -234,6 +242,15 @@
 				4FBA4F8528F4A48C00E4863C /* QuickSelectButtons.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		4FA553D228FA194D001AA5BB /* UIMap */ = {
+			isa = PBXGroup;
+			children = (
+				4FA553D328FA19BC001AA5BB /* UICampusMap.swift */,
+				4FA553D528FA1B12001AA5BB /* MapCoordinator.swift */,
+			);
+			path = UIMap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,13 +395,16 @@
 				4F139E9728E764CC0027EB3A /* Building+MapKit.swift in Sources */,
 				4F139E9228E645260027EB3A /* StorageManager.swift in Sources */,
 				4F139E5E28E639760027EB3A /* CampusMap.swift in Sources */,
+				4FA553D628FA1B12001AA5BB /* MapCoordinator.swift in Sources */,
 				4F139EA228EB67970027EB3A /* ToolbarButtons.swift in Sources */,
 				4F139DF928E5FEC90027EB3A /* ContentView.swift in Sources */,
 				4FBA4F8628F4A48C00E4863C /* QuickSelectButtons.swift in Sources */,
 				4F139E6428E63A900027EB3A /* CampusModel.swift in Sources */,
+				4FA553D828FA1E1A001AA5BB /* FavoritedAnnotation.swift in Sources */,
 				4F139EA028EA71F70027EB3A /* BuildingMenu.swift in Sources */,
 				4FBA4F8C28F4C35100E4863C /* ManagerVariables.swift in Sources */,
 				4FBA4F9228F4CEA600E4863C /* Manager+Location.swift in Sources */,
+				4FA553D428FA19BC001AA5BB /* UICampusMap.swift in Sources */,
 				4F139E9328E645260027EB3A /* FileInfo.swift in Sources */,
 				4F139DF728E5FEC90027EB3A /* CampusApp.swift in Sources */,
 				4FBA4F8828F4A7EB00E4863C /* ManagerIntents.swift in Sources */,
