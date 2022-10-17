@@ -13,7 +13,9 @@ class MapManager : NSObject, ObservableObject
     private let storageManager : StorageManager<CampusModel>
     private let span = MapConstants.span
     let locationManager : CLLocationManager
-    var region : MKCoordinateRegion
+    
+    @Published var region : MKCoordinateRegion
+    @Published var moveRegion : Bool = false
 
     @Published var model        : CampusModel
     @Published var showSheet    : Bool          = false

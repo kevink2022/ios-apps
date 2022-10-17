@@ -49,6 +49,8 @@ extension MapManager
                 longitudeDelta: long_delta + MapConstants.spanBuffer
             )
         )
+        
+        moveRegion = true
     }
     
     func buidlingNearby(building: FavoritedBuilding) -> Bool

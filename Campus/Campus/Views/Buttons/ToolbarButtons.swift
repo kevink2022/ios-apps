@@ -13,6 +13,7 @@ struct ToolbarButtons: View
     
     var body: some View
     {
+        // Switch map style
         Button
         {
             switch manager.mapConfig

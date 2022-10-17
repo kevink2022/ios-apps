@@ -34,8 +34,15 @@ struct UICampusMap: UIViewRepresentable
         map.userTrackingMode = manager.trackingLocation ? .follow : .none
         
         let annotations = map.annotations
-        map.removeAnnotations(manager.annotations)
+        map.removeAnnotations(annotations)
         map.addAnnotations(manager.annotations)
+        
+        if manager.moveRegion
+        {
+            map.region = manager.region
+            manager.moveRegion = false
+        }
+        
     }
     
     func makeCoordinator() -> MapCoordinator

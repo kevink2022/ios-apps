@@ -29,15 +29,28 @@ class MapCoordinator : NSObject, MKMapViewDelegate
         case is FavoritedAnnotation:
             let marker = MKAnnotationView(annotation: annotation, reuseIdentifier: "")
             let building = annotation as! FavoritedAnnotation
-            marker.canShowCallout = false
             
-            marker.image = UIImage(systemName: building.building.isFavorited ? ViewConstants.favorite : ViewConstants.building)
+            marker.canShowCallout = true
+            marker.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
             
+            let image = UIImage(systemName: building.building.isFavorited ? ViewConstants.favorite : ViewConstants.building)
+            marker.image = image
             
             return marker
-         
+            
         default:
             return nil
         }
+    }
+    
+    func mapView(_ map: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
+    {
+        
+        
+        // assume view's annotation is a Place
+        let building = view.annotation as! FavoritedAnnotation
+        manager.selectedBuilding = building.building
+        manager.sheet = .detailView
+        manager.showSheet = true
     }
 }

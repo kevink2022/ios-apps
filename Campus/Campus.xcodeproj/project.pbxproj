@@ -35,9 +35,6 @@
 		4FBA4F8628F4A48C00E4863C /* QuickSelectButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8528F4A48C00E4863C /* QuickSelectButtons.swift */; };
 		4FBA4F8828F4A7EB00E4863C /* ManagerIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8728F4A7EB00E4863C /* ManagerIntents.swift */; };
 		4FBA4F8A28F4BF5900E4863C /* ManagerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8928F4BF5900E4863C /* ManagerFunctions.swift */; };
-		4FBA4F8C28F4C35100E4863C /* ManagerVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8B28F4C35100E4863C /* ManagerVariables.swift */; };
-		4FBA4F8F28F4CBB700E4863C /* SCWalk.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8D28F4CBB700E4863C /* SCWalk.gpx */; };
-		4FBA4F9028F4CBB700E4863C /* W209Westgate.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8E28F4CBB700E4863C /* W209Westgate.gpx */; };
 		4FBA4F9228F4CEA600E4863C /* Manager+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F9128F4CEA600E4863C /* Manager+Location.swift */; };
 		4FBA4F9828F4F86200E4863C /* ManagerDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F9728F4F86200E4863C /* ManagerDirections.swift */; };
 /* End PBXBuildFile section */
@@ -88,12 +85,11 @@
 		4FA553D328FA19BC001AA5BB /* UICampusMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICampusMap.swift; sourceTree = "<group>"; };
 		4FA553D528FA1B12001AA5BB /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
 		4FA553D728FA1E1A001AA5BB /* FavoritedAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedAnnotation.swift; sourceTree = "<group>"; };
+		4FA553DA28FDE0D2001AA5BB /* SCWalk.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SCWalk.gpx; sourceTree = "<group>"; };
+		4FA553DB28FDE0DF001AA5BB /* W209Westgate.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = W209Westgate.gpx; sourceTree = "<group>"; };
 		4FBA4F8528F4A48C00E4863C /* QuickSelectButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSelectButtons.swift; sourceTree = "<group>"; };
 		4FBA4F8728F4A7EB00E4863C /* ManagerIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerIntents.swift; sourceTree = "<group>"; };
 		4FBA4F8928F4BF5900E4863C /* ManagerFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerFunctions.swift; sourceTree = "<group>"; };
-		4FBA4F8B28F4C35100E4863C /* ManagerVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerVariables.swift; sourceTree = "<group>"; };
-		4FBA4F8D28F4CBB700E4863C /* SCWalk.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = SCWalk.gpx; path = "../../../../../Downloads/SampleCode2022-main/Around Town/Around Town/Models/SCWalk.gpx"; sourceTree = "<group>"; };
-		4FBA4F8E28F4CBB700E4863C /* W209Westgate.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = W209Westgate.gpx; path = "../../../../../Downloads/SampleCode2022-main/Around Town/Around Town/Models/W209Westgate.gpx"; sourceTree = "<group>"; };
 		4FBA4F9128F4CEA600E4863C /* Manager+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Location.swift"; sourceTree = "<group>"; };
 		4FBA4F9728F4F86200E4863C /* ManagerDirections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerDirections.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,8 +186,8 @@
 				4F139E6528E63B640027EB3A /* Building.swift */,
 				4F139E9628E764CC0027EB3A /* Building+MapKit.swift */,
 				4F139E9828E7811E0027EB3A /* FavoritedBuilding.swift */,
-				4FBA4F8D28F4CBB700E4863C /* SCWalk.gpx */,
-				4FBA4F8E28F4CBB700E4863C /* W209Westgate.gpx */,
+				4FA553DA28FDE0D2001AA5BB /* SCWalk.gpx */,
+				4FA553DB28FDE0DF001AA5BB /* W209Westgate.gpx */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,12 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				4F139E5F28E63A300027EB3A /* MapManager.swift */,
-				4FBA4F8928F4BF5900E4863C /* ManagerFunctions.swift */,
-				4FBA4F8728F4A7EB00E4863C /* ManagerIntents.swift */,
+				4FA553D928FDD5B0001AA5BB /* ManagerExtentions */,
 				4F139E9428E764590027EB3A /* BuildingAnnotation.swift */,
-				4FBA4F8B28F4C35100E4863C /* ManagerVariables.swift */,
-				4FBA4F9128F4CEA600E4863C /* Manager+Location.swift */,
-				4FBA4F9728F4F86200E4863C /* ManagerDirections.swift */,
 				4FA553D728FA1E1A001AA5BB /* FavoritedAnnotation.swift */,
 			);
 			path = ViewModels;
@@ -251,6 +243,17 @@
 				4FA553D528FA1B12001AA5BB /* MapCoordinator.swift */,
 			);
 			path = UIMap;
+			sourceTree = "<group>";
+		};
+		4FA553D928FDD5B0001AA5BB /* ManagerExtentions */ = {
+			isa = PBXGroup;
+			children = (
+				4FBA4F8928F4BF5900E4863C /* ManagerFunctions.swift */,
+				4FBA4F8728F4A7EB00E4863C /* ManagerIntents.swift */,
+				4FBA4F9128F4CEA600E4863C /* Manager+Location.swift */,
+				4FBA4F9728F4F86200E4863C /* ManagerDirections.swift */,
+			);
+			path = ManagerExtentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,10 +360,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FBA4F8F28F4CBB700E4863C /* SCWalk.gpx in Resources */,
 				4F139DFE28E5FECA0027EB3A /* Preview Assets.xcassets in Resources */,
 				4F139E6F28E640010027EB3A /* buildings.json in Resources */,
-				4FBA4F9028F4CBB700E4863C /* W209Westgate.gpx in Resources */,
 				4F139DFB28E5FECA0027EB3A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,7 +403,6 @@
 				4F139E6428E63A900027EB3A /* CampusModel.swift in Sources */,
 				4FA553D828FA1E1A001AA5BB /* FavoritedAnnotation.swift in Sources */,
 				4F139EA028EA71F70027EB3A /* BuildingMenu.swift in Sources */,
-				4FBA4F8C28F4C35100E4863C /* ManagerVariables.swift in Sources */,
 				4FBA4F9228F4CEA600E4863C /* Manager+Location.swift in Sources */,
 				4FA553D428FA19BC001AA5BB /* UICampusMap.swift in Sources */,
 				4F139E9328E645260027EB3A /* FileInfo.swift in Sources */,

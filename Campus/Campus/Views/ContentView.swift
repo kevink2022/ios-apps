@@ -64,6 +64,7 @@ struct ViewConstants
     static let not_location     = "location"
     static let directions       = "map.fill"
     static let not_directions   = "map"
+    static let walking          = "figure.walk"
     
     // Colors
     static let favorite_color   = Color.orange

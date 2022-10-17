@@ -25,6 +25,16 @@ struct DetailView: View
                 
                 Button
                 {
+                    
+                }
+                label:
+                {
+                    Image(systemName: ViewConstants.walking)
+                        .font(.title)
+                }
+                
+                Button
+                {
                     manager.getExpectedTime(to: manager.selectedBuilding)
                     withAnimation
                     {
