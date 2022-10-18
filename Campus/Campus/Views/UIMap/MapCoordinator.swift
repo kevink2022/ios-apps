@@ -93,9 +93,7 @@ class MapCoordinator : NSObject, MKMapViewDelegate
         let coordinate = view.convert(point, toCoordinateFrom: view)
         
         let fake_id = Int(((Double(coordinate.latitude) + Double(coordinate.longitude)) * 10000000)) % 555555
-        
-        print("\(fake_id)")
-        
+                
         let pin = FavoritedAnnotation(
             building: FavoritedBuilding(
                 building: Building(
