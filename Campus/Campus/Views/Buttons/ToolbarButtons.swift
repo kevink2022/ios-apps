@@ -13,21 +13,6 @@ struct ToolbarButtons: View
     
     var body: some View
     {
-        // Switch map style
-        Button
-        {
-            switch manager.mapConfig
-            {
-            case .standard: manager.mapConfig = .hybrid
-            case .hybrid:   manager.mapConfig = .imagery
-            case .imagery:  manager.mapConfig = .standard
-            }
-        }
-        label:
-        {
-            Image(systemName: "globe.americas")
-        }
-        
         // Center Map
         Button
         {
@@ -78,6 +63,21 @@ struct ToolbarButtons: View
         {
             Image(systemName: manager.presenting == .pinned ? ViewConstants.building : ViewConstants.not_building)
                 .foregroundColor(manager.presenting == .pinned ? ViewConstants.pinned_color : ViewConstants.not_color)
+        }
+        
+        // Switch map style
+        Button
+        {
+            switch manager.mapConfig
+            {
+            case .standard: manager.mapConfig = .hybrid
+            case .hybrid:   manager.mapConfig = .imagery
+            case .imagery:  manager.mapConfig = .standard
+            }
+        }
+        label:
+        {
+            Image(systemName: "globe.americas")
         }
         
         // Settings

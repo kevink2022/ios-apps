@@ -46,7 +46,6 @@ struct DetailView: View
                 label:
                 {
                     Image(systemName: ViewConstants.not_directions)
-                        .foregroundColor(showingDirections ? ViewConstants.directions_color : ViewConstants.not_color)
                         .font(.title)
                 }
                 
