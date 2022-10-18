@@ -20,6 +20,10 @@ struct UICampusMap: UIViewRepresentable
         map.userTrackingMode = .follow
         map.region = manager.region
         map.delegate = context.coordinator
+        
+        let longPress = UILongPressGestureRecognizer(target: context.coordinator, action: #selector(context.coordinator.addPin(recognizer:)))
+        map.addGestureRecognizer(longPress)
+        
         return map
     }
     
@@ -33,9 +37,14 @@ struct UICampusMap: UIViewRepresentable
         }
         map.userTrackingMode = manager.trackingLocation ? .follow : .none
         
-        let annotations = map.annotations
-        map.removeAnnotations(annotations)
+        map.removeAnnotations(map.annotations)
         map.addAnnotations(manager.annotations)
+        
+        map.removeOverlays(map.overlays)
+        if let route = manager.route?.polyline
+        {
+            map.addOverlay(route)
+        }
         
         if manager.moveRegion
         {

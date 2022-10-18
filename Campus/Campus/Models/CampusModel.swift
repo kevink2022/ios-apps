@@ -20,7 +20,7 @@ struct CampusDirection
 
 enum CampusSheets
 {
-    case none, detailView, buildingMenu
+    case none, detailView, buildingMenu, routeSteps
 }
 
 enum PresentedPins
@@ -28,7 +28,8 @@ enum PresentedPins
     case none, pinned, favorited
 }
 
-extension CampusModel
+enum BuildingList : String, CaseIterable, Identifiable
 {
-
+    case all, favorite, nearby
+    var id: Self {self}
 }

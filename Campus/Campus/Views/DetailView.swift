@@ -25,7 +25,9 @@ struct DetailView: View
                 
                 Button
                 {
-                    
+                    manager.directions(to: manager.selectedBuilding)
+                    manager.showSheet = false
+                    manager.sheet = .none
                 }
                 label:
                 {
@@ -48,7 +50,26 @@ struct DetailView: View
                         .font(.title)
                 }
                 
-                FavoriteButton()
+                if manager.selectedBuilding.building.name != "Dropped Pin"
+                {
+                    FavoriteButton()
+                }
+                else
+                {
+                    Button
+                    {
+                        manager.showSheet = false
+                        manager.sheet = .none
+                        manager.removePin(pin: manager.selectedBuilding)
+                        
+                        
+                    }
+                    label:
+                    {
+                        Image(systemName: "trash")
+                            .font(.title)
+                    }
+                }
             }
             
             if showingDirections

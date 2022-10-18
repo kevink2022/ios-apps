@@ -32,7 +32,11 @@
 		4FA553D428FA19BC001AA5BB /* UICampusMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA553D328FA19BC001AA5BB /* UICampusMap.swift */; };
 		4FA553D628FA1B12001AA5BB /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA553D528FA1B12001AA5BB /* MapCoordinator.swift */; };
 		4FA553D828FA1E1A001AA5BB /* FavoritedAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA553D728FA1E1A001AA5BB /* FavoritedAnnotation.swift */; };
-		4FBA4F8628F4A48C00E4863C /* QuickSelectButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8528F4A48C00E4863C /* QuickSelectButtons.swift */; };
+		4FA553DD28FDFA5F001AA5BB /* RouteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA553DC28FDFA5F001AA5BB /* RouteButton.swift */; };
+		4FA553E028FE007A001AA5BB /* RouteStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA553DF28FE007A001AA5BB /* RouteStepsView.swift */; };
+		4FA553E228FE0730001AA5BB /* RouteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA553E128FE0730001AA5BB /* RouteInfo.swift */; };
+		4FA553E828FE2A4D001AA5BB /* ListFilterButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA553E728FE2A4D001AA5BB /* ListFilterButtons.swift */; };
+		4FBA4F8628F4A48C00E4863C /* QuickActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8528F4A48C00E4863C /* QuickActionButtons.swift */; };
 		4FBA4F8828F4A7EB00E4863C /* ManagerIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8728F4A7EB00E4863C /* ManagerIntents.swift */; };
 		4FBA4F8A28F4BF5900E4863C /* ManagerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8928F4BF5900E4863C /* ManagerFunctions.swift */; };
 		4FBA4F9228F4CEA600E4863C /* Manager+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F9128F4CEA600E4863C /* Manager+Location.swift */; };
@@ -87,7 +91,11 @@
 		4FA553D728FA1E1A001AA5BB /* FavoritedAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedAnnotation.swift; sourceTree = "<group>"; };
 		4FA553DA28FDE0D2001AA5BB /* SCWalk.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SCWalk.gpx; sourceTree = "<group>"; };
 		4FA553DB28FDE0DF001AA5BB /* W209Westgate.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = W209Westgate.gpx; sourceTree = "<group>"; };
-		4FBA4F8528F4A48C00E4863C /* QuickSelectButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSelectButtons.swift; sourceTree = "<group>"; };
+		4FA553DC28FDFA5F001AA5BB /* RouteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteButton.swift; sourceTree = "<group>"; };
+		4FA553DF28FE007A001AA5BB /* RouteStepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteStepsView.swift; sourceTree = "<group>"; };
+		4FA553E128FE0730001AA5BB /* RouteInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInfo.swift; sourceTree = "<group>"; };
+		4FA553E728FE2A4D001AA5BB /* ListFilterButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFilterButtons.swift; sourceTree = "<group>"; };
+		4FBA4F8528F4A48C00E4863C /* QuickActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickActionButtons.swift; sourceTree = "<group>"; };
 		4FBA4F8728F4A7EB00E4863C /* ManagerIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerIntents.swift; sourceTree = "<group>"; };
 		4FBA4F8928F4BF5900E4863C /* ManagerFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerFunctions.swift; sourceTree = "<group>"; };
 		4FBA4F9128F4CEA600E4863C /* Manager+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Location.swift"; sourceTree = "<group>"; };
@@ -206,12 +214,14 @@
 		4F139E2228E5FF0E0027EB3A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4F139DF828E5FEC90027EB3A /* ContentView.swift */,
 				4FA553D228FA194D001AA5BB /* UIMap */,
 				4F139E9C28E78FEB0027EB3A /* Buttons */,
-				4F139DF828E5FEC90027EB3A /* ContentView.swift */,
 				4F139E5D28E639760027EB3A /* CampusMap.swift */,
 				4F139E9A28E78EB00027EB3A /* DetailView.swift */,
 				4F139E9F28EA71F70027EB3A /* BuildingMenu.swift */,
+				4FA553DF28FE007A001AA5BB /* RouteStepsView.swift */,
+				4FA553E128FE0730001AA5BB /* RouteInfo.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,7 +241,9 @@
 				4F139E9D28E78FFC0027EB3A /* FavoriteButton.swift */,
 				4F139EA128EB67970027EB3A /* ToolbarButtons.swift */,
 				4F139EA328EBB2420027EB3A /* ExitSheetButton.swift */,
-				4FBA4F8528F4A48C00E4863C /* QuickSelectButtons.swift */,
+				4FBA4F8528F4A48C00E4863C /* QuickActionButtons.swift */,
+				4FA553DC28FDFA5F001AA5BB /* RouteButton.swift */,
+				4FA553E728FE2A4D001AA5BB /* ListFilterButtons.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -391,6 +403,7 @@
 				4F139E9B28E78EB00027EB3A /* DetailView.swift in Sources */,
 				4FBA4F9828F4F86200E4863C /* ManagerDirections.swift in Sources */,
 				4F139E6028E63A300027EB3A /* MapManager.swift in Sources */,
+				4FA553E228FE0730001AA5BB /* RouteInfo.swift in Sources */,
 				4F139E6628E63B640027EB3A /* Building.swift in Sources */,
 				4F139E9928E7811E0027EB3A /* FavoritedBuilding.swift in Sources */,
 				4F139E9728E764CC0027EB3A /* Building+MapKit.swift in Sources */,
@@ -399,14 +412,17 @@
 				4FA553D628FA1B12001AA5BB /* MapCoordinator.swift in Sources */,
 				4F139EA228EB67970027EB3A /* ToolbarButtons.swift in Sources */,
 				4F139DF928E5FEC90027EB3A /* ContentView.swift in Sources */,
-				4FBA4F8628F4A48C00E4863C /* QuickSelectButtons.swift in Sources */,
+				4FBA4F8628F4A48C00E4863C /* QuickActionButtons.swift in Sources */,
 				4F139E6428E63A900027EB3A /* CampusModel.swift in Sources */,
 				4FA553D828FA1E1A001AA5BB /* FavoritedAnnotation.swift in Sources */,
 				4F139EA028EA71F70027EB3A /* BuildingMenu.swift in Sources */,
+				4FA553E028FE007A001AA5BB /* RouteStepsView.swift in Sources */,
 				4FBA4F9228F4CEA600E4863C /* Manager+Location.swift in Sources */,
+				4FA553DD28FDFA5F001AA5BB /* RouteButton.swift in Sources */,
 				4FA553D428FA19BC001AA5BB /* UICampusMap.swift in Sources */,
 				4F139E9328E645260027EB3A /* FileInfo.swift in Sources */,
 				4F139DF728E5FEC90027EB3A /* CampusApp.swift in Sources */,
+				4FA553E828FE2A4D001AA5BB /* ListFilterButtons.swift in Sources */,
 				4FBA4F8828F4A7EB00E4863C /* ManagerIntents.swift in Sources */,
 				4F139E9E28E78FFC0027EB3A /* FavoriteButton.swift in Sources */,
 				4FBA4F8A28F4BF5900E4863C /* ManagerFunctions.swift in Sources */,

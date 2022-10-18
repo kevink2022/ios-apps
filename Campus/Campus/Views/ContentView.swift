@@ -19,23 +19,40 @@ struct ContentView: View
         
         NavigationStack
         {
-            UICampusMap()
-            //CampusMap()
-                .ignoresSafeArea(edges: .horizontal)
-                .ignoresSafeArea(edges: .bottom)
-                .gesture(drag)
-                
-                .toolbar { ToolbarButtons() }
-                
-                .sheet(isPresented: $manager.showSheet)
-                {
-                    switch manager.sheet
+            ZStack
+            {
+                UICampusMap()
+                //CampusMap()
+                    .ignoresSafeArea(edges: .horizontal)
+                    .ignoresSafeArea(edges: .bottom)
+                    .gesture(drag)
+                    
+                    .toolbar { ToolbarButtons() }
+                    
+                    .sheet(isPresented: $manager.showSheet)
                     {
-                    case .detailView:   DetailView()
-                    case .buildingMenu: BuildingMenu()
-                    default:            BuildingMenu()
+                        switch manager.sheet
+                        {
+                        case .detailView:   DetailView()
+                        case .buildingMenu: BuildingMenu()
+                        case .routeSteps:   RouteStepsView()
+                        default:            BuildingMenu()
+                        }
                     }
+                
+                if let _ = manager.route
+                {
+                    HStack{
+                        Spacer()
+                        VStack(alignment: .trailing){
+                            RouteInfo()
+                            Spacer()
+                            RouteButton()
+                        }
+                    }
+                    .padding()
                 }
+            }
         }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  QuickSelectButtons.swift
+//  QuickActionButtons.swift
 //  Campus
 //
 //  Created by Kevin Kelly on 10/10/22.
@@ -7,12 +7,29 @@
 
 import SwiftUI
 
-struct QuickSelectButtons: View
+struct QuickActionButtons: View
 {
     @EnvironmentObject var manager : MapManager
     
     var body: some View
     {
+        // Delete all pins
+        Button
+        {
+            manager.deleteAllPins()
+        }
+        label:
+        {
+            HStack
+            {
+                Text(ViewConstants.quickSelect.deleteAllPins.text)
+                
+                Spacer()
+                
+                Image(systemName: ViewConstants.quickSelect.deleteAllPins.image)
+            }
+        }
+        
         
         // Show All
         Button
@@ -92,7 +109,7 @@ struct QuickSelectButtons_Previews: PreviewProvider
 {
     static var previews: some View
     {
-        QuickSelectButtons()
+        QuickActionButtons()
     }
 }
 
@@ -100,6 +117,12 @@ extension ViewConstants
 {
     struct quickSelect
     {
+        struct deleteAllPins
+        {
+            static let text  = "Delete all dropped pins"
+            static let image = "trash"
+        }
+        
         struct showAll
         {
             static let text  = "Show all buildings"

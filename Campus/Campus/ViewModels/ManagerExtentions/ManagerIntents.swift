@@ -86,4 +86,17 @@ extension MapManager
             return new
         }
     }
+    
+    func removePin(pin: FavoritedBuilding)
+    {
+        if let index = droppedPins.firstIndex(where: {$0.id == pin.id} )
+        {
+            droppedPins.remove(at: index)
+        }
+    }
+    
+    func deleteAllPins()
+    {
+        droppedPins.removeAll()
+    }
 }

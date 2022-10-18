@@ -24,17 +24,32 @@ struct BuildingMenu: View
             // Quick Action buttons
             Section
             {
-                QuickSelectButtons()
+                QuickActionButtons()
             }
             header:
             {
-                Text("Quick Select")
+                Text("Quick Actions")
+            }
+            
+            Section
+            {
+                Picker("Filter List", selection: $manager.buildingListFilter)
+                {
+                    Text("All").tag(BuildingList.all)
+                    Text("Favorite").tag(BuildingList.favorite)
+                    Text("Nearby").tag(BuildingList.nearby)
+                }
+                .pickerStyle(.segmented)
+            }
+            header:
+            {
+                Text("Filter List")
             }
             
             // Individual Building Buttons
             Section
             {
-                ForEach(manager.buildings)
+                ForEach(manager.buildingList)
                 {
                     building in
                     

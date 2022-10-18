@@ -16,6 +16,7 @@ class MapManager : NSObject, ObservableObject
     
     @Published var region : MKCoordinateRegion
     @Published var moveRegion : Bool = false
+    @Published var droppedPins : [FavoritedBuilding] = []
 
     @Published var model        : CampusModel
     @Published var showSheet    : Bool          = false
@@ -27,6 +28,9 @@ class MapManager : NSObject, ObservableObject
     // It won't let me assign a local var in the directions completion handler
     @Published var expectedTime = "Loading..."
     @Published var headingAngle : Double = 0
+    @Published var route : MKRoute?
+    @Published var buildingListFilter : BuildingList = .all
+
     @Published var mapConfig : MapConfigurations = .standard
     var currentLocation : CLLocation?
     
@@ -144,9 +148,19 @@ extension MapManager
     
     var annotations : [FavoritedAnnotation]
     {
-        self.presentedBuildings.map
+        (self.presentedBuildings + self.droppedPins).map
         {
             FavoritedAnnotation(building: $0)
+        }
+    }
+    
+    var buildingList : [FavoritedBuilding]
+    {
+        switch self.buildingListFilter
+        {
+        case .all       : return model.buildings
+        case .favorite  : return model.buildings.filter{$0.isFavorited}
+        case .nearby    : return model.buildings.filter{self.buidlingNearby(building: $0)}
         }
     }
     
