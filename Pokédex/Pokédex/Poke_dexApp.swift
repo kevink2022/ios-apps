@@ -11,7 +11,7 @@ import SwiftUI
 struct Poke_dexApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(manager: PokedexManager())
         }
     }
 }
