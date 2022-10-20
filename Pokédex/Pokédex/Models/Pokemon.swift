@@ -18,7 +18,10 @@ struct Pokemon : Identifiable, Encodable
     let previousEvolutions : [Int]?
     let nextEvolutions : [Int]?
     
-    //var image : String { ("0" * 3 - Int(String(id).count)) + String(id) }
+    var code : String
+    {
+        String(Array(String(1000 + id))[1...])
+    }
 
     enum CodingKeys : String, CodingKey
     {
