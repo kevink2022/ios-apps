@@ -12,10 +12,9 @@ class PokedexManager : ObservableObject
     let pokemon : [Pokemon]
     let storageManager : StorageManager<[Pokemon]>
     
-    init() {
-        
+    init()
+    {
         storageManager = StorageManager<[Pokemon]>(name: "pokedex")
-        
         pokemon = storageManager.modelData ?? []
     }
 }

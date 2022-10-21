@@ -14,15 +14,18 @@ struct PokemonDetailView: View
     
     var body: some View
     {
+        
         VStack(alignment: .leading)
         {
+            // MARK: - Image
             PokemonImage(
                 pokemon: pokemon,
                 cornerRadius: C.Image.cornerRadius,
                 interiorPadding: C.Image.interiorPadding,
-                isOverlay: true
+                overlayNumber: true
             )
             
+            // MARK: - Statistics
             HStack
             {
                 Spacer()
@@ -46,10 +49,10 @@ struct PokemonDetailView: View
                 Spacer()
             }
             
+            // MARK: - Types
             Text("Types")
                 .font(C.sectionTitleFont)
-            
-            
+
             HStack
             {
                 ForEach(pokemon.types)
@@ -60,7 +63,7 @@ struct PokemonDetailView: View
                 }
             }
 
-            
+            // MARK: - Weaknesses
             Text("Weaknesses")
                 .font(C.sectionTitleFont)
             

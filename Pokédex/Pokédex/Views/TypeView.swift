@@ -16,8 +16,8 @@ struct TypeView: View
     {
         Text("\(type.id)")
             .padding(C.textPadding)
-            .bold()
-            .foregroundColor(.white)
+            .font(C.textFont)
+            .foregroundColor(C.textColor)
             .background(
                 RoundedRectangle(cornerRadius: C.cornerRadius)
                     .fill(Color(pokemonType: type))

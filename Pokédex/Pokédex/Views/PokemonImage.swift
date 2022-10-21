@@ -13,7 +13,7 @@ struct PokemonImage: View
     let pokemon : Pokemon
     let cornerRadius : CGFloat
     let interiorPadding : CGFloat
-    let isOverlay : Bool
+    let overlayNumber : Bool
     
     var body: some View
     {
@@ -29,7 +29,7 @@ struct PokemonImage: View
                 )
                 .aspectRatio(1, contentMode: .fit)
                 .opacity(C.backgroundOpacity)
-                .overlay { if isOverlay {
+                .overlay { if overlayNumber {
                         VStack { Spacer()
                             HStack { Spacer()
                                 Text("\(pokemon.code)")
@@ -45,8 +45,6 @@ struct PokemonImage: View
                 .resizable()
                 .aspectRatio(1, contentMode: .fit)
                 .padding(interiorPadding)
-            
-            
         }
     }
 }

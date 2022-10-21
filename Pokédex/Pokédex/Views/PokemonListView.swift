@@ -31,7 +31,7 @@ struct PokemonListView: View
                 pokemon: pokemon,
                 cornerRadius: C.Image.cornerRadius,
                 interiorPadding: C.Image.interiorPadding,
-                isOverlay: false
+                overlayNumber: false
             )
             .frame(height: C.listHeight)
         }

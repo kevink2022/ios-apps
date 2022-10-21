@@ -14,7 +14,7 @@ struct ViewConstants
         static let listHeight : CGFloat = 100
         static let numberFont : Font = .system(.subheadline, design: .monospaced, weight: .regular)
         static let nameFont : Font = .system(.title3, design: .rounded, weight: .bold)
-        static let textColor : Color = .black
+        static let textColor : Color = .primary
         
         struct Image
         {
@@ -44,6 +44,8 @@ struct ViewConstants
     {
         static let cornerRadius : CGFloat = 25
         static let textPadding : CGFloat = 10
+        static let textColor : Color = .white
+        static let textFont : Font = .system(.body, design: .rounded, weight: .bold)
     }
     
     struct StatisticView
@@ -52,6 +54,4 @@ struct ViewConstants
         static let titleFont : Font = .system(.title3, design: .rounded, weight: .bold)
         static let labelFont : Font = .system(.title3, design: .rounded, weight: .regular)
     }
-    
-    
 }
