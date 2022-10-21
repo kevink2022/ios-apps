@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F73870129032299009B5144 /* Aurel_MusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F73870029032299009B5144 /* Aurel_MusicApp.swift */; };
+		4F73870329032299009B5144 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F73870229032299009B5144 /* ContentView.swift */; };
+		4F7387052903229A009B5144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F7387042903229A009B5144 /* Assets.xcassets */; };
+		4F7387082903229A009B5144 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F7387072903229A009B5144 /* Preview Assets.xcassets */; };
+		4F7387122903229A009B5144 /* Aurel_MusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7387112903229A009B5144 /* Aurel_MusicTests.swift */; };
+		4F73871C2903229A009B5144 /* Aurel_MusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F73871B2903229A009B5144 /* Aurel_MusicUITests.swift */; };
+		4F73871E2903229A009B5144 /* Aurel_MusicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F73871D2903229A009B5144 /* Aurel_MusicUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F73870E2903229A009B5144 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F7386F529032299009B5144 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F7386FC29032299009B5144;
+			remoteInfo = "Aurel Music";
+		};
+		4F7387182903229A009B5144 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F7386F529032299009B5144 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F7386FC29032299009B5144;
+			remoteInfo = "Aurel Music";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4F7386FD29032299009B5144 /* Aurel Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aurel Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F73870029032299009B5144 /* Aurel_MusicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aurel_MusicApp.swift; sourceTree = "<group>"; };
+		4F73870229032299009B5144 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4F7387042903229A009B5144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F7387072903229A009B5144 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4F73870D2903229A009B5144 /* Aurel MusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aurel MusicTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F7387112903229A009B5144 /* Aurel_MusicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aurel_MusicTests.swift; sourceTree = "<group>"; };
+		4F7387172903229A009B5144 /* Aurel MusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aurel MusicUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F73871B2903229A009B5144 /* Aurel_MusicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aurel_MusicUITests.swift; sourceTree = "<group>"; };
+		4F73871D2903229A009B5144 /* Aurel_MusicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aurel_MusicUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F7386FA29032299009B5144 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F73870A2903229A009B5144 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F7387142903229A009B5144 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F7386F429032299009B5144 = {
+			isa = PBXGroup;
+			children = (
+				4F7386FF29032299009B5144 /* Aurel Music */,
+				4F7387102903229A009B5144 /* Aurel MusicTests */,
+				4F73871A2903229A009B5144 /* Aurel MusicUITests */,
+				4F7386FE29032299009B5144 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4F7386FE29032299009B5144 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F7386FD29032299009B5144 /* Aurel Music.app */,
+				4F73870D2903229A009B5144 /* Aurel MusicTests.xctest */,
+				4F7387172903229A009B5144 /* Aurel MusicUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F7386FF29032299009B5144 /* Aurel Music */ = {
+			isa = PBXGroup;
+			children = (
+				4F73870029032299009B5144 /* Aurel_MusicApp.swift */,
+				4F73870229032299009B5144 /* ContentView.swift */,
+				4F7387042903229A009B5144 /* Assets.xcassets */,
+				4F7387062903229A009B5144 /* Preview Content */,
+			);
+			path = "Aurel Music";
+			sourceTree = "<group>";
+		};
+		4F7387062903229A009B5144 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4F7387072903229A009B5144 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4F7387102903229A009B5144 /* Aurel MusicTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F7387112903229A009B5144 /* Aurel_MusicTests.swift */,
+			);
+			path = "Aurel MusicTests";
+			sourceTree = "<group>";
+		};
+		4F73871A2903229A009B5144 /* Aurel MusicUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4F73871B2903229A009B5144 /* Aurel_MusicUITests.swift */,
+				4F73871D2903229A009B5144 /* Aurel_MusicUITestsLaunchTests.swift */,
+			);
+			path = "Aurel MusicUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F7386FC29032299009B5144 /* Aurel Music */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F7387212903229A009B5144 /* Build configuration list for PBXNativeTarget "Aurel Music" */;
+			buildPhases = (
+				4F7386F929032299009B5144 /* Sources */,
+				4F7386FA29032299009B5144 /* Frameworks */,
+				4F7386FB29032299009B5144 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Aurel Music";
+			productName = "Aurel Music";
+			productReference = 4F7386FD29032299009B5144 /* Aurel Music.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4F73870C2903229A009B5144 /* Aurel MusicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F7387242903229A009B5144 /* Build configuration list for PBXNativeTarget "Aurel MusicTests" */;
+			buildPhases = (
+				4F7387092903229A009B5144 /* Sources */,
+				4F73870A2903229A009B5144 /* Frameworks */,
+				4F73870B2903229A009B5144 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F73870F2903229A009B5144 /* PBXTargetDependency */,
+			);
+			name = "Aurel MusicTests";
+			productName = "Aurel MusicTests";
+			productReference = 4F73870D2903229A009B5144 /* Aurel MusicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4F7387162903229A009B5144 /* Aurel MusicUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F7387272903229A009B5144 /* Build configuration list for PBXNativeTarget "Aurel MusicUITests" */;
+			buildPhases = (
+				4F7387132903229A009B5144 /* Sources */,
+				4F7387142903229A009B5144 /* Frameworks */,
+				4F7387152903229A009B5144 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F7387192903229A009B5144 /* PBXTargetDependency */,
+			);
+			name = "Aurel MusicUITests";
+			productName = "Aurel MusicUITests";
+			productReference = 4F7387172903229A009B5144 /* Aurel MusicUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F7386F529032299009B5144 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					4F7386FC29032299009B5144 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					4F73870C2903229A009B5144 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 4F7386FC29032299009B5144;
+					};
+					4F7387162903229A009B5144 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 4F7386FC29032299009B5144;
+					};
+				};
+			};
+			buildConfigurationList = 4F7386F829032299009B5144 /* Build configuration list for PBXProject "Aurel Music" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4F7386F429032299009B5144;
+			productRefGroup = 4F7386FE29032299009B5144 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F7386FC29032299009B5144 /* Aurel Music */,
+				4F73870C2903229A009B5144 /* Aurel MusicTests */,
+				4F7387162903229A009B5144 /* Aurel MusicUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F7386FB29032299009B5144 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F7387082903229A009B5144 /* Preview Assets.xcassets in Resources */,
+				4F7387052903229A009B5144 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F73870B2903229A009B5144 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F7387152903229A009B5144 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F7386F929032299009B5144 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F73870329032299009B5144 /* ContentView.swift in Sources */,
+				4F73870129032299009B5144 /* Aurel_MusicApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F7387092903229A009B5144 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F7387122903229A009B5144 /* Aurel_MusicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F7387132903229A009B5144 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F73871E2903229A009B5144 /* Aurel_MusicUITestsLaunchTests.swift in Sources */,
+				4F73871C2903229A009B5144 /* Aurel_MusicUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F73870F2903229A009B5144 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F7386FC29032299009B5144 /* Aurel Music */;
+			targetProxy = 4F73870E2903229A009B5144 /* PBXContainerItemProxy */;
+		};
+		4F7387192903229A009B5144 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F7386FC29032299009B5144 /* Aurel Music */;
+			targetProxy = 4F7387182903229A009B5144 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4F73871F2903229A009B5144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4F7387202903229A009B5144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4F7387222903229A009B5144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Aurel Music/Preview Content\"";
+				DEVELOPMENT_TEAM = Q9B7SPU3TM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.krk252.Aurel-Music";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F7387232903229A009B5144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Aurel Music/Preview Content\"";
+				DEVELOPMENT_TEAM = Q9B7SPU3TM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.krk252.Aurel-Music";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4F7387252903229A009B5144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q9B7SPU3TM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.krk252.Aurel-MusicTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aurel Music.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Aurel Music";
+			};
+			name = Debug;
+		};
+		4F7387262903229A009B5144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q9B7SPU3TM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.krk252.Aurel-MusicTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aurel Music.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Aurel Music";
+			};
+			name = Release;
+		};
+		4F7387282903229A009B5144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q9B7SPU3TM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.krk252.Aurel-MusicUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Aurel Music";
+			};
+			name = Debug;
+		};
+		4F7387292903229A009B5144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q9B7SPU3TM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.krk252.Aurel-MusicUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Aurel Music";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F7386F829032299009B5144 /* Build configuration list for PBXProject "Aurel Music" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F73871F2903229A009B5144 /* Debug */,
+				4F7387202903229A009B5144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F7387212903229A009B5144 /* Build configuration list for PBXNativeTarget "Aurel Music" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F7387222903229A009B5144 /* Debug */,
+				4F7387232903229A009B5144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F7387242903229A009B5144 /* Build configuration list for PBXNativeTarget "Aurel MusicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F7387252903229A009B5144 /* Debug */,
+				4F7387262903229A009B5144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F7387272903229A009B5144 /* Build configuration list for PBXNativeTarget "Aurel MusicUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F7387282903229A009B5144 /* Debug */,
+				4F7387292903229A009B5144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F7386F529032299009B5144 /* Project object */;
+}
