@@ -9,23 +9,31 @@ import SwiftUI
 
 struct PokemonListView: View
 {
-    typealias C = ViewConstants.PokemonList
+    typealias C = ViewConstants.PokemonListView
     let pokemon : Pokemon
     
     var body: some View
     {
         HStack
         {
-            Text("\(pokemon.code)")
-                .font(.subheadline)
+            Text("\(pokemon.id)")
+                .font(C.numberFont)
+                .foregroundColor(C.textColor)
+
             
             Text("\(pokemon.name)")
-                .bold()
+                .font(C.nameFont)
+                .foregroundColor(C.textColor)
             
             Spacer()
             
-            PokemonImage(pokemon: pokemon)
-                .frame(height: C.listHeight)
+            PokemonImage(
+                pokemon: pokemon,
+                cornerRadius: C.Image.cornerRadius,
+                interiorPadding: C.Image.interiorPadding,
+                isOverlay: false
+            )
+            .frame(height: C.listHeight)
         }
         .padding()
     }

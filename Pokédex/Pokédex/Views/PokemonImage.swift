@@ -11,12 +11,15 @@ struct PokemonImage: View
 {
     typealias C = ViewConstants.PokemonImage
     let pokemon : Pokemon
+    let cornerRadius : CGFloat
+    let interiorPadding : CGFloat
+    let isOverlay : Bool
     
     var body: some View
     {
         ZStack
         {
-            RoundedRectangle(cornerRadius: C.cornerRadius)
+            RoundedRectangle(cornerRadius: cornerRadius)
                 .fill(
                     LinearGradient(
                         colors: pokemon.types.map {Color(pokemonType: $0)},
@@ -25,18 +28,31 @@ struct PokemonImage: View
                     )
                 )
                 .aspectRatio(1, contentMode: .fit)
+                .opacity(C.backgroundOpacity)
+                .overlay { if isOverlay {
+                        VStack { Spacer()
+                            HStack { Spacer()
+                                Text("\(pokemon.code)")
+                                    .font(C.numberFont)
+                            }
+                        }
+                        .padding()
+                    }
+                }
 
             
             Image(pokemon.code)
                 .resizable()
                 .aspectRatio(1, contentMode: .fit)
-                .padding(C.interiorPadding)
+                .padding(interiorPadding)
+            
+            
         }
     }
 }
 
-struct PokemonImage_Previews: PreviewProvider {
-    static var previews: some View {
-        PokemonImage(pokemon: Pokemon.standard)
-    }
-}
+//struct PokemonImage_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PokemonImage(pokemon: Pokemon.standard)
+//    }
+//}

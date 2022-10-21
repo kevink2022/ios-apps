@@ -9,20 +9,45 @@ import SwiftUI
 
 struct PokemonDetailView: View
 {
+    typealias C = ViewConstants.PokemonDetailView
     let pokemon : Pokemon
     
     var body: some View
     {
-        VStack
+        VStack(alignment: .leading)
         {
-            PokemonImage(pokemon: pokemon)
+            PokemonImage(
+                pokemon: pokemon,
+                cornerRadius: C.Image.cornerRadius,
+                interiorPadding: C.Image.interiorPadding,
+                isOverlay: true
+            )
             
             HStack
             {
+                Spacer()
                 
+                StatisticView(
+                    title: "Height",
+                    label: "m",
+                    value: pokemon.height,
+                    precision: 2
+                )
+                
+                Spacer()
+                
+                StatisticView(
+                    title: "Weight",
+                    label: "kg",
+                    value: pokemon.weight,
+                    precision: 1
+                )
+                
+                Spacer()
             }
             
             Text("Types")
+                .font(C.sectionTitleFont)
             
             
             HStack
@@ -37,6 +62,7 @@ struct PokemonDetailView: View
 
             
             Text("Weaknesses")
+                .font(C.sectionTitleFont)
             
             ScrollView(.horizontal)
             {

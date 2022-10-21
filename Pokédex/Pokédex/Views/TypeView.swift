@@ -14,9 +14,14 @@ struct TypeView: View
     
     var body: some View
     {
-        RoundedRectangle(cornerRadius: C.cornerRadius)
-            .foregroundColor(Color(pokemonType: type))
-            .overlay { Text("\(type.id)") }
+        Text("\(type.id)")
+            .padding(C.textPadding)
+            .bold()
+            .foregroundColor(.white)
+            .background(
+                RoundedRectangle(cornerRadius: C.cornerRadius)
+                    .fill(Color(pokemonType: type))
+            )
     }
 }
 
