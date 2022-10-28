@@ -9,6 +9,17 @@ import SwiftUI
 
 struct ViewConstants
 {
+    struct DetailToobar
+    {
+        static let titleFont : Font = .system(.largeTitle, design: .default, weight: .bold)
+    }
+    
+    struct Pokeball
+    {
+        static let caught = "pokeball_color"
+        static let notCaught = "pokeball_gray"
+    }
+    
     struct MainView
     {
         static let homeText  = "Home"
@@ -34,6 +45,7 @@ struct ViewConstants
     struct PokemonDetailView
     {
         static let sectionTitleFont : Font = .system(.body, design: .rounded, weight: .semibold)
+        static let caughtButtonFrame : CGFloat = 40
         
         struct Image
         {

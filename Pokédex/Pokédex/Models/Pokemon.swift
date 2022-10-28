@@ -7,14 +7,16 @@
 
 import Foundation
 
-struct CatchablePokemon : Identifiable, Codable
+struct CatchablePokemon : Identifiable, Hashable, Codable
 {
     let pokemon : Pokemon
     var isCaught : Bool = false
     var id : Int {self.pokemon.id}
+    
+    static let standard = CatchablePokemon(pokemon: Pokemon.standard)
 }
 
-struct Pokemon : Identifiable, Encodable
+struct Pokemon : Identifiable, Hashable, Encodable
 {
     let id : Int
     let name : String

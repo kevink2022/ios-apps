@@ -9,83 +9,139 @@ import SwiftUI
 
 struct PokemonDetailView: View
 {
+    @EnvironmentObject var manager : PokedexManager
     typealias C = ViewConstants.PokemonDetailView
-    let pokemon : Pokemon
+    var catchable : CatchablePokemon
     
     var body: some View
     {
-        
-        VStack(alignment: .leading)
+        ScrollView
         {
-            // MARK: - Image
-            PokemonImage(
-                pokemon: pokemon,
-                cornerRadius: C.Image.cornerRadius,
-                interiorPadding: C.Image.interiorPadding,
-                overlayNumber: true
-            )
-            
-            // MARK: - Statistics
-            HStack
+            VStack(alignment: .leading)
             {
-                Spacer()
-                
-                StatisticView(
-                    title: "Height",
-                    label: "m",
-                    value: pokemon.height,
-                    precision: 2
+                // MARK: - Image
+                PokemonImage(
+                    pokemon: catchable.pokemon,
+                    cornerRadius: C.Image.cornerRadius,
+                    interiorPadding: C.Image.interiorPadding,
+                    overlayNumber: true
                 )
                 
-                Spacer()
-                
-                StatisticView(
-                    title: "Weight",
-                    label: "kg",
-                    value: pokemon.weight,
-                    precision: 1
-                )
-                
-                Spacer()
-            }
-            
-            // MARK: - Types
-            Text("Types")
-                .font(C.sectionTitleFont)
-
-            HStack
-            {
-                ForEach(pokemon.types)
-                {
-                    type in
-                    
-                    TypeView(type: type)
-                }
-            }
-
-            // MARK: - Weaknesses
-            Text("Weaknesses")
-                .font(C.sectionTitleFont)
-            
-            ScrollView(.horizontal)
-            {
+                // MARK: - Statistics
                 HStack
                 {
-                    ForEach(pokemon.weaknesses)
+                    Spacer()
+                    
+                    StatisticView(
+                        title: "Height",
+                        label: "m",
+                        value: catchable.pokemon.height,
+                        precision: 2
+                    )
+                    
+                    Spacer()
+                    
+                    StatisticView(
+                        title: "Weight",
+                        label: "kg",
+                        value: catchable.pokemon.weight,
+                        precision: 1
+                    )
+                    
+                    Spacer()
+                }
+                
+                // MARK: - Types
+                Text("Types")
+                    .font(C.sectionTitleFont)
+                
+                HStack
+                {
+                    ForEach(catchable.pokemon.types)
                     {
                         type in
                         
                         TypeView(type: type)
                     }
                 }
+                
+                // MARK: - Weaknesses
+                Text("Weaknesses")
+                    .font(C.sectionTitleFont)
+                
+                ScrollView(.horizontal)
+                {
+                    HStack
+                    {
+                        ForEach(catchable.pokemon.weaknesses)
+                        {
+                            type in
+                            
+                            TypeView(type: type)
+                        }
+                    }
+                }
+                
+                HStack
+                {
+                    if let prevEvo = catchable.pokemon.previousEvolutions
+                    {
+                        ForEach(prevEvo, id: \.self)
+                        {
+                            id in
+                            
+                            var catchable = manager.catchableFromId(id: id)
+                            
+                            NavigationLink
+                            {
+                                PokemonDetailView(catchable: catchable)
+                            }
+                            label:
+                            {
+                                PokemonImage(
+                                    pokemon: catchable.pokemon,
+                                    cornerRadius: 15,
+                                    interiorPadding: 5,
+                                    overlayNumber: false
+                                )
+                            }
+                        }
+                    }
+                    
+                    
+                    if let nextEvo = catchable.pokemon.nextEvolutions
+                    {
+                        ForEach(nextEvo, id: \.self)
+                        {
+                            id in
+                            
+                            var catchable = manager.catchableFromId(id: id)
+                            
+                            NavigationLink
+                            {
+                                PokemonDetailView(catchable: catchable)
+                            }
+                            label:
+                            {
+                                PokemonImage(
+                                    pokemon: catchable.pokemon,
+                                    cornerRadius: 15,
+                                    interiorPadding: 5,
+                                    overlayNumber: true
+                                )
+                            }
+                        }
+                    }
+                    
+                }
             }
+            .padding()
         }
-        .padding()
     }
 }
 
 struct PokemonDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonDetailView(pokemon: Pokemon.standard)
+        PokemonDetailView(catchable: (CatchablePokemon.standard))
     }
 }

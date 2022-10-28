@@ -17,23 +17,39 @@ struct PokedexList: View
         {
             List
             {
-                ForEach(manager.catchable)
+                ForEach($manager.catchable)
                 {
-                    catchable in
+                    $catchable in
 
                     NavigationLink
                     {
-                        PokemonDetailView(pokemon: catchable.pokemon)
-                            .navigationTitle(catchable.pokemon.name)
+                        PokemonDetailView(catchable: catchable)
+                            .toolbar {
+                                DetailToolbar(catchable: $catchable)
+                            }
                     }
                     label:
                     {
                         PokemonListView(pokemon: catchable.pokemon)
                     }
+                    
+//                    NavigationLink(value: catchable)
+//                    {
+//                        PokemonListView(pokemon: catchable.pokemon)
+//                    }
                 }
             }
             .navigationTitle("Pokédex")
             .navigationBarTitleDisplayMode(.automatic)
+//            .navigationDestination(for: CatchablePokemon.self)
+//            {
+//                catchable in
+//
+//                PokemonDetailView(catchable: catchable)
+//                    .toolbar {
+//                        DetailToolbar(catchable: catchable)
+//                    }
+//            }
         }
     }
 }
