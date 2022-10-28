@@ -9,6 +9,14 @@ import SwiftUI
 
 struct ViewConstants
 {
+    struct MainView
+    {
+        static let homeText  = "Home"
+        static let homeImage = "house"
+        static let listText  = "List"
+        static let listImage = "list.bullet"
+    }
+    
     struct PokemonListView
     {
         static let listHeight : CGFloat = 100

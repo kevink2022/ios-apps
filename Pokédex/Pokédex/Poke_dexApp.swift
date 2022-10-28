@@ -8,10 +8,16 @@
 import SwiftUI
 
 @main
-struct Poke_dexApp: App {
-    var body: some Scene {
-        WindowGroup {
-            MainView(manager: PokedexManager())
+struct Poke_dexApp: App
+{
+    @StateObject var manager = PokedexManager()
+    
+    var body: some Scene
+    {
+        WindowGroup
+        {
+            MainView()
+                .environmentObject(manager)
         }
     }
 }

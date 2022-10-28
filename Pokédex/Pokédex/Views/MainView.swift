@@ -9,38 +9,24 @@ import SwiftUI
 
 struct MainView: View
 {
-    @ObservedObject var manager : PokedexManager
+    typealias C = ViewConstants.MainView
     
     var body: some View
     {
-        NavigationStack
+        TabView
         {
-            List
-            {
-                ForEach(manager.pokemon)
-                {
-                    pokemon in
-
-                    NavigationLink
-                    {
-                        PokemonDetailView(pokemon: pokemon)
-                            .navigationTitle(pokemon.name)
-                    }
-                    label:
-                    {
-                        PokemonListView(pokemon: pokemon)
-                    }
-                }
-            }
-            .navigationTitle("Pokédex")
-            .navigationBarTitleDisplayMode(.automatic)
+            PokedexHome()
+                .tabItem {Label(C.homeText, systemImage: C.homeImage)}
+            
+            PokedexList()
+                .tabItem {Label(C.listText, systemImage: C.listImage)}
         }
-        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(manager: PokedexManager())
+        MainView()
+            .environmentObject(PokedexManager())
     }
 }
