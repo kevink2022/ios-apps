@@ -17,18 +17,18 @@ struct PokedexList: View
         {
             List
             {
-                ForEach(manager.pokemon)
+                ForEach(manager.catchable)
                 {
-                    pokemon in
+                    catchable in
 
                     NavigationLink
                     {
-                        PokemonDetailView(pokemon: pokemon)
-                            .navigationTitle(pokemon.name)
+                        PokemonDetailView(pokemon: catchable.pokemon)
+                            .navigationTitle(catchable.pokemon.name)
                     }
                     label:
                     {
-                        PokemonListView(pokemon: pokemon)
+                        PokemonListView(pokemon: catchable.pokemon)
                     }
                 }
             }

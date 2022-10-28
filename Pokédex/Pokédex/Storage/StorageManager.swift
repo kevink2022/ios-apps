@@ -3,50 +3,74 @@
 //  US States
 //
 //  Created by Hannan, John Joseph on 10/17/22.
+//  Modified by Kevin Kelly
 //
-
 import Foundation
 
-class StorageManager<T:Codable> {
-    var modelData : T?
-    let filename : String
-    let fileInfo : FileInfo
-    init(name:String) {
-        filename = name
-        fileInfo = FileInfo(for: filename)
-        if fileInfo.exists {
+class StorageManager<SomeData:Codable>
+{
+    let modelData : SomeData?
+    private var fileInfo : FileInfo
+    private let fileName : String
+    
+    init(fileName name : String)
+    {
+        fileName = name
+        fileInfo = FileInfo(for: fileName)
+        
+        if fileInfo.exists
+        {
             let decoder = JSONDecoder()
-            do {
-                let data = try Data(contentsOf: fileInfo.url)
-                modelData = try  decoder.decode(T.self, from: data)
-            } catch {
+            
+            do
+            {
+                let data = try Data.init(contentsOf: fileInfo.url)
+                modelData = try decoder.decode(SomeData.self, from: data)
+            }
+            catch
+            {
                 print(error)
                 modelData = nil
             }
             return
         }
-        // First time here -
-        let solutionURL = Bundle.main.url(forResource: filename, withExtension: "json")
-        do {
-            let data = try Data(contentsOf: solutionURL!)
+        
+        
+        // first time running app
+        let mainBundle = Bundle.main
+        let url = mainBundle.url(forResource: fileName, withExtension: "json")
+        
+        guard url != nil else
+        {
+            modelData = nil
+            return
+        }
+        
+        do
+        {
+            let data = try Data.init(contentsOf: url!)
             let decoder = JSONDecoder()
-            modelData = try decoder.decode(T.self, from: data)
-
-        } catch { // Handle error
+            modelData = try decoder.decode(SomeData.self, from: data)
+        }
+        catch
+        {
             print(error)
             modelData = nil
         }
     }
     
-    func save(_ modelData: T) {
-        do {
-             let encoder = JSONEncoder()
-            let datajson = try encoder.encode(modelData)
-            try datajson.write(to: fileInfo.url)
+    func save(modelData:SomeData) {
+
+        let url = fileInfo.url
+        let encoder = JSONEncoder()
+        do
+        {
+            let data = try encoder.encode(modelData)
+            try data.write(to: url)
         }
-        catch {
-            print(error)
+        catch
+        {
+                
         }
     }
 }
-
