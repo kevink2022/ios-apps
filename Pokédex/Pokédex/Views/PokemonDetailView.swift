@@ -21,7 +21,7 @@ struct PokemonDetailView: View
             {
                 // MARK: - Image
                 PokemonImage(
-                    pokemon: catchable.pokemon,
+                    catchable: catchable,
                     cornerRadius: C.Image.cornerRadius,
                     interiorPadding: C.Image.interiorPadding,
                     overlayNumber: true
@@ -81,59 +81,8 @@ struct PokemonDetailView: View
                         }
                     }
                 }
-                
-                HStack
-                {
-                    if let prevEvo = catchable.pokemon.previousEvolutions
-                    {
-                        ForEach(prevEvo, id: \.self)
-                        {
-                            id in
-                            
-                            var catchable = manager.catchableFromId(id: id)
-                            
-                            NavigationLink
-                            {
-                                PokemonDetailView(catchable: catchable)
-                            }
-                            label:
-                            {
-                                PokemonImage(
-                                    pokemon: catchable.pokemon,
-                                    cornerRadius: 15,
-                                    interiorPadding: 5,
-                                    overlayNumber: false
-                                )
-                            }
-                        }
-                    }
-                    
-                    
-                    if let nextEvo = catchable.pokemon.nextEvolutions
-                    {
-                        ForEach(nextEvo, id: \.self)
-                        {
-                            id in
-                            
-                            var catchable = manager.catchableFromId(id: id)
-                            
-                            NavigationLink
-                            {
-                                PokemonDetailView(catchable: catchable)
-                            }
-                            label:
-                            {
-                                PokemonImage(
-                                    pokemon: catchable.pokemon,
-                                    cornerRadius: 15,
-                                    interiorPadding: 5,
-                                    overlayNumber: true
-                                )
-                            }
-                        }
-                    }
-                    
-                }
+
+                EvolutionsView(catchable: catchable)
             }
             .padding()
         }

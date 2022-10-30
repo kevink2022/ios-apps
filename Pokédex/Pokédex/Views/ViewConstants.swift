@@ -9,6 +9,12 @@ import SwiftUI
 
 struct ViewConstants
 {
+    struct EvolutionsView
+    {
+        static let titleFont : Font = ViewConstants.PokemonDetailView.sectionTitleFont
+        static let frame : CGFloat = 100
+    }
+    
     struct DetailToobar
     {
         static let titleFont : Font = .system(.largeTitle, design: .default, weight: .bold)
@@ -58,6 +64,8 @@ struct ViewConstants
     {
         static let backgroundOpacity : CGFloat = 0.6
         static let numberFont : Font = .system(.title3, design: .monospaced, weight: .bold)
+        static let pokeballOpacity : CGFloat = 0.5
+        static let pokeballPadding : CGFloat = 2
     }
     
     struct TypeView

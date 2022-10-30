@@ -27,6 +27,8 @@ class PokedexManager : ObservableObject
             let _pokemon = _pokemonStorage.modelData ?? []
             
             catchable = _pokemon.map { CatchablePokemon(pokemon: $0) }
+            
+            print(catchable)
         }
     }
     
@@ -43,19 +45,4 @@ class PokedexManager : ObservableObject
             return CatchablePokemon.standard
         }
     }
-    
-//    /// Simply a way to force a view redraw when changes dont propagate
-//    @Published var redraw : Bool = true
-//    func forceRedraw() { redraw.toggle() }
-//
-//    // MARK: - Intents
-//
-//    func toggleCaught(id: Int)
-//    {
-//        if let index = catchable.firstIndex(where: {$0.id == id} )
-//        {
-//            catchable[index].isCaught.toggle()
-//            forceRedraw()
-//        }
-//    }
 }
