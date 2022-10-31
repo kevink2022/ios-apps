@@ -48,23 +48,3 @@ struct PokemonCard_Previews: PreviewProvider {
         PokemonCard(catchable: CatchablePokemon.standard)
     }
 }
-
-extension ViewConstants
-{
-    struct PokemonCard
-    {
-        static let cornerRadius : CGFloat = 15
-        static let interiorPadding : CGFloat = 5
-        static let cardWidth : CGFloat = 150
-        static let numberFont : Font = .system(.subheadline, design: .monospaced, weight: .regular)
-        static let nameFont : Font = .system(.title3, design: .rounded, weight: .bold)
-        static let textColor : Color = .primary
-        
-        struct Image
-        {
-            static let cornerRadius : CGFloat = 10
-            static let interiorPadding : CGFloat = 5
-        }
-
-    }
-}

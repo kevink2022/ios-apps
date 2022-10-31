@@ -10,19 +10,15 @@ import SwiftUI
 struct ListFilterMenu: View
 {
     @EnvironmentObject var manager : PokedexManager
+    typealias C = ViewConstants.ListFilterMenu
     
     var body: some View
     {
         Menu
         {
-            Button("Show All")
+            Button("All")
             {
-                
-            }
-            
-            Button("Show Caught")
-            {
-                
+                manager.filterType = nil
             }
             
             ForEach(PokemonType.allCases)
@@ -31,13 +27,13 @@ struct ListFilterMenu: View
                 
                 Button(type.rawValue)
                 {
-                    
+                    manager.filterType = type
                 }
             }
         }
         label:
         {
-            Image(systemName: "magnifyingglass.circle")
+            Image(systemName: C.icon)
         }
     }
 }

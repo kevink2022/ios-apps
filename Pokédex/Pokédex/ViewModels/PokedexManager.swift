@@ -11,6 +11,7 @@ class PokedexManager : ObservableObject
 {
     @Published var catchable : [CatchablePokemon]
     @Published var path : [CatchablePokemon] = []
+    @Published var filterType : PokemonType? = nil
     let storageManager : StorageManager<[CatchablePokemon]>
     
     init()
@@ -41,6 +42,26 @@ class PokedexManager : ObservableObject
         else
         {
             return CatchablePokemon.standard
+        }
+    }
+    
+    // MARK: - Filtering
+    
+    enum Filters
+    {
+        case all, caught
+        case type(PokemonType)
+    }
+    
+    var listCatchable : [CatchablePokemon]
+    {
+        if let type = self.filterType
+        {
+            return self.filteredByType(type)
+        }
+        else
+        {
+            return self.catchable
         }
     }
     

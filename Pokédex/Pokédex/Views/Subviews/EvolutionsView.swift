@@ -34,7 +34,7 @@ struct EvolutionsView: View
                         {
                             PokemonDetailView(catchable: catchable)
                                 .toolbar {
-                                    DetailToolbar(catchable: $manager.catchable[catchable.id - 1])
+                                    DetailToolbar(catchable: $manager.catchable[catchable.id - 1], dismissOnRelease: false)
                                 }
                         }
                         label:
@@ -63,7 +63,7 @@ struct EvolutionsView: View
                         {
                             PokemonDetailView(catchable: catchable)
                                 .toolbar {
-                                    DetailToolbar(catchable: $manager.catchable[catchable.id - 1])
+                                    DetailToolbar(catchable: $manager.catchable[catchable.id - 1], dismissOnRelease: false)
                                 }
                         }
                         label:

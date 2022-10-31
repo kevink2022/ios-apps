@@ -23,12 +23,16 @@ struct CaughtView: View
 struct CaughtButton: View
 {
     @Binding var caught : Bool
+    @Environment(\.dismiss) var dismiss
+    let dismissOnRelease : Bool
+    
     
     var body: some View
     {
         Button
         {
             caught.toggle()
+            if dismissOnRelease { dismiss() }
         }
         label:
         {

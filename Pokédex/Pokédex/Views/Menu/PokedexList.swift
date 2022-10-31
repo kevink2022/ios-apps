@@ -17,15 +17,15 @@ struct PokedexList: View
         {
             List
             {
-                ForEach($manager.catchable)
+                ForEach(manager.listCatchable)
                 {
-                    $catchable in
+                    catchable in
 
                     NavigationLink
                     {
                         PokemonDetailView(catchable: catchable)
                             .toolbar {
-                                DetailToolbar(catchable: $catchable)
+                                DetailToolbar(catchable: $manager.catchable[catchable.id - 1], dismissOnRelease: false)
                             }
                     }
                     label:

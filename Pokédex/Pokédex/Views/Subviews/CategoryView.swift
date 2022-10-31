@@ -14,7 +14,7 @@ struct CategoryView: View
     let title : String
     let catchable : [CatchablePokemon]
     let dismissOnRelease : Bool
-    @Environment(\.dismiss) var dismiss
+    
 
     
     var body: some View
@@ -37,7 +37,7 @@ struct CategoryView: View
                         {
                             PokemonDetailView(catchable: catchable)
                                 .toolbar {
-                                    DetailToolbar(catchable: $manager.catchable[catchable.id - 1])
+                                    DetailToolbar(catchable: $manager.catchable[catchable.id - 1], dismissOnRelease: dismissOnRelease)
                                 }
                         }
                         label:
@@ -54,11 +54,4 @@ struct CategoryView: View
         }
     }
 }
-
-//struct CategoryView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CategoryView()
-//    }
-//}
-
 

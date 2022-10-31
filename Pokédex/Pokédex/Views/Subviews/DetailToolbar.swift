@@ -11,6 +11,7 @@ struct DetailToolbar: View
 {
     typealias C = ViewConstants.DetailToobar
     @Binding var catchable : CatchablePokemon
+    let dismissOnRelease : Bool
     
     var body: some View
     {
@@ -21,13 +22,7 @@ struct DetailToolbar: View
             
             Spacer()
             
-            CaughtButton(caught: $catchable.isCaught)
+            CaughtButton(caught: $catchable.isCaught, dismissOnRelease: dismissOnRelease)
         }
     }
 }
-
-//struct PokemonDetailToolbar_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PokemonDetailToolbar()
-//    }
-//}

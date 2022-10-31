@@ -27,7 +27,7 @@ struct Poke_dexApp: App
             case .active:
                 break
             case .inactive:
-                break
+                manager.save()
             @unknown default:
                 assert(false, "Unknown scene Phase")
             }
