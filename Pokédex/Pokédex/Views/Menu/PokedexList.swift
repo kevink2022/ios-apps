@@ -32,24 +32,11 @@ struct PokedexList: View
                     {
                         PokemonListView(catchable: catchable)
                     }
-                    
-//                    NavigationLink(value: catchable)
-//                    {
-//                        PokemonListView(pokemon: catchable.pokemon)
-//                    }
                 }
             }
             .navigationTitle("Pokédex")
             .navigationBarTitleDisplayMode(.automatic)
-//            .navigationDestination(for: CatchablePokemon.self)
-//            {
-//                catchable in
-//
-//                PokemonDetailView(catchable: catchable)
-//                    .toolbar {
-//                        DetailToolbar(catchable: catchable)
-//                    }
-//            }
+            .toolbar { ListFilterMenu() }
         }
     }
 }

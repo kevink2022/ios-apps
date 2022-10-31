@@ -9,6 +9,13 @@ import SwiftUI
 
 struct ViewConstants
 {
+    struct CategoryView
+    {
+        static let titleFont : Font = .system(.title, design: .rounded, weight: .bold)
+        static let verticalPadding : CGFloat = 10
+        static let horizontalPadding : CGFloat = 5
+    }
+    
     struct EvolutionsView
     {
         static let titleFont : Font = ViewConstants.PokemonDetailView.sectionTitleFont

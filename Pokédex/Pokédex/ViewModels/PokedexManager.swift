@@ -27,8 +27,6 @@ class PokedexManager : ObservableObject
             let _pokemon = _pokemonStorage.modelData ?? []
             
             catchable = _pokemon.map { CatchablePokemon(pokemon: $0) }
-            
-            print(catchable)
         }
     }
     
@@ -43,6 +41,22 @@ class PokedexManager : ObservableObject
         else
         {
             return CatchablePokemon.standard
+        }
+    }
+    
+    func filteredByCaught() -> [CatchablePokemon]
+    {
+        catchable.filter { $0.isCaught }
+    }
+    
+    func filteredByType(_ filterType: PokemonType) -> [CatchablePokemon]
+    {
+        catchable.filter
+        {
+            $0.pokemon.types.reduce(false)
+            {
+                partial, type in ((type == filterType) || partial)
+            }
         }
     }
 }

@@ -55,13 +55,16 @@ struct PokemonDetailView: View
                 Text("Types")
                     .font(C.sectionTitleFont)
                 
-                HStack
+                ScrollView(.horizontal) // yay! scrolling!
                 {
-                    ForEach(catchable.pokemon.types)
+                    HStack
                     {
-                        type in
-                        
-                        TypeView(type: type)
+                        ForEach(catchable.pokemon.types)
+                        {
+                            type in
+                            
+                            TypeView(type: type)
+                        }
                     }
                 }
                 

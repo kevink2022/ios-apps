@@ -37,8 +37,4 @@ struct CaughtButton: View
     }
 }
 
-//struct CaughtPokeballView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CaughtView()
-//    }
-//}
+
