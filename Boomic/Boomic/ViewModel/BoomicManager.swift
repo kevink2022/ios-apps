@@ -10,9 +10,12 @@ import Foundation
 class BoomicManager : ObservableObject
 {
     @Published var library : BoomicLibrary
+    @Published var currentSong : Song?
+    @Published var queue : [Song]
     
     init()
     {
         library = BoomicLibrary(songs: [], albums: [], artists: [])
+        queue = []
     }
 }

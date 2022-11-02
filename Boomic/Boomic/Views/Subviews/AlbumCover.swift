@@ -19,7 +19,7 @@ struct AlbumCover: View
             .resizable()
             .aspectRatio(1, contentMode: .fit)
             .cornerRadius(C.cornerRadius)
-            .padding(C.padding)
+            .padding(.horizontal, C.padding)
     }
 }
 

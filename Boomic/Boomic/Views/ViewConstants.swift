@@ -21,11 +21,28 @@ struct ViewConstants
     
     struct Classic_GUI
     {
+        struct Fonts
+        {
+            static let title : Font = .system(.largeTitle, design: .default, weight: .bold)
+            static let artist : Font = .system(.title3, design: .default, weight: .light)
+            static let album = Font.system(.title3, design: .default, weight: .light)
+        }
+        
         struct ClassicSongView
         {
-            struct Fonts
+            
+        }
+        
+        struct Subviews
+        {
+            struct ClassicMediaControls
             {
-                static let title : Font = .system(.title, design: .default, weight: .bold)
+                static let playSF = "play.fill"
+                static let pauseSF = "pause.fill"
+                static let lastSongSF = "backward.fill"
+                static let nextSongSF = "forward.fill"
+                static let font = Font.system(.largeTitle, design: .default, weight: .bold)
+                static let color = Color.primary
             }
         }
     }

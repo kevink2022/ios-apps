@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ClassicSongView: View
 {
-    typealias C = ViewConstants.Classic_GUI.ClassicSongView
+    typealias F = ViewConstants.Classic_GUI.Fonts
     let song : Song
     
     var body: some View
@@ -18,16 +18,9 @@ struct ClassicSongView: View
         {
             AlbumCover(image: "ratatat-magnifique")
             
+            ClassicTitles(song: song)
             
-            VStack(alignment: .leading)
-            {
-                //TODO: add defaults
-                Text(song.name ?? "No name") //default - filename
-                    .font(C.Fonts.title)
-                
-                Text(song.artist?.name ?? "No artist")
-            }
-            .padding(.horizontal)
+            ClassicMediaControls()
             
             
             
@@ -38,10 +31,7 @@ struct ClassicSongView: View
 struct ClassicSongView_Previews: PreviewProvider {
     static var previews: some View {
         ClassicSongView(song: Song.standard)
+        ClassicSongView(song: Song.standard).preferredColorScheme(.dark)
     }
 }
 
-extension ViewConstants.Classic_GUI
-{
-    
-}
