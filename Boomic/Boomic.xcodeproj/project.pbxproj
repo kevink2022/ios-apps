@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F597D222911A14F00BC1046 /* BoomicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D212911A14F00BC1046 /* BoomicApp.swift */; };
+		4F597D262911A15000BC1046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F597D252911A15000BC1046 /* Assets.xcassets */; };
+		4F597D292911A15000BC1046 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F597D282911A15000BC1046 /* Preview Assets.xcassets */; };
+		4F597D332911A15000BC1046 /* BoomicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D322911A15000BC1046 /* BoomicTests.swift */; };
+		4F597D3D2911A15000BC1046 /* BoomicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D3C2911A15000BC1046 /* BoomicUITests.swift */; };
+		4F597D3F2911A15000BC1046 /* BoomicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D3E2911A15000BC1046 /* BoomicUITestsLaunchTests.swift */; };
+		4F597D502911A1CE00BC1046 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D4F2911A1CE00BC1046 /* MainView.swift */; };
+		4F597D562911A28B00BC1046 /* ClassicSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D552911A28B00BC1046 /* ClassicSongView.swift */; };
+		4F597D592911A65100BC1046 /* AlbumCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D582911A65100BC1046 /* AlbumCover.swift */; };
+		4F597D5B2911A74100BC1046 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D5A2911A74100BC1046 /* ViewConstants.swift */; };
+		4F597D5D2911A8F800BC1046 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D5C2911A8F800BC1046 /* Song.swift */; };
+		4F597D5F2912E07900BC1046 /* BoomicLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D5E2912E07900BC1046 /* BoomicLibrary.swift */; };
+		4F597D612912E0C500BC1046 /* BoomicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D602912E0C500BC1046 /* BoomicManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F597D2F2911A15000BC1046 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F597D162911A14F00BC1046 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F597D1D2911A14F00BC1046;
+			remoteInfo = Boomic;
+		};
+		4F597D392911A15000BC1046 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F597D162911A14F00BC1046 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F597D1D2911A14F00BC1046;
+			remoteInfo = Boomic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4F597D1E2911A14F00BC1046 /* Boomic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boomic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F597D212911A14F00BC1046 /* BoomicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoomicApp.swift; sourceTree = "<group>"; };
+		4F597D252911A15000BC1046 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F597D282911A15000BC1046 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4F597D2E2911A15000BC1046 /* BoomicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoomicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F597D322911A15000BC1046 /* BoomicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoomicTests.swift; sourceTree = "<group>"; };
+		4F597D382911A15000BC1046 /* BoomicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoomicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F597D3C2911A15000BC1046 /* BoomicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoomicUITests.swift; sourceTree = "<group>"; };
+		4F597D3E2911A15000BC1046 /* BoomicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoomicUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4F597D4F2911A1CE00BC1046 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		4F597D552911A28B00BC1046 /* ClassicSongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicSongView.swift; sourceTree = "<group>"; };
+		4F597D582911A65100BC1046 /* AlbumCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCover.swift; sourceTree = "<group>"; };
+		4F597D5A2911A74100BC1046 /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
+		4F597D5C2911A8F800BC1046 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		4F597D5E2912E07900BC1046 /* BoomicLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoomicLibrary.swift; sourceTree = "<group>"; };
+		4F597D602912E0C500BC1046 /* BoomicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoomicManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F597D1B2911A14F00BC1046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F597D2B2911A15000BC1046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F597D352911A15000BC1046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F597D152911A14F00BC1046 = {
+			isa = PBXGroup;
+			children = (
+				4F597D202911A14F00BC1046 /* Boomic */,
+				4F597D312911A15000BC1046 /* BoomicTests */,
+				4F597D3B2911A15000BC1046 /* BoomicUITests */,
+				4F597D1F2911A14F00BC1046 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4F597D1F2911A14F00BC1046 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F597D1E2911A14F00BC1046 /* Boomic.app */,
+				4F597D2E2911A15000BC1046 /* BoomicTests.xctest */,
+				4F597D382911A15000BC1046 /* BoomicUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F597D202911A14F00BC1046 /* Boomic */ = {
+			isa = PBXGroup;
+			children = (
+				4F597D512911A20B00BC1046 /* Other */,
+				4F597D4C2911A16F00BC1046 /* Models */,
+				4F597D4D2911A17C00BC1046 /* ViewModel */,
+				4F597D4B2911A16200BC1046 /* Views */,
+				4F597D272911A15000BC1046 /* Preview Content */,
+			);
+			path = Boomic;
+			sourceTree = "<group>";
+		};
+		4F597D272911A15000BC1046 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4F597D282911A15000BC1046 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4F597D312911A15000BC1046 /* BoomicTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F597D322911A15000BC1046 /* BoomicTests.swift */,
+			);
+			path = BoomicTests;
+			sourceTree = "<group>";
+		};
+		4F597D3B2911A15000BC1046 /* BoomicUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4F597D3C2911A15000BC1046 /* BoomicUITests.swift */,
+				4F597D3E2911A15000BC1046 /* BoomicUITestsLaunchTests.swift */,
+			);
+			path = BoomicUITests;
+			sourceTree = "<group>";
+		};
+		4F597D4B2911A16200BC1046 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4F597D4F2911A1CE00BC1046 /* MainView.swift */,
+				4F597D572911A62B00BC1046 /* Subviews */,
+				4F597D4E2911A1AB00BC1046 /* Classic_GUI */,
+				4F597D5A2911A74100BC1046 /* ViewConstants.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4F597D4C2911A16F00BC1046 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4F597D5C2911A8F800BC1046 /* Song.swift */,
+				4F597D5E2912E07900BC1046 /* BoomicLibrary.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4F597D4D2911A17C00BC1046 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4F597D602912E0C500BC1046 /* BoomicManager.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4F597D4E2911A1AB00BC1046 /* Classic_GUI */ = {
+			isa = PBXGroup;
+			children = (
+				4F597D552911A28B00BC1046 /* ClassicSongView.swift */,
+			);
+			path = Classic_GUI;
+			sourceTree = "<group>";
+		};
+		4F597D512911A20B00BC1046 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				4F597D252911A15000BC1046 /* Assets.xcassets */,
+				4F597D212911A14F00BC1046 /* BoomicApp.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		4F597D572911A62B00BC1046 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				4F597D582911A65100BC1046 /* AlbumCover.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F597D1D2911A14F00BC1046 /* Boomic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F597D422911A15000BC1046 /* Build configuration list for PBXNativeTarget "Boomic" */;
+			buildPhases = (
+				4F597D1A2911A14F00BC1046 /* Sources */,
+				4F597D1B2911A14F00BC1046 /* Frameworks */,
+				4F597D1C2911A14F00BC1046 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Boomic;
+			productName = Boomic;
+			productReference = 4F597D1E2911A14F00BC1046 /* Boomic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4F597D2D2911A15000BC1046 /* BoomicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F597D452911A15000BC1046 /* Build configuration list for PBXNativeTarget "BoomicTests" */;
+			buildPhases = (
+				4F597D2A2911A15000BC1046 /* Sources */,
+				4F597D2B2911A15000BC1046 /* Frameworks */,
+				4F597D2C2911A15000BC1046 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F597D302911A15000BC1046 /* PBXTargetDependency */,
+			);
+			name = BoomicTests;
+			productName = BoomicTests;
+			productReference = 4F597D2E2911A15000BC1046 /* BoomicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4F597D372911A15000BC1046 /* BoomicUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F597D482911A15000BC1046 /* Build configuration list for PBXNativeTarget "BoomicUITests" */;
+			buildPhases = (
+				4F597D342911A15000BC1046 /* Sources */,
+				4F597D352911A15000BC1046 /* Frameworks */,
+				4F597D362911A15000BC1046 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F597D3A2911A15000BC1046 /* PBXTargetDependency */,
+			);
+			name = BoomicUITests;
+			productName = BoomicUITests;
+			productReference = 4F597D382911A15000BC1046 /* BoomicUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F597D162911A14F00BC1046 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					4F597D1D2911A14F00BC1046 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					4F597D2D2911A15000BC1046 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 4F597D1D2911A14F00BC1046;
+					};
+					4F597D372911A15000BC1046 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 4F597D1D2911A14F00BC1046;
+					};
+				};
+			};
+			buildConfigurationList = 4F597D192911A14F00BC1046 /* Build configuration list for PBXProject "Boomic" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4F597D152911A14F00BC1046;
+			productRefGroup = 4F597D1F2911A14F00BC1046 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F597D1D2911A14F00BC1046 /* Boomic */,
+				4F597D2D2911A15000BC1046 /* BoomicTests */,
+				4F597D372911A15000BC1046 /* BoomicUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F597D1C2911A14F00BC1046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F597D292911A15000BC1046 /* Preview Assets.xcassets in Resources */,
+				4F597D262911A15000BC1046 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F597D2C2911A15000BC1046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F597D362911A15000BC1046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F597D1A2911A14F00BC1046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F597D5D2911A8F800BC1046 /* Song.swift in Sources */,
+				4F597D5B2911A74100BC1046 /* ViewConstants.swift in Sources */,
+				4F597D612912E0C500BC1046 /* BoomicManager.swift in Sources */,
+				4F597D502911A1CE00BC1046 /* MainView.swift in Sources */,
+				4F597D222911A14F00BC1046 /* BoomicApp.swift in Sources */,
+				4F597D562911A28B00BC1046 /* ClassicSongView.swift in Sources */,
+				4F597D592911A65100BC1046 /* AlbumCover.swift in Sources */,
+				4F597D5F2912E07900BC1046 /* BoomicLibrary.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F597D2A2911A15000BC1046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F597D332911A15000BC1046 /* BoomicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F597D342911A15000BC1046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F597D3D2911A15000BC1046 /* BoomicUITests.swift in Sources */,
+				4F597D3F2911A15000BC1046 /* BoomicUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F597D302911A15000BC1046 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F597D1D2911A14F00BC1046 /* Boomic */;
+			targetProxy = 4F597D2F2911A15000BC1046 /* PBXContainerItemProxy */;
+		};
+		4F597D3A2911A15000BC1046 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F597D1D2911A14F00BC1046 /* Boomic */;
+			targetProxy = 4F597D392911A15000BC1046 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4F597D402911A15000BC1046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4F597D412911A15000BC1046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4F597D432911A15000BC1046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Boomic/Preview Content\"";
+				DEVELOPMENT_TEAM = Q9B7SPU3TM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.krk252.Boomic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F597D442911A15000BC1046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Boomic/Preview Content\"";
+				DEVELOPMENT_TEAM = Q9B7SPU3TM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.krk252.Boomic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4F597D462911A15000BC1046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q9B7SPU3TM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.krk252.BoomicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Boomic.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Boomic";
+			};
+			name = Debug;
+		};
+		4F597D472911A15000BC1046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q9B7SPU3TM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.krk252.BoomicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Boomic.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Boomic";
+			};
+			name = Release;
+		};
+		4F597D492911A15000BC1046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q9B7SPU3TM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.krk252.BoomicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Boomic;
+			};
+			name = Debug;
+		};
+		4F597D4A2911A15000BC1046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q9B7SPU3TM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.krk252.BoomicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Boomic;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F597D192911A14F00BC1046 /* Build configuration list for PBXProject "Boomic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F597D402911A15000BC1046 /* Debug */,
+				4F597D412911A15000BC1046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F597D422911A15000BC1046 /* Build configuration list for PBXNativeTarget "Boomic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F597D432911A15000BC1046 /* Debug */,
+				4F597D442911A15000BC1046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F597D452911A15000BC1046 /* Build configuration list for PBXNativeTarget "BoomicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F597D462911A15000BC1046 /* Debug */,
+				4F597D472911A15000BC1046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F597D482911A15000BC1046 /* Build configuration list for PBXNativeTarget "BoomicUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F597D492911A15000BC1046 /* Debug */,
+				4F597D4A2911A15000BC1046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F597D162911A14F00BC1046 /* Project object */;
+}
