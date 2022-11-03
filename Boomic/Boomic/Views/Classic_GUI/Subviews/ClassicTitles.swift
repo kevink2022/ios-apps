@@ -16,13 +16,13 @@ struct ClassicTitles: View
         VStack(alignment: .leading)
         {
             //TODO: add defaults
-            Text(song.name ?? "No name") //default - filename
+            Text(song.title ?? "Filename") //default - filename
                 .font(F.title)
             
-            Text(song.album?.name ?? "No album found")
+            Text(song.album ?? "No album found")
                 .font(F.album)
             
-            Text(song.artist?.name ?? "No artist found")
+            Text(song.artist ?? "No artist found")
                 .font(F.artist)
         }
         .padding(.horizontal)

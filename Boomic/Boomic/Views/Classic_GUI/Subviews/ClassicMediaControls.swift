@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ClassicMediaControls: View
 {
+    @EnvironmentObject var manager : BoomicManager
+    
     var body: some View
     {
         HStack
@@ -28,11 +30,11 @@ struct ClassicMediaControls: View
             
             Button
             {
-                
+                manager.player.isPlaying ? manager.pause() : manager.play()
             }
             label:
             {
-                Image(systemName: C.playSF)
+                Image(systemName: manager.isPlaying ? C.pauseSF : C.playSF)
             }
             
             Spacer()

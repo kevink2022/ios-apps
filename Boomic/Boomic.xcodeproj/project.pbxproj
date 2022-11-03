@@ -23,6 +23,9 @@
 		4F597D642912E97900BC1046 /* ClassicVolumeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D632912E97900BC1046 /* ClassicVolumeSlider.swift */; };
 		4F597D662912EC6100BC1046 /* ClassicMediaControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D652912EC6100BC1046 /* ClassicMediaControls.swift */; };
 		4F597D682912EF6C00BC1046 /* ClassicTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D672912EF6C00BC1046 /* ClassicTitles.swift */; };
+		4F597E65291323E700BC1046 /* SongListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597E64291323E700BC1046 /* SongListView.swift */; };
+		4FCD439E29145065001E7FCC /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD439D29145065001E7FCC /* Artist.swift */; };
+		4FCD43A02914506E001E7FCC /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD439F2914506E001E7FCC /* Album.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,10 @@
 		4F597D632912E97900BC1046 /* ClassicVolumeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicVolumeSlider.swift; sourceTree = "<group>"; };
 		4F597D652912EC6100BC1046 /* ClassicMediaControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicMediaControls.swift; sourceTree = "<group>"; };
 		4F597D672912EF6C00BC1046 /* ClassicTitles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicTitles.swift; sourceTree = "<group>"; };
+		4F597D692913079700BC1046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F597E64291323E700BC1046 /* SongListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListView.swift; sourceTree = "<group>"; };
+		4FCD439D29145065001E7FCC /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		4FCD439F2914506E001E7FCC /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +119,8 @@
 		4F597D202911A14F00BC1046 /* Boomic */ = {
 			isa = PBXGroup;
 			children = (
+				4FCD439A29144F45001E7FCC /* Development */,
+				4F597D692913079700BC1046 /* Info.plist */,
 				4F597D512911A20B00BC1046 /* Other */,
 				4F597D4C2911A16F00BC1046 /* Models */,
 				4F597D4D2911A17C00BC1046 /* ViewModel */,
@@ -149,6 +158,7 @@
 		4F597D4B2911A16200BC1046 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4F597E63291323DC00BC1046 /* Menus */,
 				4F597D4F2911A1CE00BC1046 /* MainView.swift */,
 				4F597D5A2911A74100BC1046 /* ViewConstants.swift */,
 				4F597D572911A62B00BC1046 /* Subviews */,
@@ -162,6 +172,8 @@
 			children = (
 				4F597D5C2911A8F800BC1046 /* Song.swift */,
 				4F597D5E2912E07900BC1046 /* BoomicLibrary.swift */,
+				4FCD439D29145065001E7FCC /* Artist.swift */,
+				4FCD439F2914506E001E7FCC /* Album.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -208,6 +220,54 @@
 				4F597D672912EF6C00BC1046 /* ClassicTitles.swift */,
 			);
 			path = Subviews;
+			sourceTree = "<group>";
+		};
+		4F597E63291323DC00BC1046 /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+				4F597E64291323E700BC1046 /* SongListView.swift */,
+			);
+			path = Menus;
+			sourceTree = "<group>";
+		};
+		4F597E692913383400BC1046 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				4FCD43D1291477AE001E7FCC /* OoT */,
+				4FCD43BC29147178001E7FCC /* Classics */,
+				4FCD43BB29147147001E7FCC /* Magnifique */,
+			);
+			name = Music;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		4FCD439A29144F45001E7FCC /* Development */ = {
+			isa = PBXGroup;
+			children = (
+				4F597E692913383400BC1046 /* Music */,
+			);
+			path = Development;
+			sourceTree = "<group>";
+		};
+		4FCD43BB29147147001E7FCC /* Magnifique */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Magnifique;
+			sourceTree = "<group>";
+		};
+		4FCD43BC29147178001E7FCC /* Classics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classics;
+			sourceTree = "<group>";
+		};
+		4FCD43D1291477AE001E7FCC /* OoT */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OoT;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,12 +405,15 @@
 				4F597D682912EF6C00BC1046 /* ClassicTitles.swift in Sources */,
 				4F597D612912E0C500BC1046 /* BoomicManager.swift in Sources */,
 				4F597D642912E97900BC1046 /* ClassicVolumeSlider.swift in Sources */,
+				4FCD439E29145065001E7FCC /* Artist.swift in Sources */,
 				4F597D502911A1CE00BC1046 /* MainView.swift in Sources */,
 				4F597D222911A14F00BC1046 /* BoomicApp.swift in Sources */,
+				4F597E65291323E700BC1046 /* SongListView.swift in Sources */,
 				4F597D562911A28B00BC1046 /* ClassicSongView.swift in Sources */,
 				4F597D662912EC6100BC1046 /* ClassicMediaControls.swift in Sources */,
 				4F597D592911A65100BC1046 /* AlbumCover.swift in Sources */,
 				4F597D5F2912E07900BC1046 /* BoomicLibrary.swift in Sources */,
+				4FCD43A02914506E001E7FCC /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +575,8 @@
 				DEVELOPMENT_TEAM = Q9B7SPU3TM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Boomic/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Boomic needs permission to access your Apple music library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -541,6 +606,8 @@
 				DEVELOPMENT_TEAM = Q9B7SPU3TM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Boomic/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Boomic needs permission to access your Apple music library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

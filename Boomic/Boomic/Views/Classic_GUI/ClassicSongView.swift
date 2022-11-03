@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ClassicSongView: View
 {
-    typealias F = ViewConstants.Classic_GUI.Fonts
+    @EnvironmentObject var manager : BoomicManager
     let song : Song
     
     var body: some View
@@ -21,9 +21,6 @@ struct ClassicSongView: View
             ClassicTitles(song: song)
             
             ClassicMediaControls()
-            
-            
-            
         }
     }
 }

@@ -8,10 +8,16 @@
 import SwiftUI
 
 @main
-struct BoomicApp: App {
-    var body: some Scene {
-        WindowGroup {
+struct BoomicApp: App
+{
+    @StateObject var manager = BoomicManager()
+    
+    var body: some Scene
+    {
+        WindowGroup
+        {
             MainView()
+                .environmentObject(manager)
         }
     }
 }

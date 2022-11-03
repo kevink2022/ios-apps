@@ -12,4 +12,11 @@ struct BoomicLibrary
     var songs : [Song]
     var albums : [Album]
     var artists : [Artist]
+    
+    enum SupportedFileFormats : String, CaseIterable
+    {
+        case flac
+    }
 }
+
+
