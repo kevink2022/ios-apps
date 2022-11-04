@@ -16,16 +16,7 @@ struct SongListView: View
     var body: some View
     {
         List
-        {
-            Button
-            {
-                manager.getMetadata()
-            }
-            label:
-            {
-                Text("metadata")
-            }
-            
+        {            
             ForEach(manager.songs)
             {
                 song in

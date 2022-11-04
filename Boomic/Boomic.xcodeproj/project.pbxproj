@@ -26,6 +26,30 @@
 		4F597E65291323E700BC1046 /* SongListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597E64291323E700BC1046 /* SongListView.swift */; };
 		4FCD439E29145065001E7FCC /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD439D29145065001E7FCC /* Artist.swift */; };
 		4FCD43A02914506E001E7FCC /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD439F2914506E001E7FCC /* Album.swift */; };
+		4FCD43F9291481E2001E7FCC /* 01 Title.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43EC291481E2001E7FCC /* 01 Title.m4a */; };
+		4FCD43FA291481E2001E7FCC /* 09 Gerudo Valley.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43ED291481E2001E7FCC /* 09 Gerudo Valley.m4a */; };
+		4FCD43FB291481E2001E7FCC /* 03 Hyrule Field.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43EE291481E2001E7FCC /* 03 Hyrule Field.m4a */; };
+		4FCD43FC291481E2001E7FCC /* 07 Goron City.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43EF291481E2001E7FCC /* 07 Goron City.m4a */; };
+		4FCD43FD291481E2001E7FCC /* 02 Kokiri Forest.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43F0291481E2001E7FCC /* 02 Kokiri Forest.m4a */; };
+		4FCD43FE291481E2001E7FCC /* 04 Hyrule Castle.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43F1291481E2001E7FCC /* 04 Hyrule Castle.m4a */; };
+		4FCD43FF291481E2001E7FCC /* 05 Lon Lon Ranch.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43F2291481E2001E7FCC /* 05 Lon Lon Ranch.m4a */; };
+		4FCD4400291481E2001E7FCC /* 06 Kakariko Village.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43F3291481E2001E7FCC /* 06 Kakariko Village.m4a */; };
+		4FCD4401291481E2001E7FCC /* 12 Ocarina Medley.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43F4291481E2001E7FCC /* 12 Ocarina Medley.m4a */; };
+		4FCD4402291481E2001E7FCC /* 10 Ganondorf.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43F5291481E2001E7FCC /* 10 Ganondorf.m4a */; };
+		4FCD4403291481E2001E7FCC /* 11 Princess Zelda.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43F6291481E2001E7FCC /* 11 Princess Zelda.m4a */; };
+		4FCD4404291481E2001E7FCC /* 13 The Legend of Zelda Medley.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43F7291481E2001E7FCC /* 13 The Legend of Zelda Medley.m4a */; };
+		4FCD4405291481E2001E7FCC /* 08 Zora's Domain.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43F8291481E2001E7FCC /* 08 Zora's Domain.m4a */; };
+		4FCD4410291481F0001E7FCC /* 01 Montanita.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD4406291481F0001E7FCC /* 01 Montanita.flac */; };
+		4FCD4411291481F0001E7FCC /* 10 Tacobel Canon.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD4407291481F0001E7FCC /* 10 Tacobel Canon.flac */; };
+		4FCD4412291481F0001E7FCC /* 03 Gettysburg.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD4408291481F0001E7FCC /* 03 Gettysburg.flac */; };
+		4FCD4413291481F0001E7FCC /* 02 Lex.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD4409291481F0001E7FCC /* 02 Lex.flac */; };
+		4FCD4414291481F0001E7FCC /* 05 Tropicana.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD440A291481F0001E7FCC /* 05 Tropicana.flac */; };
+		4FCD4415291481F0001E7FCC /* 07 Kennedy.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD440B291481F0001E7FCC /* 07 Kennedy.flac */; };
+		4FCD4416291481F0001E7FCC /* 09 Nostrand.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD440C291481F0001E7FCC /* 09 Nostrand.flac */; };
+		4FCD4417291481F0001E7FCC /* 06 Loud Pipes.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD440D291481F0001E7FCC /* 06 Loud Pipes.flac */; };
+		4FCD4418291481F0001E7FCC /* 08 Swisha.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD440E291481F0001E7FCC /* 08 Swisha.flac */; };
+		4FCD4419291481F0001E7FCC /* 04 Wildcat.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD440F291481F0001E7FCC /* 04 Wildcat.flac */; };
+		4FCD441B29149151001E7FCC /* Manager+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD441A29149151001E7FCC /* Manager+Debug.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +93,30 @@
 		4F597E64291323E700BC1046 /* SongListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListView.swift; sourceTree = "<group>"; };
 		4FCD439D29145065001E7FCC /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		4FCD439F2914506E001E7FCC /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		4FCD43EC291481E2001E7FCC /* 01 Title.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "01 Title.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/01 Title.m4a"; sourceTree = "<group>"; };
+		4FCD43ED291481E2001E7FCC /* 09 Gerudo Valley.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "09 Gerudo Valley.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/09 Gerudo Valley.m4a"; sourceTree = "<group>"; };
+		4FCD43EE291481E2001E7FCC /* 03 Hyrule Field.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "03 Hyrule Field.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/03 Hyrule Field.m4a"; sourceTree = "<group>"; };
+		4FCD43EF291481E2001E7FCC /* 07 Goron City.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "07 Goron City.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/07 Goron City.m4a"; sourceTree = "<group>"; };
+		4FCD43F0291481E2001E7FCC /* 02 Kokiri Forest.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "02 Kokiri Forest.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/02 Kokiri Forest.m4a"; sourceTree = "<group>"; };
+		4FCD43F1291481E2001E7FCC /* 04 Hyrule Castle.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "04 Hyrule Castle.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/04 Hyrule Castle.m4a"; sourceTree = "<group>"; };
+		4FCD43F2291481E2001E7FCC /* 05 Lon Lon Ranch.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "05 Lon Lon Ranch.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/05 Lon Lon Ranch.m4a"; sourceTree = "<group>"; };
+		4FCD43F3291481E2001E7FCC /* 06 Kakariko Village.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "06 Kakariko Village.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/06 Kakariko Village.m4a"; sourceTree = "<group>"; };
+		4FCD43F4291481E2001E7FCC /* 12 Ocarina Medley.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "12 Ocarina Medley.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/12 Ocarina Medley.m4a"; sourceTree = "<group>"; };
+		4FCD43F5291481E2001E7FCC /* 10 Ganondorf.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "10 Ganondorf.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/10 Ganondorf.m4a"; sourceTree = "<group>"; };
+		4FCD43F6291481E2001E7FCC /* 11 Princess Zelda.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "11 Princess Zelda.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/11 Princess Zelda.m4a"; sourceTree = "<group>"; };
+		4FCD43F7291481E2001E7FCC /* 13 The Legend of Zelda Medley.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "13 The Legend of Zelda Medley.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/13 The Legend of Zelda Medley.m4a"; sourceTree = "<group>"; };
+		4FCD43F8291481E2001E7FCC /* 08 Zora's Domain.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "08 Zora's Domain.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/08 Zora's Domain.m4a"; sourceTree = "<group>"; };
+		4FCD4406291481F0001E7FCC /* 01 Montanita.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "01 Montanita.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/01 Montanita.flac"; sourceTree = "<group>"; };
+		4FCD4407291481F0001E7FCC /* 10 Tacobel Canon.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "10 Tacobel Canon.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/10 Tacobel Canon.flac"; sourceTree = "<group>"; };
+		4FCD4408291481F0001E7FCC /* 03 Gettysburg.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "03 Gettysburg.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/03 Gettysburg.flac"; sourceTree = "<group>"; };
+		4FCD4409291481F0001E7FCC /* 02 Lex.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "02 Lex.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/02 Lex.flac"; sourceTree = "<group>"; };
+		4FCD440A291481F0001E7FCC /* 05 Tropicana.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "05 Tropicana.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/05 Tropicana.flac"; sourceTree = "<group>"; };
+		4FCD440B291481F0001E7FCC /* 07 Kennedy.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "07 Kennedy.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/07 Kennedy.flac"; sourceTree = "<group>"; };
+		4FCD440C291481F0001E7FCC /* 09 Nostrand.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "09 Nostrand.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/09 Nostrand.flac"; sourceTree = "<group>"; };
+		4FCD440D291481F0001E7FCC /* 06 Loud Pipes.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "06 Loud Pipes.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/06 Loud Pipes.flac"; sourceTree = "<group>"; };
+		4FCD440E291481F0001E7FCC /* 08 Swisha.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "08 Swisha.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/08 Swisha.flac"; sourceTree = "<group>"; };
+		4FCD440F291481F0001E7FCC /* 04 Wildcat.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "04 Wildcat.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/04 Wildcat.flac"; sourceTree = "<group>"; };
+		4FCD441A29149151001E7FCC /* Manager+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Debug.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				4F597D602912E0C500BC1046 /* BoomicManager.swift */,
+				4FCD441A29149151001E7FCC /* Manager+Debug.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -259,6 +308,16 @@
 		4FCD43BC29147178001E7FCC /* Classics */ = {
 			isa = PBXGroup;
 			children = (
+				4FCD4406291481F0001E7FCC /* 01 Montanita.flac */,
+				4FCD4409291481F0001E7FCC /* 02 Lex.flac */,
+				4FCD4408291481F0001E7FCC /* 03 Gettysburg.flac */,
+				4FCD440F291481F0001E7FCC /* 04 Wildcat.flac */,
+				4FCD440A291481F0001E7FCC /* 05 Tropicana.flac */,
+				4FCD440D291481F0001E7FCC /* 06 Loud Pipes.flac */,
+				4FCD440B291481F0001E7FCC /* 07 Kennedy.flac */,
+				4FCD440E291481F0001E7FCC /* 08 Swisha.flac */,
+				4FCD440C291481F0001E7FCC /* 09 Nostrand.flac */,
+				4FCD4407291481F0001E7FCC /* 10 Tacobel Canon.flac */,
 			);
 			path = Classics;
 			sourceTree = "<group>";
@@ -266,6 +325,19 @@
 		4FCD43D1291477AE001E7FCC /* OoT */ = {
 			isa = PBXGroup;
 			children = (
+				4FCD43EC291481E2001E7FCC /* 01 Title.m4a */,
+				4FCD43F0291481E2001E7FCC /* 02 Kokiri Forest.m4a */,
+				4FCD43EE291481E2001E7FCC /* 03 Hyrule Field.m4a */,
+				4FCD43F1291481E2001E7FCC /* 04 Hyrule Castle.m4a */,
+				4FCD43F2291481E2001E7FCC /* 05 Lon Lon Ranch.m4a */,
+				4FCD43F3291481E2001E7FCC /* 06 Kakariko Village.m4a */,
+				4FCD43EF291481E2001E7FCC /* 07 Goron City.m4a */,
+				4FCD43F8291481E2001E7FCC /* 08 Zora's Domain.m4a */,
+				4FCD43ED291481E2001E7FCC /* 09 Gerudo Valley.m4a */,
+				4FCD43F5291481E2001E7FCC /* 10 Ganondorf.m4a */,
+				4FCD43F6291481E2001E7FCC /* 11 Princess Zelda.m4a */,
+				4FCD43F4291481E2001E7FCC /* 12 Ocarina Medley.m4a */,
+				4FCD43F7291481E2001E7FCC /* 13 The Legend of Zelda Medley.m4a */,
 			);
 			path = OoT;
 			sourceTree = "<group>";
@@ -374,8 +446,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FCD43FD291481E2001E7FCC /* 02 Kokiri Forest.m4a in Resources */,
+				4FCD4410291481F0001E7FCC /* 01 Montanita.flac in Resources */,
+				4FCD43FA291481E2001E7FCC /* 09 Gerudo Valley.m4a in Resources */,
+				4FCD4405291481E2001E7FCC /* 08 Zora's Domain.m4a in Resources */,
+				4FCD4404291481E2001E7FCC /* 13 The Legend of Zelda Medley.m4a in Resources */,
+				4FCD4417291481F0001E7FCC /* 06 Loud Pipes.flac in Resources */,
+				4FCD43FB291481E2001E7FCC /* 03 Hyrule Field.m4a in Resources */,
 				4F597D292911A15000BC1046 /* Preview Assets.xcassets in Resources */,
+				4FCD4414291481F0001E7FCC /* 05 Tropicana.flac in Resources */,
+				4FCD4418291481F0001E7FCC /* 08 Swisha.flac in Resources */,
+				4FCD43FF291481E2001E7FCC /* 05 Lon Lon Ranch.m4a in Resources */,
 				4F597D262911A15000BC1046 /* Assets.xcassets in Resources */,
+				4FCD4416291481F0001E7FCC /* 09 Nostrand.flac in Resources */,
+				4FCD4400291481E2001E7FCC /* 06 Kakariko Village.m4a in Resources */,
+				4FCD4415291481F0001E7FCC /* 07 Kennedy.flac in Resources */,
+				4FCD4413291481F0001E7FCC /* 02 Lex.flac in Resources */,
+				4FCD4402291481E2001E7FCC /* 10 Ganondorf.m4a in Resources */,
+				4FCD4412291481F0001E7FCC /* 03 Gettysburg.flac in Resources */,
+				4FCD4401291481E2001E7FCC /* 12 Ocarina Medley.m4a in Resources */,
+				4FCD4403291481E2001E7FCC /* 11 Princess Zelda.m4a in Resources */,
+				4FCD43FE291481E2001E7FCC /* 04 Hyrule Castle.m4a in Resources */,
+				4FCD4411291481F0001E7FCC /* 10 Tacobel Canon.flac in Resources */,
+				4FCD43FC291481E2001E7FCC /* 07 Goron City.m4a in Resources */,
+				4FCD43F9291481E2001E7FCC /* 01 Title.m4a in Resources */,
+				4FCD4419291481F0001E7FCC /* 04 Wildcat.flac in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +498,7 @@
 				4F597D5D2911A8F800BC1046 /* Song.swift in Sources */,
 				4F597D5B2911A74100BC1046 /* ViewConstants.swift in Sources */,
 				4F597D682912EF6C00BC1046 /* ClassicTitles.swift in Sources */,
+				4FCD441B29149151001E7FCC /* Manager+Debug.swift in Sources */,
 				4F597D612912E0C500BC1046 /* BoomicManager.swift in Sources */,
 				4F597D642912E97900BC1046 /* ClassicVolumeSlider.swift in Sources */,
 				4FCD439E29145065001E7FCC /* Artist.swift in Sources */,

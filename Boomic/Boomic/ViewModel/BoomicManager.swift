@@ -11,6 +11,8 @@ import AudioToolbox
 
 class BoomicManager : ObservableObject
 {
+    static let DEBUG : Bool = true
+    
     @Published var songs : [Song] = []
     var currentSong : Song? = nil
     var player : AVAudioPlayer
@@ -21,21 +23,21 @@ class BoomicManager : ObservableObject
         
         player = AVAudioPlayer()
         
-        
-        // on inital boot, probably will extract to scan lib func
-        if let flacURLs = Bundle.main.urls(forResourcesWithExtension: "flac", subdirectory: nil)
+        for format in BoomicLibrary.SupportedFileFormats.allCases
         {
-            songs = flacURLs.map
+            if let URLs = Bundle.main.urls(forResourcesWithExtension: format.rawValue, subdirectory: nil)
             {
-                if let tags = audioFileInfo(url: $0)
+                songs.append(contentsOf: URLs.map
                 {
-                    return Song(source: $0, tags: tags)
-                }
-                else
-                {
-                    return Song(source: $0)
-                }
-
+                    if let tags = getTags(source: $0, format: format)
+                    {
+                        return Song(source: $0, tags: tags)
+                    }
+                    else
+                    {
+                        return Song(source: $0)
+                    }
+                })
             }
         }
     }
@@ -53,14 +55,6 @@ class BoomicManager : ObservableObject
         catch
         {
             print("ERROR: could not instantiate player")
-        }
-    }
-    
-    func getMetadata()
-    {
-        for song in songs
-        {
-            let _ = audioFileInfo(url: song.source)
         }
     }
 
@@ -108,12 +102,11 @@ extension BoomicManager
 // MARK: - Audio Toolbox
 extension BoomicManager
 {
-    
     ///source:  https://stackoverflow.com/questions/52276830/how-can-i-get-flac-file-metadata-in-swift-on-ios-11
-    func audioFileInfo(url: URL) -> Dictionary<String,Any>?
+    func getTags(source: URL, format: BoomicLibrary.SupportedFileFormats) -> Dictionary<String,Any>?
     {
         var fileID: AudioFileID? = nil
-        var status:OSStatus = AudioFileOpenURL(url as CFURL, .readPermission, kAudioFileFLACType, &fileID)
+        var status:OSStatus = AudioFileOpenURL(source as CFURL, .readPermission, BoomicLibrary.supportedFormatID(format: format), &fileID)
 
         guard status == noErr else { return nil }
 
@@ -138,36 +131,17 @@ extension BoomicManager
     }
 }
 
-//class BoomicMetadata
-//{
-//    var url : URL
-//
-//    init(url: URL)
-//    {
-//        self.url = url
-//
-//        let playerItem = AVPlayerItem(url: url)
-//
-//        let asset: AVAsset = playerItem.asset// An asset object to inspect.
-//
-//        BoomicMetadata.getMetadata(asset: asset)
-//
-//        playerItem.asset.loadMetadata(for: .unknown)
-//        {
-//            metadata, error in
-//
-//            guard error == nil else {print("ERROR: \(error?.localizedDescription)"); return}
-//
-//            print(metadata?.count)
-//            metadata?.forEach {print("METADATA: \($0)")}
-//        }
-//    }
-//
-//    static func getMetadata(asset: AVAsset) async throws
-//    {
-//        for format in try await asset.load(.availableMetadataFormats) {
-//            let metadata = try await asset.loadMetadata(for: format)
-//            // Process the format-specific metadata collection.
-//        }
-//    }
-//}
+extension BoomicLibrary
+{
+    static func supportedFormatID(format: BoomicLibrary.SupportedFileFormats) -> AudioFileTypeID
+    {
+        switch format
+        {
+        case .flac: return kAudioFileFLACType
+        case .m4a:  return kAudioFileM4AType
+        }
+    }
+    
+}
+
+

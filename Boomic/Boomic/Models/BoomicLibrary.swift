@@ -15,7 +15,7 @@ struct BoomicLibrary
     
     enum SupportedFileFormats : String, CaseIterable
     {
-        case flac
+        case flac, m4a
     }
 }
 
