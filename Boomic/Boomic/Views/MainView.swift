@@ -11,10 +11,7 @@ struct MainView: View {
     var body: some View {
         //SongListView()
         
-        GeometryReader
-        {
-            geo in BoomicSlider(geometry: geo)
-        }
+        BoomicSlider()
     }
 }
 

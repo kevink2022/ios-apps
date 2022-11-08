@@ -31,13 +31,13 @@ class Song : Identifiable, Codable
 
 extension Song
 {
-//    static let standard = Song(
-//        source: URL(string: ""),
-//        name: "Abrasive",
-//        artist: "Ratatat",
-//        album: "Magnifique",
-//        trackNo: 4
-//    )
+    static let standard = Song(
+        source: URL.documentsDirectory,
+        name: "Abrasive",
+        artist: "Ratatat",
+        album: "Magnifique",
+        trackNo: 4
+    )
     
     // Since Each song needs a source
     static let unknown = Song(

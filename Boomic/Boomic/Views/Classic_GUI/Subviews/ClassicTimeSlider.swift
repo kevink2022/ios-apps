@@ -14,20 +14,30 @@ struct ClassicTimeSlider: View
     
     var body: some View
     {
-        VStack
+        VStack(spacing: 0)
         {
             HStack
             {
-                Text("\(manager.player.currentTime().seconds.readable)")
+//                Text("\(manager.player.currentTime().seconds.readable)")
+//
+//                Spacer()
+//
+//                Text("\(manager.player.currentItem!.duration.seconds.readable)")
+                
+                Text("0:00")
                 
                 Spacer()
                 
-                Text("\(manager.player.currentItem!.duration.seconds.readable)")
+                Text("5:40")
             }
+            .font(F.time)
             
+            BoomicSlider()
         }
         
     }
+    
+    typealias F = ViewConstants.Classic_GUI.Fonts
 }
 
 struct ClassicTimeSlider_Previews: PreviewProvider {

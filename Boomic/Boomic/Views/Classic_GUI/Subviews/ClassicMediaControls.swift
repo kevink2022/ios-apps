@@ -30,7 +30,7 @@ struct ClassicMediaControls: View
             
             Button
             {
-                manager.isPlaying ? manager.pause() : manager.play()
+                //manager.isPlaying ? manager.pause() : manager.play()
             }
             label:
             {
@@ -50,15 +50,17 @@ struct ClassicMediaControls: View
             
             Spacer()
         }
-        .font(C.font)
+        .font(F.mediaControls)
         .foregroundColor(C.color)
     }
     
     typealias C = ViewConstants.Classic_GUI.Subviews.ClassicMediaControls
+    typealias F = ViewConstants.Classic_GUI.Fonts
 }
 
 struct ClassicMediaControls_Previews: PreviewProvider {
     static var previews: some View {
         ClassicMediaControls()
+            .environmentObject(BoomicManager())
     }
 }

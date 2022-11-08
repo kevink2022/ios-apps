@@ -6,15 +6,44 @@
 //
 
 import SwiftUI
-import MediaPlayer
-import UIKit
 
-struct ClassicVolumeSlider: UIViewRepresentable
+struct ClassicVolumeSlider: View
 {
-    func makeUIView(context: Context) -> MPVolumeView
+    var body: some View
     {
-        MPVolumeView(frame: .zero)
+        HStack
+        {
+            Image(systemName: C.lowVolumeSF)
+            
+            BoomicSlider()
+            
+            Image(systemName: C.highVolumeSF)
+        }
+        .frame(height: 10)
     }
-
-    func updateUIView(_ view: MPVolumeView, context: Context) { }
+    
+    typealias C = ViewConstants.Classic_GUI.Subviews.ClassicVolumeSlider
 }
+
+
+struct ClassicVolumeSlider_Previews: PreviewProvider {
+    static var previews: some View {
+        ClassicVolumeSlider()
+    }
+}
+
+
+//import MediaPlayer
+//import UIKit
+
+//struct ClassicVolumeSlider: UIViewRepresentable
+//{
+//    func makeUIView(context: Context) -> MPVolumeView
+//    {
+//        MPVolumeView(frame: .zero)
+//    }
+//
+//    func updateUIView(_ view: MPVolumeView, context: Context) { }
+//}
+
+

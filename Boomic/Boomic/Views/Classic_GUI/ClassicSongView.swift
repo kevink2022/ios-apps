@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ClassicSongView: View
 {
-    @EnvironmentObject var manager : BoomicManager
     let song : Song
     
     var body: some View
@@ -18,19 +17,31 @@ struct ClassicSongView: View
         {
             AlbumCover(image: "ratatat-magnifique")
             
+            
             ClassicTitles(song: song)
             
             ClassicTimeSlider()
+                .frame(height: 50)
+                .padding()
             
             ClassicMediaControls()
+                .padding(.vertical)
+            
+            ClassicVolumeSlider()
+                .padding()
+            
+            ClassicQueueControls()
+                .padding(.top)
         }
     }
 }
 
-//struct ClassicSongView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ClassicSongView(song: Song.standard)
-//        ClassicSongView(song: Song.standard).preferredColorScheme(.dark)
-//    }
-//}
+struct ClassicSongView_Previews: PreviewProvider {
+    static var previews: some View {
+        ClassicSongView(song: Song.standard)
+            .environmentObject(BoomicManager())
+        ClassicSongView(song: Song.standard).preferredColorScheme(.dark)
+            .environmentObject(BoomicManager())
+    }
+}
 

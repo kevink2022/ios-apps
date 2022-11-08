@@ -56,6 +56,7 @@
 		4FCD44232915B965001E7FCC /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD44222915B965001E7FCC /* Metadata.swift */; };
 		4FCD44262915BB04001E7FCC /* StaticMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD44252915BB04001E7FCC /* StaticMethods.swift */; };
 		4FEC954C291995A6003EA394 /* BoomicSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC954B291995A6003EA394 /* BoomicSlider.swift */; };
+		4FEC954E291A18A7003EA394 /* ClassicQueueControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC954D291A18A7003EA394 /* ClassicQueueControls.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		4FCD44222915B965001E7FCC /* Metadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Metadata.swift; path = "../New Group/Metadata.swift"; sourceTree = "<group>"; };
 		4FCD44252915BB04001E7FCC /* StaticMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticMethods.swift; sourceTree = "<group>"; };
 		4FEC954B291995A6003EA394 /* BoomicSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoomicSlider.swift; sourceTree = "<group>"; };
+		4FEC954D291A18A7003EA394 /* ClassicQueueControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicQueueControls.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +283,7 @@
 				4F597D652912EC6100BC1046 /* ClassicMediaControls.swift */,
 				4F597D672912EF6C00BC1046 /* ClassicTitles.swift */,
 				4FCD441E29158EE6001E7FCC /* ClassicTimeSlider.swift */,
+				4FEC954D291A18A7003EA394 /* ClassicQueueControls.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				4FCD441B29149151001E7FCC /* Manager+Debug.swift in Sources */,
 				4F597D612912E0C500BC1046 /* BoomicManager.swift in Sources */,
 				4FCD44212915B8C4001E7FCC /* MediaControls.swift in Sources */,
+				4FEC954E291A18A7003EA394 /* ClassicQueueControls.swift in Sources */,
 				4F597D642912E97900BC1046 /* ClassicVolumeSlider.swift in Sources */,
 				4FCD439E29145065001E7FCC /* Artist.swift in Sources */,
 				4F597D502911A1CE00BC1046 /* MainView.swift in Sources */,

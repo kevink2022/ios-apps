@@ -9,6 +9,17 @@ import SwiftUI
 
 struct BoomicSlider: View
 {
+    var body: some View
+    {
+        GeometryReader
+        {
+            geo in __BoomicSlider(geometry: geo)
+        }
+    }
+}
+
+struct __BoomicSlider: View
+{
     @State var percent : Double = 0.5
     @State var offset : Double = 0.0
     let geometry : GeometryProxy
@@ -28,9 +39,7 @@ struct BoomicSlider: View
 
                 // seek or volume or whatever
             }
-        
-    
-            
+
         ZStack(alignment: .leading)
         {
             Rectangle()
@@ -41,24 +50,16 @@ struct BoomicSlider: View
         }
         .clipShape(Capsule())
         .gesture(drag)
-
-        .frame(height: 10)
-
-        
-        .padding()
+        .frame(height: C.frame)
     }
+    
+    typealias C = ViewConstants.Subviews.BoomicSlider
 }
 
 struct BoomicSlider_Previews: PreviewProvider
 {
     static var previews: some View
     {
-        GeometryReader
-        {
-            geo in
-            
-            BoomicSlider(geometry: geo)
-        }
-        
+        BoomicSlider()
     }
 }
