@@ -50,6 +50,12 @@
 		4FCD4418291481F0001E7FCC /* 08 Swisha.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD440E291481F0001E7FCC /* 08 Swisha.flac */; };
 		4FCD4419291481F0001E7FCC /* 04 Wildcat.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD440F291481F0001E7FCC /* 04 Wildcat.flac */; };
 		4FCD441B29149151001E7FCC /* Manager+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD441A29149151001E7FCC /* Manager+Debug.swift */; };
+		4FCD441D29157E65001E7FCC /* SongListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD441C29157E65001E7FCC /* SongListItem.swift */; };
+		4FCD441F29158EE6001E7FCC /* ClassicTimeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD441E29158EE6001E7FCC /* ClassicTimeSlider.swift */; };
+		4FCD44212915B8C4001E7FCC /* MediaControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD44202915B8C4001E7FCC /* MediaControls.swift */; };
+		4FCD44232915B965001E7FCC /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD44222915B965001E7FCC /* Metadata.swift */; };
+		4FCD44262915BB04001E7FCC /* StaticMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD44252915BB04001E7FCC /* StaticMethods.swift */; };
+		4FEC954C291995A6003EA394 /* BoomicSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC954B291995A6003EA394 /* BoomicSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +123,12 @@
 		4FCD440E291481F0001E7FCC /* 08 Swisha.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "08 Swisha.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/08 Swisha.flac"; sourceTree = "<group>"; };
 		4FCD440F291481F0001E7FCC /* 04 Wildcat.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "04 Wildcat.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/04 Wildcat.flac"; sourceTree = "<group>"; };
 		4FCD441A29149151001E7FCC /* Manager+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Debug.swift"; sourceTree = "<group>"; };
+		4FCD441C29157E65001E7FCC /* SongListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListItem.swift; sourceTree = "<group>"; };
+		4FCD441E29158EE6001E7FCC /* ClassicTimeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicTimeSlider.swift; sourceTree = "<group>"; };
+		4FCD44202915B8C4001E7FCC /* MediaControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaControls.swift; sourceTree = "<group>"; };
+		4FCD44222915B965001E7FCC /* Metadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Metadata.swift; path = "../New Group/Metadata.swift"; sourceTree = "<group>"; };
+		4FCD44252915BB04001E7FCC /* StaticMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticMethods.swift; sourceTree = "<group>"; };
+		4FEC954B291995A6003EA394 /* BoomicSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoomicSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,9 +218,9 @@
 		4F597D4B2911A16200BC1046 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4F597E63291323DC00BC1046 /* Menus */,
 				4F597D4F2911A1CE00BC1046 /* MainView.swift */,
 				4F597D5A2911A74100BC1046 /* ViewConstants.swift */,
+				4F597E63291323DC00BC1046 /* Menus */,
 				4F597D572911A62B00BC1046 /* Subviews */,
 				4F597D4E2911A1AB00BC1046 /* Classic_GUI */,
 			);
@@ -230,7 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				4F597D602912E0C500BC1046 /* BoomicManager.swift */,
-				4FCD441A29149151001E7FCC /* Manager+Debug.swift */,
+				4FCD44242915B9CC001E7FCC /* Extensions */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -257,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				4F597D582911A65100BC1046 /* AlbumCover.swift */,
+				4FEC954B291995A6003EA394 /* BoomicSlider.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -267,6 +280,7 @@
 				4F597D632912E97900BC1046 /* ClassicVolumeSlider.swift */,
 				4F597D652912EC6100BC1046 /* ClassicMediaControls.swift */,
 				4F597D672912EF6C00BC1046 /* ClassicTitles.swift */,
+				4FCD441E29158EE6001E7FCC /* ClassicTimeSlider.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -275,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				4F597E64291323E700BC1046 /* SongListView.swift */,
+				4FCD441C29157E65001E7FCC /* SongListItem.swift */,
 			);
 			path = Menus;
 			sourceTree = "<group>";
@@ -340,6 +355,17 @@
 				4FCD43F7291481E2001E7FCC /* 13 The Legend of Zelda Medley.m4a */,
 			);
 			path = OoT;
+			sourceTree = "<group>";
+		};
+		4FCD44242915B9CC001E7FCC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4FCD44222915B965001E7FCC /* Metadata.swift */,
+				4FCD44202915B8C4001E7FCC /* MediaControls.swift */,
+				4FCD441A29149151001E7FCC /* Manager+Debug.swift */,
+				4FCD44252915BB04001E7FCC /* StaticMethods.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -497,19 +523,25 @@
 			files = (
 				4F597D5D2911A8F800BC1046 /* Song.swift in Sources */,
 				4F597D5B2911A74100BC1046 /* ViewConstants.swift in Sources */,
+				4FCD44262915BB04001E7FCC /* StaticMethods.swift in Sources */,
+				4FCD441F29158EE6001E7FCC /* ClassicTimeSlider.swift in Sources */,
 				4F597D682912EF6C00BC1046 /* ClassicTitles.swift in Sources */,
 				4FCD441B29149151001E7FCC /* Manager+Debug.swift in Sources */,
 				4F597D612912E0C500BC1046 /* BoomicManager.swift in Sources */,
+				4FCD44212915B8C4001E7FCC /* MediaControls.swift in Sources */,
 				4F597D642912E97900BC1046 /* ClassicVolumeSlider.swift in Sources */,
 				4FCD439E29145065001E7FCC /* Artist.swift in Sources */,
 				4F597D502911A1CE00BC1046 /* MainView.swift in Sources */,
 				4F597D222911A14F00BC1046 /* BoomicApp.swift in Sources */,
 				4F597E65291323E700BC1046 /* SongListView.swift in Sources */,
+				4FCD44232915B965001E7FCC /* Metadata.swift in Sources */,
 				4F597D562911A28B00BC1046 /* ClassicSongView.swift in Sources */,
+				4FEC954C291995A6003EA394 /* BoomicSlider.swift in Sources */,
 				4F597D662912EC6100BC1046 /* ClassicMediaControls.swift in Sources */,
 				4F597D592911A65100BC1046 /* AlbumCover.swift in Sources */,
 				4F597D5F2912E07900BC1046 /* BoomicLibrary.swift in Sources */,
 				4FCD43A02914506E001E7FCC /* Album.swift in Sources */,
+				4FCD441D29157E65001E7FCC /* SongListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

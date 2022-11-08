@@ -28,7 +28,7 @@ struct SongListView: View
                 }
                 label:
                 {
-                    Text(song.title ?? song.source.relativeString.replacingOccurrences(of: "%20", with: " "))
+                    SongListItem(song: song)
                 }
             }
         }

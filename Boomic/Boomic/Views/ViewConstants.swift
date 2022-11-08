@@ -9,6 +9,30 @@ import SwiftUI
 
 struct ViewConstants
 {
+    /// For general placeholder text/images
+    struct Placeholders
+    {
+        struct Unknown
+        {
+            static let artist = "Unknown Artist"
+            static let album = "Unknown Album"
+        }
+    }
+    
+    struct Menus
+    {
+        struct Fonts
+        {
+            static let title = Font.system(.title3, design: .default, weight: .semibold)
+            static let artist = Font.system(.subheadline, design: .default, weight: .regular)
+        }
+        
+        struct SongListItem
+        {
+            static let height : CGFloat = 45
+        }
+    }
+    
     struct Subviews
     {
         struct AlbumCover
@@ -23,8 +47,8 @@ struct ViewConstants
     {
         struct Fonts
         {
-            static let title : Font = .system(.largeTitle, design: .default, weight: .bold)
-            static let artist : Font = .system(.title3, design: .default, weight: .light)
+            static let title = Font.system(.largeTitle, design: .default, weight: .bold)
+            static let artist = Font.system(.title3, design: .default, weight: .light)
             static let album = Font.system(.title3, design: .default, weight: .light)
         }
         

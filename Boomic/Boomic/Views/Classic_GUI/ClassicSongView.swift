@@ -20,15 +20,17 @@ struct ClassicSongView: View
             
             ClassicTitles(song: song)
             
+            ClassicTimeSlider()
+            
             ClassicMediaControls()
         }
     }
 }
 
-struct ClassicSongView_Previews: PreviewProvider {
-    static var previews: some View {
-        ClassicSongView(song: Song.standard)
-        ClassicSongView(song: Song.standard).preferredColorScheme(.dark)
-    }
-}
+//struct ClassicSongView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ClassicSongView(song: Song.standard)
+//        ClassicSongView(song: Song.standard).preferredColorScheme(.dark)
+//    }
+//}
 

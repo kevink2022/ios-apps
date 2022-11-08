@@ -30,7 +30,7 @@ struct ClassicMediaControls: View
             
             Button
             {
-                manager.player.isPlaying ? manager.pause() : manager.play()
+                manager.isPlaying ? manager.pause() : manager.play()
             }
             label:
             {

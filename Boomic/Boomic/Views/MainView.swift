@@ -9,7 +9,12 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        SongListView()
+        //SongListView()
+        
+        GeometryReader
+        {
+            geo in BoomicSlider(geometry: geo)
+        }
     }
 }
 

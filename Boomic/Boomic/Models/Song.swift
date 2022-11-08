@@ -25,17 +25,29 @@ class Song : Identifiable, Codable
         self.album = album
         self.trackNo = trackNo
     }
+    
+    var filename : String { self.source.relativeString.replacingOccurrences(of: "%20", with: " ") }
 }
 
 extension Song
 {
-    static let standard = Song(
+//    static let standard = Song(
+//        source: URL(string: ""),
+//        name: "Abrasive",
+//        artist: "Ratatat",
+//        album: "Magnifique",
+//        trackNo: 4
+//    )
+    
+    // Since Each song needs a source
+    static let unknown = Song(
         source: URL(string: "")!,
-        name: "Abrasive",
-        artist: "Ratatat",
-        album: "Magnifique",
-        trackNo: 4
+        name: "",
+        artist: "Unknown Artist",
+        album: "Unknown Album",
+        trackNo: 0
     )
+    
 //    static let standard = Song(
 //        name: "Abrasive",
 //        artist: Artist.ratatat,
