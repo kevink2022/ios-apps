@@ -13,25 +13,28 @@ struct ClassicSongView: View
     
     var body: some View
     {
-        VStack(alignment: .leading)
+        ZStack
         {
-            AlbumCover(image: "ratatat-magnifique")
+            ImageBlurBackground(image: nil)
             
-            
-            ClassicTitles(song: song)
-            
-            ClassicTimeSlider()
-                .frame(height: 50)
-                .padding()
-            
-            ClassicMediaControls()
-                .padding(.vertical)
-            
-            ClassicVolumeSlider()
-                .padding()
-            
-            ClassicQueueControls()
-                .padding(.top)
+            VStack(alignment: .leading)
+            {
+                AlbumCover(image: nil)
+                
+                ClassicTitles(song: song)
+                
+                ClassicTimeSlider()
+                    .padding()
+                
+                ClassicMediaControls()
+                    .padding(.vertical)
+                
+                ClassicVolumeSlider()
+                    .padding()
+                
+                ClassicQueueControls()
+                    .padding(.top)
+            }
         }
     }
 }

@@ -18,17 +18,21 @@ struct ClassicTitles: View
             //TODO: add defaults
             Text(song.title ?? song.filename) //default - filename
                 .font(F.title)
+                .lineLimit(C.lineLimit)
             
-            Text(song.album ?? P.album)
+            Text(song.albumTitle ?? P.album)
                 .font(F.album)
+                .lineLimit(C.lineLimit)
             
-            Text(song.artist ?? P.artist)
+            Text(song.artistName ?? P.artist)
                 .font(F.artist)
+                .lineLimit(C.lineLimit)
         }
         .padding(.horizontal)
     }
     
     typealias F = ViewConstants.Classic_GUI.Fonts
+    typealias C = ViewConstants.Classic_GUI.Subviews.ClassicTitles
     typealias P = ViewConstants.Placeholders.Unknown
 }
 

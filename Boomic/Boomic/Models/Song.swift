@@ -13,17 +13,22 @@ class Song : Identifiable, Codable
     var id : URL { source }
     
     var title : String?
-    var artist : String?
-    var album : String?
+    var artistName : String?
+    var albumTitle : String?
     var trackNo : Int?
+    
+    var album: Album? = nil
+    var artist: Artist? = nil
     
     init(source: URL, name: String? = nil, artist: String? = nil, album: String? = nil, trackNo: Int? = nil)
     {
         self.source = source
         self.title = name
-        self.artist = artist
-        self.album = album
+        self.artistName = artist
+        self.albumTitle = album
         self.trackNo = trackNo
+        self.album = nil
+        self.title = nil
     }
     
     var filename : String { self.source.relativeString.replacingOccurrences(of: "%20", with: " ") }
@@ -49,7 +54,7 @@ extension Song
     )
     
 //    static let standard = Song(
-//        name: "Abrasive",
+//        title: "Abrasive",
 //        artist: Artist.ratatat,
 //        album: Album.magnifique,
 //        trackNo: 4,
@@ -63,16 +68,16 @@ extension Song
     {
         let song = Song(source: source)
         
-        song.artist = dict["artist"] as? String
+        song.artistName = dict["artist"] as? String
         song.title = dict["title"] as? String
-        song.album = dict["album"] as? String
+        song.albumTitle = dict["album"] as? String
         song.trackNo = dict["track number"] as? Int
         
         self.init(
             source: song.source,
             name: song.title,
-            artist: song.artist,
-            album: song.album,
+            artist: song.artistName,
+            album: song.albumTitle,
             trackNo: song.trackNo
         )
     }

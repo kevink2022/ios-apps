@@ -33,6 +33,9 @@ struct ClassicTimeSlider: View
             .font(F.time)
             
             BoomicSlider()
+
+            .frame(height: 20)
+            
         }
         
     }

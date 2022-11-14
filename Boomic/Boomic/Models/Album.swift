@@ -7,49 +7,44 @@
 
 import Foundation
 
-class Album : Identifiable
+class Album : Identifiable, Codable
 {
-    var name : String
-    var artist : Artist?
+    var title : String
     var trackCount : Int?
-    var albumCover : CoverImage?
+    var artistName : String?
+    //var albumCover : CoverImage?
     
-    var id : String { name + (artist?.name ?? Artist.unknown.name) }
+    var artist : Artist?
+    var songs : [Song] = []
+    
+    var id : String { title + (artist?.name ?? Artist.unknown.name) }
     
     
-    init(name: String, artist: Artist? = nil, trackCount: Int? = nil, albumCover: CoverImage? = nil) {
-        self.name = name
+    init(title: String, artist: Artist? = nil, trackCount: Int? = nil) {
+        self.title = title
         self.artist = artist
         self.trackCount = trackCount
-        self.albumCover = albumCover
     }
-    
-    
-    enum CoverImage
-    {
-        // Development Only
-        case asset(String)
-        // Local Storage
-        case path(URL)
-        // Streaming Source
-    }
-    
-    
+
 }
 
 
 extension Album
 {
+    func addSong(_ song: Song)
+    {
+        self.songs.append(song)
+        song.album = self
+    }
+    
     static let unknown = Album(
-        name: "Unknown Album",
+        title: "Unknown Album",
         artist: Artist.unknown,
-        trackCount: nil,
-        albumCover: nil)
+        trackCount: nil)
     
     static let magnifique = Album(
-        name: "Magnifique",
+        title: "Magnifique",
         artist: Artist.ratatat,
-        trackCount: 14,
-        albumCover: .asset("ratatat-magnifique")
+        trackCount: 14
     )
 }

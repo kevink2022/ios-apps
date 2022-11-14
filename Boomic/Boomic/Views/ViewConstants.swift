@@ -34,17 +34,27 @@ struct ViewConstants
         
         struct SongListItem
         {
-            static let height : CGFloat = 45
+            static let height : CGFloat = 55
+        }
+        
+        struct Subviews
+        {
+            
         }
     }
     
     struct Subviews
     {
+        struct ImageBlurBackground
+        {
+            static let defaultAlbumCover : String = ViewConstants.Subviews.AlbumCover.defaultAlbumCover
+        }
+        
         struct AlbumCover
         {
             static let padding : CGFloat = 2
-            static let cornerRadius : CGFloat = 5
-            static let defaultAlbumCover : String = "ratatat-magnifique"
+            static let cornerRadius : CGFloat = 8
+            static let defaultAlbumCover : String = "boomic_logo"
         }
         
         struct BoomicSlider
@@ -65,10 +75,7 @@ struct ViewConstants
             static let queueControls = Font.system(.title, design: .default, weight: .bold)
         }
         
-        struct ClassicSongView
-        {
-            
-        }
+        
         
         struct Subviews
         {
@@ -81,6 +88,11 @@ struct ViewConstants
                 static let color = Color.primary
             }
             
+            struct ClassicTitles
+            {
+                static let lineLimit = 1
+            }
+
             struct ClassicVolumeSlider
             {
                 static let lowVolumeSF = "speaker.wave.1.fill"

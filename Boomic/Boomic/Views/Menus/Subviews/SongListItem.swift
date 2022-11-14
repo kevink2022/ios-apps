@@ -15,16 +15,17 @@ struct SongListItem: View
     {
         HStack
         {
-            AlbumCover(image: "ratatat-magnifique")
+            AlbumCover(image: nil)
             
             VStack(alignment: .leading)
             {
                 Text(song.title ?? song.filename)
                     .font(F.title)
                 
-                Text(song.artist ?? P.Unknown.artist)
+                Text(song.artistName ?? P.Unknown.artist)
                     .font(F.artist)
             }
+            .foregroundColor(.primary)
             
             Spacer()
         }
@@ -36,8 +37,8 @@ struct SongListItem: View
     typealias P = ViewConstants.Placeholders
 }
 
-//struct SongListItem_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SongListItem(song: Song.standard)
-//    }
-//}
+struct SongListItem_Previews: PreviewProvider {
+    static var previews: some View {
+        SongListItem(song: Song.standard)
+    }
+}

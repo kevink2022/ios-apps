@@ -15,26 +15,42 @@ struct SongListView: View
     
     var body: some View
     {
-        List
-        {            
-            ForEach(manager.songs)
+        VStack
+        {
+            List
             {
-                song in
-                
-                Button
+                ForEach(manager.songs)
                 {
-                    manager.setSong(song: song)
-                    showSheet = true
+                    song in
+                    
+                    Button
+                    {
+                        manager.setSong(song: song)
+                        showSheet = true
+                    }
+                    label:
+                    {
+                        SongListItem(song: song)
+                    }
                 }
-                label:
-                {
-                    SongListItem(song: song)
-                }
+            }
+            .listStyle(.inset)
+            
+            Button
+            {
+                manager.setSong(song: Song.standard)
+                showSheet = true
+            }
+            label:
+            {
+                CurrentSongBar(song: Song.standard)
+                    .ignoresSafeArea()
             }
         }
         .sheet(isPresented: $showSheet)
         {
-            ClassicSongView(song: manager.currentSong!)
+            //ClassicSongView(song: manager.currentSong!)
+            ClassicSongView(song: Song.standard)
         }
         
     }
@@ -43,5 +59,9 @@ struct SongListView: View
 struct SongListView_Previews: PreviewProvider {
     static var previews: some View {
         SongListView()
+            .environmentObject(BoomicManager())
+        SongListView()
+            .environmentObject(BoomicManager())
+            .preferredColorScheme(.dark)
     }
 }

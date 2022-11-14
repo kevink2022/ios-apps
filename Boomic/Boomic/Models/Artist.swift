@@ -7,10 +7,13 @@
 
 import Foundation
 
-class Artist : Identifiable
+class Artist : Identifiable, Codable
 {
     var name : String
     var id : String { name }
+    
+    var songs : [Song] = []
+    var albums : [Album] = []
  
     init(name: String)
     {
@@ -24,4 +27,10 @@ extension Artist
     static let ratatat = Artist(name: "Ratatat")
     
     static let unknown = Artist(name: "Unknown Artist")
+    
+    func addSong(_ song: Song)
+    {
+        self.songs.append(song)
+        song.artist = self
+    }
 }

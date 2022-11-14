@@ -57,6 +57,16 @@
 		4FCD44262915BB04001E7FCC /* StaticMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD44252915BB04001E7FCC /* StaticMethods.swift */; };
 		4FEC954C291995A6003EA394 /* BoomicSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC954B291995A6003EA394 /* BoomicSlider.swift */; };
 		4FEC954E291A18A7003EA394 /* ClassicQueueControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC954D291A18A7003EA394 /* ClassicQueueControls.swift */; };
+		4FEC9551291AC6C1003EA394 /* CurrentSongBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC9550291AC6C1003EA394 /* CurrentSongBar.swift */; };
+		4FEC9553291B2273003EA394 /* ImageBlurBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC9552291B2273003EA394 /* ImageBlurBackground.swift */; };
+		4FEC9555291DBC42003EA394 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC9554291DBC42003EA394 /* CategoriesView.swift */; };
+		4FECA26E29229CBB003EA394 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA26D29229CBB003EA394 /* Categories.swift */; };
+		4FECA2702922B758003EA394 /* CategoryMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA26F2922B758003EA394 /* CategoryMethods.swift */; };
+		4FECA2722922B79C003EA394 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA2712922B79C003EA394 /* CategoryView.swift */; };
+		4FECA2742922C024003EA394 /* ImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA2732922C024003EA394 /* ImageSource.swift */; };
+		4FECA2762922CBCC003EA394 /* ImageExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA2752922CBCC003EA394 /* ImageExtenstion.swift */; };
+		4FECA2782922D03B003EA394 /* GridMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA2772922D03B003EA394 /* GridMenu.swift */; };
+		4FECA27A2922D3DC003EA394 /* ContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA2792922D3DC003EA394 /* ContainerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +141,16 @@
 		4FCD44252915BB04001E7FCC /* StaticMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticMethods.swift; sourceTree = "<group>"; };
 		4FEC954B291995A6003EA394 /* BoomicSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoomicSlider.swift; sourceTree = "<group>"; };
 		4FEC954D291A18A7003EA394 /* ClassicQueueControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicQueueControls.swift; sourceTree = "<group>"; };
+		4FEC9550291AC6C1003EA394 /* CurrentSongBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSongBar.swift; sourceTree = "<group>"; };
+		4FEC9552291B2273003EA394 /* ImageBlurBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBlurBackground.swift; sourceTree = "<group>"; };
+		4FEC9554291DBC42003EA394 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		4FECA26D29229CBB003EA394 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		4FECA26F2922B758003EA394 /* CategoryMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMethods.swift; sourceTree = "<group>"; };
+		4FECA2712922B79C003EA394 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		4FECA2732922C024003EA394 /* ImageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSource.swift; sourceTree = "<group>"; };
+		4FECA2752922CBCC003EA394 /* ImageExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtenstion.swift; sourceTree = "<group>"; };
+		4FECA2772922D03B003EA394 /* GridMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridMenu.swift; sourceTree = "<group>"; };
+		4FECA2792922D3DC003EA394 /* ContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +256,8 @@
 				4F597D5E2912E07900BC1046 /* BoomicLibrary.swift */,
 				4FCD439D29145065001E7FCC /* Artist.swift */,
 				4FCD439F2914506E001E7FCC /* Album.swift */,
+				4FECA26D29229CBB003EA394 /* Categories.swift */,
+				4FECA2732922C024003EA394 /* ImageSource.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -270,8 +292,11 @@
 		4F597D572911A62B00BC1046 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				4FEC9552291B2273003EA394 /* ImageBlurBackground.swift */,
 				4F597D582911A65100BC1046 /* AlbumCover.swift */,
 				4FEC954B291995A6003EA394 /* BoomicSlider.swift */,
+				4FECA2752922CBCC003EA394 /* ImageExtenstion.swift */,
+				4FECA2792922D3DC003EA394 /* ContainerProtocol.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -291,8 +316,9 @@
 		4F597E63291323DC00BC1046 /* Menus */ = {
 			isa = PBXGroup;
 			children = (
+				4FEC954F291AC65C003EA394 /* Subviews */,
 				4F597E64291323E700BC1046 /* SongListView.swift */,
-				4FCD441C29157E65001E7FCC /* SongListItem.swift */,
+				4FEC9554291DBC42003EA394 /* CategoriesView.swift */,
 			);
 			path = Menus;
 			sourceTree = "<group>";
@@ -367,8 +393,20 @@
 				4FCD44202915B8C4001E7FCC /* MediaControls.swift */,
 				4FCD441A29149151001E7FCC /* Manager+Debug.swift */,
 				4FCD44252915BB04001E7FCC /* StaticMethods.swift */,
+				4FECA26F2922B758003EA394 /* CategoryMethods.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4FEC954F291AC65C003EA394 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				4FCD441C29157E65001E7FCC /* SongListItem.swift */,
+				4FEC9550291AC6C1003EA394 /* CurrentSongBar.swift */,
+				4FECA2712922B79C003EA394 /* CategoryView.swift */,
+				4FECA2772922D03B003EA394 /* GridMenu.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,24 +566,34 @@
 				4F597D5B2911A74100BC1046 /* ViewConstants.swift in Sources */,
 				4FCD44262915BB04001E7FCC /* StaticMethods.swift in Sources */,
 				4FCD441F29158EE6001E7FCC /* ClassicTimeSlider.swift in Sources */,
+				4FEC9553291B2273003EA394 /* ImageBlurBackground.swift in Sources */,
 				4F597D682912EF6C00BC1046 /* ClassicTitles.swift in Sources */,
 				4FCD441B29149151001E7FCC /* Manager+Debug.swift in Sources */,
+				4FECA27A2922D3DC003EA394 /* ContainerProtocol.swift in Sources */,
 				4F597D612912E0C500BC1046 /* BoomicManager.swift in Sources */,
 				4FCD44212915B8C4001E7FCC /* MediaControls.swift in Sources */,
 				4FEC954E291A18A7003EA394 /* ClassicQueueControls.swift in Sources */,
 				4F597D642912E97900BC1046 /* ClassicVolumeSlider.swift in Sources */,
+				4FEC9551291AC6C1003EA394 /* CurrentSongBar.swift in Sources */,
 				4FCD439E29145065001E7FCC /* Artist.swift in Sources */,
 				4F597D502911A1CE00BC1046 /* MainView.swift in Sources */,
 				4F597D222911A14F00BC1046 /* BoomicApp.swift in Sources */,
+				4FECA2742922C024003EA394 /* ImageSource.swift in Sources */,
 				4F597E65291323E700BC1046 /* SongListView.swift in Sources */,
 				4FCD44232915B965001E7FCC /* Metadata.swift in Sources */,
+				4FECA2782922D03B003EA394 /* GridMenu.swift in Sources */,
 				4F597D562911A28B00BC1046 /* ClassicSongView.swift in Sources */,
 				4FEC954C291995A6003EA394 /* BoomicSlider.swift in Sources */,
+				4FEC9555291DBC42003EA394 /* CategoriesView.swift in Sources */,
 				4F597D662912EC6100BC1046 /* ClassicMediaControls.swift in Sources */,
 				4F597D592911A65100BC1046 /* AlbumCover.swift in Sources */,
 				4F597D5F2912E07900BC1046 /* BoomicLibrary.swift in Sources */,
 				4FCD43A02914506E001E7FCC /* Album.swift in Sources */,
+				4FECA2702922B758003EA394 /* CategoryMethods.swift in Sources */,
+				4FECA2722922B79C003EA394 /* CategoryView.swift in Sources */,
 				4FCD441D29157E65001E7FCC /* SongListItem.swift in Sources */,
+				4FECA2762922CBCC003EA394 /* ImageExtenstion.swift in Sources */,
+				4FECA26E29229CBB003EA394 /* Categories.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,11 +14,11 @@ class BoomicManager : ObservableObject
     static let DEBUG : Bool = true
     
     @Published var songs : [Song] = []
+    var artists : [Artist] = []
+    var albums : [Album] = []
     var currentSong : Song? = nil
     var player : AVPlayer
-    
     var commandCenter : MPRemoteCommandCenter
-    
     
     
     init()
@@ -67,6 +67,38 @@ class BoomicManager : ObservableObject
                         return Song(source: $0)
                     }
                 })
+            }
+        }
+        
+        // MARK: Build Song/Album/Artist/Composer/etc. map
+        for song in songs
+        {
+            if let artistName = song.artistName
+            {
+                if let artist = artists.first(where: {$0.name == artistName})
+                {
+                    artist.addSong(song)
+                }
+                else
+                {
+                    let artist = Artist(name: artistName)
+                    artist.addSong(song)
+                    artists.append(artist)
+                }
+            }
+            
+            if let albumTitle = song.albumTitle
+            {
+                if let album = albums.first(where: {$0.title == albumTitle})
+                {
+                    album.addSong(song)
+                }
+                else
+                {
+                    let album = Album(title: albumTitle)
+                    album.addSong(song)
+                    albums.append(album)
+                }
             }
         }
     }

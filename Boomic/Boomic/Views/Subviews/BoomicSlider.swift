@@ -29,13 +29,17 @@ struct __BoomicSlider: View
         let drag = DragGesture()
             .onChanged {
                 value in
-                offset = (value.translation.width / geometry.size.width)
+                let _offset = (value.translation.width / geometry.size.width)
+                if ((percent + _offset) > 1) {offset = 1-percent}
+                else {offset = _offset}
             }
             .onEnded {
                 value in
                 
                 offset = 0.0
                 percent += (value.translation.width / geometry.size.width)
+                if (percent > 1) {percent = 1}
+
 
                 // seek or volume or whatever
             }
