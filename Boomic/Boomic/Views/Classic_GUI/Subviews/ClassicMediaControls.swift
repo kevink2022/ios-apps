@@ -19,7 +19,7 @@ struct ClassicMediaControls: View
             
             Button
             {
-                
+                manager.lastSong()
             }
             label:
             {
@@ -30,7 +30,7 @@ struct ClassicMediaControls: View
             
             Button
             {
-                manager.isPlaying ? manager.pause() : manager.play()
+                manager.togglePlayback()
             }
             label:
             {
@@ -41,7 +41,7 @@ struct ClassicMediaControls: View
             
             Button
             {
-                
+                manager.nextSong()
             }
             label:
             {

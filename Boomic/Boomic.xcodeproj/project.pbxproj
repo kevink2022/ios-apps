@@ -67,6 +67,10 @@
 		4FECA2762922CBCC003EA394 /* ImageExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA2752922CBCC003EA394 /* ImageExtenstion.swift */; };
 		4FECA2782922D03B003EA394 /* GridMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA2772922D03B003EA394 /* GridMenu.swift */; };
 		4FECA27A2922D3DC003EA394 /* ContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA2792922D3DC003EA394 /* ContainerProtocol.swift */; };
+		4FECA27C2922D8A8003EA394 /* AlbumListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA27B2922D8A8003EA394 /* AlbumListItem.swift */; };
+		4FECA27E2922DBD5003EA394 /* AlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA27D2922DBD5003EA394 /* AlbumListView.swift */; };
+		4FECA2802922E016003EA394 /* ArtistListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA27F2922E016003EA394 /* ArtistListItem.swift */; };
+		4FECA2822922E09E003EA394 /* ArtistListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA2812922E09E003EA394 /* ArtistListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +155,10 @@
 		4FECA2752922CBCC003EA394 /* ImageExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtenstion.swift; sourceTree = "<group>"; };
 		4FECA2772922D03B003EA394 /* GridMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridMenu.swift; sourceTree = "<group>"; };
 		4FECA2792922D3DC003EA394 /* ContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProtocol.swift; sourceTree = "<group>"; };
+		4FECA27B2922D8A8003EA394 /* AlbumListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListItem.swift; sourceTree = "<group>"; };
+		4FECA27D2922DBD5003EA394 /* AlbumListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListView.swift; sourceTree = "<group>"; };
+		4FECA27F2922E016003EA394 /* ArtistListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListItem.swift; sourceTree = "<group>"; };
+		4FECA2812922E09E003EA394 /* ArtistListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +327,8 @@
 				4FEC954F291AC65C003EA394 /* Subviews */,
 				4F597E64291323E700BC1046 /* SongListView.swift */,
 				4FEC9554291DBC42003EA394 /* CategoriesView.swift */,
+				4FECA2812922E09E003EA394 /* ArtistListView.swift */,
+				4FECA27D2922DBD5003EA394 /* AlbumListView.swift */,
 			);
 			path = Menus;
 			sourceTree = "<group>";
@@ -405,6 +415,8 @@
 				4FEC9550291AC6C1003EA394 /* CurrentSongBar.swift */,
 				4FECA2712922B79C003EA394 /* CategoryView.swift */,
 				4FECA2772922D03B003EA394 /* GridMenu.swift */,
+				4FECA27B2922D8A8003EA394 /* AlbumListItem.swift */,
+				4FECA27F2922E016003EA394 /* ArtistListItem.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -570,16 +582,19 @@
 				4F597D682912EF6C00BC1046 /* ClassicTitles.swift in Sources */,
 				4FCD441B29149151001E7FCC /* Manager+Debug.swift in Sources */,
 				4FECA27A2922D3DC003EA394 /* ContainerProtocol.swift in Sources */,
+				4FECA2802922E016003EA394 /* ArtistListItem.swift in Sources */,
 				4F597D612912E0C500BC1046 /* BoomicManager.swift in Sources */,
 				4FCD44212915B8C4001E7FCC /* MediaControls.swift in Sources */,
 				4FEC954E291A18A7003EA394 /* ClassicQueueControls.swift in Sources */,
 				4F597D642912E97900BC1046 /* ClassicVolumeSlider.swift in Sources */,
 				4FEC9551291AC6C1003EA394 /* CurrentSongBar.swift in Sources */,
+				4FECA27E2922DBD5003EA394 /* AlbumListView.swift in Sources */,
 				4FCD439E29145065001E7FCC /* Artist.swift in Sources */,
 				4F597D502911A1CE00BC1046 /* MainView.swift in Sources */,
 				4F597D222911A14F00BC1046 /* BoomicApp.swift in Sources */,
 				4FECA2742922C024003EA394 /* ImageSource.swift in Sources */,
 				4F597E65291323E700BC1046 /* SongListView.swift in Sources */,
+				4FECA27C2922D8A8003EA394 /* AlbumListItem.swift in Sources */,
 				4FCD44232915B965001E7FCC /* Metadata.swift in Sources */,
 				4FECA2782922D03B003EA394 /* GridMenu.swift in Sources */,
 				4F597D562911A28B00BC1046 /* ClassicSongView.swift in Sources */,
@@ -592,6 +607,7 @@
 				4FECA2702922B758003EA394 /* CategoryMethods.swift in Sources */,
 				4FECA2722922B79C003EA394 /* CategoryView.swift in Sources */,
 				4FCD441D29157E65001E7FCC /* SongListItem.swift in Sources */,
+				4FECA2822922E09E003EA394 /* ArtistListView.swift in Sources */,
 				4FECA2762922CBCC003EA394 /* ImageExtenstion.swift in Sources */,
 				4FECA26E29229CBB003EA394 /* Categories.swift in Sources */,
 			);

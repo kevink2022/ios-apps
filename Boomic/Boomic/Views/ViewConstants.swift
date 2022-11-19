@@ -41,6 +41,13 @@ struct ViewConstants
         {
             
         }
+        
+        struct AlbumListItem
+        {
+            static let titleFont = Font.system(.title, design: .default, weight: .bold)
+            static let artistFont = Font.system(.subheadline, design: .default, weight: .regular)
+            static let cornerRadius : CGFloat = 15
+        }
     }
     
     struct Subviews

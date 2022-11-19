@@ -34,7 +34,7 @@ struct CategoriesView: View
 
                     NavigationLink
                     {
-                        SongListView()
+                        SongListView(queue: manager.songs)
                     }
                     label:
                     {
@@ -43,7 +43,7 @@ struct CategoriesView: View
 
                     NavigationLink
                     {
-
+                        AlbumListView(albums: manager.albums)
                     }
                     label:
                     {
@@ -52,7 +52,7 @@ struct CategoriesView: View
 
                     NavigationLink
                     {
-
+                        ArtistListView()
                     }
                     label:
                     {
@@ -60,76 +60,6 @@ struct CategoriesView: View
                     }
                 }
             }
-            
-            
-//            GeometryReader
-//            {
-//                geo in
-//
-//                VStack(alignment: .leading)
-//                {
-//                    Text("Boomic Music")
-//                        .font(.system(.largeTitle, design: .default, weight: .heavy))
-//                        .padding()
-//
-//                    ScrollView
-//                    {
-//                        LazyVGrid(columns: [GridItem(.adaptive(minimum: geo.size.width/3), spacing: 15)])
-//                        {
-////                            ForEach(Categories.allCases)
-////                            {
-////                                cat in let category = manager.categoryInfo(cat)
-////
-////                                NavigationLink
-////                                {
-////
-////                                }
-////                                label:
-////                                {
-////                                    CategoryButton(image: category.image, label: category.label)
-////                                }
-////                            }
-//
-//                            NavigationLink
-//                            {
-//
-//                            }
-//                            label:
-//                            {
-//                                CategoryView(category: .songs)
-//                            }
-//
-//                            NavigationLink
-//                            {
-//                                SongListView()
-//                            }
-//                            label:
-//                            {
-//                                CategoryView(category: .songs)
-//                            }
-//
-//                            NavigationLink
-//                            {
-//
-//                            }
-//                            label:
-//                            {
-//                                CategoryView(category: .albums)
-//                            }
-//
-//                            NavigationLink
-//                            {
-//
-//                            }
-//                            label:
-//                            {
-//                                CategoryView(category: .artists)
-//                            }
-//                        }
-//                        .padding()
-//                    }
-//                }
-//            }
         }
     }
 }

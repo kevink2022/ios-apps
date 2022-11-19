@@ -13,13 +13,18 @@ class BoomicManager : ObservableObject
 {
     static let DEBUG : Bool = true
     
-    @Published var songs : [Song] = []
+    var songs : [Song] = []
+    @Published var queue : [Song] = []
     var artists : [Artist] = []
     var albums : [Album] = []
-    var currentSong : Song? = nil
-    var player : AVPlayer
+    @Published var currentSongIndex : Int? = nil
+    
+    @Published var player : AVPlayer
     var commandCenter : MPRemoteCommandCenter
     
+    // MARK: Playback States
+    @Published var shuffleState : Shuffle = .inOrder
+    @Published var repeatState : Repeat = .dontRepeat
     
     init()
     {
@@ -101,6 +106,9 @@ class BoomicManager : ObservableObject
                 }
             }
         }
+        
+        print(artists)
+        print(albums)
     }
 }
 

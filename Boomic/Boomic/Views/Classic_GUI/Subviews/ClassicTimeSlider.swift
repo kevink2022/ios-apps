@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ClassicTimeSlider: View
 {
-    @State var value : CGFloat = 50
     @EnvironmentObject var manager : BoomicManager
     
     var body: some View
@@ -18,21 +17,15 @@ struct ClassicTimeSlider: View
         {
             HStack
             {
-//                Text("\(manager.player.currentTime().seconds.readable)")
-//
-//                Spacer()
-//
-//                Text("\(manager.player.currentItem!.duration.seconds.readable)")
-                
-                Text("0:00")
-                
+                Text("\(manager.player.currentTime().seconds.readable)")
+
                 Spacer()
-                
-                Text("5:40")
+
+                Text("\(manager.player.currentItem!.duration.seconds.readable)")
             }
             .font(F.time)
             
-            BoomicSlider()
+            BoomicSlider(percent: $manager.songProgress)
 
             .frame(height: 20)
             

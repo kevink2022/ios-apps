@@ -11,6 +11,7 @@ struct SongListView: View
 {
     @EnvironmentObject var manager : BoomicManager
     @State var showSheet : Bool = false
+    let queue : [Song]
     
     
     var body: some View
@@ -19,13 +20,13 @@ struct SongListView: View
         {
             List
             {
-                ForEach(manager.songs)
+                ForEach(queue.indices)
                 {
-                    song in
+                    index in let song = queue[index]
                     
                     Button
                     {
-                        manager.setSong(song: song)
+                        manager.selectSong(queue: queue, queueIndex: index)
                         showSheet = true
                     }
                     label:
@@ -38,7 +39,7 @@ struct SongListView: View
             
             Button
             {
-                manager.setSong(song: Song.standard)
+//                manager.setSong(song: Song.standard)
                 showSheet = true
             }
             label:
@@ -56,12 +57,14 @@ struct SongListView: View
     }
 }
 
-struct SongListView_Previews: PreviewProvider {
-    static var previews: some View {
-        SongListView()
-            .environmentObject(BoomicManager())
-        SongListView()
-            .environmentObject(BoomicManager())
-            .preferredColorScheme(.dark)
-    }
-}
+//struct SongListView_Previews: PreviewProvider
+//{
+//    static var previews: some View
+//    {
+//        SongListView(queue: manager.songs)
+//            .environmentObject(BoomicManager())
+//        SongListView(songs: manager.songs)
+//            .environmentObject(BoomicManager())
+//            .preferredColorScheme(.dark)
+//    }
+//}

@@ -24,13 +24,12 @@ struct CategoryView: View
                 Image(category.image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .padding()
                 
                 Text(category.label)
                     .font(C.labelFont)
-                    .padding(.bottom)
             }
             .foregroundColor(.primary)
+            .padding()
         }
         .aspectRatio(1, contentMode: .fit)
     }

@@ -16,6 +16,7 @@ struct GridMenu<Content: View> : ContainerView
         GeometryReader
         {
             geo in
+            
             ScrollView
             {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: geo.size.width/3), spacing: 15)])
