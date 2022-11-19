@@ -22,7 +22,7 @@ struct SongListItem: View
                 Text(song.title ?? song.filename)
                     .font(F.title)
                 
-                Text(song.artistName ?? P.Unknown.artist)
+                Text(song.artist?.name ?? P.Unknown.artist)
                     .font(F.artist)
             }
             .foregroundColor(.primary)

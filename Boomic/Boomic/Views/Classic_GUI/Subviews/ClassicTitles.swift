@@ -15,16 +15,15 @@ struct ClassicTitles: View
     {
         VStack(alignment: .leading)
         {
-            //TODO: add defaults
-            Text(song.title ?? song.filename) //default - filename
+            Text(song.titleLabel)
                 .font(F.title)
                 .lineLimit(C.lineLimit)
             
-            Text(song.albumTitle ?? P.album)
+            Text(song.albumLabel)
                 .font(F.album)
                 .lineLimit(C.lineLimit)
             
-            Text(song.artistName ?? P.artist)
+            Text(song.artistLabel)
                 .font(F.artist)
                 .lineLimit(C.lineLimit)
         }

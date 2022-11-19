@@ -39,19 +39,25 @@ struct SongListView: View
             
             Button
             {
-//                manager.setSong(song: Song.standard)
                 showSheet = true
             }
             label:
             {
-                CurrentSongBar(song: Song.standard)
-                    .ignoresSafeArea()
+                if let song = manager.currentSong
+                {
+                    CurrentSongBar(song: song)
+                        .ignoresSafeArea()
+                }
             }
         }
         .sheet(isPresented: $showSheet)
         {
-            //ClassicSongView(song: manager.currentSong!)
-            ClassicSongView(song: Song.standard)
+            if let song = manager.currentSong
+            {
+                ClassicSongView(song: song)
+                    //.ignoresSafeArea()
+            }
+            
         }
         
     }

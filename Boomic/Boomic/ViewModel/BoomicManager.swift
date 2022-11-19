@@ -105,10 +105,15 @@ class BoomicManager : ObservableObject
                     albums.append(album)
                 }
             }
+            
+            print(song.titleLabel)
+            print(song.albumLabel)
+            print(song.artistLabel)
         }
         
-        print(artists)
-        print(albums)
+        print("end init")
     }
 }
 
+/// 0x0000600001366f80 - classics
+/// 0x0000600001b45ea0 - lound pipes

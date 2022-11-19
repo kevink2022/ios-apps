@@ -20,41 +20,46 @@ class Song : Identifiable, Codable
     var album: Album? = nil
     var artist: Artist? = nil
     
-    init(source: URL, name: String? = nil, artist: String? = nil, album: String? = nil, trackNo: Int? = nil)
+    // MARK: Calculated
+    var filename : String { self.source.relativeString.replacingOccurrences(of: "%20", with: " ") }
+    
+    var titleLabel : String { self.title ?? self.filename }
+    var albumLabel : String { self.album?.title ?? self.albumTitle ?? ViewConstants.Placeholders.Unknown.album }
+    var artistLabel : String { self.artist?.name ?? self.artistName ?? ViewConstants.Placeholders.Unknown.artist }
+    
+    init(source: URL, songTitle: String? = nil, artistName: String? = nil, albumTitle: String? = nil, trackNo: Int? = nil)
     {
         self.source = source
-        self.title = name
-        self.artistName = artist
-        self.albumTitle = album
+        self.title = songTitle
+        self.artistName = artistName
+        self.albumTitle = albumTitle
         self.trackNo = trackNo
         self.album = nil
-        self.title = nil
+        self.artist = nil
     }
-    
-    var filename : String { self.source.relativeString.replacingOccurrences(of: "%20", with: " ") }
 }
 
 extension Song
 {
     static let standard = Song(
         source: URL.documentsDirectory,
-        name: "Abrasive",
-        artist: "Ratatat",
-        album: "Magnifique",
+        songTitle: "Abrasive",
+        artistName: "Ratatat",
+        albumTitle: "Magnifique",
         trackNo: 4
     )
     
     // Since Each song needs a source
     static let unknown = Song(
         source: URL(string: "")!,
-        name: "",
-        artist: "Unknown Artist",
-        album: "Unknown Album",
+        songTitle: "",
+        artistName: "Unknown Artist",
+        albumTitle: "Unknown Album",
         trackNo: 0
     )
     
 //    static let standard = Song(
-//        title: "Abrasive",
+//        songTitle: "Abrasive",
 //        artist: Artist.ratatat,
 //        album: Album.magnifique,
 //        trackNo: 4,
@@ -66,19 +71,24 @@ extension Song
 {
     convenience init(source: URL, tags dict: Dictionary<String,Any>)
     {
-        let song = Song(source: source)
-        
-        song.artistName = dict["artist"] as? String
-        song.title = dict["title"] as? String
-        song.albumTitle = dict["album"] as? String
-        song.trackNo = dict["track number"] as? Int
-        
+//        let song = Song(source: source)
+//
+//        song.artistName = dict["artist"] as? String
+//        song.title = dict["title"] as? String
+//        song.albumTitle = dict["album"] as? String
+//        song.trackNo = dict["track number"] as? Int
+//
+//        if let title = dict["title"] as? String
+//        {
+//            song.title = (title)
+//        }
+
         self.init(
-            source: song.source,
-            name: song.title,
-            artist: song.artistName,
-            album: song.albumTitle,
-            trackNo: song.trackNo
+            source: source,
+            songTitle: dict["title"] as? String,
+            artistName: dict["artist"] as? String,
+            albumTitle: dict["album"] as? String,
+            trackNo: dict["track number"] as? Int
         )
     }
     

@@ -35,6 +35,7 @@ struct BoomicSlider: View
                     value in
                     let _offset = (value.translation.width / geometry.size.width)
                     if ((percent + _offset) > 1) {offset = 1-percent}
+                    else if ((percent + _offset) < 0) {offset = -percent}
                     else {offset = _offset}
                 }
                 .onEnded {
@@ -43,6 +44,7 @@ struct BoomicSlider: View
                     offset = 0.0
                     percent += (value.translation.width / geometry.size.width)
                     if (percent > 1) {percent = 1}
+                    else if (percent < 0) {percent = 0}
 
                     // seek or volume or whatever
                 }

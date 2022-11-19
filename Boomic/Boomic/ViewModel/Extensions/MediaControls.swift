@@ -44,7 +44,7 @@ extension BoomicManager
     }
     
     // MARK: - Media Controls
-    func togglePlayback() { isPlaying ? play() : pause() }
+    func togglePlayback() { isPlaying ? pause() : play() }
     func play() { player.play(); objectWillChange.send() }
     func pause() { player.pause(); objectWillChange.send() }
     
@@ -84,6 +84,26 @@ extension BoomicManager
                 self.currentSongIndex = curr - 1
                 self.startNewSong(paused: !playing)
             }
+        }
+    }
+    
+    func toggleShuffle()
+    {
+        switch shuffleState
+        {
+        case .inOrder : shuffleState = .shuffle
+        case .shuffle : shuffleState = .inOrder
+        }
+    }
+    
+    func toggleRepeat()
+    {
+        switch repeatState
+        {
+        case .dontRepeat : repeatState = .repeatQueue
+        case .repeatQueue: repeatState = .repeatSong
+        case .repeatSong : repeatState = .singleSong
+        case .singleSong : repeatState = .dontRepeat
         }
     }
     

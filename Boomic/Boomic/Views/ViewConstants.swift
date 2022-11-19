@@ -109,8 +109,13 @@ struct ViewConstants
             struct ClassicQueueControls
             {
                 static let shuffleSF = "shuffle"
-                static let repeatSF = "repeat"
-                static let repearOneSF = "repeat.1"
+                static let inOrderSF = "arrow.forward"
+                
+                static let dontRepeatSF = "arrow.forward.to.line"
+                static let repeatQueueSF = "repeat"
+                static let repearSongSF = "repeat.1"
+                static let singleSongSF = "1.circle"
+                
                 static let queueSF = "list.triangle"
             }
         }
