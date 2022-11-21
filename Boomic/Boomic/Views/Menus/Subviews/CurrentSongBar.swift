@@ -41,7 +41,7 @@ struct CurrentSongBar: View
                 }
                 label:
                 {
-                    Image(systemName: !manager.isPlaying ? "pause.fill" : "play.fill")
+                    Image(systemName: manager.isPlaying ? "pause.fill" : "play.fill")
                         .font(.largeTitle)
                         .foregroundColor(.primary)
                         .padding(.horizontal)
@@ -55,7 +55,6 @@ struct CurrentSongBar: View
     
     typealias C = ViewConstants.Menus.SongListItem
     typealias F = ViewConstants.Menus.Fonts
-    typealias P = ViewConstants.Placeholders
 }
 
 struct CurrentSongBar_Previews: PreviewProvider {

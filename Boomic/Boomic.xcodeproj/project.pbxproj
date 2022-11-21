@@ -26,29 +26,6 @@
 		4F597E65291323E700BC1046 /* SongListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597E64291323E700BC1046 /* SongListView.swift */; };
 		4FCD439E29145065001E7FCC /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD439D29145065001E7FCC /* Artist.swift */; };
 		4FCD43A02914506E001E7FCC /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD439F2914506E001E7FCC /* Album.swift */; };
-		4FCD43F9291481E2001E7FCC /* 01 Title.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43EC291481E2001E7FCC /* 01 Title.m4a */; };
-		4FCD43FA291481E2001E7FCC /* 09 Gerudo Valley.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43ED291481E2001E7FCC /* 09 Gerudo Valley.m4a */; };
-		4FCD43FB291481E2001E7FCC /* 03 Hyrule Field.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43EE291481E2001E7FCC /* 03 Hyrule Field.m4a */; };
-		4FCD43FC291481E2001E7FCC /* 07 Goron City.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43EF291481E2001E7FCC /* 07 Goron City.m4a */; };
-		4FCD43FD291481E2001E7FCC /* 02 Kokiri Forest.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43F0291481E2001E7FCC /* 02 Kokiri Forest.m4a */; };
-		4FCD43FE291481E2001E7FCC /* 04 Hyrule Castle.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43F1291481E2001E7FCC /* 04 Hyrule Castle.m4a */; };
-		4FCD43FF291481E2001E7FCC /* 05 Lon Lon Ranch.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43F2291481E2001E7FCC /* 05 Lon Lon Ranch.m4a */; };
-		4FCD4400291481E2001E7FCC /* 06 Kakariko Village.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43F3291481E2001E7FCC /* 06 Kakariko Village.m4a */; };
-		4FCD4401291481E2001E7FCC /* 12 Ocarina Medley.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43F4291481E2001E7FCC /* 12 Ocarina Medley.m4a */; };
-		4FCD4402291481E2001E7FCC /* 10 Ganondorf.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43F5291481E2001E7FCC /* 10 Ganondorf.m4a */; };
-		4FCD4403291481E2001E7FCC /* 11 Princess Zelda.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43F6291481E2001E7FCC /* 11 Princess Zelda.m4a */; };
-		4FCD4404291481E2001E7FCC /* 13 The Legend of Zelda Medley.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43F7291481E2001E7FCC /* 13 The Legend of Zelda Medley.m4a */; };
-		4FCD4405291481E2001E7FCC /* 08 Zora's Domain.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD43F8291481E2001E7FCC /* 08 Zora's Domain.m4a */; };
-		4FCD4410291481F0001E7FCC /* 01 Montanita.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD4406291481F0001E7FCC /* 01 Montanita.flac */; };
-		4FCD4411291481F0001E7FCC /* 10 Tacobel Canon.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD4407291481F0001E7FCC /* 10 Tacobel Canon.flac */; };
-		4FCD4412291481F0001E7FCC /* 03 Gettysburg.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD4408291481F0001E7FCC /* 03 Gettysburg.flac */; };
-		4FCD4413291481F0001E7FCC /* 02 Lex.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD4409291481F0001E7FCC /* 02 Lex.flac */; };
-		4FCD4414291481F0001E7FCC /* 05 Tropicana.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD440A291481F0001E7FCC /* 05 Tropicana.flac */; };
-		4FCD4415291481F0001E7FCC /* 07 Kennedy.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD440B291481F0001E7FCC /* 07 Kennedy.flac */; };
-		4FCD4416291481F0001E7FCC /* 09 Nostrand.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD440C291481F0001E7FCC /* 09 Nostrand.flac */; };
-		4FCD4417291481F0001E7FCC /* 06 Loud Pipes.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD440D291481F0001E7FCC /* 06 Loud Pipes.flac */; };
-		4FCD4418291481F0001E7FCC /* 08 Swisha.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD440E291481F0001E7FCC /* 08 Swisha.flac */; };
-		4FCD4419291481F0001E7FCC /* 04 Wildcat.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD440F291481F0001E7FCC /* 04 Wildcat.flac */; };
 		4FCD441B29149151001E7FCC /* Manager+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD441A29149151001E7FCC /* Manager+Debug.swift */; };
 		4FCD441D29157E65001E7FCC /* SongListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD441C29157E65001E7FCC /* SongListItem.swift */; };
 		4FCD441F29158EE6001E7FCC /* ClassicTimeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD441E29158EE6001E7FCC /* ClassicTimeSlider.swift */; };
@@ -72,6 +49,130 @@
 		4FECA2802922E016003EA394 /* ArtistListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA27F2922E016003EA394 /* ArtistListItem.swift */; };
 		4FECA2822922E09E003EA394 /* ArtistListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA2812922E09E003EA394 /* ArtistListView.swift */; };
 		4FECA289292AD3CA003EA394 /* QueueListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA288292AD3CA003EA394 /* QueueListView.swift */; };
+		4FECA32D292B0A53003EA394 /* 1 Me and Your Mama.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2AB292B0A52003EA394 /* 1 Me and Your Mama.flac */; };
+		4FECA32E292B0A53003EA394 /* 4 Zombies.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2AC292B0A52003EA394 /* 4 Zombies.flac */; };
+		4FECA32F292B0A53003EA394 /* 5 Riot.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2AD292B0A52003EA394 /* 5 Riot.flac */; };
+		4FECA330292B0A53003EA394 /* 8 Terrified.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2AE292B0A52003EA394 /* 8 Terrified.flac */; };
+		4FECA331292B0A53003EA394 /* 2 Have Some Love.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2AF292B0A52003EA394 /* 2 Have Some Love.flac */; };
+		4FECA332292B0A53003EA394 /* 6 Redbone.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2B0292B0A52003EA394 /* 6 Redbone.flac */; };
+		4FECA333292B0A53003EA394 /* 3 Boogieman.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2B1292B0A52003EA394 /* 3 Boogieman.flac */; };
+		4FECA334292B0A53003EA394 /* 7 California.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2B2292B0A52003EA394 /* 7 California.flac */; };
+		4FECA335292B0A53003EA394 /* 11 Stand Tall.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2B3292B0A52003EA394 /* 11 Stand Tall.flac */; };
+		4FECA336292B0A53003EA394 /* 10 The Night Me and Your Mama Met.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2B4292B0A52003EA394 /* 10 The Night Me and Your Mama Met.flac */; };
+		4FECA337292B0A53003EA394 /* 9 Baby Boy.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2B5292B0A52003EA394 /* 9 Baby Boy.flac */; };
+		4FECA338292B0A53003EA394 /* 12 Ocarina Medley.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2B7292B0A52003EA394 /* 12 Ocarina Medley.m4a */; };
+		4FECA339292B0A53003EA394 /* 13 The Legend of Zelda Medley.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2B8292B0A52003EA394 /* 13 The Legend of Zelda Medley.m4a */; };
+		4FECA33A292B0A53003EA394 /* 01 Title.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2B9292B0A52003EA394 /* 01 Title.m4a */; };
+		4FECA33B292B0A53003EA394 /* 11 Princess Zelda.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2BA292B0A52003EA394 /* 11 Princess Zelda.m4a */; };
+		4FECA33C292B0A53003EA394 /* 05 Lon Lon Ranch.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2BB292B0A52003EA394 /* 05 Lon Lon Ranch.m4a */; };
+		4FECA33D292B0A53003EA394 /* 03 Hyrule Field.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2BC292B0A52003EA394 /* 03 Hyrule Field.m4a */; };
+		4FECA33E292B0A53003EA394 /* 02 Kokiri Forest.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2BD292B0A52003EA394 /* 02 Kokiri Forest.m4a */; };
+		4FECA33F292B0A53003EA394 /* 06 Kakariko Village.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2BE292B0A52003EA394 /* 06 Kakariko Village.m4a */; };
+		4FECA340292B0A53003EA394 /* 07 Goron City.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2BF292B0A52003EA394 /* 07 Goron City.m4a */; };
+		4FECA341292B0A53003EA394 /* 09 Gerudo Valley.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2C0292B0A52003EA394 /* 09 Gerudo Valley.m4a */; };
+		4FECA342292B0A53003EA394 /* 10 Ganondorf.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2C1292B0A52003EA394 /* 10 Ganondorf.m4a */; };
+		4FECA343292B0A53003EA394 /* 08 Zora's Domain.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2C2292B0A52003EA394 /* 08 Zora's Domain.m4a */; };
+		4FECA344292B0A53003EA394 /* 04 Hyrule Castle.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2C3292B0A52003EA394 /* 04 Hyrule Castle.m4a */; };
+		4FECA345292B0A53003EA394 /* 10. Ratatat - Spanish Armada.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2C5292B0A52003EA394 /* 10. Ratatat - Spanish Armada.flac */; };
+		4FECA346292B0A53003EA394 /* 07. Ratatat - Breaking Away.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2C6292B0A52003EA394 /* 07. Ratatat - Breaking Away.flac */; };
+		4FECA347292B0A53003EA394 /* 08. Ratatat - Lapland.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2C7292B0A52003EA394 /* 08. Ratatat - Lapland.flac */; };
+		4FECA348292B0A53003EA394 /* 03. Ratatat - Crips.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2C8292B0A52003EA394 /* 03. Ratatat - Crips.flac */; };
+		4FECA349292B0A53003EA394 /* 06. Ratatat - Bustelo.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2C9292B0A52003EA394 /* 06. Ratatat - Bustelo.flac */; };
+		4FECA34A292B0A53003EA394 /* 05. Ratatat - Everest.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2CA292B0A52003EA394 /* 05. Ratatat - Everest.flac */; };
+		4FECA34B292B0A53003EA394 /* 02. Ratatat - El Pico.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2CB292B0A52003EA394 /* 02. Ratatat - El Pico.flac */; };
+		4FECA34C292B0A53003EA394 /* 04. Ratatat - Desert Eagle.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2CC292B0A52003EA394 /* 04. Ratatat - Desert Eagle.flac */; };
+		4FECA34D292B0A53003EA394 /* cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2CD292B0A52003EA394 /* cover.jpg */; };
+		4FECA34E292B0A53003EA394 /* 01. Ratatat - Seventeen Years.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2CE292B0A52003EA394 /* 01. Ratatat - Seventeen Years.flac */; };
+		4FECA34F292B0A53003EA394 /* 11. Ratatat - Cherry.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2CF292B0A52003EA394 /* 11. Ratatat - Cherry.flac */; };
+		4FECA350292B0A53003EA394 /* 09. Ratatat - Germany to Germany.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2D0292B0A52003EA394 /* 09. Ratatat - Germany to Germany.flac */; };
+		4FECA351292B0A53003EA394 /* 01 Opening_ Mario_s Theme (Super Mario Bros.).m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2D2292B0A52003EA394 /* 01 Opening_ Mario_s Theme (Super Mario Bros.).m4a */; };
+		4FECA352292B0A53003EA394 /* 06 Super Mario Bros. 3 Ending Theme (Super Mario Bros. 3).m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2D3292B0A52003EA394 /* 06 Super Mario Bros. 3 Ending Theme (Super Mario Bros. 3).m4a */; };
+		4FECA353292B0A53003EA394 /* 11 Epona_s Song (The Legend of Zelda_ Ocarina of Time).m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2D4292B0A52003EA394 /* 11 Epona_s Song (The Legend of Zelda_ Ocarina of Time).m4a */; };
+		4FECA354292B0A53003EA394 /* 10 Dragon Roost Island Theme (The Legend of Zelda_ The Wind Waker).m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2D5292B0A52003EA394 /* 10 Dragon Roost Island Theme (The Legend of Zelda_ The Wind Waker).m4a */; };
+		4FECA355292B0A53003EA394 /* 13 Ballad of the Wind Fish [The Indigo-Go_s] (The Legend of Zelda_ Majora_s Mask).m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2D6292B0A52003EA394 /* 13 Ballad of the Wind Fish [The Indigo-Go_s] (The Legend of Zelda_ Majora_s Mask).m4a */; };
+		4FECA356292B0A53003EA394 /* 14 Goron City Theme (The Legend of Zelda_ Ocarina of Time).m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2D7292B0A52003EA394 /* 14 Goron City Theme (The Legend of Zelda_ Ocarina of Time).m4a */; };
+		4FECA357292B0A53003EA394 /* 05 Go Go Mario (Super Mario Bros.).m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2D8292B0A52003EA394 /* 05 Go Go Mario (Super Mario Bros.).m4a */; };
+		4FECA358292B0A53003EA394 /* 07 Yoshi_s Island Athletic (Yoshi_s Island).m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2D9292B0A52003EA394 /* 07 Yoshi_s Island Athletic (Yoshi_s Island).m4a */; };
+		4FECA359292B0A53003EA394 /* 04 Mario Scat Version (Super Mario Sunshine).m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2DA292B0A52003EA394 /* 04 Mario Scat Version (Super Mario Sunshine).m4a */; };
+		4FECA35A292B0A53003EA394 /* 12 Delfino Plaza Theme (Super Mario Sunshine).m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2DB292B0A52003EA394 /* 12 Delfino Plaza Theme (Super Mario Sunshine).m4a */; };
+		4FECA35B292B0A53003EA394 /* 08 Yoshi on the Beach (Yoshi_s Story).m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2DC292B0A52003EA394 /* 08 Yoshi on the Beach (Yoshi_s Story).m4a */; };
+		4FECA35C292B0A53003EA394 /* 03 Super Mario Bros. Medley (Super Mario Bros.).m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2DD292B0A52003EA394 /* 03 Super Mario Bros. Medley (Super Mario Bros.).m4a */; };
+		4FECA35D292B0A53003EA394 /* 09 The Wind Waker Title Theme (The Legend of Zelda_ The Wind Waker).m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2DE292B0A52003EA394 /* 09 The Wind Waker Title Theme (The Legend of Zelda_ The Wind Waker).m4a */; };
+		4FECA35E292B0A53003EA394 /* 16 The Legend of Zelda Medley (The Legend of Zelda).m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2DF292B0A52003EA394 /* 16 The Legend of Zelda Medley (The Legend of Zelda).m4a */; };
+		4FECA35F292B0A53003EA394 /* 15 Shop Theme (The Legend of Zelda_ Ocarina of Time).m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2E0292B0A52003EA394 /* 15 Shop Theme (The Legend of Zelda_ Ocarina of Time).m4a */; };
+		4FECA360292B0A53003EA394 /* 02 Super Mario 64 Opening Theme - Overworld Theme (Super Mario 64).m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2E1292B0A52003EA394 /* 02 Super Mario 64 Opening Theme - Overworld Theme (Super Mario 64).m4a */; };
+		4FECA361292B0A53003EA394 /* 17 Super Mario Sunshine Ending Theme (Super Mario Sunshine).m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2E2292B0A52003EA394 /* 17 Super Mario Sunshine Ending Theme (Super Mario Sunshine).m4a */; };
+		4FECA362292B0A53003EA394 /* 1-01 - Welcome To Los Santos.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2E4292B0A52003EA394 /* 1-01 - Welcome To Los Santos.flac */; };
+		4FECA363292B0A53003EA394 /* 1-03 - Old Love  New Love.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2E5292B0A52003EA394 /* 1-03 - Old Love  New Love.flac */; };
+		4FECA364292B0A53003EA394 /* 3-06 - Can't Hardly Stand It.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2E6292B0A52003EA394 /* 3-06 - Can't Hardly Stand It.flac */; };
+		4FECA365292B0A53003EA394 /* 1-17 - Don't Come Close.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2E7292B0A52003EA394 /* 1-17 - Don't Come Close.flac */; };
+		4FECA366292B0A53003EA394 /* 2-21 - Hillbilly Crank Dealers’ Blues .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2E8292B0A52003EA394 /* 2-21 - Hillbilly Crank Dealers’ Blues .flac */; };
+		4FECA367292B0A53003EA394 /* 2-18 - Therapy and Other Hobbies .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2E9292B0A52003EA394 /* 2-18 - Therapy and Other Hobbies .flac */; };
+		4FECA368292B0A53003EA394 /* 1-12 - R  Cali.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2EA292B0A52003EA394 /* 1-12 - R  Cali.flac */; };
+		4FECA369292B0A53003EA394 /* 3-01 - The Kill.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2EB292B0A52003EA394 /* 3-01 - The Kill.flac */; };
+		4FECA36A292B0A53003EA394 /* 3-11 - Hollywood Nights.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2EC292B0A52003EA394 /* 3-11 - Hollywood Nights.flac */; };
+		4FECA36B292B0A53003EA394 /* 3-04 - I Get Lifted.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2ED292B0A52003EA394 /* 3-04 - I Get Lifted.flac */; };
+		4FECA36C292B0A53003EA394 /* 1-02 - Smokin' And Ridin'.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2EE292B0A52003EA394 /* 1-02 - Smokin' And Ridin'.flac */; };
+		4FECA36D292B0A53003EA394 /* 3-07 - Life of Crime.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2EF292B0A52003EA394 /* 3-07 - Life of Crime.flac */; };
+		4FECA36E292B0A53003EA394 /* 1-08 - High Pressure Dave.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2F0292B0A52003EA394 /* 1-08 - High Pressure Dave.flac */; };
+		4FECA36F292B0A53003EA394 /* 2-06 - The Grip .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2F1292B0A52003EA394 /* 2-06 - The Grip .flac */; };
+		4FECA370292B0A53003EA394 /* 2-13 - Chop the Dog .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2F2292B0A52003EA394 /* 2-13 - Chop the Dog .flac */; };
+		4FECA371292B0A53003EA394 /* 3-19 - Mirror Maru.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2F3292B0A52003EA394 /* 3-19 - Mirror Maru.flac */; };
+		4FECA372292B0A53003EA394 /* 2-09 - No Happy Endings .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2F4292B0A52003EA394 /* 2-09 - No Happy Endings .flac */; };
+		4FECA373292B0A53003EA394 /* 2-11 - (Sounds Kind of) Fruity .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2F5292B0A52003EA394 /* 2-11 - (Sounds Kind of) Fruity .flac */; };
+		4FECA374292B0A53003EA394 /* 1-13 - Colours.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2F6292B0A52003EA394 /* 1-13 - Colours.flac */; };
+		4FECA375292B0A53003EA394 /* 1-11 - Nowhere To Go.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2F7292B0A52003EA394 /* 1-11 - Nowhere To Go.flac */; };
+		4FECA376292B0A53003EA394 /* 3-12 - From Nowhere (Baardsen Remix).flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2F8292B0A52003EA394 /* 3-12 - From Nowhere (Baardsen Remix).flac */; };
+		4FECA377292B0A53003EA394 /* 2-07 - Mr. Trevor Philips .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2F9292B0A52003EA394 /* 2-07 - Mr. Trevor Philips .flac */; };
+		4FECA378292B0A53003EA394 /* 1-18 - Sleepwalking.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2FA292B0A52003EA394 /* 1-18 - Sleepwalking.flac */; };
+		4FECA379292B0A53003EA394 /* 3-02 - I Am a Madman.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2FB292B0A52003EA394 /* 3-02 - I Am a Madman.flac */; };
+		4FECA37A292B0A53003EA394 /* 3-10 - I'd Rather Be With You.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2FC292B0A52003EA394 /* 3-10 - I'd Rather Be With You.flac */; };
+		4FECA37B292B0A53003EA394 /* 2-12 - Minor Turbulence .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2FD292B0A52003EA394 /* 2-12 - Minor Turbulence .flac */; };
+		4FECA37C292B0A53003EA394 /* 3-13 - Say That Then.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2FE292B0A52003EA394 /* 3-13 - Say That Then.flac */; };
+		4FECA37D292B0A53003EA394 /* 2-08 - A Bit of an Awkward Situation .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2FF292B0A52003EA394 /* 2-08 - A Bit of an Awkward Situation .flac */; };
+		4FECA37E292B0A53003EA394 /* 2-14 - A Lonely Man .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA300292B0A52003EA394 /* 2-14 - A Lonely Man .flac */; };
+		4FECA37F292B0A53003EA394 /* 2-01 - We Were Set Up .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA301292B0A52003EA394 /* 2-01 - We Were Set Up .flac */; };
+		4FECA380292B0A53003EA394 /* 2-20 - The Agency Heist .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA302292B0A52003EA394 /* 2-20 - The Agency Heist .flac */; };
+		4FECA381292B0A53003EA394 /* 2-10 - His Mentor .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA303292B0A52003EA394 /* 2-10 - His Mentor .flac */; };
+		4FECA382292B0A53003EA394 /* 2-22 - Welcome to Los Santos (outro) .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA304292B0A52003EA394 /* 2-22 - Welcome to Los Santos (outro) .flac */; };
+		4FECA383292B0A53003EA394 /* 3-08 - Es Toy.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA305292B0A52003EA394 /* 3-08 - Es Toy.flac */; };
+		4FECA384292B0A53003EA394 /* 1-05 - Nine Is God.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA306292B0A52003EA394 /* 1-05 - Nine Is God.flac */; };
+		4FECA385292B0A53003EA394 /* 3-03 - Jasmine.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA307292B0A52003EA394 /* 3-03 - Jasmine.flac */; };
+		4FECA386292B0A53003EA394 /* 1-15 - Life Of A Mack.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA308292B0A52003EA394 /* 1-15 - Life Of A Mack.flac */; };
+		4FECA387292B0A53003EA394 /* 1-10 - Garbage.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA309292B0A52003EA394 /* 1-10 - Garbage.flac */; };
+		4FECA388292B0A53003EA394 /* 1-06 - Bassheads.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA30A292B0A52003EA394 /* 1-06 - Bassheads.flac */; };
+		4FECA389292B0A53003EA394 /* 1-14 - Hold Up.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA30B292B0A52003EA394 /* 1-14 - Hold Up.flac */; };
+		4FECA38A292B0A53003EA394 /* 3-18 - This Mystic Decade.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA30C292B0A52003EA394 /* 3-18 - This Mystic Decade.flac */; };
+		4FECA38B292B0A53003EA394 /* 2-03 - A Haze of Patriotic Fervor .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA30D292B0A52003EA394 /* 2-03 - A Haze of Patriotic Fervor .flac */; };
+		4FECA38C292B0A53003EA394 /* 3-05 - What You Wanna Do.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA30E292B0A52003EA394 /* 3-05 - What You Wanna Do.flac */; };
+		4FECA38D292B0A53003EA394 /* 3-15 - Nobody Move, Nobody Gets Hurt.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA30F292B0A52003EA394 /* 3-15 - Nobody Move, Nobody Gets Hurt.flac */; };
+		4FECA38E292B0A53003EA394 /* 2-02 - A Legitimate Business Man .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA310292B0A52003EA394 /* 2-02 - A Legitimate Business Man .flac */; };
+		4FECA38F292B0A53003EA394 /* 3-16 - All the Things She Said.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA311292B0A52003EA394 /* 3-16 - All the Things She Said.flac */; };
+		4FECA390292B0A53003EA394 /* 3-09 - Gabriel (Soulwax Mix).flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA312292B0A52003EA394 /* 3-09 - Gabriel (Soulwax Mix).flac */; };
+		4FECA391292B0A53003EA394 /* 3-14 - I Ain't Living Long Like This.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA313292B0A52003EA394 /* 3-14 - I Ain't Living Long Like This.flac */; };
+		4FECA392292B0A53003EA394 /* 3-17 - Harm in Change.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA314292B0A52003EA394 /* 3-17 - Harm in Change.flac */; };
+		4FECA393292B0A53003EA394 /* 2-15 - You Forget a Thousand Things .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA315292B0A52003EA394 /* 2-15 - You Forget a Thousand Things .flac */; };
+		4FECA394292B0A53003EA394 /* 2-05 - North Yankton Memories .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA316292B0A52003EA394 /* 2-05 - North Yankton Memories .flac */; };
+		4FECA395292B0A53003EA394 /* 2-04 - Los Santos at Night .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA317292B0A52003EA394 /* 2-04 - Los Santos at Night .flac */; };
+		4FECA396292B0A53003EA394 /* 2-17 - Fresh Meat .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA318292B0A52003EA394 /* 2-17 - Fresh Meat .flac */; };
+		4FECA397292B0A53003EA394 /* 1-16 - The Set Up.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA319292B0A52003EA394 /* 1-16 - The Set Up.flac */; };
+		4FECA398292B0A53003EA394 /* 1-04 - Change Of Coast.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA31A292B0A52003EA394 /* 1-04 - Change Of Coast.flac */; };
+		4FECA399292B0A53003EA394 /* 1-09 - What's Next.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA31B292B0A52003EA394 /* 1-09 - What's Next.flac */; };
+		4FECA39A292B0A53003EA394 /* 2-16 - Impotent Rage  Am I Being Clear Now .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA31C292B0A52003EA394 /* 2-16 - Impotent Rage  Am I Being Clear Now .flac */; };
+		4FECA39B292B0A53003EA394 /* 2-19 - Rich Man’s Plaything .flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA31D292B0A52003EA394 /* 2-19 - Rich Man’s Plaything .flac */; };
+		4FECA39C292B0A53003EA394 /* 1-07 - Stonecutters.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA31E292B0A52003EA394 /* 1-07 - Stonecutters.flac */; };
+		4FECA39D292B0A53003EA394 /* 06 Loud Pipes.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA320292B0A52003EA394 /* 06 Loud Pipes.flac */; };
+		4FECA39E292B0A53003EA394 /* 09 Nostrand.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA321292B0A52003EA394 /* 09 Nostrand.flac */; };
+		4FECA39F292B0A53003EA394 /* 01 Montanita.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA322292B0A52003EA394 /* 01 Montanita.flac */; };
+		4FECA3A0292B0A53003EA394 /* 08 Swisha.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA323292B0A52003EA394 /* 08 Swisha.flac */; };
+		4FECA3A1292B0A53003EA394 /* 03 Gettysburg.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA324292B0A52003EA394 /* 03 Gettysburg.flac */; };
+		4FECA3A2292B0A53003EA394 /* 07 Kennedy.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA325292B0A52003EA394 /* 07 Kennedy.flac */; };
+		4FECA3A3292B0A53003EA394 /* 05 Tropicana.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA326292B0A52003EA394 /* 05 Tropicana.flac */; };
+		4FECA3A4292B0A53003EA394 /* 04 Wildcat.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA327292B0A52003EA394 /* 04 Wildcat.flac */; };
+		4FECA3A5292B0A53003EA394 /* Ratatat - Classics.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA328292B0A52003EA394 /* Ratatat - Classics.jpg */; };
+		4FECA3A6292B0A53003EA394 /* 02 Lex.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA329292B0A52003EA394 /* 02 Lex.flac */; };
+		4FECA3A7292B0A53003EA394 /* 10 Tacobel Canon.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA32A292B0A52003EA394 /* 10 Tacobel Canon.flac */; };
+		4FECA3A8292B0A53003EA394 /* folder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA32C292B0A53003EA394 /* folder.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,29 +216,6 @@
 		4F597E64291323E700BC1046 /* SongListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListView.swift; sourceTree = "<group>"; };
 		4FCD439D29145065001E7FCC /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		4FCD439F2914506E001E7FCC /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
-		4FCD43EC291481E2001E7FCC /* 01 Title.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "01 Title.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/01 Title.m4a"; sourceTree = "<group>"; };
-		4FCD43ED291481E2001E7FCC /* 09 Gerudo Valley.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "09 Gerudo Valley.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/09 Gerudo Valley.m4a"; sourceTree = "<group>"; };
-		4FCD43EE291481E2001E7FCC /* 03 Hyrule Field.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "03 Hyrule Field.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/03 Hyrule Field.m4a"; sourceTree = "<group>"; };
-		4FCD43EF291481E2001E7FCC /* 07 Goron City.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "07 Goron City.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/07 Goron City.m4a"; sourceTree = "<group>"; };
-		4FCD43F0291481E2001E7FCC /* 02 Kokiri Forest.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "02 Kokiri Forest.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/02 Kokiri Forest.m4a"; sourceTree = "<group>"; };
-		4FCD43F1291481E2001E7FCC /* 04 Hyrule Castle.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "04 Hyrule Castle.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/04 Hyrule Castle.m4a"; sourceTree = "<group>"; };
-		4FCD43F2291481E2001E7FCC /* 05 Lon Lon Ranch.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "05 Lon Lon Ranch.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/05 Lon Lon Ranch.m4a"; sourceTree = "<group>"; };
-		4FCD43F3291481E2001E7FCC /* 06 Kakariko Village.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "06 Kakariko Village.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/06 Kakariko Village.m4a"; sourceTree = "<group>"; };
-		4FCD43F4291481E2001E7FCC /* 12 Ocarina Medley.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "12 Ocarina Medley.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/12 Ocarina Medley.m4a"; sourceTree = "<group>"; };
-		4FCD43F5291481E2001E7FCC /* 10 Ganondorf.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "10 Ganondorf.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/10 Ganondorf.m4a"; sourceTree = "<group>"; };
-		4FCD43F6291481E2001E7FCC /* 11 Princess Zelda.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "11 Princess Zelda.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/11 Princess Zelda.m4a"; sourceTree = "<group>"; };
-		4FCD43F7291481E2001E7FCC /* 13 The Legend of Zelda Medley.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "13 The Legend of Zelda Medley.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/13 The Legend of Zelda Medley.m4a"; sourceTree = "<group>"; };
-		4FCD43F8291481E2001E7FCC /* 08 Zora's Domain.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "08 Zora's Domain.m4a"; path = "../../../../../Desktop/Boomic_Test_Musi/OoT Orchestra/08 Zora's Domain.m4a"; sourceTree = "<group>"; };
-		4FCD4406291481F0001E7FCC /* 01 Montanita.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "01 Montanita.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/01 Montanita.flac"; sourceTree = "<group>"; };
-		4FCD4407291481F0001E7FCC /* 10 Tacobel Canon.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "10 Tacobel Canon.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/10 Tacobel Canon.flac"; sourceTree = "<group>"; };
-		4FCD4408291481F0001E7FCC /* 03 Gettysburg.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "03 Gettysburg.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/03 Gettysburg.flac"; sourceTree = "<group>"; };
-		4FCD4409291481F0001E7FCC /* 02 Lex.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "02 Lex.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/02 Lex.flac"; sourceTree = "<group>"; };
-		4FCD440A291481F0001E7FCC /* 05 Tropicana.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "05 Tropicana.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/05 Tropicana.flac"; sourceTree = "<group>"; };
-		4FCD440B291481F0001E7FCC /* 07 Kennedy.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "07 Kennedy.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/07 Kennedy.flac"; sourceTree = "<group>"; };
-		4FCD440C291481F0001E7FCC /* 09 Nostrand.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "09 Nostrand.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/09 Nostrand.flac"; sourceTree = "<group>"; };
-		4FCD440D291481F0001E7FCC /* 06 Loud Pipes.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "06 Loud Pipes.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/06 Loud Pipes.flac"; sourceTree = "<group>"; };
-		4FCD440E291481F0001E7FCC /* 08 Swisha.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "08 Swisha.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/08 Swisha.flac"; sourceTree = "<group>"; };
-		4FCD440F291481F0001E7FCC /* 04 Wildcat.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "04 Wildcat.flac"; path = "../../../../../Desktop/Boomic_Test_Musi/Ratatat-Classics/04 Wildcat.flac"; sourceTree = "<group>"; };
 		4FCD441A29149151001E7FCC /* Manager+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Debug.swift"; sourceTree = "<group>"; };
 		4FCD441C29157E65001E7FCC /* SongListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListItem.swift; sourceTree = "<group>"; };
 		4FCD441E29158EE6001E7FCC /* ClassicTimeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicTimeSlider.swift; sourceTree = "<group>"; };
@@ -161,6 +239,130 @@
 		4FECA27F2922E016003EA394 /* ArtistListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListItem.swift; sourceTree = "<group>"; };
 		4FECA2812922E09E003EA394 /* ArtistListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListView.swift; sourceTree = "<group>"; };
 		4FECA288292AD3CA003EA394 /* QueueListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueListView.swift; sourceTree = "<group>"; };
+		4FECA2AB292B0A52003EA394 /* 1 Me and Your Mama.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1 Me and Your Mama.flac"; sourceTree = "<group>"; };
+		4FECA2AC292B0A52003EA394 /* 4 Zombies.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4 Zombies.flac"; sourceTree = "<group>"; };
+		4FECA2AD292B0A52003EA394 /* 5 Riot.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "5 Riot.flac"; sourceTree = "<group>"; };
+		4FECA2AE292B0A52003EA394 /* 8 Terrified.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "8 Terrified.flac"; sourceTree = "<group>"; };
+		4FECA2AF292B0A52003EA394 /* 2 Have Some Love.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2 Have Some Love.flac"; sourceTree = "<group>"; };
+		4FECA2B0292B0A52003EA394 /* 6 Redbone.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "6 Redbone.flac"; sourceTree = "<group>"; };
+		4FECA2B1292B0A52003EA394 /* 3 Boogieman.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3 Boogieman.flac"; sourceTree = "<group>"; };
+		4FECA2B2292B0A52003EA394 /* 7 California.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "7 California.flac"; sourceTree = "<group>"; };
+		4FECA2B3292B0A52003EA394 /* 11 Stand Tall.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "11 Stand Tall.flac"; sourceTree = "<group>"; };
+		4FECA2B4292B0A52003EA394 /* 10 The Night Me and Your Mama Met.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "10 The Night Me and Your Mama Met.flac"; sourceTree = "<group>"; };
+		4FECA2B5292B0A52003EA394 /* 9 Baby Boy.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "9 Baby Boy.flac"; sourceTree = "<group>"; };
+		4FECA2B7292B0A52003EA394 /* 12 Ocarina Medley.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "12 Ocarina Medley.m4a"; sourceTree = "<group>"; };
+		4FECA2B8292B0A52003EA394 /* 13 The Legend of Zelda Medley.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "13 The Legend of Zelda Medley.m4a"; sourceTree = "<group>"; };
+		4FECA2B9292B0A52003EA394 /* 01 Title.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "01 Title.m4a"; sourceTree = "<group>"; };
+		4FECA2BA292B0A52003EA394 /* 11 Princess Zelda.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "11 Princess Zelda.m4a"; sourceTree = "<group>"; };
+		4FECA2BB292B0A52003EA394 /* 05 Lon Lon Ranch.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "05 Lon Lon Ranch.m4a"; sourceTree = "<group>"; };
+		4FECA2BC292B0A52003EA394 /* 03 Hyrule Field.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "03 Hyrule Field.m4a"; sourceTree = "<group>"; };
+		4FECA2BD292B0A52003EA394 /* 02 Kokiri Forest.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "02 Kokiri Forest.m4a"; sourceTree = "<group>"; };
+		4FECA2BE292B0A52003EA394 /* 06 Kakariko Village.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "06 Kakariko Village.m4a"; sourceTree = "<group>"; };
+		4FECA2BF292B0A52003EA394 /* 07 Goron City.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "07 Goron City.m4a"; sourceTree = "<group>"; };
+		4FECA2C0292B0A52003EA394 /* 09 Gerudo Valley.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "09 Gerudo Valley.m4a"; sourceTree = "<group>"; };
+		4FECA2C1292B0A52003EA394 /* 10 Ganondorf.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "10 Ganondorf.m4a"; sourceTree = "<group>"; };
+		4FECA2C2292B0A52003EA394 /* 08 Zora's Domain.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "08 Zora's Domain.m4a"; sourceTree = "<group>"; };
+		4FECA2C3292B0A52003EA394 /* 04 Hyrule Castle.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "04 Hyrule Castle.m4a"; sourceTree = "<group>"; };
+		4FECA2C5292B0A52003EA394 /* 10. Ratatat - Spanish Armada.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "10. Ratatat - Spanish Armada.flac"; sourceTree = "<group>"; };
+		4FECA2C6292B0A52003EA394 /* 07. Ratatat - Breaking Away.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "07. Ratatat - Breaking Away.flac"; sourceTree = "<group>"; };
+		4FECA2C7292B0A52003EA394 /* 08. Ratatat - Lapland.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "08. Ratatat - Lapland.flac"; sourceTree = "<group>"; };
+		4FECA2C8292B0A52003EA394 /* 03. Ratatat - Crips.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "03. Ratatat - Crips.flac"; sourceTree = "<group>"; };
+		4FECA2C9292B0A52003EA394 /* 06. Ratatat - Bustelo.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "06. Ratatat - Bustelo.flac"; sourceTree = "<group>"; };
+		4FECA2CA292B0A52003EA394 /* 05. Ratatat - Everest.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "05. Ratatat - Everest.flac"; sourceTree = "<group>"; };
+		4FECA2CB292B0A52003EA394 /* 02. Ratatat - El Pico.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "02. Ratatat - El Pico.flac"; sourceTree = "<group>"; };
+		4FECA2CC292B0A52003EA394 /* 04. Ratatat - Desert Eagle.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "04. Ratatat - Desert Eagle.flac"; sourceTree = "<group>"; };
+		4FECA2CD292B0A52003EA394 /* cover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cover.jpg; sourceTree = "<group>"; };
+		4FECA2CE292B0A52003EA394 /* 01. Ratatat - Seventeen Years.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "01. Ratatat - Seventeen Years.flac"; sourceTree = "<group>"; };
+		4FECA2CF292B0A52003EA394 /* 11. Ratatat - Cherry.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "11. Ratatat - Cherry.flac"; sourceTree = "<group>"; };
+		4FECA2D0292B0A52003EA394 /* 09. Ratatat - Germany to Germany.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "09. Ratatat - Germany to Germany.flac"; sourceTree = "<group>"; };
+		4FECA2D2292B0A52003EA394 /* 01 Opening_ Mario_s Theme (Super Mario Bros.).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "01 Opening_ Mario_s Theme (Super Mario Bros.).m4a"; sourceTree = "<group>"; };
+		4FECA2D3292B0A52003EA394 /* 06 Super Mario Bros. 3 Ending Theme (Super Mario Bros. 3).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "06 Super Mario Bros. 3 Ending Theme (Super Mario Bros. 3).m4a"; sourceTree = "<group>"; };
+		4FECA2D4292B0A52003EA394 /* 11 Epona_s Song (The Legend of Zelda_ Ocarina of Time).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "11 Epona_s Song (The Legend of Zelda_ Ocarina of Time).m4a"; sourceTree = "<group>"; };
+		4FECA2D5292B0A52003EA394 /* 10 Dragon Roost Island Theme (The Legend of Zelda_ The Wind Waker).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "10 Dragon Roost Island Theme (The Legend of Zelda_ The Wind Waker).m4a"; sourceTree = "<group>"; };
+		4FECA2D6292B0A52003EA394 /* 13 Ballad of the Wind Fish [The Indigo-Go_s] (The Legend of Zelda_ Majora_s Mask).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "13 Ballad of the Wind Fish [The Indigo-Go_s] (The Legend of Zelda_ Majora_s Mask).m4a"; sourceTree = "<group>"; };
+		4FECA2D7292B0A52003EA394 /* 14 Goron City Theme (The Legend of Zelda_ Ocarina of Time).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "14 Goron City Theme (The Legend of Zelda_ Ocarina of Time).m4a"; sourceTree = "<group>"; };
+		4FECA2D8292B0A52003EA394 /* 05 Go Go Mario (Super Mario Bros.).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "05 Go Go Mario (Super Mario Bros.).m4a"; sourceTree = "<group>"; };
+		4FECA2D9292B0A52003EA394 /* 07 Yoshi_s Island Athletic (Yoshi_s Island).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "07 Yoshi_s Island Athletic (Yoshi_s Island).m4a"; sourceTree = "<group>"; };
+		4FECA2DA292B0A52003EA394 /* 04 Mario Scat Version (Super Mario Sunshine).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "04 Mario Scat Version (Super Mario Sunshine).m4a"; sourceTree = "<group>"; };
+		4FECA2DB292B0A52003EA394 /* 12 Delfino Plaza Theme (Super Mario Sunshine).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "12 Delfino Plaza Theme (Super Mario Sunshine).m4a"; sourceTree = "<group>"; };
+		4FECA2DC292B0A52003EA394 /* 08 Yoshi on the Beach (Yoshi_s Story).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "08 Yoshi on the Beach (Yoshi_s Story).m4a"; sourceTree = "<group>"; };
+		4FECA2DD292B0A52003EA394 /* 03 Super Mario Bros. Medley (Super Mario Bros.).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "03 Super Mario Bros. Medley (Super Mario Bros.).m4a"; sourceTree = "<group>"; };
+		4FECA2DE292B0A52003EA394 /* 09 The Wind Waker Title Theme (The Legend of Zelda_ The Wind Waker).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "09 The Wind Waker Title Theme (The Legend of Zelda_ The Wind Waker).m4a"; sourceTree = "<group>"; };
+		4FECA2DF292B0A52003EA394 /* 16 The Legend of Zelda Medley (The Legend of Zelda).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "16 The Legend of Zelda Medley (The Legend of Zelda).m4a"; sourceTree = "<group>"; };
+		4FECA2E0292B0A52003EA394 /* 15 Shop Theme (The Legend of Zelda_ Ocarina of Time).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "15 Shop Theme (The Legend of Zelda_ Ocarina of Time).m4a"; sourceTree = "<group>"; };
+		4FECA2E1292B0A52003EA394 /* 02 Super Mario 64 Opening Theme - Overworld Theme (Super Mario 64).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "02 Super Mario 64 Opening Theme - Overworld Theme (Super Mario 64).m4a"; sourceTree = "<group>"; };
+		4FECA2E2292B0A52003EA394 /* 17 Super Mario Sunshine Ending Theme (Super Mario Sunshine).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "17 Super Mario Sunshine Ending Theme (Super Mario Sunshine).m4a"; sourceTree = "<group>"; };
+		4FECA2E4292B0A52003EA394 /* 1-01 - Welcome To Los Santos.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-01 - Welcome To Los Santos.flac"; sourceTree = "<group>"; };
+		4FECA2E5292B0A52003EA394 /* 1-03 - Old Love  New Love.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-03 - Old Love  New Love.flac"; sourceTree = "<group>"; };
+		4FECA2E6292B0A52003EA394 /* 3-06 - Can't Hardly Stand It.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-06 - Can't Hardly Stand It.flac"; sourceTree = "<group>"; };
+		4FECA2E7292B0A52003EA394 /* 1-17 - Don't Come Close.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-17 - Don't Come Close.flac"; sourceTree = "<group>"; };
+		4FECA2E8292B0A52003EA394 /* 2-21 - Hillbilly Crank Dealers’ Blues .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-21 - Hillbilly Crank Dealers’ Blues .flac"; sourceTree = "<group>"; };
+		4FECA2E9292B0A52003EA394 /* 2-18 - Therapy and Other Hobbies .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-18 - Therapy and Other Hobbies .flac"; sourceTree = "<group>"; };
+		4FECA2EA292B0A52003EA394 /* 1-12 - R  Cali.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-12 - R  Cali.flac"; sourceTree = "<group>"; };
+		4FECA2EB292B0A52003EA394 /* 3-01 - The Kill.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-01 - The Kill.flac"; sourceTree = "<group>"; };
+		4FECA2EC292B0A52003EA394 /* 3-11 - Hollywood Nights.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-11 - Hollywood Nights.flac"; sourceTree = "<group>"; };
+		4FECA2ED292B0A52003EA394 /* 3-04 - I Get Lifted.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-04 - I Get Lifted.flac"; sourceTree = "<group>"; };
+		4FECA2EE292B0A52003EA394 /* 1-02 - Smokin' And Ridin'.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-02 - Smokin' And Ridin'.flac"; sourceTree = "<group>"; };
+		4FECA2EF292B0A52003EA394 /* 3-07 - Life of Crime.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-07 - Life of Crime.flac"; sourceTree = "<group>"; };
+		4FECA2F0292B0A52003EA394 /* 1-08 - High Pressure Dave.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-08 - High Pressure Dave.flac"; sourceTree = "<group>"; };
+		4FECA2F1292B0A52003EA394 /* 2-06 - The Grip .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-06 - The Grip .flac"; sourceTree = "<group>"; };
+		4FECA2F2292B0A52003EA394 /* 2-13 - Chop the Dog .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-13 - Chop the Dog .flac"; sourceTree = "<group>"; };
+		4FECA2F3292B0A52003EA394 /* 3-19 - Mirror Maru.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-19 - Mirror Maru.flac"; sourceTree = "<group>"; };
+		4FECA2F4292B0A52003EA394 /* 2-09 - No Happy Endings .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-09 - No Happy Endings .flac"; sourceTree = "<group>"; };
+		4FECA2F5292B0A52003EA394 /* 2-11 - (Sounds Kind of) Fruity .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-11 - (Sounds Kind of) Fruity .flac"; sourceTree = "<group>"; };
+		4FECA2F6292B0A52003EA394 /* 1-13 - Colours.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-13 - Colours.flac"; sourceTree = "<group>"; };
+		4FECA2F7292B0A52003EA394 /* 1-11 - Nowhere To Go.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-11 - Nowhere To Go.flac"; sourceTree = "<group>"; };
+		4FECA2F8292B0A52003EA394 /* 3-12 - From Nowhere (Baardsen Remix).flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-12 - From Nowhere (Baardsen Remix).flac"; sourceTree = "<group>"; };
+		4FECA2F9292B0A52003EA394 /* 2-07 - Mr. Trevor Philips .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-07 - Mr. Trevor Philips .flac"; sourceTree = "<group>"; };
+		4FECA2FA292B0A52003EA394 /* 1-18 - Sleepwalking.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-18 - Sleepwalking.flac"; sourceTree = "<group>"; };
+		4FECA2FB292B0A52003EA394 /* 3-02 - I Am a Madman.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-02 - I Am a Madman.flac"; sourceTree = "<group>"; };
+		4FECA2FC292B0A52003EA394 /* 3-10 - I'd Rather Be With You.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-10 - I'd Rather Be With You.flac"; sourceTree = "<group>"; };
+		4FECA2FD292B0A52003EA394 /* 2-12 - Minor Turbulence .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-12 - Minor Turbulence .flac"; sourceTree = "<group>"; };
+		4FECA2FE292B0A52003EA394 /* 3-13 - Say That Then.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-13 - Say That Then.flac"; sourceTree = "<group>"; };
+		4FECA2FF292B0A52003EA394 /* 2-08 - A Bit of an Awkward Situation .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-08 - A Bit of an Awkward Situation .flac"; sourceTree = "<group>"; };
+		4FECA300292B0A52003EA394 /* 2-14 - A Lonely Man .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-14 - A Lonely Man .flac"; sourceTree = "<group>"; };
+		4FECA301292B0A52003EA394 /* 2-01 - We Were Set Up .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-01 - We Were Set Up .flac"; sourceTree = "<group>"; };
+		4FECA302292B0A52003EA394 /* 2-20 - The Agency Heist .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-20 - The Agency Heist .flac"; sourceTree = "<group>"; };
+		4FECA303292B0A52003EA394 /* 2-10 - His Mentor .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-10 - His Mentor .flac"; sourceTree = "<group>"; };
+		4FECA304292B0A52003EA394 /* 2-22 - Welcome to Los Santos (outro) .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-22 - Welcome to Los Santos (outro) .flac"; sourceTree = "<group>"; };
+		4FECA305292B0A52003EA394 /* 3-08 - Es Toy.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-08 - Es Toy.flac"; sourceTree = "<group>"; };
+		4FECA306292B0A52003EA394 /* 1-05 - Nine Is God.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-05 - Nine Is God.flac"; sourceTree = "<group>"; };
+		4FECA307292B0A52003EA394 /* 3-03 - Jasmine.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-03 - Jasmine.flac"; sourceTree = "<group>"; };
+		4FECA308292B0A52003EA394 /* 1-15 - Life Of A Mack.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-15 - Life Of A Mack.flac"; sourceTree = "<group>"; };
+		4FECA309292B0A52003EA394 /* 1-10 - Garbage.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-10 - Garbage.flac"; sourceTree = "<group>"; };
+		4FECA30A292B0A52003EA394 /* 1-06 - Bassheads.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-06 - Bassheads.flac"; sourceTree = "<group>"; };
+		4FECA30B292B0A52003EA394 /* 1-14 - Hold Up.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-14 - Hold Up.flac"; sourceTree = "<group>"; };
+		4FECA30C292B0A52003EA394 /* 3-18 - This Mystic Decade.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-18 - This Mystic Decade.flac"; sourceTree = "<group>"; };
+		4FECA30D292B0A52003EA394 /* 2-03 - A Haze of Patriotic Fervor .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-03 - A Haze of Patriotic Fervor .flac"; sourceTree = "<group>"; };
+		4FECA30E292B0A52003EA394 /* 3-05 - What You Wanna Do.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-05 - What You Wanna Do.flac"; sourceTree = "<group>"; };
+		4FECA30F292B0A52003EA394 /* 3-15 - Nobody Move, Nobody Gets Hurt.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-15 - Nobody Move, Nobody Gets Hurt.flac"; sourceTree = "<group>"; };
+		4FECA310292B0A52003EA394 /* 2-02 - A Legitimate Business Man .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-02 - A Legitimate Business Man .flac"; sourceTree = "<group>"; };
+		4FECA311292B0A52003EA394 /* 3-16 - All the Things She Said.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-16 - All the Things She Said.flac"; sourceTree = "<group>"; };
+		4FECA312292B0A52003EA394 /* 3-09 - Gabriel (Soulwax Mix).flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-09 - Gabriel (Soulwax Mix).flac"; sourceTree = "<group>"; };
+		4FECA313292B0A52003EA394 /* 3-14 - I Ain't Living Long Like This.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-14 - I Ain't Living Long Like This.flac"; sourceTree = "<group>"; };
+		4FECA314292B0A52003EA394 /* 3-17 - Harm in Change.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-17 - Harm in Change.flac"; sourceTree = "<group>"; };
+		4FECA315292B0A52003EA394 /* 2-15 - You Forget a Thousand Things .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-15 - You Forget a Thousand Things .flac"; sourceTree = "<group>"; };
+		4FECA316292B0A52003EA394 /* 2-05 - North Yankton Memories .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-05 - North Yankton Memories .flac"; sourceTree = "<group>"; };
+		4FECA317292B0A52003EA394 /* 2-04 - Los Santos at Night .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-04 - Los Santos at Night .flac"; sourceTree = "<group>"; };
+		4FECA318292B0A52003EA394 /* 2-17 - Fresh Meat .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-17 - Fresh Meat .flac"; sourceTree = "<group>"; };
+		4FECA319292B0A52003EA394 /* 1-16 - The Set Up.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-16 - The Set Up.flac"; sourceTree = "<group>"; };
+		4FECA31A292B0A52003EA394 /* 1-04 - Change Of Coast.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-04 - Change Of Coast.flac"; sourceTree = "<group>"; };
+		4FECA31B292B0A52003EA394 /* 1-09 - What's Next.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-09 - What's Next.flac"; sourceTree = "<group>"; };
+		4FECA31C292B0A52003EA394 /* 2-16 - Impotent Rage  Am I Being Clear Now .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-16 - Impotent Rage  Am I Being Clear Now .flac"; sourceTree = "<group>"; };
+		4FECA31D292B0A52003EA394 /* 2-19 - Rich Man’s Plaything .flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-19 - Rich Man’s Plaything .flac"; sourceTree = "<group>"; };
+		4FECA31E292B0A52003EA394 /* 1-07 - Stonecutters.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1-07 - Stonecutters.flac"; sourceTree = "<group>"; };
+		4FECA320292B0A52003EA394 /* 06 Loud Pipes.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "06 Loud Pipes.flac"; sourceTree = "<group>"; };
+		4FECA321292B0A52003EA394 /* 09 Nostrand.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "09 Nostrand.flac"; sourceTree = "<group>"; };
+		4FECA322292B0A52003EA394 /* 01 Montanita.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "01 Montanita.flac"; sourceTree = "<group>"; };
+		4FECA323292B0A52003EA394 /* 08 Swisha.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "08 Swisha.flac"; sourceTree = "<group>"; };
+		4FECA324292B0A52003EA394 /* 03 Gettysburg.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "03 Gettysburg.flac"; sourceTree = "<group>"; };
+		4FECA325292B0A52003EA394 /* 07 Kennedy.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "07 Kennedy.flac"; sourceTree = "<group>"; };
+		4FECA326292B0A52003EA394 /* 05 Tropicana.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "05 Tropicana.flac"; sourceTree = "<group>"; };
+		4FECA327292B0A52003EA394 /* 04 Wildcat.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "04 Wildcat.flac"; sourceTree = "<group>"; };
+		4FECA328292B0A52003EA394 /* Ratatat - Classics.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ratatat - Classics.jpg"; sourceTree = "<group>"; };
+		4FECA329292B0A52003EA394 /* 02 Lex.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "02 Lex.flac"; sourceTree = "<group>"; };
+		4FECA32A292B0A52003EA394 /* 10 Tacobel Canon.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "10 Tacobel Canon.flac"; sourceTree = "<group>"; };
+		4FECA32C292B0A53003EA394 /* folder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = folder.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +495,7 @@
 		4F597D512911A20B00BC1046 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				4FECA2A9292B0A1D003EA394 /* Music */,
 				4F597D252911A15000BC1046 /* Assets.xcassets */,
 				4F597D212911A14F00BC1046 /* BoomicApp.swift */,
 			);
@@ -336,67 +539,11 @@
 			path = Menus;
 			sourceTree = "<group>";
 		};
-		4F597E692913383400BC1046 /* Music */ = {
-			isa = PBXGroup;
-			children = (
-				4FCD43D1291477AE001E7FCC /* OoT */,
-				4FCD43BC29147178001E7FCC /* Classics */,
-				4FCD43BB29147147001E7FCC /* Magnifique */,
-			);
-			name = Music;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		4FCD439A29144F45001E7FCC /* Development */ = {
 			isa = PBXGroup;
 			children = (
-				4F597E692913383400BC1046 /* Music */,
 			);
 			path = Development;
-			sourceTree = "<group>";
-		};
-		4FCD43BB29147147001E7FCC /* Magnifique */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Magnifique;
-			sourceTree = "<group>";
-		};
-		4FCD43BC29147178001E7FCC /* Classics */ = {
-			isa = PBXGroup;
-			children = (
-				4FCD4406291481F0001E7FCC /* 01 Montanita.flac */,
-				4FCD4409291481F0001E7FCC /* 02 Lex.flac */,
-				4FCD4408291481F0001E7FCC /* 03 Gettysburg.flac */,
-				4FCD440F291481F0001E7FCC /* 04 Wildcat.flac */,
-				4FCD440A291481F0001E7FCC /* 05 Tropicana.flac */,
-				4FCD440D291481F0001E7FCC /* 06 Loud Pipes.flac */,
-				4FCD440B291481F0001E7FCC /* 07 Kennedy.flac */,
-				4FCD440E291481F0001E7FCC /* 08 Swisha.flac */,
-				4FCD440C291481F0001E7FCC /* 09 Nostrand.flac */,
-				4FCD4407291481F0001E7FCC /* 10 Tacobel Canon.flac */,
-			);
-			path = Classics;
-			sourceTree = "<group>";
-		};
-		4FCD43D1291477AE001E7FCC /* OoT */ = {
-			isa = PBXGroup;
-			children = (
-				4FCD43EC291481E2001E7FCC /* 01 Title.m4a */,
-				4FCD43F0291481E2001E7FCC /* 02 Kokiri Forest.m4a */,
-				4FCD43EE291481E2001E7FCC /* 03 Hyrule Field.m4a */,
-				4FCD43F1291481E2001E7FCC /* 04 Hyrule Castle.m4a */,
-				4FCD43F2291481E2001E7FCC /* 05 Lon Lon Ranch.m4a */,
-				4FCD43F3291481E2001E7FCC /* 06 Kakariko Village.m4a */,
-				4FCD43EF291481E2001E7FCC /* 07 Goron City.m4a */,
-				4FCD43F8291481E2001E7FCC /* 08 Zora's Domain.m4a */,
-				4FCD43ED291481E2001E7FCC /* 09 Gerudo Valley.m4a */,
-				4FCD43F5291481E2001E7FCC /* 10 Ganondorf.m4a */,
-				4FCD43F6291481E2001E7FCC /* 11 Princess Zelda.m4a */,
-				4FCD43F4291481E2001E7FCC /* 12 Ocarina Medley.m4a */,
-				4FCD43F7291481E2001E7FCC /* 13 The Legend of Zelda Medley.m4a */,
-			);
-			path = OoT;
 			sourceTree = "<group>";
 		};
 		4FCD44242915B9CC001E7FCC /* Extensions */ = {
@@ -422,6 +569,193 @@
 				4FECA27F2922E016003EA394 /* ArtistListItem.swift */,
 			);
 			path = Subviews;
+			sourceTree = "<group>";
+		};
+		4FECA2A9292B0A1D003EA394 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				4FECA2AA292B0A52003EA394 /* awaken my love */,
+				4FECA2D1292B0A52003EA394 /* mario_zelda_big_band */,
+				4FECA2B6292B0A52003EA394 /* OoT Orchestra */,
+				4FECA31F292B0A52003EA394 /* Ratatat-Classics */,
+				4FECA32B292B0A53003EA394 /* Ratatat-Magnifique */,
+				4FECA2C4292B0A52003EA394 /* Ratatat-Ratatat */,
+				4FECA2E3292B0A52003EA394 /* The Music of Grand Theft Auto V */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		4FECA2AA292B0A52003EA394 /* awaken my love */ = {
+			isa = PBXGroup;
+			children = (
+				4FECA2AB292B0A52003EA394 /* 1 Me and Your Mama.flac */,
+				4FECA2AC292B0A52003EA394 /* 4 Zombies.flac */,
+				4FECA2AD292B0A52003EA394 /* 5 Riot.flac */,
+				4FECA2AE292B0A52003EA394 /* 8 Terrified.flac */,
+				4FECA2AF292B0A52003EA394 /* 2 Have Some Love.flac */,
+				4FECA2B0292B0A52003EA394 /* 6 Redbone.flac */,
+				4FECA2B1292B0A52003EA394 /* 3 Boogieman.flac */,
+				4FECA2B2292B0A52003EA394 /* 7 California.flac */,
+				4FECA2B3292B0A52003EA394 /* 11 Stand Tall.flac */,
+				4FECA2B4292B0A52003EA394 /* 10 The Night Me and Your Mama Met.flac */,
+				4FECA2B5292B0A52003EA394 /* 9 Baby Boy.flac */,
+			);
+			path = "awaken my love";
+			sourceTree = "<group>";
+		};
+		4FECA2B6292B0A52003EA394 /* OoT Orchestra */ = {
+			isa = PBXGroup;
+			children = (
+				4FECA2B7292B0A52003EA394 /* 12 Ocarina Medley.m4a */,
+				4FECA2B8292B0A52003EA394 /* 13 The Legend of Zelda Medley.m4a */,
+				4FECA2B9292B0A52003EA394 /* 01 Title.m4a */,
+				4FECA2BA292B0A52003EA394 /* 11 Princess Zelda.m4a */,
+				4FECA2BB292B0A52003EA394 /* 05 Lon Lon Ranch.m4a */,
+				4FECA2BC292B0A52003EA394 /* 03 Hyrule Field.m4a */,
+				4FECA2BD292B0A52003EA394 /* 02 Kokiri Forest.m4a */,
+				4FECA2BE292B0A52003EA394 /* 06 Kakariko Village.m4a */,
+				4FECA2BF292B0A52003EA394 /* 07 Goron City.m4a */,
+				4FECA2C0292B0A52003EA394 /* 09 Gerudo Valley.m4a */,
+				4FECA2C1292B0A52003EA394 /* 10 Ganondorf.m4a */,
+				4FECA2C2292B0A52003EA394 /* 08 Zora's Domain.m4a */,
+				4FECA2C3292B0A52003EA394 /* 04 Hyrule Castle.m4a */,
+			);
+			path = "OoT Orchestra";
+			sourceTree = "<group>";
+		};
+		4FECA2C4292B0A52003EA394 /* Ratatat-Ratatat */ = {
+			isa = PBXGroup;
+			children = (
+				4FECA2C5292B0A52003EA394 /* 10. Ratatat - Spanish Armada.flac */,
+				4FECA2C6292B0A52003EA394 /* 07. Ratatat - Breaking Away.flac */,
+				4FECA2C7292B0A52003EA394 /* 08. Ratatat - Lapland.flac */,
+				4FECA2C8292B0A52003EA394 /* 03. Ratatat - Crips.flac */,
+				4FECA2C9292B0A52003EA394 /* 06. Ratatat - Bustelo.flac */,
+				4FECA2CA292B0A52003EA394 /* 05. Ratatat - Everest.flac */,
+				4FECA2CB292B0A52003EA394 /* 02. Ratatat - El Pico.flac */,
+				4FECA2CC292B0A52003EA394 /* 04. Ratatat - Desert Eagle.flac */,
+				4FECA2CD292B0A52003EA394 /* cover.jpg */,
+				4FECA2CE292B0A52003EA394 /* 01. Ratatat - Seventeen Years.flac */,
+				4FECA2CF292B0A52003EA394 /* 11. Ratatat - Cherry.flac */,
+				4FECA2D0292B0A52003EA394 /* 09. Ratatat - Germany to Germany.flac */,
+			);
+			path = "Ratatat-Ratatat";
+			sourceTree = "<group>";
+		};
+		4FECA2D1292B0A52003EA394 /* mario_zelda_big_band */ = {
+			isa = PBXGroup;
+			children = (
+				4FECA2D2292B0A52003EA394 /* 01 Opening_ Mario_s Theme (Super Mario Bros.).m4a */,
+				4FECA2D3292B0A52003EA394 /* 06 Super Mario Bros. 3 Ending Theme (Super Mario Bros. 3).m4a */,
+				4FECA2D4292B0A52003EA394 /* 11 Epona_s Song (The Legend of Zelda_ Ocarina of Time).m4a */,
+				4FECA2D5292B0A52003EA394 /* 10 Dragon Roost Island Theme (The Legend of Zelda_ The Wind Waker).m4a */,
+				4FECA2D6292B0A52003EA394 /* 13 Ballad of the Wind Fish [The Indigo-Go_s] (The Legend of Zelda_ Majora_s Mask).m4a */,
+				4FECA2D7292B0A52003EA394 /* 14 Goron City Theme (The Legend of Zelda_ Ocarina of Time).m4a */,
+				4FECA2D8292B0A52003EA394 /* 05 Go Go Mario (Super Mario Bros.).m4a */,
+				4FECA2D9292B0A52003EA394 /* 07 Yoshi_s Island Athletic (Yoshi_s Island).m4a */,
+				4FECA2DA292B0A52003EA394 /* 04 Mario Scat Version (Super Mario Sunshine).m4a */,
+				4FECA2DB292B0A52003EA394 /* 12 Delfino Plaza Theme (Super Mario Sunshine).m4a */,
+				4FECA2DC292B0A52003EA394 /* 08 Yoshi on the Beach (Yoshi_s Story).m4a */,
+				4FECA2DD292B0A52003EA394 /* 03 Super Mario Bros. Medley (Super Mario Bros.).m4a */,
+				4FECA2DE292B0A52003EA394 /* 09 The Wind Waker Title Theme (The Legend of Zelda_ The Wind Waker).m4a */,
+				4FECA2DF292B0A52003EA394 /* 16 The Legend of Zelda Medley (The Legend of Zelda).m4a */,
+				4FECA2E0292B0A52003EA394 /* 15 Shop Theme (The Legend of Zelda_ Ocarina of Time).m4a */,
+				4FECA2E1292B0A52003EA394 /* 02 Super Mario 64 Opening Theme - Overworld Theme (Super Mario 64).m4a */,
+				4FECA2E2292B0A52003EA394 /* 17 Super Mario Sunshine Ending Theme (Super Mario Sunshine).m4a */,
+			);
+			path = mario_zelda_big_band;
+			sourceTree = "<group>";
+		};
+		4FECA2E3292B0A52003EA394 /* The Music of Grand Theft Auto V */ = {
+			isa = PBXGroup;
+			children = (
+				4FECA2E4292B0A52003EA394 /* 1-01 - Welcome To Los Santos.flac */,
+				4FECA2E5292B0A52003EA394 /* 1-03 - Old Love  New Love.flac */,
+				4FECA2E6292B0A52003EA394 /* 3-06 - Can't Hardly Stand It.flac */,
+				4FECA2E7292B0A52003EA394 /* 1-17 - Don't Come Close.flac */,
+				4FECA2E8292B0A52003EA394 /* 2-21 - Hillbilly Crank Dealers’ Blues .flac */,
+				4FECA2E9292B0A52003EA394 /* 2-18 - Therapy and Other Hobbies .flac */,
+				4FECA2EA292B0A52003EA394 /* 1-12 - R  Cali.flac */,
+				4FECA2EB292B0A52003EA394 /* 3-01 - The Kill.flac */,
+				4FECA2EC292B0A52003EA394 /* 3-11 - Hollywood Nights.flac */,
+				4FECA2ED292B0A52003EA394 /* 3-04 - I Get Lifted.flac */,
+				4FECA2EE292B0A52003EA394 /* 1-02 - Smokin' And Ridin'.flac */,
+				4FECA2EF292B0A52003EA394 /* 3-07 - Life of Crime.flac */,
+				4FECA2F0292B0A52003EA394 /* 1-08 - High Pressure Dave.flac */,
+				4FECA2F1292B0A52003EA394 /* 2-06 - The Grip .flac */,
+				4FECA2F2292B0A52003EA394 /* 2-13 - Chop the Dog .flac */,
+				4FECA2F3292B0A52003EA394 /* 3-19 - Mirror Maru.flac */,
+				4FECA2F4292B0A52003EA394 /* 2-09 - No Happy Endings .flac */,
+				4FECA2F5292B0A52003EA394 /* 2-11 - (Sounds Kind of) Fruity .flac */,
+				4FECA2F6292B0A52003EA394 /* 1-13 - Colours.flac */,
+				4FECA2F7292B0A52003EA394 /* 1-11 - Nowhere To Go.flac */,
+				4FECA2F8292B0A52003EA394 /* 3-12 - From Nowhere (Baardsen Remix).flac */,
+				4FECA2F9292B0A52003EA394 /* 2-07 - Mr. Trevor Philips .flac */,
+				4FECA2FA292B0A52003EA394 /* 1-18 - Sleepwalking.flac */,
+				4FECA2FB292B0A52003EA394 /* 3-02 - I Am a Madman.flac */,
+				4FECA2FC292B0A52003EA394 /* 3-10 - I'd Rather Be With You.flac */,
+				4FECA2FD292B0A52003EA394 /* 2-12 - Minor Turbulence .flac */,
+				4FECA2FE292B0A52003EA394 /* 3-13 - Say That Then.flac */,
+				4FECA2FF292B0A52003EA394 /* 2-08 - A Bit of an Awkward Situation .flac */,
+				4FECA300292B0A52003EA394 /* 2-14 - A Lonely Man .flac */,
+				4FECA301292B0A52003EA394 /* 2-01 - We Were Set Up .flac */,
+				4FECA302292B0A52003EA394 /* 2-20 - The Agency Heist .flac */,
+				4FECA303292B0A52003EA394 /* 2-10 - His Mentor .flac */,
+				4FECA304292B0A52003EA394 /* 2-22 - Welcome to Los Santos (outro) .flac */,
+				4FECA305292B0A52003EA394 /* 3-08 - Es Toy.flac */,
+				4FECA306292B0A52003EA394 /* 1-05 - Nine Is God.flac */,
+				4FECA307292B0A52003EA394 /* 3-03 - Jasmine.flac */,
+				4FECA308292B0A52003EA394 /* 1-15 - Life Of A Mack.flac */,
+				4FECA309292B0A52003EA394 /* 1-10 - Garbage.flac */,
+				4FECA30A292B0A52003EA394 /* 1-06 - Bassheads.flac */,
+				4FECA30B292B0A52003EA394 /* 1-14 - Hold Up.flac */,
+				4FECA30C292B0A52003EA394 /* 3-18 - This Mystic Decade.flac */,
+				4FECA30D292B0A52003EA394 /* 2-03 - A Haze of Patriotic Fervor .flac */,
+				4FECA30E292B0A52003EA394 /* 3-05 - What You Wanna Do.flac */,
+				4FECA30F292B0A52003EA394 /* 3-15 - Nobody Move, Nobody Gets Hurt.flac */,
+				4FECA310292B0A52003EA394 /* 2-02 - A Legitimate Business Man .flac */,
+				4FECA311292B0A52003EA394 /* 3-16 - All the Things She Said.flac */,
+				4FECA312292B0A52003EA394 /* 3-09 - Gabriel (Soulwax Mix).flac */,
+				4FECA313292B0A52003EA394 /* 3-14 - I Ain't Living Long Like This.flac */,
+				4FECA314292B0A52003EA394 /* 3-17 - Harm in Change.flac */,
+				4FECA315292B0A52003EA394 /* 2-15 - You Forget a Thousand Things .flac */,
+				4FECA316292B0A52003EA394 /* 2-05 - North Yankton Memories .flac */,
+				4FECA317292B0A52003EA394 /* 2-04 - Los Santos at Night .flac */,
+				4FECA318292B0A52003EA394 /* 2-17 - Fresh Meat .flac */,
+				4FECA319292B0A52003EA394 /* 1-16 - The Set Up.flac */,
+				4FECA31A292B0A52003EA394 /* 1-04 - Change Of Coast.flac */,
+				4FECA31B292B0A52003EA394 /* 1-09 - What's Next.flac */,
+				4FECA31C292B0A52003EA394 /* 2-16 - Impotent Rage  Am I Being Clear Now .flac */,
+				4FECA31D292B0A52003EA394 /* 2-19 - Rich Man’s Plaything .flac */,
+				4FECA31E292B0A52003EA394 /* 1-07 - Stonecutters.flac */,
+			);
+			path = "The Music of Grand Theft Auto V";
+			sourceTree = "<group>";
+		};
+		4FECA31F292B0A52003EA394 /* Ratatat-Classics */ = {
+			isa = PBXGroup;
+			children = (
+				4FECA320292B0A52003EA394 /* 06 Loud Pipes.flac */,
+				4FECA321292B0A52003EA394 /* 09 Nostrand.flac */,
+				4FECA322292B0A52003EA394 /* 01 Montanita.flac */,
+				4FECA323292B0A52003EA394 /* 08 Swisha.flac */,
+				4FECA324292B0A52003EA394 /* 03 Gettysburg.flac */,
+				4FECA325292B0A52003EA394 /* 07 Kennedy.flac */,
+				4FECA326292B0A52003EA394 /* 05 Tropicana.flac */,
+				4FECA327292B0A52003EA394 /* 04 Wildcat.flac */,
+				4FECA328292B0A52003EA394 /* Ratatat - Classics.jpg */,
+				4FECA329292B0A52003EA394 /* 02 Lex.flac */,
+				4FECA32A292B0A52003EA394 /* 10 Tacobel Canon.flac */,
+			);
+			path = "Ratatat-Classics";
+			sourceTree = "<group>";
+		};
+		4FECA32B292B0A53003EA394 /* Ratatat-Magnifique */ = {
+			isa = PBXGroup;
+			children = (
+				4FECA32C292B0A53003EA394 /* folder.jpg */,
+			);
+			path = "Ratatat-Magnifique";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,31 +862,132 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FCD43FD291481E2001E7FCC /* 02 Kokiri Forest.m4a in Resources */,
-				4FCD4410291481F0001E7FCC /* 01 Montanita.flac in Resources */,
-				4FCD43FA291481E2001E7FCC /* 09 Gerudo Valley.m4a in Resources */,
-				4FCD4405291481E2001E7FCC /* 08 Zora's Domain.m4a in Resources */,
-				4FCD4404291481E2001E7FCC /* 13 The Legend of Zelda Medley.m4a in Resources */,
-				4FCD4417291481F0001E7FCC /* 06 Loud Pipes.flac in Resources */,
-				4FCD43FB291481E2001E7FCC /* 03 Hyrule Field.m4a in Resources */,
+				4FECA3A7292B0A53003EA394 /* 10 Tacobel Canon.flac in Resources */,
+				4FECA392292B0A53003EA394 /* 3-17 - Harm in Change.flac in Resources */,
+				4FECA34C292B0A53003EA394 /* 04. Ratatat - Desert Eagle.flac in Resources */,
+				4FECA35E292B0A53003EA394 /* 16 The Legend of Zelda Medley (The Legend of Zelda).m4a in Resources */,
+				4FECA36F292B0A53003EA394 /* 2-06 - The Grip .flac in Resources */,
+				4FECA33D292B0A53003EA394 /* 03 Hyrule Field.m4a in Resources */,
+				4FECA39F292B0A53003EA394 /* 01 Montanita.flac in Resources */,
+				4FECA39C292B0A53003EA394 /* 1-07 - Stonecutters.flac in Resources */,
+				4FECA36B292B0A53003EA394 /* 3-04 - I Get Lifted.flac in Resources */,
+				4FECA32F292B0A53003EA394 /* 5 Riot.flac in Resources */,
+				4FECA383292B0A53003EA394 /* 3-08 - Es Toy.flac in Resources */,
+				4FECA350292B0A53003EA394 /* 09. Ratatat - Germany to Germany.flac in Resources */,
+				4FECA37C292B0A53003EA394 /* 3-13 - Say That Then.flac in Resources */,
+				4FECA339292B0A53003EA394 /* 13 The Legend of Zelda Medley.m4a in Resources */,
+				4FECA35A292B0A53003EA394 /* 12 Delfino Plaza Theme (Super Mario Sunshine).m4a in Resources */,
+				4FECA387292B0A53003EA394 /* 1-10 - Garbage.flac in Resources */,
+				4FECA338292B0A53003EA394 /* 12 Ocarina Medley.m4a in Resources */,
+				4FECA364292B0A53003EA394 /* 3-06 - Can't Hardly Stand It.flac in Resources */,
+				4FECA388292B0A53003EA394 /* 1-06 - Bassheads.flac in Resources */,
+				4FECA35B292B0A53003EA394 /* 08 Yoshi on the Beach (Yoshi_s Story).m4a in Resources */,
+				4FECA348292B0A53003EA394 /* 03. Ratatat - Crips.flac in Resources */,
+				4FECA360292B0A53003EA394 /* 02 Super Mario 64 Opening Theme - Overworld Theme (Super Mario 64).m4a in Resources */,
+				4FECA395292B0A53003EA394 /* 2-04 - Los Santos at Night .flac in Resources */,
+				4FECA33F292B0A53003EA394 /* 06 Kakariko Village.m4a in Resources */,
+				4FECA394292B0A53003EA394 /* 2-05 - North Yankton Memories .flac in Resources */,
 				4F597D292911A15000BC1046 /* Preview Assets.xcassets in Resources */,
-				4FCD4414291481F0001E7FCC /* 05 Tropicana.flac in Resources */,
-				4FCD4418291481F0001E7FCC /* 08 Swisha.flac in Resources */,
-				4FCD43FF291481E2001E7FCC /* 05 Lon Lon Ranch.m4a in Resources */,
+				4FECA393292B0A53003EA394 /* 2-15 - You Forget a Thousand Things .flac in Resources */,
+				4FECA33B292B0A53003EA394 /* 11 Princess Zelda.m4a in Resources */,
+				4FECA342292B0A53003EA394 /* 10 Ganondorf.m4a in Resources */,
+				4FECA389292B0A53003EA394 /* 1-14 - Hold Up.flac in Resources */,
+				4FECA39D292B0A53003EA394 /* 06 Loud Pipes.flac in Resources */,
+				4FECA379292B0A53003EA394 /* 3-02 - I Am a Madman.flac in Resources */,
+				4FECA368292B0A53003EA394 /* 1-12 - R  Cali.flac in Resources */,
+				4FECA334292B0A53003EA394 /* 7 California.flac in Resources */,
+				4FECA3A0292B0A53003EA394 /* 08 Swisha.flac in Resources */,
+				4FECA396292B0A53003EA394 /* 2-17 - Fresh Meat .flac in Resources */,
+				4FECA37E292B0A53003EA394 /* 2-14 - A Lonely Man .flac in Resources */,
+				4FECA330292B0A53003EA394 /* 8 Terrified.flac in Resources */,
+				4FECA3A4292B0A53003EA394 /* 04 Wildcat.flac in Resources */,
+				4FECA34D292B0A53003EA394 /* cover.jpg in Resources */,
+				4FECA34F292B0A53003EA394 /* 11. Ratatat - Cherry.flac in Resources */,
+				4FECA38C292B0A53003EA394 /* 3-05 - What You Wanna Do.flac in Resources */,
+				4FECA32D292B0A53003EA394 /* 1 Me and Your Mama.flac in Resources */,
+				4FECA375292B0A53003EA394 /* 1-11 - Nowhere To Go.flac in Resources */,
+				4FECA35F292B0A53003EA394 /* 15 Shop Theme (The Legend of Zelda_ Ocarina of Time).m4a in Resources */,
+				4FECA38E292B0A53003EA394 /* 2-02 - A Legitimate Business Man .flac in Resources */,
+				4FECA369292B0A53003EA394 /* 3-01 - The Kill.flac in Resources */,
+				4FECA363292B0A53003EA394 /* 1-03 - Old Love  New Love.flac in Resources */,
+				4FECA34B292B0A53003EA394 /* 02. Ratatat - El Pico.flac in Resources */,
+				4FECA351292B0A53003EA394 /* 01 Opening_ Mario_s Theme (Super Mario Bros.).m4a in Resources */,
+				4FECA36D292B0A53003EA394 /* 3-07 - Life of Crime.flac in Resources */,
+				4FECA3A6292B0A53003EA394 /* 02 Lex.flac in Resources */,
+				4FECA38F292B0A53003EA394 /* 3-16 - All the Things She Said.flac in Resources */,
+				4FECA344292B0A53003EA394 /* 04 Hyrule Castle.m4a in Resources */,
+				4FECA3A5292B0A53003EA394 /* Ratatat - Classics.jpg in Resources */,
+				4FECA38B292B0A53003EA394 /* 2-03 - A Haze of Patriotic Fervor .flac in Resources */,
+				4FECA36E292B0A53003EA394 /* 1-08 - High Pressure Dave.flac in Resources */,
+				4FECA358292B0A53003EA394 /* 07 Yoshi_s Island Athletic (Yoshi_s Island).m4a in Resources */,
+				4FECA36A292B0A53003EA394 /* 3-11 - Hollywood Nights.flac in Resources */,
+				4FECA370292B0A53003EA394 /* 2-13 - Chop the Dog .flac in Resources */,
+				4FECA378292B0A53003EA394 /* 1-18 - Sleepwalking.flac in Resources */,
+				4FECA37A292B0A53003EA394 /* 3-10 - I'd Rather Be With You.flac in Resources */,
+				4FECA34A292B0A53003EA394 /* 05. Ratatat - Everest.flac in Resources */,
+				4FECA346292B0A53003EA394 /* 07. Ratatat - Breaking Away.flac in Resources */,
+				4FECA390292B0A53003EA394 /* 3-09 - Gabriel (Soulwax Mix).flac in Resources */,
+				4FECA372292B0A53003EA394 /* 2-09 - No Happy Endings .flac in Resources */,
+				4FECA373292B0A53003EA394 /* 2-11 - (Sounds Kind of) Fruity .flac in Resources */,
+				4FECA333292B0A53003EA394 /* 3 Boogieman.flac in Resources */,
+				4FECA377292B0A53003EA394 /* 2-07 - Mr. Trevor Philips .flac in Resources */,
+				4FECA371292B0A53003EA394 /* 3-19 - Mirror Maru.flac in Resources */,
+				4FECA365292B0A53003EA394 /* 1-17 - Don't Come Close.flac in Resources */,
+				4FECA37F292B0A53003EA394 /* 2-01 - We Were Set Up .flac in Resources */,
+				4FECA337292B0A53003EA394 /* 9 Baby Boy.flac in Resources */,
+				4FECA38D292B0A53003EA394 /* 3-15 - Nobody Move, Nobody Gets Hurt.flac in Resources */,
+				4FECA361292B0A53003EA394 /* 17 Super Mario Sunshine Ending Theme (Super Mario Sunshine).m4a in Resources */,
+				4FECA381292B0A53003EA394 /* 2-10 - His Mentor .flac in Resources */,
+				4FECA391292B0A53003EA394 /* 3-14 - I Ain't Living Long Like This.flac in Resources */,
+				4FECA3A1292B0A53003EA394 /* 03 Gettysburg.flac in Resources */,
+				4FECA36C292B0A53003EA394 /* 1-02 - Smokin' And Ridin'.flac in Resources */,
+				4FECA397292B0A53003EA394 /* 1-16 - The Set Up.flac in Resources */,
+				4FECA367292B0A53003EA394 /* 2-18 - Therapy and Other Hobbies .flac in Resources */,
+				4FECA35D292B0A53003EA394 /* 09 The Wind Waker Title Theme (The Legend of Zelda_ The Wind Waker).m4a in Resources */,
+				4FECA386292B0A53003EA394 /* 1-15 - Life Of A Mack.flac in Resources */,
+				4FECA331292B0A53003EA394 /* 2 Have Some Love.flac in Resources */,
+				4FECA352292B0A53003EA394 /* 06 Super Mario Bros. 3 Ending Theme (Super Mario Bros. 3).m4a in Resources */,
+				4FECA341292B0A53003EA394 /* 09 Gerudo Valley.m4a in Resources */,
+				4FECA39A292B0A53003EA394 /* 2-16 - Impotent Rage  Am I Being Clear Now .flac in Resources */,
+				4FECA362292B0A53003EA394 /* 1-01 - Welcome To Los Santos.flac in Resources */,
+				4FECA366292B0A53003EA394 /* 2-21 - Hillbilly Crank Dealers’ Blues .flac in Resources */,
+				4FECA382292B0A53003EA394 /* 2-22 - Welcome to Los Santos (outro) .flac in Resources */,
+				4FECA39B292B0A53003EA394 /* 2-19 - Rich Man’s Plaything .flac in Resources */,
+				4FECA356292B0A53003EA394 /* 14 Goron City Theme (The Legend of Zelda_ Ocarina of Time).m4a in Resources */,
+				4FECA374292B0A53003EA394 /* 1-13 - Colours.flac in Resources */,
 				4F597D262911A15000BC1046 /* Assets.xcassets in Resources */,
-				4FCD4416291481F0001E7FCC /* 09 Nostrand.flac in Resources */,
-				4FCD4400291481E2001E7FCC /* 06 Kakariko Village.m4a in Resources */,
-				4FCD4415291481F0001E7FCC /* 07 Kennedy.flac in Resources */,
-				4FCD4413291481F0001E7FCC /* 02 Lex.flac in Resources */,
-				4FCD4402291481E2001E7FCC /* 10 Ganondorf.m4a in Resources */,
-				4FCD4412291481F0001E7FCC /* 03 Gettysburg.flac in Resources */,
-				4FCD4401291481E2001E7FCC /* 12 Ocarina Medley.m4a in Resources */,
-				4FCD4403291481E2001E7FCC /* 11 Princess Zelda.m4a in Resources */,
-				4FCD43FE291481E2001E7FCC /* 04 Hyrule Castle.m4a in Resources */,
-				4FCD4411291481F0001E7FCC /* 10 Tacobel Canon.flac in Resources */,
-				4FCD43FC291481E2001E7FCC /* 07 Goron City.m4a in Resources */,
-				4FCD43F9291481E2001E7FCC /* 01 Title.m4a in Resources */,
-				4FCD4419291481F0001E7FCC /* 04 Wildcat.flac in Resources */,
+				4FECA336292B0A53003EA394 /* 10 The Night Me and Your Mama Met.flac in Resources */,
+				4FECA357292B0A53003EA394 /* 05 Go Go Mario (Super Mario Bros.).m4a in Resources */,
+				4FECA398292B0A53003EA394 /* 1-04 - Change Of Coast.flac in Resources */,
+				4FECA3A8292B0A53003EA394 /* folder.jpg in Resources */,
+				4FECA385292B0A53003EA394 /* 3-03 - Jasmine.flac in Resources */,
+				4FECA34E292B0A53003EA394 /* 01. Ratatat - Seventeen Years.flac in Resources */,
+				4FECA354292B0A53003EA394 /* 10 Dragon Roost Island Theme (The Legend of Zelda_ The Wind Waker).m4a in Resources */,
+				4FECA37B292B0A53003EA394 /* 2-12 - Minor Turbulence .flac in Resources */,
+				4FECA343292B0A53003EA394 /* 08 Zora's Domain.m4a in Resources */,
+				4FECA355292B0A53003EA394 /* 13 Ballad of the Wind Fish [The Indigo-Go_s] (The Legend of Zelda_ Majora_s Mask).m4a in Resources */,
+				4FECA33C292B0A53003EA394 /* 05 Lon Lon Ranch.m4a in Resources */,
+				4FECA347292B0A53003EA394 /* 08. Ratatat - Lapland.flac in Resources */,
+				4FECA345292B0A53003EA394 /* 10. Ratatat - Spanish Armada.flac in Resources */,
+				4FECA32E292B0A53003EA394 /* 4 Zombies.flac in Resources */,
+				4FECA380292B0A53003EA394 /* 2-20 - The Agency Heist .flac in Resources */,
+				4FECA3A2292B0A53003EA394 /* 07 Kennedy.flac in Resources */,
+				4FECA353292B0A53003EA394 /* 11 Epona_s Song (The Legend of Zelda_ Ocarina of Time).m4a in Resources */,
+				4FECA39E292B0A53003EA394 /* 09 Nostrand.flac in Resources */,
+				4FECA359292B0A53003EA394 /* 04 Mario Scat Version (Super Mario Sunshine).m4a in Resources */,
+				4FECA335292B0A53003EA394 /* 11 Stand Tall.flac in Resources */,
+				4FECA384292B0A53003EA394 /* 1-05 - Nine Is God.flac in Resources */,
+				4FECA399292B0A53003EA394 /* 1-09 - What's Next.flac in Resources */,
+				4FECA340292B0A53003EA394 /* 07 Goron City.m4a in Resources */,
+				4FECA35C292B0A53003EA394 /* 03 Super Mario Bros. Medley (Super Mario Bros.).m4a in Resources */,
+				4FECA376292B0A53003EA394 /* 3-12 - From Nowhere (Baardsen Remix).flac in Resources */,
+				4FECA332292B0A53003EA394 /* 6 Redbone.flac in Resources */,
+				4FECA33E292B0A53003EA394 /* 02 Kokiri Forest.m4a in Resources */,
+				4FECA37D292B0A53003EA394 /* 2-08 - A Bit of an Awkward Situation .flac in Resources */,
+				4FECA349292B0A53003EA394 /* 06. Ratatat - Bustelo.flac in Resources */,
+				4FECA33A292B0A53003EA394 /* 01 Title.m4a in Resources */,
+				4FECA38A292B0A53003EA394 /* 3-18 - This Mystic Decade.flac in Resources */,
+				4FECA3A3292B0A53003EA394 /* 05 Tropicana.flac in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
