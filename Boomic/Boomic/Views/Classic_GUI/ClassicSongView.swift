@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ClassicSongView: View
 {
+    @EnvironmentObject var manager : BoomicManager
     let song : Song
     
     var body: some View
@@ -19,9 +20,27 @@ struct ClassicSongView: View
             
             VStack(alignment: .leading)
             {
-                AlbumCover(image: nil)
+                if manager.showQueueSheet
+                {
+                    QueueListView()
+                    
+                    Button
+                    {
+                        withAnimation { manager.showQueueSheet.toggle() }
+                    }
+                    label:
+                    {
+                        SongListItem(song: song)
+                    }
+                    .padding(.horizontal)
+                }
+                else
+                {
+                    AlbumCover(image: nil)
+                    
+                    ClassicTitles(song: song)
+                }
                 
-                ClassicTitles(song: song)
                 
                 ClassicTimeSlider()
                     .padding()
@@ -36,6 +55,10 @@ struct ClassicSongView: View
                     .padding(.top)
             }
         }
+//        .sheet(isPresented: $manager.showQueueSheet)
+//        {
+//            SongListView(songs: manager.queue)
+//        }
     }
 }
 

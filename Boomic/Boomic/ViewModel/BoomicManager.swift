@@ -13,19 +13,25 @@ class BoomicManager : ObservableObject
 {
     static let DEBUG : Bool = true
     
+    // MARK: Model Objects
     var songs : [Song] = []
-    @Published var queue : [Song] = []
     var artists : [Artist] = []
     var albums : [Album] = []
-    @Published var currentSongIndex : Int? = nil
     
+    // MARK: Audio Engine Objects
     @Published var player : AVPlayer
     var commandCenter : MPRemoteCommandCenter
     
-    // MARK: Playback States
+    // MARK: Playback State
+    @Published var queue : [Song] = []
+    @Published var currentSongIndex : Int? = nil
     @Published var shuffleState : Shuffle = .inOrder
     @Published var repeatState : Repeat = .dontRepeat
     
+    // MARK: View State
+    @Published var showCurrentSongSheet : Bool = false
+    @Published var showQueueSheet : Bool = false
+
     init()
     {
         let _ = BoomicManager.initAudioSession()

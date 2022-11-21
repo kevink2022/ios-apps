@@ -34,7 +34,7 @@ struct CategoriesView: View
 
                     NavigationLink
                     {
-                        SongListView(queue: manager.songs)
+                        SongListView(songs: manager.songs)
                     }
                     label:
                     {

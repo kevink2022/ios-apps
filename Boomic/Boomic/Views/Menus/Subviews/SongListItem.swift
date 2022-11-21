@@ -10,26 +10,37 @@ import SwiftUI
 struct SongListItem: View
 {
     let song : Song
+    let selected : Bool
+    
+    init(song: Song, selected: Bool = false)
+    {
+        self.song = song
+        self.selected = selected
+    }
     
     var body: some View
     {
-        HStack
+        ZStack
         {
-            AlbumCover(image: nil)
-            
-            VStack(alignment: .leading)
+            HStack
             {
-                Text(song.title ?? song.filename)
-                    .font(F.title)
+                AlbumCover(image: nil)
                 
-                Text(song.artist?.name ?? P.Unknown.artist)
-                    .font(F.artist)
+                VStack(alignment: .leading)
+                {
+                    Text(song.title ?? song.filename)
+                        .font(F.title)
+                    
+                    Text(song.artist?.name ?? P.Unknown.artist)
+                        .font(F.artist)
+                }
+                .foregroundColor(selected ? .accentColor : .primary)
+                
+                Spacer()
             }
-            .foregroundColor(.primary)
-            
-            Spacer()
         }
         .frame(height: C.height)
+        .clipped()
     }
     
     typealias C = ViewConstants.Menus.SongListItem

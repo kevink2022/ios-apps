@@ -10,9 +10,7 @@ import SwiftUI
 struct SongListView: View
 {
     @EnvironmentObject var manager : BoomicManager
-    @State var showSheet : Bool = false
-    let queue : [Song]
-    
+    let songs : [Song]
     
     var body: some View
     {
@@ -20,14 +18,16 @@ struct SongListView: View
         {
             List
             {
-                ForEach(queue.indices)
+                ForEach(songs.indices)
                 {
-                    index in let song = queue[index]
+                    index in let song = songs[index]
                     
                     Button
                     {
-                        manager.selectSong(queue: queue, queueIndex: index)
-                        showSheet = true
+                        manager.selectSong(queue: songs, queueIndex: index)
+                        
+                        if manager.showQueueSheet == true { manager.showQueueSheet = false }
+                        else { manager.showCurrentSongSheet = true }
                     }
                     label:
                     {
@@ -36,30 +36,7 @@ struct SongListView: View
                 }
             }
             .listStyle(.inset)
-            
-            Button
-            {
-                showSheet = true
-            }
-            label:
-            {
-                if let song = manager.currentSong
-                {
-                    CurrentSongBar(song: song)
-                        .ignoresSafeArea()
-                }
-            }
         }
-        .sheet(isPresented: $showSheet)
-        {
-            if let song = manager.currentSong
-            {
-                ClassicSongView(song: song)
-                    //.ignoresSafeArea()
-            }
-            
-        }
-        
     }
 }
 

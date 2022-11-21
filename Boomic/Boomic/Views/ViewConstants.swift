@@ -79,7 +79,7 @@ struct ViewConstants
             static let album = Font.system(.title3, design: .default, weight: .light)
             static let time = Font.system(.body, design: .default, weight: .light)
             static let mediaControls = Font.system(.largeTitle, design: .default, weight: .heavy)
-            static let queueControls = Font.system(.title, design: .default, weight: .bold)
+            static let queueControls = Font.system(.title3, design: .default, weight: .bold)
         }
         
         

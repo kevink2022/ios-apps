@@ -41,6 +41,7 @@ struct ClassicQueueControls: View
             
             Button
             {
+                withAnimation { manager.showQueueSheet.toggle() }
                 
             }
             label:

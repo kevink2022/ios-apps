@@ -29,7 +29,9 @@ extension BoomicManager
             
             if let dur = player.currentItem?.duration
             {
-                return CMTimeGetSeconds(curr) / CMTimeGetSeconds(dur)
+                let progress = CMTimeGetSeconds(curr) / CMTimeGetSeconds(dur)
+                if progress >= 1 { onSongEnd() }
+                return progress
             }
             else { return 0 }
         }
@@ -37,9 +39,33 @@ extension BoomicManager
         {
             if let dur = player.currentItem?.duration
             {
-                let seekTo = CMTime(seconds: newValue * CMTimeGetSeconds(dur), preferredTimescale: 1)
+                let seekTo = CMTime(seconds: newValue * CMTimeGetSeconds(dur), preferredTimescale: CMTimeScale(NSEC_PER_SEC))
                 player.seek(to: seekTo)
             }
+        }
+    }
+    
+    var volume : Double
+    {
+        get { Double(player.volume) }
+        set { player.volume = Float(newValue) }
+    }
+    
+    func onSongEnd()
+    {
+        if repeatState == .singleSong || repeatState == .repeatSong
+        {
+            startNewSong(paused: repeatState == .singleSong ? true : false)
+        }
+        else if currentSongIndex! + 1 == queue.count
+        {
+            currentSongIndex! = 0
+            startNewSong(paused: repeatState == .dontRepeat ? true : false)
+        }
+        else
+        {
+            currentSongIndex! += 1
+            startNewSong()
         }
     }
     
@@ -50,41 +76,29 @@ extension BoomicManager
     
     func nextSong()
     {
-        if let curr = self.currentSongIndex
+        if currentSongIndex! + 1 == queue.count
         {
-            let playing = isPlaying
-            
-            if curr + 1 == self.queue.count
-            {
-                self.currentSongIndex = 0
-                
-                if repeatState == .repeatQueue { self.startNewSong(paused: false) }
-                else { self.startNewSong(paused: true) }
-            }
-            else
-            {
-                self.currentSongIndex = curr + 1
-                self.startNewSong(paused: !playing)
-            }
+            currentSongIndex! = 0
         }
+        else
+        {
+            currentSongIndex! += 1
+        }
+        startNewSong(paused: !isPlaying)
     }
     
     func lastSong()
     {
-        if let curr = self.currentSongIndex
+        // TODO: Implement restarting song
+        if currentSongIndex! == 0
         {
-            let playing = isPlaying
             
-            if curr == 0
-            {
-                
-            }
-            else
-            {
-                self.currentSongIndex = curr - 1
-                self.startNewSong(paused: !playing)
-            }
         }
+        else
+        {
+            currentSongIndex! -= 1
+        }
+        startNewSong(paused: !isPlaying)
     }
     
     func toggleShuffle()
@@ -107,20 +121,24 @@ extension BoomicManager
         }
     }
     
-    
-    
-    func selectSong(queue: [Song], queueIndex: Int)
+    func queueSelectSong(index: Int)
     {
-        self.queue = queue
+        currentSongIndex = index
+        startNewSong(paused: !isPlaying)
+    }
+    
+    func selectSong(queue newQueue: [Song], queueIndex: Int)
+    {
+        queue = newQueue
         if shuffleState == .shuffle
         {
             let song = self.queue.remove(at: queueIndex)
-            self.queue = [song] + self.queue.shuffled()
-            self.currentSongIndex = 0
+            queue = [song] + queue.shuffled()
+            currentSongIndex = 0
         }
-        else { self.currentSongIndex = queueIndex }
+        else { currentSongIndex = queueIndex }
         
-        self.startNewSong()
+        startNewSong()
     }
     
     /// Create the player instance and prepare system for playback
@@ -131,12 +149,12 @@ extension BoomicManager
             self.player = AVPlayer(url: song.source)
             //self.setupNowPlaying()
             self.addPeriodicTimeObserver()
-            //self.player.seek(to: CMTime(seconds: 0.0, preferredTimescale: 1))
-            if !paused { self.player.play() }
-            //objectWillChange.send()
+            play(); pause()
+            songProgress = 0.0
+            if !paused { play() }
         }
     }
-    
+        
     /// Source: https://developer.apple.com/documentation/avfoundation/media_playback/observing_the_playback_time
     func addPeriodicTimeObserver()
     {

@@ -9,13 +9,15 @@ import SwiftUI
 
 struct ClassicVolumeSlider: View
 {
+    @EnvironmentObject var manager : BoomicManager
+    
     var body: some View
     {
         HStack
         {
             Image(systemName: C.lowVolumeSF)
             
-            BoomicSlider(percent: .constant(0.5))
+            BoomicSlider(percent: $manager.volume)
             
             Image(systemName: C.highVolumeSF)
         }

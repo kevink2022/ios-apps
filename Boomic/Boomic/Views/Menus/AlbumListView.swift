@@ -24,7 +24,7 @@ struct AlbumListView: View
                     
                     NavigationLink
                     {
-                        SongListView(queue: album.songs)
+                        SongListView(songs: album.songs)
                     }
                     label:
                     {

@@ -9,34 +9,43 @@ import SwiftUI
 
 struct CurrentSongBar: View
 {
+    @EnvironmentObject var manager : BoomicManager
     let song : Song
     
     var body: some View
     {
         ZStack
         {
-            ImageBlurBackground(image: "ratatat-classics")
+            ImageBlurBackground(image: nil)
                 .clipped()
             
             HStack
             {
-                AlbumCover(image: "ratatat-classics")
+                AlbumCover(image: nil)
                 
                 VStack(alignment: .leading)
                 {
-                    Text(song.title ?? song.filename)
+                    Text(song.titleLabel)
                         .font(F.title)
                     
-                    Text(song.artistName ?? P.Unknown.artist)
+                    Text(song.artistLabel)
                         .font(F.artist)
                 }
                 .foregroundColor(.primary)
                 
                 Spacer()
                 
-                Image(systemName: "play.fill")
-                    .font(.largeTitle)
-                    .padding(.horizontal)
+                Button
+                {
+                    manager.togglePlayback()
+                }
+                label:
+                {
+                    Image(systemName: !manager.isPlaying ? "pause.fill" : "play.fill")
+                        .font(.largeTitle)
+                        .foregroundColor(.primary)
+                        .padding(.horizontal)
+                }
             }
             .padding()
         
@@ -53,6 +62,5 @@ struct CurrentSongBar_Previews: PreviewProvider {
     static var previews: some View {
         CurrentSongBar(song: Song.standard)
         CurrentSongBar(song: Song.standard).preferredColorScheme(.dark)
-
     }
 }

@@ -23,7 +23,7 @@ struct ArtistListView: View
                     
                     NavigationLink
                     {
-                        SongListView(queue: artist.songs)
+                        SongListView(songs: artist.songs)
                     }
                     label:
                     {

@@ -19,7 +19,7 @@ struct GridMenu<Content: View> : ContainerView
             
             ScrollView
             {
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: geo.size.width/3), spacing: 15)])
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: geo.size.width/3), spacing: 8)])
                 {
                     content()
                 }
