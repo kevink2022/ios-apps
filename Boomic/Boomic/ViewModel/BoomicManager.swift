@@ -22,6 +22,7 @@ class BoomicManager : ObservableObject
     
     // MARK: Playback State
     @Published var queue : [Song] = []
+    var inlineQueue : [Song] = []
     @Published var currentSongIndex : Int? = nil
     @Published var shuffleState : Shuffle = .inOrder
     @Published var repeatState : Repeat = .dontRepeat
@@ -36,27 +37,9 @@ class BoomicManager : ObservableObject
         
         player = AVPlayer()
         
-        commandCenter = MPRemoteCommandCenter.shared()
-            
         // MARK: configuring command center
-        commandCenter.togglePlayPauseCommand.addTarget
-        {
-            [unowned self] event in
-            
-            if let _ = self.currentSong
-            {
-                if self.isPlaying
-                {
-                    self.player.pause()
-                }
-                else
-                {
-                    self.player.play()
-                }
-            }
-            
-            return .success
-        }
+        commandCenter = MPRemoteCommandCenter.shared()
+        let _ = initCommandCenter()
         
         // MARK: Scanning files to create library
         for format in BoomicLibrary.SupportedFileFormats.allCases
@@ -108,5 +91,7 @@ class BoomicManager : ObservableObject
                 }
             }
         }
+        
+        
     }
 }

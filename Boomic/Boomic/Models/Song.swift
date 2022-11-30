@@ -39,6 +39,39 @@ class Song : Identifiable, Codable
     }
 }
 
+// MARK: Methods
+extension Song
+{
+    convenience init(source: URL, tags dict: Dictionary<String,Any>)
+    {
+        self.init(
+            source: source,
+            songTitle: dict["title"] as? String,
+            artistName: dict["artist"] as? String,
+            albumTitle: dict["album"] as? String,
+            trackNo: Song.trackNoFromString( dict["track number"] as? String )
+        )
+    }
+    
+    static func trackNoFromString(_ str: String?) -> Int?
+    {
+        if let str = str
+        {
+            if str.contains("/")
+            {
+                return Int(str.split(separator: "/")[0])
+            }
+            else
+            {
+                return Int(str)
+            }
+        }
+        
+        return nil
+    }
+}
+
+// MARK: Static
 extension Song
 {
     static let standard = Song(
@@ -51,49 +84,10 @@ extension Song
     
     // Since Each song needs a source
     static let unknown = Song(
-        source: URL(string: "")!,
+        source: URL.documentsDirectory,
         songTitle: "",
         artistName: "Unknown Artist",
         albumTitle: "Unknown Album",
         trackNo: 0
     )
-    
-//    static let standard = Song(
-//        songTitle: "Abrasive",
-//        artist: Artist.ratatat,
-//        album: Album.magnifique,
-//        trackNo: 4,
-//        source: URL(string: "")!
-//    )
-}
-
-extension Song
-{
-    convenience init(source: URL, tags dict: Dictionary<String,Any>)
-    {
-//        let song = Song(source: source)
-//
-//        song.artistName = dict["artist"] as? String
-//        song.title = dict["title"] as? String
-//        song.albumTitle = dict["album"] as? String
-//        song.trackNo = dict["track number"] as? Int
-//
-//        if let title = dict["title"] as? String
-//        {
-//            song.title = (title)
-//        }
-
-        self.init(
-            source: source,
-            songTitle: dict["title"] as? String,
-            artistName: dict["artist"] as? String,
-            albumTitle: dict["album"] as? String,
-            trackNo: dict["track number"] as? Int
-        )
-    }
-    
-    //    mutating func autoTag(song: Song, format: BoomicLibrary.SupportedFileFormats)
-    //    {
-    //
-    //    }
 }

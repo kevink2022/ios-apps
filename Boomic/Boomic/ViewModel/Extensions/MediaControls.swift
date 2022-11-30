@@ -105,12 +105,12 @@ extension BoomicManager
     {
         switch shuffleState
         {
-        case .inOrder : shuffleState = .shuffle
-        case .shuffle : shuffleState = .inOrder
+        case .inOrder : shuffleState = .shuffle; shuffleQueue()
+        case .shuffle : shuffleState = .inOrder; unshuffleQueue()
         }
     }
     
-    func toggleRepeat()
+    func toggleRepeat()	
     {
         switch repeatState
         {
@@ -129,16 +129,37 @@ extension BoomicManager
     
     func selectSong(queue newQueue: [Song], queueIndex: Int)
     {
-        queue = newQueue
-        if shuffleState == .shuffle
+        inlineQueue = newQueue
+        
+        queue = inlineQueue
+        currentSongIndex = queueIndex
+        
+        if shuffleState == .shuffle { shuffleQueue() }
+        startNewSong()
+    }
+    
+    
+    func shuffleQueue()
+    {
+        if let index = currentSongIndex
         {
-            let song = self.queue.remove(at: queueIndex)
-            queue = [song] + queue.shuffled()
+            var oldQueue = inlineQueue
+            let song = oldQueue.remove(at: index)
+            let newQueue = [song] + oldQueue.shuffled()
+            queue = newQueue
             currentSongIndex = 0
         }
-        else { currentSongIndex = queueIndex }
-        
-        startNewSong()
+    }
+    
+    func unshuffleQueue()
+    {
+        if let _ = currentSongIndex
+        {
+            let inlineIndex = inlineQueue.firstIndex(where: {$0.id == currentSong!.id})
+    
+            queue = inlineQueue
+            currentSongIndex = inlineIndex
+        }
     }
     
     /// Create the player instance and prepare system for playback
@@ -146,10 +167,10 @@ extension BoomicManager
     {
         if let song = currentSong
         {
-            self.player = AVPlayer(url: song.source)
-            //self.setupNowPlaying()
-            self.addPeriodicTimeObserver()
-            play(); pause()
+            //player = AVPlayer(url: song.source)
+            player.replaceCurrentItem(with: AVPlayerItem(url: song.source))
+            setupNowPlaying()
+            addPeriodicTimeObserver()
             songProgress = 0.0
             if !paused { play() }
         }

@@ -61,11 +61,21 @@ extension BoomicManager
     {
         // Define Now Playing Info
         var nowPlayingInfo = [String : Any]()
-        nowPlayingInfo[MPMediaItemPropertyTitle] = currentSong!.title ?? currentSong!.filename
-
-        nowPlayingInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = player.currentTime().seconds
-        nowPlayingInfo[MPMediaItemPropertyPlaybackDuration] = player.currentItem!.duration.seconds
-        nowPlayingInfo[MPNowPlayingInfoPropertyPlaybackRate] = player.rate
+        
+        if let song = currentSong
+        {
+            nowPlayingInfo[MPMediaItemPropertyTitle] = song.titleLabel
+            nowPlayingInfo[MPMediaItemPropertyArtist] = song.artistLabel
+            
+            nowPlayingInfo[MPMediaItemPropertyPlaybackDuration] = player.currentItem!.duration.seconds
+            
+            nowPlayingInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = String(player.currentTime().seconds)
+            nowPlayingInfo[MPNowPlayingInfoPropertyPlaybackRate] = player.rate
+            
+            nowPlayingInfo[MPNowPlayingInfoPropertyAssetURL] = song.source
+            
+            nowPlayingInfo[MPNowPlayingInfoPropertyPlaybackProgress] = songProgress
+        }
 
         // Set the metadata
         MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
