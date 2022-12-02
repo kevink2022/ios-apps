@@ -11,61 +11,61 @@ import MediaPlayer
 
 class BoomicManager : ObservableObject
 {
-    // MARK: Model Objects
-    var songs : [Song] = []
-    var artists : [Artist] = []
-    var albums : [Album] = []
+    // MARK: - Model Objects
+    @Published var library : BoomicLibrary
     
-    // MARK: Audio Engine Objects
+    // MARK: - Audio Engine Objects
     @Published var player : AVPlayer
     var commandCenter : MPRemoteCommandCenter
     
-    // MARK: Playback State
+    // MARK: - Playback State
     @Published var queue : [Song] = []
     var inlineQueue : [Song] = []
     @Published var currentSongIndex : Int? = nil
     @Published var shuffleState : Shuffle = .inOrder
     @Published var repeatState : Repeat = .dontRepeat
     
-    // MARK: View State
+    // MARK: - View State
     @Published var showCurrentSongSheet : Bool = false
     @Published var showQueueSheet : Bool = false
+    
+    // MARK: - File Management
+//    var fileManager = FileManager()
+    let storage : StorageManager<BoomicLibrary>
 
     init()
     {
         let _ = BoomicManager.initAudioSession()
         
         player = AVPlayer()
+        library = BoomicLibrary.empty
+        storage = StorageManager<BoomicLibrary>(fileName: "library")
         
-        // MARK: configuring command center
         commandCenter = MPRemoteCommandCenter.shared()
         let _ = initCommandCenter()
         
-        // MARK: Scanning files to create library
-        for format in BoomicLibrary.SupportedFileFormats.allCases
+        if let library = storage.modelData
         {
-            if let URLs = Bundle.main.urls(forResourcesWithExtension: format.rawValue, subdirectory: nil)
-            {
-                songs.append(contentsOf: URLs.map
-                {
-                    if let tags = getTags(source: $0, format: format)
-                    {
-                        return Song(source: $0, tags: tags)
-                    }
-                    else
-                    {
-                        return Song(source: $0)
-                    }
-                })
-            }
+            self.library = library
+        }
+        else
+        {
+            BoomicManager.createReadMe()
+            library.songs = BoomicManager.scanForSongs()
         }
         
-        // MARK: Build Song/Album/Artist/Composer/etc. map
-        for song in songs
+        mapLibrary()
+    }
+    
+    /// Connect songs, albums, artists, by reference to allow them to be easilty navigated between
+    // TODO: Hashing
+    func mapLibrary()
+    {
+        for song in library.songs
         {
             if let artistName = song.artistName
             {
-                if let artist = artists.first(where: {$0.name == artistName})
+                if let artist = library.artists.first(where: {$0.name == artistName})
                 {
                     artist.addSong(song)
                 }
@@ -73,13 +73,13 @@ class BoomicManager : ObservableObject
                 {
                     let artist = Artist(name: artistName)
                     artist.addSong(song)
-                    artists.append(artist)
+                    library.artists.append(artist)
                 }
             }
             
             if let albumTitle = song.albumTitle
             {
-                if let album = albums.first(where: {$0.title == albumTitle})
+                if let album = library.albums.first(where: {$0.title == albumTitle})
                 {
                     album.addSong(song)
                 }
@@ -87,11 +87,9 @@ class BoomicManager : ObservableObject
                 {
                     let album = Album(title: albumTitle)
                     album.addSong(song)
-                    albums.append(album)
+                    library.albums.append(album)
                 }
             }
         }
-        
-        
     }
 }

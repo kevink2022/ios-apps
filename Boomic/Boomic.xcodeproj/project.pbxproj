@@ -170,6 +170,10 @@
 		4FECA3A4292B0A53003EA394 /* 04 Wildcat.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA327292B0A52003EA394 /* 04 Wildcat.flac */; };
 		4FECA3A6292B0A53003EA394 /* 02 Lex.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA329292B0A52003EA394 /* 02 Lex.flac */; };
 		4FECA3A7292B0A53003EA394 /* 10 Tacobel Canon.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA32A292B0A52003EA394 /* 10 Tacobel Canon.flac */; };
+		4FECA3E02937E5FB003EA394 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA3DF2937E5FB003EA394 /* Playlist.swift */; };
+		4FECA3E4293951CB003EA394 /* FileManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA3E3293951CB003EA394 /* FileManagement.swift */; };
+		4FECA3F929395D4F003EA394 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA3F829395D4F003EA394 /* StorageManager.swift */; };
+		4FECA3FB29395D58003EA394 /* FileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA3FA29395D58003EA394 /* FileInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -357,6 +361,10 @@
 		4FECA327292B0A52003EA394 /* 04 Wildcat.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "04 Wildcat.flac"; sourceTree = "<group>"; };
 		4FECA329292B0A52003EA394 /* 02 Lex.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "02 Lex.flac"; sourceTree = "<group>"; };
 		4FECA32A292B0A52003EA394 /* 10 Tacobel Canon.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "10 Tacobel Canon.flac"; sourceTree = "<group>"; };
+		4FECA3DF2937E5FB003EA394 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		4FECA3E3293951CB003EA394 /* FileManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagement.swift; sourceTree = "<group>"; };
+		4FECA3F829395D4F003EA394 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		4FECA3FA29395D58003EA394 /* FileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -407,6 +415,7 @@
 		4F597D202911A14F00BC1046 /* Boomic */ = {
 			isa = PBXGroup;
 			children = (
+				4FECA3F729395D46003EA394 /* Storage */,
 				4FCD439A29144F45001E7FCC /* Development */,
 				4F597D692913079700BC1046 /* Info.plist */,
 				4F597D512911A20B00BC1046 /* Other */,
@@ -464,6 +473,7 @@
 				4FCD439F2914506E001E7FCC /* Album.swift */,
 				4FECA26D29229CBB003EA394 /* Categories.swift */,
 				4FECA2732922C024003EA394 /* ImageSource.swift */,
+				4FECA3DF2937E5FB003EA394 /* Playlist.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -548,6 +558,7 @@
 				4FCD441A29149151001E7FCC /* Manager+Debug.swift */,
 				4FCD44252915BB04001E7FCC /* InitMethods.swift */,
 				4FECA26F2922B758003EA394 /* CategoryMethods.swift */,
+				4FECA3E3293951CB003EA394 /* FileManagement.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -739,6 +750,15 @@
 				4FECA32A292B0A52003EA394 /* 10 Tacobel Canon.flac */,
 			);
 			path = "Ratatat-Classics";
+			sourceTree = "<group>";
+		};
+		4FECA3F729395D46003EA394 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				4FECA3F829395D4F003EA394 /* StorageManager.swift */,
+				4FECA3FA29395D58003EA394 /* FileInfo.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -999,6 +1019,7 @@
 				4FEC9553291B2273003EA394 /* ImageBlurBackground.swift in Sources */,
 				4F597D682912EF6C00BC1046 /* ClassicTitles.swift in Sources */,
 				4FCD441B29149151001E7FCC /* Manager+Debug.swift in Sources */,
+				4FECA3F929395D4F003EA394 /* StorageManager.swift in Sources */,
 				4FECA27A2922D3DC003EA394 /* ContainerProtocol.swift in Sources */,
 				4FECA2802922E016003EA394 /* ArtistListItem.swift in Sources */,
 				4F597D612912E0C500BC1046 /* BoomicManager.swift in Sources */,
@@ -1011,11 +1032,14 @@
 				4F597D502911A1CE00BC1046 /* MainView.swift in Sources */,
 				4F597D222911A14F00BC1046 /* BoomicApp.swift in Sources */,
 				4FECA2742922C024003EA394 /* ImageSource.swift in Sources */,
+				4FECA3E4293951CB003EA394 /* FileManagement.swift in Sources */,
 				4F597E65291323E700BC1046 /* SongListView.swift in Sources */,
 				4FECA27C2922D8A8003EA394 /* AlbumListItem.swift in Sources */,
 				4FCD44232915B965001E7FCC /* Metadata.swift in Sources */,
 				4FECA2782922D03B003EA394 /* GridMenu.swift in Sources */,
+				4FECA3E02937E5FB003EA394 /* Playlist.swift in Sources */,
 				4F597D562911A28B00BC1046 /* ClassicSongView.swift in Sources */,
+				4FECA3FB29395D58003EA394 /* FileInfo.swift in Sources */,
 				4FEC954C291995A6003EA394 /* BoomicSlider.swift in Sources */,
 				4FEC9555291DBC42003EA394 /* CategoriesView.swift in Sources */,
 				4F597D662912EC6100BC1046 /* ClassicMediaControls.swift in Sources */,
@@ -1191,6 +1215,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Boomic/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Boomic needs permission to access your Apple music library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1222,6 +1247,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Boomic/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Boomic needs permission to access your Apple music library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

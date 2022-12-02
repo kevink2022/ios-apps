@@ -6,5 +6,12 @@
 	<array>
 		<string>audio</string>
 	</array>
+	<key>UIFileSharingEnabled</key>
+	<true/>
+	<key>UISupportedExternalAccessoryProtocols</key>
+	<array>
+		<string></string>
+		<string></string>
+	</array>
 </dict>
 </plist>

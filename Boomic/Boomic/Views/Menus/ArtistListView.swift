@@ -17,7 +17,7 @@ struct ArtistListView: View
         {
             GridMenu
             {
-                ForEach(manager.artists)
+                ForEach(manager.library.artists)
                 {
                     artist in
                     

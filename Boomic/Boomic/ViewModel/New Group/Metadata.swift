@@ -13,7 +13,7 @@ import MediaPlayer
 extension BoomicManager
 {
     ///source:  https://stackoverflow.com/questions/52276830/how-can-i-get-flac-file-metadata-in-swift-on-ios-11
-    func getTags(source: URL, format: BoomicLibrary.SupportedFileFormats) -> Dictionary<String,Any>?
+    static func getTags(source: URL, format: BoomicLibrary.SupportedFileFormats) -> Dictionary<String,Any>?
     {
         var fileID: AudioFileID? = nil
         var status:OSStatus = AudioFileOpenURL(source as CFURL, .readPermission, BoomicLibrary.supportedFormatID(format: format), &fileID)
