@@ -101,6 +101,7 @@
 		4FCD44202915B8C4001E7FCC /* MediaControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaControls.swift; sourceTree = "<group>"; };
 		4FCD44222915B965001E7FCC /* Metadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Metadata.swift; path = "../New Group/Metadata.swift"; sourceTree = "<group>"; };
 		4FCD44252915BB04001E7FCC /* InitMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitMethods.swift; sourceTree = "<group>"; };
+		4FD5045C293A98F900B9C76F /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = TODO.md; path = Boomic/Storage/TODO.md; sourceTree = SOURCE_ROOT; };
 		4FEC954B291995A6003EA394 /* BoomicSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoomicSlider.swift; sourceTree = "<group>"; };
 		4FEC954D291A18A7003EA394 /* ClassicQueueControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicQueueControls.swift; sourceTree = "<group>"; };
 		4FEC9550291AC6C1003EA394 /* CurrentSongBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSongBar.swift; sourceTree = "<group>"; };
@@ -300,6 +301,7 @@
 		4FCD439A29144F45001E7FCC /* Development */ = {
 			isa = PBXGroup;
 			children = (
+				4FD5045C293A98F900B9C76F /* TODO.md */,
 			);
 			path = Development;
 			sourceTree = "<group>";

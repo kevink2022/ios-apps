@@ -19,6 +19,11 @@ struct BoomicLibrary : Codable
         case flac, m4a
     }
     
+    enum SupportedAlbumArtFormats : String, CaseIterable
+    {
+        case png, jpg, jpeg
+    }
+    
     static let empty = BoomicLibrary(songs: [], albums: [], artists: [], playlists: [])
 }
 

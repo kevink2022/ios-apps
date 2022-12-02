@@ -15,10 +15,7 @@ struct AlbumListItem: View
     {
         VStack(alignment: .leading)
         {
-            Image(.asset("boomic_logo"))
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .cornerRadius(C.cornerRadius)
+            AlbumCover(image: album.albumCover)
             
             Text(album.title)
                 .font(F.title)
@@ -27,6 +24,7 @@ struct AlbumListItem: View
             Text(album.artist?.name ?? Artist.unknown.name)
                 .font(F.artist)
         }
+        .foregroundColor(.primary)
     }
     
     typealias F = ViewConstants.Menus.Fonts

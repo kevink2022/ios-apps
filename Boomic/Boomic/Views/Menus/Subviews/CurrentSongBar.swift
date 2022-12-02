@@ -16,12 +16,12 @@ struct CurrentSongBar: View
     {
         ZStack
         {
-            ImageBlurBackground(image: nil)
+            ImageBlurBackground(image: song.albumCover)
                 .clipped()
             
             HStack
             {
-                AlbumCover(image: nil)
+                AlbumCover(image: song.albumCover)
                 
                 VStack(alignment: .leading)
                 {

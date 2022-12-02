@@ -36,12 +36,21 @@ extension Image
             }
             else
             {
-                self.init("boomic_logo")
+                self.init(systemName: "exclamationmark.triangle.fill")
             }
             
         // TODO: Add URL support
-        case .url:
-            self.init("exclamationmark.triangle.fill")
+        case .url(let source):
+            
+            if let data = try? Data(contentsOf: source)
+            {
+                if let uiImage = UIImage(data: data)
+                {
+                    self.init(uiImage: uiImage)
+                    break
+                }
+            }
+            self.init(systemName: "exclamationmark.triangle.fill")
         }
     }
 }

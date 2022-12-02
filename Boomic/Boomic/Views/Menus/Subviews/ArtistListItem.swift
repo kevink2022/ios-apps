@@ -24,6 +24,7 @@ struct ArtistListItem: View
                 .font(F.title)
                 .lineLimit(1)
         }
+        .foregroundColor(.primary)
     }
     
     typealias F = ViewConstants.Menus.Fonts

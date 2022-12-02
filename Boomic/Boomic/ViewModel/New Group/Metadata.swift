@@ -43,10 +43,47 @@ extension BoomicManager
     /// Only does album art right now, more modern framework for getting tags,
     /// probably should use this for all tags but don't feel like dealing with the
     /// async in init rn
+    // TODO: Embedded or stored get priority?
+    /// EMBEDDED
+    ///   + Easier for user to manage library
+    ///   - Very heavy on RAM
+    /// STORED PROS
+    ///   + Very light on RAM
+    ///   - Can incorrectly match if library is unorganized
+    /// Currently, stored is first, but this could be easilty reversed
     func asyncGetTags() async
     {
         for song in library.songs
         {
+            /// Putting the album cover in the same directory has the files is common practice
+            let songDirectory = song.source.deletingLastPathComponent()
+            
+            if songDirectory.hasDirectoryPath
+            {
+                
+                // TODO: Clean this
+                /// Lowercase
+                for format in BoomicLibrary.SupportedAlbumArtFormats.allCases
+                {
+                    if let artwork_url = Bundle.urls(forResourcesWithExtension: format.rawValue, subdirectory: nil, in: songDirectory)?.first
+                    {
+                        song.albumCover = .url(artwork_url.absoluteURL)
+                        break
+                    }
+                }
+                /// Uppercase
+                for format in BoomicLibrary.SupportedAlbumArtFormats.allCases
+                {
+                    if let artwork_url = Bundle.urls(forResourcesWithExtension: format.rawValue.uppercased(), subdirectory: nil, in: songDirectory)?.first
+                    {
+                        song.albumCover = .url(artwork_url.absoluteURL)
+                        break
+                    }
+                }
+            }
+                
+            if let _ = song.albumCover { continue }
+            
             let asset: AVAsset = AVAsset(url: song.source) // An asset object to inspect.
             
             do
@@ -87,7 +124,6 @@ extension BoomicLibrary
         case .m4a:  return kAudioFileM4AType
         }
     }
-    
 }
 
 extension BoomicManager
