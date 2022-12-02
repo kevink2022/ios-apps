@@ -39,6 +39,42 @@ extension BoomicManager
 
         return swiftDict
     }
+    
+    /// Only does album art right now, more modern framework for getting tags,
+    /// probably should use this for all tags but don't feel like dealing with the
+    /// async in init rn
+    func asyncGetTags() async
+    {
+        for song in library.songs
+        {
+            let asset: AVAsset = AVAsset(url: song.source) // An asset object to inspect.
+            
+            do
+            {
+                for format in try await asset.load(.availableMetadataFormats) {
+                    let metadata = try await asset.loadMetadata(for: format)
+                    // Process the format-specific metadata collection.
+                    
+                    let artworkItem = AVMetadataItem.metadataItems(
+                        from: metadata,
+                        filteredByIdentifier: .iTunesMetadataCoverArt
+                    )
+                    
+                    if let artwork = artworkItem.first
+                    {
+                        if let imageData = try await artwork.load(.dataValue)
+                        {
+                            song.albumCover = .data(imageData)
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                //TODO: Error handling
+            }
+        }
+    }
 }
 
 extension BoomicLibrary

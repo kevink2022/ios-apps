@@ -6,17 +6,14 @@
 //
 
 import Foundation
+import AVFoundation
 
 extension BoomicManager
 {
     static func scanForSongs() -> [Song]
     {
         var songs : [Song] = []
-        
         var URLs : [URL] = []
-        
-        let docsBundle = Bundle(url: URL.documentsDirectory)
-        
         let fileManager = FileManager()
         
         // Enumerate the app's document directory

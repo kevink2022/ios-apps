@@ -10,12 +10,12 @@ import SwiftUI
 struct AlbumCover: View
 {
     typealias C = ViewConstants.Subviews.AlbumCover
-    let image : String?
+    let image : ImageSource?
     
     var body: some View
     {
         //TODO: ADD DEFAULT
-        Image(image ?? C.defaultAlbumCover)
+        Image(image ?? .asset(C.defaultAlbumCover))
             .resizable()
             .aspectRatio(1, contentMode: .fit)
             .cornerRadius(C.cornerRadius)
@@ -25,8 +25,8 @@ struct AlbumCover: View
 
 struct AlbumCover_Previews: PreviewProvider {
     static var previews: some View {
-        AlbumCover(image: "ratatat-magnifique")
-        AlbumCover(image: "ratatat-magnifique").preferredColorScheme(.dark)
+        AlbumCover(image: .asset("ratatat-magnifique"))
+        AlbumCover(image: .asset("ratatat-magnifique")).preferredColorScheme(.dark)
     }
 }
 

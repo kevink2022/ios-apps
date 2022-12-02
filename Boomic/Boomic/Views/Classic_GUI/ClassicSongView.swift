@@ -16,7 +16,7 @@ struct ClassicSongView: View
     {
         ZStack
         {
-            ImageBlurBackground(image: nil)
+            ImageBlurBackground(image: song.albumCover)
             
             VStack(alignment: .leading)
             {
@@ -36,14 +36,24 @@ struct ClassicSongView: View
                 }
                 else
                 {
-                    AlbumCover(image: nil)
+                    AlbumCover(image: song.albumCover)
                     
                     ClassicTitles(song: song)
                 }
                 
-                
-                ClassicTimeSlider()
-                    .padding()
+                if manager.songExists
+                {
+                    ClassicTimeSlider()
+                        .padding()
+                }
+                else
+                {
+                    HStack
+                    {
+                        Image(systemName: "externaldrive.trianglebadge.exclamationmark")
+                        Text("The song file cannot be found")
+                    }
+                }
                 
                 ClassicMediaControls()
                     .padding(.vertical)

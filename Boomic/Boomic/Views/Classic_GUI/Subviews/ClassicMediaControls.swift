@@ -36,6 +36,7 @@ struct ClassicMediaControls: View
             {
                 Image(systemName: manager.isPlaying ? C.pauseSF : C.playSF)
             }
+            .disabled(!manager.songExists)
             
             Spacer()
             

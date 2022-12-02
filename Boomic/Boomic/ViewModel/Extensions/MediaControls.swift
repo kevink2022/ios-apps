@@ -10,6 +10,8 @@ import AVFoundation
 
 extension BoomicManager
 {
+    /// If a song's file is moved or deleted, then promt user and don't allow playback
+    var songExists : Bool { player.currentItem != nil }
     var isPlaying : Bool { player.rate != 0 }
     
     var currentSong : Song?
@@ -167,7 +169,6 @@ extension BoomicManager
     {
         if let song = currentSong
         {
-            //player = AVPlayer(url: song.source)
             player.replaceCurrentItem(with: AVPlayerItem(url: song.source))
             setupNowPlaying()
             addPeriodicTimeObserver()

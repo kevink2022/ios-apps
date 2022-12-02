@@ -19,6 +19,7 @@ class Song : Identifiable, Codable
     
     var album: Album? = nil
     var artist: Artist? = nil
+    var albumCover : ImageSource? = nil
     
     // MARK: Calculated
     var filename : String { self.source.relativeString.replacingOccurrences(of: "%20", with: " ") }

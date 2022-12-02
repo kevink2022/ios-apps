@@ -44,6 +44,8 @@ class BoomicManager : ObservableObject
         commandCenter = MPRemoteCommandCenter.shared()
         let _ = initCommandCenter()
         
+        let initStartTime = CFAbsoluteTimeGetCurrent()
+        
         if let library = storage.modelData
         {
             self.library = library
@@ -55,41 +57,10 @@ class BoomicManager : ObservableObject
         }
         
         mapLibrary()
-    }
-    
-    /// Connect songs, albums, artists, by reference to allow them to be easilty navigated between
-    // TODO: Hashing
-    func mapLibrary()
-    {
-        for song in library.songs
-        {
-            if let artistName = song.artistName
-            {
-                if let artist = library.artists.first(where: {$0.name == artistName})
-                {
-                    artist.addSong(song)
-                }
-                else
-                {
-                    let artist = Artist(name: artistName)
-                    artist.addSong(song)
-                    library.artists.append(artist)
-                }
-            }
-            
-            if let albumTitle = song.albumTitle
-            {
-                if let album = library.albums.first(where: {$0.title == albumTitle})
-                {
-                    album.addSong(song)
-                }
-                else
-                {
-                    let album = Album(title: albumTitle)
-                    album.addSong(song)
-                    library.albums.append(album)
-                }
-            }
-        }
+        
+        let initTime = CFAbsoluteTimeGetCurrent() - initStartTime
+        print("@@@@@ Time elapsed for INIT: \(initTime)s. @@@@@")
+                    
+        Task { await asyncGetTags() }
     }
 }

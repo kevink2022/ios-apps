@@ -11,6 +11,76 @@ import MediaPlayer
 
 extension BoomicManager
 {
+    /// Connect songs, albums, artists, by reference to allow them to be easilty navigated between
+    // TODO: Hashing
+    func mapLibrary()
+    {
+        library.songs.forEach
+        {
+            song in
+            
+            if let artistName = song.artistName
+            {
+                if let artist = library.artists.first(where: {$0.name == artistName})
+                {
+                    artist.addSong(song)
+                }
+                else
+                {
+                    let artist = Artist(name: artistName)
+                    artist.addSong(song)
+                    library.artists.append(artist)
+                }
+            }
+            
+            if let albumTitle = song.albumTitle
+            {
+                if let album = library.albums.first(where: {$0.title == albumTitle})
+                {
+                    album.addSong(song)
+                }
+                else
+                {
+                    let album = Album(title: albumTitle)
+                    album.addSong(song)
+                    library.albums.append(album)
+                }
+            }
+        }
+        
+        /// Sorted alphabetically
+        library.songs.sort(by: { $0.titleLabel < $1.titleLabel } )
+        library.artists.sort(by: { $0.name < $1.name } )
+        library.albums.sort(by: { $0.title < $1.title} )
+        
+        /// Sort albums by track number:
+        ///     - First tracks have track numbers and are sorted that way
+        ///     - Rest are sorted alphabetically
+        library.albums.forEach { album in
+            album.songs.sort(by: { song1, song2 in
+                if let trackNo1 = song1.trackNo
+                {
+                    if let trackNo2 = song2.trackNo
+                    {
+                        return trackNo1 < trackNo2
+                    }
+                    else
+                    {
+                        return true // song1 before song2
+                    }
+                }
+                else if let _ = song2.trackNo
+                {
+                    return false // song2 before song1
+                }
+                else
+                {
+                    return song1.titleLabel < song2.titleLabel // alphabetical
+                }
+            })
+        }
+    }
+    
     // MARK: - inits
     static func initAudioSession() -> Bool
     {

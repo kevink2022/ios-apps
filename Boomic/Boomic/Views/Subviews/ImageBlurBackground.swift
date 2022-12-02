@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ImageBlurBackground: View
 {
-    let image : String?
+    let image : ImageSource?
     
     var body: some View
     {
-        Image(image ?? C.defaultAlbumCover)
+        Image(image ?? .asset(C.defaultAlbumCover))
             .resizable()
             .scaleEffect(3)
             .ignoresSafeArea()
@@ -24,11 +24,11 @@ struct ImageBlurBackground: View
     typealias C = ViewConstants.Subviews.ImageBlurBackground
 }
 
-struct ImageBlurBackground_Previews: PreviewProvider {
-    static var previews: some View {
-        ImageBlurBackground(image: "ratatat-magnifique")
-        ImageBlurBackground(image: "ratatat-magnifique").preferredColorScheme(.dark)
-        ImageBlurBackground(image: "ratatat-classics")
-        ImageBlurBackground(image: "ratatat-classics").preferredColorScheme(.dark)
-    }
-}
+//struct ImageBlurBackground_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ImageBlurBackground(image: "ratatat-magnifique")
+//        ImageBlurBackground(image: "ratatat-magnifique").preferredColorScheme(.dark)
+//        ImageBlurBackground(image: "ratatat-classics")
+//        ImageBlurBackground(image: "ratatat-classics").preferredColorScheme(.dark)
+//    }
+//}

@@ -24,7 +24,7 @@ struct SongListItem: View
         {
             HStack
             {
-                AlbumCover(image: nil)
+                AlbumCover(image: song.albumCover)
                 
                 VStack(alignment: .leading)
                 {
