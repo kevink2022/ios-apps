@@ -61,6 +61,6 @@ class BoomicManager : ObservableObject
         let initTime = CFAbsoluteTimeGetCurrent() - initStartTime
         print("@@@@@ Time elapsed for INIT: \(initTime)s. @@@@@")
                     
-        Task { await asyncGetTags() }
+        Task { await getAlbumArtwork() }
     }
 }

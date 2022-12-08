@@ -19,7 +19,7 @@ struct ClassicMediaControls: View
             
             Button
             {
-                manager.lastSong()
+                withAnimation { manager.toLastSong() }
             }
             label:
             {
@@ -42,7 +42,7 @@ struct ClassicMediaControls: View
             
             Button
             {
-                manager.nextSong()
+                withAnimation { manager.toNextSong() }
             }
             label:
             {

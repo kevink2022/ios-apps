@@ -25,7 +25,7 @@ struct ClassicTimeSlider: View
             }
             .font(F.time)
             
-            BoomicSlider(percent: $manager.songProgress)
+            BoomicSlider(percent: $manager.songProgress, shape: Capsule())
 
             .frame(height: 20)
             
@@ -63,7 +63,7 @@ extension Double
                 return String(format: "%i:%02i", m, s)
             }
         }
-        else{ return "0:00" }
+        else { return "0:00" }
     }
 }
 

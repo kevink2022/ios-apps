@@ -36,7 +36,8 @@ struct ClassicSongView: View
                 }
                 else
                 {
-                    AlbumCover(image: song.albumCover)
+                    //AlbumCover(image: song.albumCover)
+                    GesturedAlbumCover()
                     
                     ClassicTitles(song: song)
                 }

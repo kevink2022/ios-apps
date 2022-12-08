@@ -50,7 +50,7 @@ struct CurrentSongBar: View
             .padding()
         
         }
-        .frame(height: C.height)
+        .frame(height: 55)
     }
     
     typealias C = ViewConstants.Menus.SongListItem

@@ -17,7 +17,7 @@ struct ClassicVolumeSlider: View
         {
             Image(systemName: C.lowVolumeSF)
             
-            BoomicSlider(percent: $manager.volume)
+            BoomicSlider(percent: $manager.volume, shape: Capsule())
             
             Image(systemName: C.highVolumeSF)
         }

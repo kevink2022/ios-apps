@@ -13,30 +13,40 @@ import MediaPlayer
 extension BoomicManager
 {
     ///source:  https://stackoverflow.com/questions/52276830/how-can-i-get-flac-file-metadata-in-swift-on-ios-11
-    static func getTags(source: URL, format: BoomicLibrary.SupportedFileFormats) -> Dictionary<String,Any>?
-    {
+    ///  The comments were added by the openai chatbot!
+    // A function that gets the metadata tags from an audio file
+    static func getTags(source: URL, format: BoomicLibrary.SupportedFileFormats) -> Dictionary<String,Any>? {
+        // Open the audio file with the specified URL and format
         var fileID: AudioFileID? = nil
         var status:OSStatus = AudioFileOpenURL(source as CFURL, .readPermission, BoomicLibrary.supportedFormatID(format: format), &fileID)
 
+        // Check if the file was successfully opened
         guard status == noErr else { return nil }
 
+        // Get the metadata tags from the audio file
         var dict: CFDictionary? = nil
         var dataSize = UInt32(MemoryLayout<CFDictionary?>.size(ofValue: dict))
 
+        // Check if the audio file ID is valid
         guard let audioFile = fileID else { return nil }
 
+        // Get the metadata tags from the audio file
         status = AudioFileGetProperty(audioFile, kAudioFilePropertyInfoDictionary, &dataSize, &dict)
 
+        // Check if the metadata was successfully retrieved
         guard status == noErr else { return nil }
 
+        // Close the audio file
         AudioFileClose(audioFile)
 
+        // Check if the metadata dictionary is valid
         guard let cfDict = dict else { return nil }
 
+        // Convert the metadata dictionary to a dictionary that can be used in Swift
         let tagsDict = NSDictionary.init(dictionary: cfDict)
-        
         let swiftDict = tagsDict as! Dictionary<String,Any>
 
+        // Return the metadata dictionary
         return swiftDict
     }
     
@@ -51,7 +61,7 @@ extension BoomicManager
     ///   + Very light on RAM
     ///   - Can incorrectly match if library is unorganized
     /// Currently, stored is first, but this could be easilty reversed
-    func asyncGetTags() async
+    func getAlbumArtwork() async
     {
         for song in library.songs
         {

@@ -34,7 +34,7 @@ struct ViewConstants
         
         struct SongListItem
         {
-            static let height : CGFloat = 55
+            static let height : CGFloat = 40
         }
         
         struct Subviews
