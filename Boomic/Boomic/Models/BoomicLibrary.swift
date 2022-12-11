@@ -13,6 +13,7 @@ struct BoomicLibrary : Codable
     var albums : [Album]
     var artists : [Artist]
     var playlists : [Playlist]
+    var settings : BoomicSettings
     
     enum SupportedFileFormats : String, CaseIterable
     {
@@ -24,7 +25,17 @@ struct BoomicLibrary : Codable
         case png, jpg, jpeg
     }
     
-    static let empty = BoomicLibrary(songs: [], albums: [], artists: [], playlists: [])
+    static let empty = BoomicLibrary(
+        songs: [],
+        albums: [],
+        artists: [],
+        playlists: [],
+        settings: BoomicSettings(
+            songGUI: .classic,
+            classicTimeSlider: .classic,
+            albumCover: .notGestured    
+        )
+    )
 }
 
 

@@ -56,36 +56,36 @@ extension BoomicManager
         /// Sort albums by track number:
         ///     - First tracks have track numbers and are sorted that way
         ///     - Rest are sorted alphabetically
-//        library.albums.forEach { album in
-//            album.songs.sort(by: { song1, song2 in
-//                if let trackNo1 = song1.trackNo
-//                {
-//                    if let trackNo2 = song2.trackNo
-//                    {
-//                        return trackNo1 < trackNo2
-//                    }
-//                    else
-//                    {
-//                        return true // song1 before song2
-//                    }
-//                }
-//                else if let _ = song2.trackNo
-//                {
-//                    return false // song2 before song1
-//                }
-//                else
-//                {
-//                    return song1.titleLabel < song2.titleLabel // alphabetical
-//                }
-//            })
-//        }
-        /// Here is openai's chatbot version
         library.albums.forEach { album in
             album.songs.sort(by: { song1, song2 in
-                return (song1.trackNo ?? 0) < (song2.trackNo ?? 0) ||
-                    (song1.trackNo == nil && song2.trackNo == nil && song1.titleLabel < song2.titleLabel)
+                if let trackNo1 = song1.trackNo
+                {
+                    if let trackNo2 = song2.trackNo
+                    {
+                        return trackNo1 < trackNo2
+                    }
+                    else
+                    {
+                        return true // song1 before song2
+                    }
+                }
+                else if let _ = song2.trackNo
+                {
+                    return false // song2 before song1
+                }
+                else
+                {
+                    return song1.titleLabel < song2.titleLabel // alphabetical
+                }
             })
         }
+        /// Here is openai's chatbot version
+//        library.albums.forEach { album in
+//            album.songs.sort(by: { song1, song2 in
+//                return (song1.trackNo ?? 0) < (song2.trackNo ?? 0) ||
+//                    (song1.trackNo == nil && song2.trackNo == nil && song1.titleLabel < song2.titleLabel)
+//            })
+//        }
     }
     
     // MARK: - inits
@@ -132,8 +132,7 @@ extension BoomicManager
             return .success
         }
         
-        
-        
+        // TODO: Fix this
         // Source: https://stackoverflow.com/questions/34321071/how-can-i-make-the-control-center-slider-editable
         commandCenter.changePlaybackPositionCommand.addTarget
         {
@@ -149,7 +148,6 @@ extension BoomicManager
             }
             return .success
         }
-        
         
         return true
     }

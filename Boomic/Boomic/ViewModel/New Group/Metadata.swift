@@ -70,21 +70,11 @@ extension BoomicManager
             
             if songDirectory.hasDirectoryPath
             {
+                typealias Formats = BoomicLibrary.SupportedAlbumArtFormats
                 
-                // TODO: Clean this
-                /// Lowercase
-                for format in BoomicLibrary.SupportedAlbumArtFormats.allCases
+                for format in Formats.allCases.map({$0.rawValue}) + Formats.allCases.map({$0.rawValue.uppercased()})
                 {
-                    if let artwork_url = Bundle.urls(forResourcesWithExtension: format.rawValue, subdirectory: nil, in: songDirectory)?.first
-                    {
-                        song.albumCover = .url(artwork_url.absoluteURL)
-                        break
-                    }
-                }
-                /// Uppercase
-                for format in BoomicLibrary.SupportedAlbumArtFormats.allCases
-                {
-                    if let artwork_url = Bundle.urls(forResourcesWithExtension: format.rawValue.uppercased(), subdirectory: nil, in: songDirectory)?.first
+                    if let artwork_url = Bundle.urls(forResourcesWithExtension: format, subdirectory: nil, in: songDirectory)?.first
                     {
                         song.albumCover = .url(artwork_url.absoluteURL)
                         break
@@ -161,5 +151,72 @@ extension BoomicManager
 
         // Set the metadata
         MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
+    }
+    
+    /// Get the perodic audio levels to display on the GUI
+    func setAudioLevels() async
+    {
+        do
+        {
+            guard currentSong != nil else {return}
+            let song = currentSong!
+
+            // Load the audio file using an AVAudioFile instance.
+            let audioFile = try AVAudioFile(forReading: song.source)
+            let asset = AVAsset(url: song.source)
+            //guard asset != nil else {return}
+            let tracks = try await asset.load(.tracks)
+            let bitrate = try await tracks[0].load(.estimatedDataRate)
+            let sampleRate = try await Int(tracks[0].load(.naturalTimeScale))
+            
+            // Create an AVAudioPCMBuffer instance to hold the audio data.
+            let pcmBuffer = AVAudioPCMBuffer(pcmFormat: audioFile.processingFormat,
+                                             frameCapacity: AVAudioFrameCount(audioFile.length))
+            
+            // Guard for nil buffer
+            guard pcmBuffer != nil else {throw BoomicError.pcmBufferNil}
+            
+            let buffer = pcmBuffer!
+            
+            try audioFile.read(into: buffer)
+            
+            DispatchQueue.main.async
+            {
+                let samples = Array(UnsafeBufferPointer(start: buffer.floatChannelData![0], count: Int(buffer.frameLength)))
+                
+                var levels : [Float] = []
+                            
+                for chunk in samples.chunked(into: sampleRate)
+                {
+                    levels.append(chunk.average ?? 0)
+                }
+                
+                self.audioLevelSamples = levels
+            }
+        }
+        catch
+        {
+            print("ERROR in audioLevels(): \(error.localizedDescription)")
+        }
+    }
+    
+}
+
+extension Array
+{
+    // source: https://www.hackingwithswift.com/example-code/language/how-to-split-an-array-into-chunks
+    func chunked(into size: Int) -> [[Element]] {
+        return stride(from: 0, to: count, by: size).map {
+            Array(self[$0 ..< Swift.min($0 + size, count)])
+        }
+    }
+}
+
+extension Array where Element == Float
+{
+    var average : Float?
+    {
+        guard self.count > 0 else {return nil}
+        return self.reduce(0, +) / Float(self.count)
     }
 }

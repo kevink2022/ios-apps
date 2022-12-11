@@ -15,7 +15,7 @@
 		4F597D3F2911A15000BC1046 /* BoomicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D3E2911A15000BC1046 /* BoomicUITestsLaunchTests.swift */; };
 		4F597D502911A1CE00BC1046 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D4F2911A1CE00BC1046 /* MainView.swift */; };
 		4F597D562911A28B00BC1046 /* ClassicSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D552911A28B00BC1046 /* ClassicSongView.swift */; };
-		4F597D592911A65100BC1046 /* AlbumCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D582911A65100BC1046 /* AlbumCover.swift */; };
+		4F597D592911A65100BC1046 /* StaticAlbumCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D582911A65100BC1046 /* StaticAlbumCover.swift */; };
 		4F597D5B2911A74100BC1046 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D5A2911A74100BC1046 /* ViewConstants.swift */; };
 		4F597D5D2911A8F800BC1046 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D5C2911A8F800BC1046 /* Song.swift */; };
 		4F597D5F2912E07900BC1046 /* BoomicLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D5E2912E07900BC1046 /* BoomicLibrary.swift */; };
@@ -27,6 +27,8 @@
 		4F9A489A294166F800852EB5 /* RightTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9A4899294166F800852EB5 /* RightTriangle.swift */; };
 		4F9A489E29416C6D00852EB5 /* Gesture_GUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9A489D29416C6D00852EB5 /* Gesture_GUI.swift */; };
 		4F9A48A129426ED500852EB5 /* GestureVolumeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9A48A029426ED500852EB5 /* GestureVolumeSlider.swift */; };
+		4FA699A7294278C80086EEBD /* BoomicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA699A6294278C80086EEBD /* BoomicError.swift */; };
+		4FA699A92942A8F90086EEBD /* ScrollingTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA699A82942A8F90086EEBD /* ScrollingTimeView.swift */; };
 		4FCD439E29145065001E7FCC /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD439D29145065001E7FCC /* Artist.swift */; };
 		4FCD43A02914506E001E7FCC /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD439F2914506E001E7FCC /* Album.swift */; };
 		4FCD441B29149151001E7FCC /* Manager+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD441A29149151001E7FCC /* Manager+Debug.swift */; };
@@ -56,6 +58,9 @@
 		4FECA3E4293951CB003EA394 /* FileManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA3E3293951CB003EA394 /* FileManagement.swift */; };
 		4FECA3F929395D4F003EA394 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA3F829395D4F003EA394 /* StorageManager.swift */; };
 		4FECA3FB29395D58003EA394 /* FileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FECA3FA29395D58003EA394 /* FileInfo.swift */; };
+		4FFDE8232945427A0046FB73 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDE8222945427A0046FB73 /* SettingsView.swift */; };
+		4FFDE825294545740046FB73 /* BoomicSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDE824294545740046FB73 /* BoomicSettings.swift */; };
+		4FFDE82729455FAA0046FB73 /* AlbumCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDE82629455FAA0046FB73 /* AlbumCover.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +92,7 @@
 		4F597D3E2911A15000BC1046 /* BoomicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoomicUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4F597D4F2911A1CE00BC1046 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4F597D552911A28B00BC1046 /* ClassicSongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicSongView.swift; sourceTree = "<group>"; };
-		4F597D582911A65100BC1046 /* AlbumCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCover.swift; sourceTree = "<group>"; };
+		4F597D582911A65100BC1046 /* StaticAlbumCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticAlbumCover.swift; sourceTree = "<group>"; };
 		4F597D5A2911A74100BC1046 /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
 		4F597D5C2911A8F800BC1046 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		4F597D5E2912E07900BC1046 /* BoomicLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoomicLibrary.swift; sourceTree = "<group>"; };
@@ -100,6 +105,8 @@
 		4F9A4899294166F800852EB5 /* RightTriangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightTriangle.swift; sourceTree = "<group>"; };
 		4F9A489D29416C6D00852EB5 /* Gesture_GUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gesture_GUI.swift; sourceTree = "<group>"; };
 		4F9A48A029426ED500852EB5 /* GestureVolumeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GestureVolumeSlider.swift; path = Boomic/Views/Gesture_GUI/GestureVolumeSlider.swift; sourceTree = SOURCE_ROOT; };
+		4FA699A6294278C80086EEBD /* BoomicError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoomicError.swift; sourceTree = "<group>"; };
+		4FA699A82942A8F90086EEBD /* ScrollingTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingTimeView.swift; sourceTree = "<group>"; };
 		4FCD439D29145065001E7FCC /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		4FCD439F2914506E001E7FCC /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		4FCD441A29149151001E7FCC /* Manager+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Debug.swift"; sourceTree = "<group>"; };
@@ -130,6 +137,9 @@
 		4FECA3E3293951CB003EA394 /* FileManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagement.swift; sourceTree = "<group>"; };
 		4FECA3F829395D4F003EA394 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		4FECA3FA29395D58003EA394 /* FileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileInfo.swift; sourceTree = "<group>"; };
+		4FFDE8222945427A0046FB73 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4FFDE824294545740046FB73 /* BoomicSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoomicSettings.swift; sourceTree = "<group>"; };
+		4FFDE82629455FAA0046FB73 /* AlbumCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCover.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +251,8 @@
 				4FECA26D29229CBB003EA394 /* Categories.swift */,
 				4FECA2732922C024003EA394 /* ImageSource.swift */,
 				4FECA3DF2937E5FB003EA394 /* Playlist.swift */,
+				4FA699A6294278C80086EEBD /* BoomicError.swift */,
+				4FFDE824294545740046FB73 /* BoomicSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -277,9 +289,11 @@
 			children = (
 				4FD5045D293AB2F000B9C76F /* GesturedAlbumCover.swift */,
 				4FEC9552291B2273003EA394 /* ImageBlurBackground.swift */,
-				4F597D582911A65100BC1046 /* AlbumCover.swift */,
+				4F597D582911A65100BC1046 /* StaticAlbumCover.swift */,
 				4FEC954B291995A6003EA394 /* BoomicSlider.swift */,
 				4FECA2792922D3DC003EA394 /* ContainerProtocol.swift */,
+				4FA699A82942A8F90086EEBD /* ScrollingTimeView.swift */,
+				4FFDE82629455FAA0046FB73 /* AlbumCover.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -305,6 +319,7 @@
 				4FECA2812922E09E003EA394 /* ArtistListView.swift */,
 				4FECA27D2922DBD5003EA394 /* AlbumListView.swift */,
 				4FECA288292AD3CA003EA394 /* QueueListView.swift */,
+				4FFDE8222945427A0046FB73 /* SettingsView.swift */,
 			);
 			path = Menus;
 			sourceTree = "<group>";
@@ -526,6 +541,7 @@
 				4FECA27E2922DBD5003EA394 /* AlbumListView.swift in Sources */,
 				4FCD439E29145065001E7FCC /* Artist.swift in Sources */,
 				4F597D502911A1CE00BC1046 /* MainView.swift in Sources */,
+				4FA699A7294278C80086EEBD /* BoomicError.swift in Sources */,
 				4F597D222911A14F00BC1046 /* BoomicApp.swift in Sources */,
 				4FECA2742922C024003EA394 /* ImageSource.swift in Sources */,
 				4FECA3E4293951CB003EA394 /* FileManagement.swift in Sources */,
@@ -533,6 +549,7 @@
 				4FECA27C2922D8A8003EA394 /* AlbumListItem.swift in Sources */,
 				4FCD44232915B965001E7FCC /* Metadata.swift in Sources */,
 				4FECA2782922D03B003EA394 /* GridMenu.swift in Sources */,
+				4FFDE8232945427A0046FB73 /* SettingsView.swift in Sources */,
 				4F9A489A294166F800852EB5 /* RightTriangle.swift in Sources */,
 				4FECA3E02937E5FB003EA394 /* Playlist.swift in Sources */,
 				4F597D562911A28B00BC1046 /* ClassicSongView.swift in Sources */,
@@ -540,17 +557,20 @@
 				4FEC954C291995A6003EA394 /* BoomicSlider.swift in Sources */,
 				4FEC9555291DBC42003EA394 /* CategoriesView.swift in Sources */,
 				4F597D662912EC6100BC1046 /* ClassicMediaControls.swift in Sources */,
-				4F597D592911A65100BC1046 /* AlbumCover.swift in Sources */,
+				4F597D592911A65100BC1046 /* StaticAlbumCover.swift in Sources */,
 				4F597D5F2912E07900BC1046 /* BoomicLibrary.swift in Sources */,
 				4FCD43A02914506E001E7FCC /* Album.swift in Sources */,
 				4FECA2702922B758003EA394 /* CategoryMethods.swift in Sources */,
 				4FECA2722922B79C003EA394 /* CategoryView.swift in Sources */,
 				4F9A48A129426ED500852EB5 /* GestureVolumeSlider.swift in Sources */,
+				4FFDE825294545740046FB73 /* BoomicSettings.swift in Sources */,
 				4F9A489E29416C6D00852EB5 /* Gesture_GUI.swift in Sources */,
 				4FCD441D29157E65001E7FCC /* SongListItem.swift in Sources */,
 				4FECA2822922E09E003EA394 /* ArtistListView.swift in Sources */,
 				4FECA289292AD3CA003EA394 /* QueueListView.swift in Sources */,
 				4FECA26E29229CBB003EA394 /* Categories.swift in Sources */,
+				4FFDE82729455FAA0046FB73 /* AlbumCover.swift in Sources */,
+				4FA699A92942A8F90086EEBD /* ScrollingTimeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

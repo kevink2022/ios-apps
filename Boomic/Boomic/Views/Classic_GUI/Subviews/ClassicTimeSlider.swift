@@ -13,24 +13,47 @@ struct ClassicTimeSlider: View
     
     var body: some View
     {
-        VStack(spacing: 0)
+        switch manager.library.settings.classicTimeSlider
         {
-            HStack
-            {
-                Text("\(manager.player.currentTime().seconds.readable)")
-
-                Spacer()
-
-                Text("\(manager.player.currentItem!.duration.seconds.readable)")
-            }
-            .font(F.time)
-            
-            BoomicSlider(percent: $manager.songProgress, shape: Capsule())
-
-            .frame(height: 20)
-            
+        case .classic: Classic()
+        case .scrolling: Scrolling()
         }
+    }
+    
+    private struct Scrolling : View
+    {
+        @EnvironmentObject var manager : BoomicManager
         
+        var body: some View
+        {
+            ScrollingTimeView(percent: $manager.songProgress, samples: manager.audioLevelSamples, frame: 60)
+        }
+    }
+    
+    private struct Classic : View
+    {
+        @EnvironmentObject var manager : BoomicManager
+        
+        var body: some View
+        {
+            VStack(spacing: 0)
+            {
+                HStack
+                {
+                    Text("\(manager.player.currentTime().seconds.readable)")
+
+                    Spacer()
+
+                    Text("\(manager.player.currentItem!.duration.seconds.readable)")
+                }
+                .font(F.time)
+                
+                BoomicSlider(percent: $manager.songProgress, shape: Capsule())
+
+                .frame(height: 20)
+            }
+            .padding()
+        }
     }
     
     typealias F = ViewConstants.Classic_GUI.Fonts

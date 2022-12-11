@@ -15,7 +15,7 @@ struct GesturedAlbumCover: View
     
     var body: some View
     {
-        //let magnify = MagnificationGesture()
+        // TODO: - why does the last song album's angle go to zero for a second?
         
         let drag = DragGesture(minimumDistance: C.minimumGesture)
             .onChanged { value in
@@ -26,6 +26,7 @@ struct GesturedAlbumCover: View
                 /// Setting offset to negative and and changing song at the same time puts
                 /// the new current album in the place of the where the desired album was,
                 /// but the neighboring album to disapear so it doesn't really work
+                /// - with the animation, the disapeaerring album is fine
                 if offset.width > 100
                 {
                     offset.width = -offset.width
@@ -48,7 +49,7 @@ struct GesturedAlbumCover: View
         {
             if lastSongOffset.width > -C.offscreenOffset
             {
-                AlbumCover(image: manager.lastSong?.albumCover)
+                StaticAlbumCover(image: manager.lastSong?.albumCover)
                     .rotation3DEffect(
                         lastSongAngle,
                         axis: (x: 0.0, y: -1.0, z: 0.0),
@@ -58,7 +59,7 @@ struct GesturedAlbumCover: View
             
             if nextSongOffset.width < C.offscreenOffset
             {
-                AlbumCover(image: manager.nextSong?.albumCover)
+                StaticAlbumCover(image: manager.nextSong?.albumCover)
                     .rotation3DEffect(
                         nextSongAngle,
                         axis: (x: 0.0, y: 1.0, z: 0.0),
@@ -66,7 +67,7 @@ struct GesturedAlbumCover: View
                     .offset(nextSongOffset)
             }
             
-            AlbumCover(image: manager.currentSong?.albumCover)
+            StaticAlbumCover(image: manager.currentSong?.albumCover)
                 .rotation3DEffect(
                     currentSongAngle,
                     axis: currentSongAxis,
@@ -95,10 +96,10 @@ extension ViewConstants.Subviews
 {
     struct GesturedAlbumCover
     {
-        static let minimumGesture = CGFloat(25)
+        static let minimumGesture = CGFloat(50)
         static let offscreenOffset = CGFloat(400)
         static let angleDivider = Double(6.0)
-        static let animationDuration = Double(0.6)
+        static let animationDuration = Double(0.2)
         static let gestureThreshold : Int = 100
     }
 }

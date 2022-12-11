@@ -19,6 +19,7 @@ extension BoomicManager
         // Enumerate the app's document directory
         if let enumerator = fileManager.enumerator(atPath: URL.documentsDirectory.path())
         {
+            // TODO: filter trash
             for object in enumerator.allObjects
             {
                 if let object = object as? String
@@ -30,7 +31,7 @@ extension BoomicManager
         
         for url in URLs
         {
-            if let format = BoomicLibrary.SupportedFileFormats.allCases.first(where: {$0.rawValue == url.pathExtension})
+            if let format = BoomicLibrary.SupportedFileFormats.allCases.first(where: {$0.rawValue.lowercased() == url.pathExtension.lowercased()})
             {
                 if let tags = BoomicManager.getTags(source: url, format: format)
                 {
@@ -42,28 +43,6 @@ extension BoomicManager
                 }
             }
         }
-        
-//        for format in BoomicLibrary.SupportedFileFormats.allCases
-//        {
-//            //if let URLs = Bundle.main.urls(forResourcesWithExtension: format.rawValue, subdirectory: nil)
-//            if let URLs = Bundle.urls(
-//                forResourcesWithExtension: format.rawValue,
-//                subdirectory: nil,
-//                in: URL.documentsDirectory
-//            ) {
-//                songs.append(contentsOf: URLs.map
-//                {
-//                    if let tags = BoomicManager.getTags(source: $0, format: format)
-//                    {
-//                        return Song(source: $0, tags: tags)
-//                    }
-//                    else
-//                    {
-//                        return Song(source: $0)
-//                    }
-//                })
-//            }
-//        }
         
         return songs
     }

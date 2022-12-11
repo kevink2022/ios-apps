@@ -9,6 +9,9 @@ import SwiftUI
 
 struct Gesture_GUI: View
 {
+    @EnvironmentObject var manager : BoomicManager
+    let song : Song
+    
     var body: some View
     {
         ZStack
@@ -16,20 +19,26 @@ struct Gesture_GUI: View
             VStack
             {
                 //GesturedAlbumCover()
-                AlbumCover(image: nil)
+                StaticAlbumCover(image: song.albumCover)
                 
                 ZStack
                 {
                     HStack
                     {
-                        RightTriangle()
-                            .padding()
+                        ScrollingTimeView(
+                            percent: $manager.songProgress,
+                            samples: manager.audioLevelSamples,
+                            frame: 140,
+                            vertical: true
+                        )
                         
                         GestureVolumeSlider()
                     }
                     
                     Image(systemName: "play.fill")
                 }
+                
+                ClassicTitles(song: song)
             }
         }
     }
@@ -37,6 +46,6 @@ struct Gesture_GUI: View
 
 struct Gesture_GUI_Previews: PreviewProvider {
     static var previews: some View {
-        Gesture_GUI()
+        Gesture_GUI(song: Song.standard)
     }
 }

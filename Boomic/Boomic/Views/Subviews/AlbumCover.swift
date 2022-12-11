@@ -2,35 +2,27 @@
 //  AlbumCover.swift
 //  Boomic
 //
-//  Created by Kevin Kelly on 11/1/22.
+//  Created by Kevin Kelly on 12/10/22.
 //
 
 import SwiftUI
 
 struct AlbumCover: View
 {
-    typealias C = ViewConstants.Subviews.AlbumCover
-    let image : ImageSource?
+    @EnvironmentObject var manager : BoomicManager
     
     var body: some View
     {
-        //TODO: ADD DEFAULT
-        Image(image ?? .asset(C.defaultAlbumCover))
-            .resizable()
-            .aspectRatio(1, contentMode: .fit)
-            .cornerRadius(C.cornerRadius)
-            .padding(.horizontal, C.padding)
+        switch manager.library.settings.albumCover
+        {
+        case .notGestured: StaticAlbumCover(image: manager.currentSong?.albumCover)
+        case .gestured: GesturedAlbumCover()
+        }
     }
 }
 
-struct AlbumCover_Previews: PreviewProvider {
-    static var previews: some View {
-        AlbumCover(image: .asset("ratatat-magnifique"))
-        AlbumCover(image: .asset("ratatat-magnifique")).preferredColorScheme(.dark)
-    }
-}
-
-extension ViewConstants.Subviews
-{
-    
-}
+//struct AlbumCover_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AlbumCover()
+//    }
+//}

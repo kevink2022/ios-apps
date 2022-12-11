@@ -45,14 +45,15 @@ struct ClassicSongView: View
                 if manager.songExists
                 {
                     ClassicTimeSlider()
-                        .padding()
                 }
                 else
                 {
                     HStack
                     {
+                        Spacer()
                         Image(systemName: "externaldrive.trianglebadge.exclamationmark")
                         Text("The song file cannot be found")
+                        Spacer()
                     }
                 }
                 

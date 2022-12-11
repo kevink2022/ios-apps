@@ -39,7 +39,7 @@ extension Image
                 self.init(systemName: "exclamationmark.triangle.fill")
             }
             
-        // TODO: Add URL support
+        // TODO: Add remote URL support
         case .url(let source):
             
             if let data = try? Data(contentsOf: source)

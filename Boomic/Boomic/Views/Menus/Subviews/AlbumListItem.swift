@@ -15,7 +15,7 @@ struct AlbumListItem: View
     {
         VStack(alignment: .leading)
         {
-            AlbumCover(image: album.albumCover)
+            StaticAlbumCover(image: album.albumCover)
             
             Text(album.title)
                 .font(F.title)

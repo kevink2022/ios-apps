@@ -16,6 +16,7 @@ class Song : Identifiable, Codable
     var artistName : String?
     var albumTitle : String?
     var trackNo : Int?
+    var duration : Double?
     
     var album: Album? = nil
     var artist: Artist? = nil
@@ -52,6 +53,9 @@ extension Song
             albumTitle: dict["album"] as? String,
             trackNo: Song.trackNoFromString( dict["track number"] as? String )
         )
+        
+        // idk why i won't let me do this in the init
+        self.duration = dict["approximate duration in seconds"] as? Double
     }
     
     static func trackNoFromString(_ str: String?) -> Int?

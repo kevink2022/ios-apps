@@ -91,10 +91,10 @@ struct BoomicSlider<S: Shape>: View
     }
 }
 
-//struct BoomicSlider_Previews: PreviewProvider
-//{
-//    static var previews: some View
-//    {
-//        BoomicSlider()
-//    }
-//}
+struct BoomicSlider_Previews: PreviewProvider
+{
+    static var previews: some View
+    {
+        BoomicSlider(percent: .constant(0.5), shape: (Capsule()))
+    }
+}

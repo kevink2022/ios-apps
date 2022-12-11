@@ -202,11 +202,14 @@ extension BoomicManager
     {
         if let song = currentSong
         {
+            print(song.source)
             player.replaceCurrentItem(with: AVPlayerItem(url: song.source))
             setupNowPlaying()
             addPeriodicTimeObserver()
             songProgress = 0.0
+            audioLevelSamples = [Float](repeating: 0.0, count: Int(ceil(song.duration ?? 50.0)))
             if !paused { play() }
+            Task { await setAudioLevels() }
         }
     }
     
@@ -215,7 +218,7 @@ extension BoomicManager
     {
         // Notify every half second
         let timeScale = CMTimeScale(NSEC_PER_SEC)
-        let time = CMTime(seconds: 0.5, preferredTimescale: timeScale)
+        let time = CMTime(seconds: 0.05, preferredTimescale: timeScale)
 
         player.addPeriodicTimeObserver(forInterval: time, queue: .main)
         {

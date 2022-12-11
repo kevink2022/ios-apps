@@ -17,9 +17,26 @@ struct CategoriesView: View
         {
             VStack(alignment: .leading)
             {
-                Text("Boomic Music")
-                .font(.system(.largeTitle, design: .default, weight: .heavy))
-                .padding()
+                HStack
+                {
+                    Text("Boomic Music")
+                        .font(.system(.largeTitle, design: .default, weight: .heavy))
+                        .padding()
+                    
+                    Spacer()
+                    
+                    NavigationLink
+                    {
+                        SettingsView()
+                    }
+                    label:
+                    {
+                        Image(.systemName("gearshape"))
+                            .font(.title)
+                            .foregroundColor(.primary)
+                            .padding(.horizontal)
+                    }
+                }
                 
                 GridMenu
                 {

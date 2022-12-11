@@ -28,9 +28,9 @@ class BoomicManager : ObservableObject
     // MARK: - View State
     @Published var showCurrentSongSheet : Bool = false
     @Published var showQueueSheet : Bool = false
+    @Published var audioLevelSamples : [Float] = []
     
     // MARK: - File Management
-//    var fileManager = FileManager()
     let storage : StorageManager<BoomicLibrary>
 
     init()
@@ -38,7 +38,17 @@ class BoomicManager : ObservableObject
         let _ = BoomicManager.initAudioSession()
         
         player = AVPlayer()
-        library = BoomicLibrary.empty
+        library = BoomicLibrary(
+            songs: [],
+            albums: [],
+            artists: [],
+            playlists: [],
+            settings: BoomicSettings(
+                songGUI: .classic,
+                classicTimeSlider: .classic,
+                albumCover: .notGestured
+            )
+        )
         storage = StorageManager<BoomicLibrary>(fileName: "library")
         
         commandCenter = MPRemoteCommandCenter.shared()
