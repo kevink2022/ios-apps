@@ -15,7 +15,8 @@ struct BoomicSlider<S: Shape>: View
     /// Constant update: update the value during the gesture and not just on end
     let constantUpdates : Bool
     
-    init(percent: Binding<Double>, shape: S, vertical: Bool = false, constantUpdates: Bool = false) {
+    init(percent: Binding<Double>, shape: S, vertical: Bool = false, constantUpdates: Bool = false)
+    {
         self._percent = percent
         self.vertical = vertical
         self.shape = shape

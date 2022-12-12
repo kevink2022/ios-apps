@@ -11,6 +11,7 @@ struct ClassicSongView: View
 {
     @EnvironmentObject var manager : BoomicManager
     let song : Song
+    @Namespace var currentSong
     
     var body: some View
     {
@@ -26,19 +27,21 @@ struct ClassicSongView: View
                     
                     Button
                     {
-                        withAnimation { manager.showQueueSheet.toggle() }
+                        withAnimation(.easeIn(duration: 0.2)) { manager.showQueueSheet.toggle() }
                     }
                     label:
                     {
-                        SongListItem(song: song)
+                        SongListItem(song: song, namespace: currentSong)
                     }
                     .padding(.horizontal)
                 }
                 else
                 {
                     AlbumCover()
+                        .matchedGeometryEffect(id: "album_cover", in: currentSong)
                     
                     SongTitles(song: song)
+                        .matchedGeometryEffect(id: "titles", in: currentSong)
                 }
                 
                 if manager.songExists

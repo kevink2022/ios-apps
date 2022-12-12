@@ -11,30 +11,52 @@ struct SongListItem: View
 {
     let song : Song
     let selected : Bool
+    let namespace : Namespace.ID?
     
-    init(song: Song, selected: Bool = false)
+    init(song: Song, selected: Bool = false, namespace: Namespace.ID? = nil)
     {
         self.song = song
         self.selected = selected
+        self.namespace = namespace
     }
     
+    // TODO: Clean this
     var body: some View
     {
         ZStack
         {
             HStack
             {
-                StaticAlbumCover(image: song.albumCover)
-                
-                VStack(alignment: .leading)
+                if let namespace = namespace
                 {
-                    Text(song.title ?? song.filename)
-                        .font(F.title)
+                    StaticAlbumCover(image: song.albumCover)
+                        .matchedGeometryEffect(id: "album_cover", in: namespace)
                     
-                    Text(song.artist?.name ?? P.Unknown.artist)
-                        .font(F.artist)
+                    VStack(alignment: .leading)
+                    {
+                        Text(song.title ?? song.filename)
+                            .font(F.title)
+                        
+                        Text(song.artist?.name ?? P.Unknown.artist)
+                            .font(F.artist)
+                    }
+                    .foregroundColor(selected ? .accentColor : .primary)
+                    .matchedGeometryEffect(id: "titles", in: namespace)
                 }
-                .foregroundColor(selected ? .accentColor : .primary)
+                else
+                {
+                    StaticAlbumCover(image: song.albumCover)
+                    
+                    VStack(alignment: .leading)
+                    {
+                        Text(song.title ?? song.filename)
+                            .font(F.title)
+                        
+                        Text(song.artist?.name ?? P.Unknown.artist)
+                            .font(F.artist)
+                    }
+                    .foregroundColor(selected ? .accentColor : .primary)
+                }
                 
                 Spacer()
             }

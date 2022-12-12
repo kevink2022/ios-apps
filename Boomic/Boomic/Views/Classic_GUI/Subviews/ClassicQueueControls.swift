@@ -41,7 +41,7 @@ struct ClassicQueueControls: View
             
             Button
             {
-                withAnimation { manager.showQueueSheet.toggle() }
+                withAnimation(.easeIn(duration: 0.2)) { manager.showQueueSheet.toggle() }
             }
             label:
             {

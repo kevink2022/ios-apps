@@ -20,6 +20,10 @@ struct GestureVolumeSlider: View
                 shape: RightTriangle(),
                 vertical: true,
                 constantUpdates: true)
+            
+//            Text("\(Int(manager.volume*100))")
+//                .font(.system(.largeTitle, design: .default, weight: .heavy))
+//                .offset(x: -20, y: 80)
         }
     }
 }
