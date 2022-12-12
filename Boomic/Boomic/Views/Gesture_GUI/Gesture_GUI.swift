@@ -16,29 +16,65 @@ struct Gesture_GUI: View
     {
         ZStack
         {
-            VStack
+            ImageBlurBackground(image: song.albumCover)
+            
+            GeometryReader
             {
-                //GesturedAlbumCover()
-                StaticAlbumCover(image: song.albumCover)
+                geo in
                 
-                ZStack
+                VStack
                 {
-                    HStack
-                    {
-                        ScrollingTimeView(
-                            percent: $manager.songProgress,
-                            samples: manager.audioLevelSamples,
-                            frame: 140,
-                            vertical: true
-                        )
-                        
-                        GestureVolumeSlider()
-                    }
+                    GesturedAlbumCover()
+                        .frame(height: geo.size.width - 2)
                     
-                    Image(systemName: "play.fill")
+                    ZStack
+                    {
+                        GeometryReader
+                        {
+                            geo in
+                            
+                            HStack
+                            {
+                                ScrollingTimeView(
+                                    percent: $manager.songProgress,
+                                    samples: manager.audioLevelSamples,
+                                    frame: geo.size.width/3,
+                                    vertical: true
+                                )
+                                .ignoresSafeArea(.all, edges: .vertical)
+                                
+                                Spacer()
+                                    .frame(width: geo.size.width/3)
+                                
+                                GestureVolumeSlider()
+                                    .frame(width: geo.size.width/3, height: geo.size.height)
+                                    .padding(.top)
+                            }
+                        }
+                        .padding(.horizontal)
+                        
+                        VStack
+                        {
+                            Spacer()
+                            
+                            RepeatButton()
+                                .frame(width: 35, height: 35)
+                            
+                            Spacer()
+                            
+                            PlayButton()
+                                .frame(width: 75, height: 75)
+                            
+                            Spacer()
+                            
+                            ShuffleButton()
+                                .frame(width: 35, height: 35)
+                            
+                            Spacer()
+                        }
+                    }
+                    SongTitles(song: song, alignment: .center)
                 }
-                
-                ClassicTitles(song: song)
             }
         }
     }

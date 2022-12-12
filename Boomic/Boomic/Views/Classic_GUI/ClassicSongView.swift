@@ -36,10 +36,9 @@ struct ClassicSongView: View
                 }
                 else
                 {
-                    //AlbumCover(image: song.albumCover)
-                    GesturedAlbumCover()
+                    AlbumCover()
                     
-                    ClassicTitles(song: song)
+                    SongTitles(song: song)
                 }
                 
                 if manager.songExists

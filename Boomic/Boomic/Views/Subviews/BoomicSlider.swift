@@ -12,11 +12,14 @@ struct BoomicSlider<S: Shape>: View
     @Binding var percent : Double
     let vertical : Bool
     let shape : S
+    /// Constant update: update the value during the gesture and not just on end
+    let constantUpdates : Bool
     
-    init(percent: Binding<Double>, shape: S, vertical: Bool = false) {
+    init(percent: Binding<Double>, shape: S, vertical: Bool = false, constantUpdates: Bool = false) {
         self._percent = percent
         self.vertical = vertical
         self.shape = shape
+        self.constantUpdates = constantUpdates
     }
     
     var body: some View
@@ -27,11 +30,13 @@ struct BoomicSlider<S: Shape>: View
                 percent: $percent,
                 geometry: geo,
                 vertical: vertical,
-                shape: shape
+                shape: shape,
+                constantUpdates: constantUpdates
             )
         }
     }
     
+    // TODO: Make the constantUpdates make more sense and generally clean this up
     private struct __Slider<S: Shape> : View
     {
         @Binding var percent : Double
@@ -39,30 +44,41 @@ struct BoomicSlider<S: Shape>: View
         let geometry : GeometryProxy
         let vertical : Bool
         let shape : S
+        let constantUpdates : Bool
+        
+        func onChanged(_ value: DragGesture.Value)
+        {
+            let _offset : CGFloat
+            // set the offset to the new value
+            if vertical {_offset = (-value.translation.height / geometry.size.height)}
+            else { _offset = (value.translation.width / geometry.size.width)}
+            // correct for out of bounds gestures
+            if ((percent + _offset) > 1) {offset = 1-percent}
+            else if ((percent + _offset) < 0) {offset = -percent}
+            else {offset = _offset}
+        }
+        
+        func onEnded(_ value: DragGesture.Value)
+        {
+            offset = 0.0
+            // set the percentage to the new value
+            if vertical {percent += (-value.translation.height / geometry.size.height)}
+            else {percent += (value.translation.width / geometry.size.width)}
+            // correct for out of bounds gestures
+            if (percent > 1) {percent = 1}
+            else if (percent < 0) {percent = 0}
+        }
+        
+        // TODO: Implent constantChanges
         
         var body: some View
         {
             let drag = DragGesture()
                 .onChanged {
-                    value in
-                    let _offset : CGFloat
-                    // set the offset to the new value
-                    if vertical {_offset = (-value.translation.height / geometry.size.height)}
-                    else { _offset = (value.translation.width / geometry.size.width)}
-                    // correct for out of bounds gestures
-                    if ((percent + _offset) > 1) {offset = 1-percent}
-                    else if ((percent + _offset) < 0) {offset = -percent}
-                    else {offset = _offset}
+                    value in onChanged(value)
                 }
                 .onEnded {
-                    value in
-                    offset = 0.0
-                    // set the percentage to the new value
-                    if vertical {percent += (-value.translation.height / geometry.size.height)}
-                    else {percent += (value.translation.width / geometry.size.width)}
-                    // correct for out of bounds gestures
-                    if (percent > 1) {percent = 1}
-                    else if (percent < 0) {percent = 0}
+                    value in onEnded(value)
                 }
 
             ZStack(alignment: .bottomLeading)
@@ -78,7 +94,7 @@ struct BoomicSlider<S: Shape>: View
                 else
                 {
                     Rectangle()
-                        .frame(width: (geometry.size.width) * (percent + offset))
+                        .frame(width: (geometry.size.width) * (percent + (constantUpdates ? 0 : offset)))
                 }
                 
             }

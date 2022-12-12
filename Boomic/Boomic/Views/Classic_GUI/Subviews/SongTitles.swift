@@ -10,17 +10,10 @@ import SwiftUI
 struct SongTitles: View
 {
     let song : Song
-    let alignment : HorizontalAlignment
-    
-    init(song: Song, alignment: HorizontalAlignment = .leading)
-    {
-        self.song = song
-        self.alignment = alignment
-    }
     
     var body: some View
     {
-        VStack(alignment: alignment)
+        VStack(alignment: .leading)
         {
             Text(song.titleLabel)
                 .font(F.title)

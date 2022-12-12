@@ -15,32 +15,41 @@ struct SettingsView: View
     {
         List
         {
-            Picker("Song GUI", selection: $manager.library.settings.songGUI)
+            Section("Current Song GUI")
             {
-                ForEach(S.SongGUI.allCases)
+                Picker("Song GUI", selection: $manager.library.settings.songGUI)
                 {
-                    setting in Text(setting.rawValue).tag(setting)
+                    ForEach(S.SongGUI.allCases)
+                    {
+                        setting in Text(setting.rawValue).tag(setting)
+                    }
                 }
+                .pickerStyle(.segmented)
             }
-            .pickerStyle(.segmented)
             
-            Picker("Time Slider", selection: $manager.library.settings.classicTimeSlider)
+            Section("Time Slider")
             {
-                ForEach(S.ClassicTimeSlider.allCases)
+                Picker("Time Slider", selection: $manager.library.settings.classicTimeSlider)
                 {
-                    setting in Text(setting.rawValue).tag(setting)
+                    ForEach(S.ClassicTimeSlider.allCases)
+                    {
+                        setting in Text(setting.rawValue).tag(setting)
+                    }
                 }
+                .pickerStyle(.segmented)
             }
-            .pickerStyle(.segmented)
             
-            Picker("Album Cover", selection: $manager.library.settings.albumCover)
+            Section("Album Cover Gestures")
             {
-                ForEach(S.AlbumCover.allCases)
+                Picker("Album Cover", selection: $manager.library.settings.albumCover)
                 {
-                    setting in Text(setting.rawValue).tag(setting)
+                    ForEach(S.AlbumCover.allCases)
+                    {
+                        setting in Text(setting.rawValue).tag(setting)
+                    }
                 }
+                .pickerStyle(.segmented)
             }
-            .pickerStyle(.segmented)
         }
     }
     

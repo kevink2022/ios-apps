@@ -24,6 +24,10 @@
 		4F597D662912EC6100BC1046 /* ClassicMediaControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D652912EC6100BC1046 /* ClassicMediaControls.swift */; };
 		4F597D682912EF6C00BC1046 /* ClassicTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597D672912EF6C00BC1046 /* ClassicTitles.swift */; };
 		4F597E65291323E700BC1046 /* SongListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F597E64291323E700BC1046 /* SongListView.swift */; };
+		4F6A16FB29465B0400282EF0 /* CurrentSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6A16FA29465B0400282EF0 /* CurrentSongView.swift */; };
+		4F6A170029465FBA00282EF0 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6A16FF29465FBA00282EF0 /* PlayButton.swift */; };
+		4F6A17042946AC3D00282EF0 /* ShuffleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6A17032946AC3D00282EF0 /* ShuffleButton.swift */; };
+		4F6A17062946AD8A00282EF0 /* RepeatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6A17052946AD8A00282EF0 /* RepeatButton.swift */; };
 		4F9A489A294166F800852EB5 /* RightTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9A4899294166F800852EB5 /* RightTriangle.swift */; };
 		4F9A489E29416C6D00852EB5 /* Gesture_GUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9A489D29416C6D00852EB5 /* Gesture_GUI.swift */; };
 		4F9A48A129426ED500852EB5 /* GestureVolumeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9A48A029426ED500852EB5 /* GestureVolumeSlider.swift */; };
@@ -102,6 +106,10 @@
 		4F597D672912EF6C00BC1046 /* ClassicTitles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicTitles.swift; sourceTree = "<group>"; };
 		4F597D692913079700BC1046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F597E64291323E700BC1046 /* SongListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListView.swift; sourceTree = "<group>"; };
+		4F6A16FA29465B0400282EF0 /* CurrentSongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSongView.swift; sourceTree = "<group>"; };
+		4F6A16FF29465FBA00282EF0 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
+		4F6A17032946AC3D00282EF0 /* ShuffleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleButton.swift; sourceTree = "<group>"; };
+		4F6A17052946AD8A00282EF0 /* RepeatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatButton.swift; sourceTree = "<group>"; };
 		4F9A4899294166F800852EB5 /* RightTriangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightTriangle.swift; sourceTree = "<group>"; };
 		4F9A489D29416C6D00852EB5 /* Gesture_GUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gesture_GUI.swift; sourceTree = "<group>"; };
 		4F9A48A029426ED500852EB5 /* GestureVolumeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GestureVolumeSlider.swift; path = Boomic/Views/Gesture_GUI/GestureVolumeSlider.swift; sourceTree = SOURCE_ROOT; };
@@ -230,6 +238,8 @@
 		4F597D4B2911A16200BC1046 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4F6A16FE29465FA900282EF0 /* Buttons */,
+				4F6A16F929465AEB00282EF0 /* Generics */,
 				4F9A489B29416C1800852EB5 /* Gesture_GUI */,
 				4F9A4898294166E700852EB5 /* Shapes */,
 				4F597D4F2911A1CE00BC1046 /* MainView.swift */,
@@ -322,6 +332,24 @@
 				4FFDE8222945427A0046FB73 /* SettingsView.swift */,
 			);
 			path = Menus;
+			sourceTree = "<group>";
+		};
+		4F6A16F929465AEB00282EF0 /* Generics */ = {
+			isa = PBXGroup;
+			children = (
+				4F6A16FA29465B0400282EF0 /* CurrentSongView.swift */,
+			);
+			path = Generics;
+			sourceTree = "<group>";
+		};
+		4F6A16FE29465FA900282EF0 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				4F6A16FF29465FBA00282EF0 /* PlayButton.swift */,
+				4F6A17032946AC3D00282EF0 /* ShuffleButton.swift */,
+				4F6A17052946AD8A00282EF0 /* RepeatButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		4F9A4898294166E700852EB5 /* Shapes */ = {
@@ -545,6 +573,7 @@
 				4F597D222911A14F00BC1046 /* BoomicApp.swift in Sources */,
 				4FECA2742922C024003EA394 /* ImageSource.swift in Sources */,
 				4FECA3E4293951CB003EA394 /* FileManagement.swift in Sources */,
+				4F6A170029465FBA00282EF0 /* PlayButton.swift in Sources */,
 				4F597E65291323E700BC1046 /* SongListView.swift in Sources */,
 				4FECA27C2922D8A8003EA394 /* AlbumListItem.swift in Sources */,
 				4FCD44232915B965001E7FCC /* Metadata.swift in Sources */,
@@ -555,6 +584,7 @@
 				4F597D562911A28B00BC1046 /* ClassicSongView.swift in Sources */,
 				4FECA3FB29395D58003EA394 /* FileInfo.swift in Sources */,
 				4FEC954C291995A6003EA394 /* BoomicSlider.swift in Sources */,
+				4F6A16FB29465B0400282EF0 /* CurrentSongView.swift in Sources */,
 				4FEC9555291DBC42003EA394 /* CategoriesView.swift in Sources */,
 				4F597D662912EC6100BC1046 /* ClassicMediaControls.swift in Sources */,
 				4F597D592911A65100BC1046 /* StaticAlbumCover.swift in Sources */,
@@ -571,6 +601,8 @@
 				4FECA26E29229CBB003EA394 /* Categories.swift in Sources */,
 				4FFDE82729455FAA0046FB73 /* AlbumCover.swift in Sources */,
 				4FA699A92942A8F90086EEBD /* ScrollingTimeView.swift in Sources */,
+				4F6A17042946AC3D00282EF0 /* ShuffleButton.swift in Sources */,
+				4F6A17062946AD8A00282EF0 /* RepeatButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

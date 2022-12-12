@@ -16,7 +16,6 @@ struct GesturedAlbumCover: View
     var body: some View
     {
         // TODO: - why does the last song album's angle go to zero for a second?
-        
         let drag = DragGesture(minimumDistance: C.minimumGesture)
             .onChanged { value in
                 offset.width = value.translation.width
@@ -74,7 +73,6 @@ struct GesturedAlbumCover: View
                     anchor: currentSongAnchor)
                 .offset(currentSongOffset)
                 .gesture(drag)
-                //.animation(.linear, value: 1)
         }
     }
     

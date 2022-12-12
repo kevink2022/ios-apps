@@ -37,21 +37,24 @@ extension BoomicSettings
 {
     enum SongGUI : String, CaseIterable, Codable, Identifiable
     {
-        case classic, gesture
+        case classic = "Classic GUI"
+        case gesture = "Gesture GUI"
         
         var id : String { self.rawValue }
     }
     
     enum ClassicTimeSlider : String, CaseIterable, Codable, Identifiable
     {
-        case classic, scrolling
+        case classic = "Classic Slider"
+        case scrolling = "Scrolling Slider"
         
         var id : String { self.rawValue }
     }
     
     enum AlbumCover : String, CaseIterable, Codable, Identifiable
     {
-        case notGestured, gestured
+        case notGestured = "Static"
+        case gestured = "Gestured"
         
         var id : String { self.rawValue }
     }

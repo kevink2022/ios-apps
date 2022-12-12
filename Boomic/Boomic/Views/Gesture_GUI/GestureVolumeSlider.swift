@@ -9,17 +9,23 @@ import SwiftUI
 
 struct GestureVolumeSlider: View
 {
-    @State var volume = 0.5
+    @EnvironmentObject var manager : BoomicManager
     
     var body: some View
     {
-        BoomicSlider(percent: $volume, shape: RightTriangle(), vertical: true)
-            .frame(width: 100, height: 100)
+        ZStack
+        {
+            BoomicSlider(
+                percent: $manager.volume,
+                shape: RightTriangle(),
+                vertical: true,
+                constantUpdates: true)
+        }
     }
 }
 
-struct GestureVolumeSlider_Previews: PreviewProvider {
-    static var previews: some View {
-        GestureVolumeSlider()
-    }
-}
+//struct GestureVolumeSlider_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GestureVolumeSlider()
+//    }
+//}

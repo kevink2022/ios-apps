@@ -33,7 +33,7 @@ struct MainView: View
         {
             if let song = manager.currentSong
             {
-                ClassicSongView(song: song)
+                CurrentSongView(song: song)
             }
         }
     }
