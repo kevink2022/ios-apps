@@ -12,7 +12,7 @@ Examples of 5, 6, and 7 letter games.
 ## Pentominoes
 Can you solve all five? Pentominoes is an iPad game where players have to fit all the shapes into a certain area. 
 
-![Pentominos Examplees](portfolio_resources/pentominos.png)
+![Pentominoes Examples](portfolio_resources/pentominos.png)
 
 Examples of the start of a game, the middle of a game, and a solved game. Care was taken to ensure pieces always snap onto positions on the grid. 
 
@@ -33,7 +33,7 @@ Can you catch 'em all? Track the original 151 Pokémon on your phone! Users can 
 Examples of the home screen, where cards are laid out by type, a Pokémon summary, and the list laid out in the order of the original Pokédex.
 
 ## Boomic Music
-Drag and drop your high resolution library and take it wherever you go! You can learn more about Boomic in its repository [here](). The version is this repo was what was developed for my final project submission in the final 5 weeks of class. 
+Drag and drop your high resolution library and take it wherever you go! You can learn more about Boomic in its repository [here](https://github.com/kevink2022/Boomic). The version is this repo was what was developed for my final project submission in the final 5 weeks of class. 
 
 ![Boomic Examples](portfolio_resources/boomic.png)
 
